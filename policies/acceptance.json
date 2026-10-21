@@ -1,0 +1,1 @@
+{"minSeconds":604800,"minObservations":1000,"maxGapSeconds":300,"minImprovementWei":"100000000000000","maxDrawdownWei":"1000000000000000","maxTradeLossWei":"100000000000000"}

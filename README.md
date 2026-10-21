@@ -2,7 +2,7 @@
 <h1 align="center">MEVHOOD · Mevy</h1>
 <p align="center"><strong>Every change faces a frozen control.</strong></p>
 <p align="center">Onchain observations → paired experiments → evidence → a reviewed next version.</p>
-<p align="center"><a href="https://github.com/sproutagentai/mevhood/actions/workflows/verify.yml"><img alt="Reproduce Mevy" src="https://github.com/sproutagentai/mevhood/actions/workflows/verify.yml/badge.svg"></a> <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-e8e6e3?labelColor=161616"></a> <img alt="Research preview" src="https://img.shields.io/badge/status-research_preview-ef986f?labelColor=161616"></p>
+<p align="center"><a href="https://github.com/sproutagentai/mevhood/actions/workflows/verify.yml"><img alt="Reproduce Mevy" src="https://github.com/sproutagentai/mevhood/actions/workflows/verify.yml/badge.svg?branch=main"></a> <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-e8e6e3?labelColor=161616"></a> <img alt="Research preview" src="https://img.shields.io/badge/status-research_preview-ef986f?labelColor=161616"></p>
 
 Mevy is MEVHOOD's research agent. It examines public onchain quotes, compares a candidate policy with a pinned control, and proposes the next experiment. Both versions see the same new data. Costs, rejected changes and incomplete evidence stay visible.
 

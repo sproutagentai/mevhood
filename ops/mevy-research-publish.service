@@ -1,0 +1,39 @@
+[Unit]
+Description=Publish validated Mevy evidence through a repository-only identity
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=mevy-publisher
+Group=mevy-publish
+WorkingDirectory=/opt/mevy-research/autonomous-current
+Environment=PATH=/opt/mevy-research/runtime/node-v24.13.0-linux-x64/bin:/usr/bin:/bin
+Environment=GIT_CONFIG_NOSYSTEM=1
+Environment=GIT_CONFIG_GLOBAL=/dev/null
+Environment=MEVY_CAMPAIGN_CONFIG=/etc/mevy-auto/campaign.json
+Environment=MEVY_PUBLIC_SPOOL=/var/spool/mevy-research-auto
+Environment=MEVY_PUBLISH_CHECKOUT=/var/lib/mevy-publisher/repo
+Environment=MEVY_PUBLISH_STATE=/var/lib/mevy-publisher/receipts
+Environment=MEVY_PUBLISH_KEY=/var/lib/mevy-publisher/ssh/mevy_ed25519
+Environment=MEVY_PUBLISH_HOSTS=/etc/mevy-auto/github_known_hosts
+UnsetEnvironment=OPENAI_API_KEY AI_GATEWAY_API_KEY ANTHROPIC_API_KEY VERCEL_OIDC_TOKEN PRIVATE_KEY GH_TOKEN GITHUB_TOKEN
+ExecStart=/usr/bin/flock --nonblock /var/lib/mevy-publisher/publish.lock /opt/mevy-research/runtime/node-v24.13.0-linux-x64/bin/node --import tsx src/publish-runner.ts
+TimeoutStartSec=240
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+ReadWritePaths=/var/lib/mevy-publisher
+InaccessiblePaths=/var/lib/mevy-research /etc/mevy-auto/openai.env
+MemoryMax=512M
+TasksMax=64
+CPUQuota=50%

@@ -28,6 +28,8 @@
     "build:agent": "eve build --skip-sandbox-prewarm",
     "mevy": "node --env-file-if-exists=.env.local --import tsx src/cli.ts",
     "dev": "node --env-file-if-exists=.env.local --env-file-if-exists=.env.llm.local node_modules/eve/bin/eve.js dev",
-    "verify": "npm run typecheck && npm test && npm run build:agent"
+    "verify": "npm run typecheck && npm test && npm run build:agent",
+    "auto:research": "node --import tsx src/auto-runner.ts",
+    "auto:publish": "node --import tsx src/publish-runner.ts"
   }
 }

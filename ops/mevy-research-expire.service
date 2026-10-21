@@ -1,0 +1,8 @@
+[Unit]
+Description=End the authorized Mevy campaign and remove dedicated secret copies
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl disable --now mevy-research-auto.service mevy-research-publish.timer
+ExecStart=/usr/bin/systemctl stop mevy-research-publish.service
+ExecStart=/usr/bin/rm -f /etc/mevy-auto/openai.env /var/lib/mevy-publisher/ssh/mevy_ed25519

@@ -1,0 +1,45 @@
+[Unit]
+Description=Mevy source-paired research (seven-day campaign, no trading)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=mevy-reader
+Group=mevy-reader
+SupplementaryGroups=mevy-publish
+WorkingDirectory=/opt/mevy-research/autonomous-current
+Environment=PATH=/opt/mevy-research/runtime/node-v24.13.0-linux-x64/bin:/usr/bin:/bin
+Environment=NODE_ENV=production
+Environment=MEVY_CAMPAIGN_CONFIG=/etc/mevy-auto/campaign.json
+Environment=MEVY_AUTO_STATE=/var/lib/mevy-research/auto
+Environment=MEVY_PUBLIC_SPOOL=/var/spool/mevy-research-auto
+UnsetEnvironment=OPENAI_API_KEY AI_GATEWAY_API_KEY ANTHROPIC_API_KEY VERCEL_OIDC_TOKEN PRIVATE_KEY GH_TOKEN GITHUB_TOKEN
+ExecStart=/usr/bin/flock --nonblock /var/lib/mevy-research/auto/worker.lock /opt/mevy-research/runtime/node-v24.13.0-linux-x64/bin/node --env-file=/etc/mevy-auto/openai.env --import tsx src/auto-runner.ts
+Restart=on-failure
+RestartSec=60
+TimeoutStopSec=185
+KillMode=control-group
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+ReadWritePaths=/var/lib/mevy-research/auto /var/spool/mevy-research-auto
+InaccessiblePaths=/var/lib/mevy-publisher
+MemoryMax=768M
+TasksMax=96
+CPUQuota=60%
+Nice=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

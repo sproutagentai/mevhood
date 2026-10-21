@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Mevy</title>
+  <path d="M32 6C18 6 8 18 7 33C6 48 17 57 32 57S58 48 57 33C56 18 46 6 32 6Z" fill="#e8e6e3"/>
+  <path d="M13 33C14 22 23 22 32 24C41 22 50 22 51 33C53 44 44 49 32 49S11 44 13 33Z" fill="#09090b"/>
+  <path d="M25 30C22 28 20 31 21 35L23 39C25 41 27 38 26 35Z" fill="#f4e4d1"/>
+  <path d="M39 29C42 27 44 31 43 35L41 39C39 41 37 38 38 34Z" fill="#f4e4d1"/>
+  <path d="M43 17L46 12" stroke="#ef986f" stroke-width="4" stroke-linecap="round"/>
+</svg>

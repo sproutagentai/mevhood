@@ -1,0 +1,11 @@
+[Unit]
+Description=Retry saved Mevy publications without repeating inference
+
+[Timer]
+OnBootSec=45
+OnUnitInactiveSec=60
+AccuracySec=5
+Unit=mevy-research-publish.service
+
+[Install]
+WantedBy=timers.target

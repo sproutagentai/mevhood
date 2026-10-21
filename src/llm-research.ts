@@ -29,17 +29,27 @@ function usdNano(value: string) {
 }
 const dollars = (n: bigint) => (Number(n) / 1e9).toFixed(9);
 
-export function planResearch(bundle: EvidenceBundle, sourcePackage: unknown, budgetUsd: string) {
+export const researchProfiles = {
+  'gpt-6.1-sol': { maxBytes:120_000, reserveInput:4400n, reserveOutput:16500n, input:2000n, output:10000n, longInput:4000n, longOutput:15000n },
+  'gpt-6-luna': { maxBytes:600_000, reserveInput:220n, reserveOutput:825n, input:100n, output:500n, longInput:200n, longOutput:750n }
+} as const;
+export type ResearchModel = keyof typeof researchProfiles;
+export function planResearch(bundle: EvidenceBundle, sourcePackage: unknown, budgetUsd: string, model:ResearchModel=researchModelId) {
   const context = researchContext(bundle, sourcePackage), budget = usdNano(budgetUsd);
   if (budget <= 0n) throw Error('Positive explicit budget required');
   const prompt = JSON.stringify(context), schema = JSON.stringify(z.toJSONSchema(analysisSchema));
   const bytes = Buffer.byteLength(prompt + researchInstructions + schema);
-  if (bytes > 120_000) throw Error('History exceeds the single-call context budget; no rows were truncated');
+  const profile=researchProfiles[model];
+  if(!profile)throw Error('Unsupported research model');
+  if (bytes > profile.maxBytes) throw Error('History exceeds the single-call context budget; no rows were truncated');
   // Conservative tokens <= UTF-8 bytes, plus framing. Standard long-context prices
   // with 10% regional margin, then 25% reserve. Not a provider-enforced spend cap.
-  const reserve = ((BigInt(bytes + 4096) * 4400n + BigInt(researchMaxOutputTokens) * 16500n) * 125n + 99n) / 100n;
+  const reserve = ((BigInt(bytes + 4096) * profile.reserveInput + BigInt(researchMaxOutputTokens) * profile.reserveOutput) * 125n + 99n) / 100n;
   if (reserve > budget) throw Error('Conservative request reserve exceeds approved budget');
-  const body = { format: 'mevy-llm-plan/v1', model: researchModelId, contextHash: digest(context), instructionsHash: digest(researchInstructions), schemaHash: digest(JSON.parse(schema)), bundleHash: bundle.bundleHash, observations: context.coverage.observations, quotes: context.coverage.quoteCount, inputBytes: bytes, maxOutputTokens: researchMaxOutputTokens, approvedBudgetUsd: dollars(budget), reservedUsd: dollars(reserve), pricingReviewedAt: '2026-10-21', reserveBasis: 'UTF-8 byte input bound +4096 framing; $4.40/$16.50 per MTok; 25% margin; one request/no retries. Recheck pricing before reuse.', automaticPromotion: 'DISABLED' };
+  const reserveBasis=model==='gpt-6.1-sol'
+    ? 'UTF-8 byte input bound +4096 framing; $4.40/$16.50 per MTok; 25% margin; one request/no retries. Recheck pricing before reuse.'
+    : 'UTF-8 byte input bound +4096 framing; $0.22/$0.825 per MTok long-context/regional bound; 25% margin; one request/no retries. Recheck pricing before reuse.';
+  const body = { format: 'mevy-llm-plan/v1', model, contextHash: digest(context), instructionsHash: digest(researchInstructions), schemaHash: digest(JSON.parse(schema)), bundleHash: bundle.bundleHash, observations: context.coverage.observations, quotes: context.coverage.quoteCount, inputBytes: bytes, maxOutputTokens: researchMaxOutputTokens, approvedBudgetUsd: dollars(budget), reservedUsd: dollars(reserve), pricingReviewedAt: '2026-10-21', reserveBasis, automaticPromotion: 'DISABLED' };
   return { plan: { ...body, planHash: digest(body) }, context, prompt };
 }
 
@@ -72,11 +82,12 @@ export async function runResearch(prepared: ReturnType<typeof planResearch>, out
     const result = await call(prepared.prompt);
     // Preserve returned content and usage even if semantic validation rejects it.
     save('provider-result.json', result);
-    if (!result.responseId || !result.modelId.startsWith(researchModelId) || result.finishReason !== 'stop') throw Error('Incomplete or unexpected model response');
+    if (!result.responseId || !result.modelId.startsWith(prepared.plan.model) || result.finishReason !== 'stop') throw Error('Incomplete or unexpected model response');
     const analysis = validateAnalysis(result.output, prepared.context);
     const known = Number.isSafeInteger(result.inputTokens) && result.inputTokens! >= 0 && Number.isSafeInteger(result.outputTokens) && result.outputTokens! >= 0;
     if (known && (result.inputTokens! > prepared.plan.inputBytes + 4096 || result.outputTokens! > prepared.plan.maxOutputTokens)) throw Error('Provider usage exceeded request reservation bounds');
-    const estimate = known ? dollars(BigInt(result.inputTokens!) * 2000n + BigInt(result.outputTokens!) * 10000n) : null;
+    const profile=researchProfiles[prepared.plan.model],long=(result.inputTokens??0)>272000;
+    const estimate = known ? dollars(BigInt(result.inputTokens!) * (long?profile.longInput:profile.input) + BigInt(result.outputTokens!) * (long?profile.longOutput:profile.output)) : null;
     const body = { format: 'mevy-llm-analysis/v1', state: 'AWAITING_HUMAN_REVIEW', planHash: prepared.plan.planHash, contextHash: prepared.plan.contextHash, bundleHash: prepared.plan.bundleHash, model: result.modelId, responseId: result.responseId, usage: { inputTokens: result.inputTokens ?? null, outputTokens: result.outputTokens ?? null }, serviceTier: result.serviceTier, estimatedStandardCostUsd: estimate, actualInvoiceCostUsd: null, costStatus: known ? 'TOKEN_BASED_ESTIMATE_NOT_INVOICE' : 'UNKNOWN', analysis, createdAt: new Date().toISOString(), parentResearchGate: prepared.context.totals.researchGate, trainingThroughBlock: Math.max(...prepared.context.observations.map(o => o.block)), livePromotion: 'DISABLED', boundary: 'Unapproved research draft. No database proposal approval, strategy change, successor freeze, signing or trading.' };
     const receipt = { ...body, analysisHash: digest(body) }; save('analysis.json', receipt);
     return receipt;

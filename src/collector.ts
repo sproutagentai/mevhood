@@ -6,7 +6,7 @@ import { engineHash } from './model.ts';
 import { snapshot } from './robinhood.ts';
 
 // An explicit, bounded read-only process. Never started by import, install, build or tests.
-const {values:v,positionals:[id]}=parseArgs({allowPositionals:true,options:{db:{type:'string',default:'data/mevy.sqlite'},seconds:{type:'string',default:'3600'},interval:{type:'string',default:'60'},'extra-gas-wei':{type:'string'},'infra-wei':{type:'string'}}});
+const {values:v,positionals:[id]}=parseArgs({allowPositionals:true,options:{db:{type:'string',default:process.env.MEVY_DB??'data/mevy.sqlite'},seconds:{type:'string',default:'3600'},interval:{type:'string',default:'60'},'extra-gas-wei':{type:'string'},'infra-wei':{type:'string'}}});
 async function main(){
   const seconds=Number(v.seconds),interval=Number(v.interval);
   if(!id||!Number.isInteger(seconds)||seconds<60||seconds>86400||!Number.isInteger(interval)||interval<30||interval>240)throw Error('Provide experiment ID, --seconds 60..86400 and --interval 30..240');

@@ -103,3 +103,46 @@ npm run mevy -- registry-freeze EXP_ID --registry ADDRESS --recorder PUBLIC_ADDR
 ```
 
 It refuses a retrospective freeze after local observations already exist. Submit separately only after explicit approval, confirm the anchor, then collect after its block/timestamp. Once both the research gate and actual public-anchor duration pass, use `registry-report` with the same flags to prepare result calldata. Data before the real public anchor, an existing result, insufficient post-anchor data, wrong chain/recorder/code, changed commitment or a report at/after the current head fails closed. Call preparation still does not establish an independent audit or L1 finality.
+
+
+## Archive RPC and historical quote audit
+
+The default source-audit endpoint is `https://rpc-robinhood.blockmachine.io`. Its [Robinhood guide](https://blockmachine.io/docs/robinhood-rpc) documents keyless archive reads. The original integration block was re-quoted from this endpoint on 21 October 2026 on both the operator machine and VPS; block/code hashes, all 12 route outputs and returned gas matched. An endpoint's advertised archive support is not sufficient on its own.
+
+Override audit routing with `--rpc HTTPS_URL` or ignored `.env.local`:
+
+```sh
+MEVY_ARCHIVE_RPC_URL=https://rpc-robinhood.blockmachine.io
+```
+
+Precedence is explicit flag, environment, then the verified public default. This only changes audit routing. Frozen evaluator/reader source and existing observations remain unchanged.
+
+For the dated integration sample:
+
+```sh
+mkdir -p data
+npm run mevy -- audit-source --file evidence/integration-2026-10-21.json --output data/source-audit.json
+```
+
+The CLI compares actual historical state at each saved block. It checks chain/block identity, contract-code hashes, pool identities, quotes and gas. `sourceAudit: PASS` with `auditComplete: false` means a bounded range passed. Only a complete receipt says `sourceRequoted: true`. Each invocation handles at most 20 observations; use `--offset 20 --limit 20` for the next range without rewriting the original bundle.
+
+For a complete exported history, with per-block progress and restart support:
+
+```sh
+npm run audit:history -- --file data/trial-001.json --output data/trial-001-source-audit --max-seconds 3600
+```
+
+The command validates the entire original bundle before source reads, writes one hash-bound receipt per block, and prints progress. Re-run the same command to resume that exact snapshot. A changed bundle, provider identity or receipt is rejected. Use a new output directory for a fresh network audit. Completion requires receipts for every observation; partial runs keep `sourceRequoted: false` and `nextOffset`. The summary retains the research report's verdict.
+
+The published preliminary snapshot contains 40 observations, captured before the original collector's quota failure. To re-check that exact history from scratch:
+
+```sh
+npm run mevy -- verify --file evidence/preliminary-vps-2026-10-21.json
+npm run audit:history -- --file evidence/preliminary-vps-2026-10-21.json --output data/preliminary-source-audit
+```
+
+The first command checks internal integrity offline. The second re-reads historical chain state and takes roughly 40 minutes on the keyless endpoint. It does not start a collector, submit transactions or call a model. Do not reuse someone else's cached receipt directory when you intend a fresh provider check.
+
+The keyless limit published by the provider is 60 RU/min per IP; source-audit commands space requests by at least 1.1 seconds. A typical 12-route block needs about 49 RPC requests. Budget roughly one minute per observation. The separately authorized VPS collector uses a 1-second transport interval and a 60-second snapshot cadence; recent complete snapshots took about 55 seconds. These limits apply to each process, while the allowance is shared across the IP. A full historical audit must not compete with that collector on the same keyless quota. Quota errors and mismatches stop the audit visibly; earlier receipts remain available.
+
+The preliminary VPS collector keeps its original absolute stop deadline. Its earlier main-RPC quota failure and resulting data gap remain in the evidence. Archive verification cannot recover missing observations, establish an onchain commitment, or turn the report into trading profit.

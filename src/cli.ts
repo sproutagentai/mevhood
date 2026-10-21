@@ -7,8 +7,10 @@ import { head,snapshot } from './robinhood.ts';
 import { prepareNext,freezeNext } from './evolution.ts';
 import { deploymentPlan,verifyDeployment,registryState,registryTransaction } from './registry.ts';
 import type { Hex } from 'viem';
+import { archiveRpc,auditSource } from './source-audit.ts';
+import { installRpcPacing } from './rpc-pacing.ts';
 
-const {positionals:[command,id],values:v}=parseArgs({allowPositionals:true,options:{db:{type:'string',default:process.env.MEVY_DB??'data/mevy.sqlite'},file:{type:'string'},output:{type:'string'},'llm-cost-wei':{type:'string'},'llm-cost-note':{type:'string'},'extra-gas-wei':{type:'string'},'infra-wei':{type:'string'},'training-through':{type:'string',default:'0'},rpc:{type:'string'},'proposal-hash':{type:'string'},'approve-draft':{type:'string'},owner:{type:'string'},'profit-floor-wei':{type:'string'},'max-amount-wei':{type:'string'},tx:{type:'string'},registry:{type:'string'},recorder:{type:'string'},'code-hash':{type:'string'}}});
+const {positionals:[command,id],values:v}=parseArgs({allowPositionals:true,options:{db:{type:'string',default:process.env.MEVY_DB??'data/mevy.sqlite'},file:{type:'string'},output:{type:'string'},'llm-cost-wei':{type:'string'},'llm-cost-note':{type:'string'},'extra-gas-wei':{type:'string'},'infra-wei':{type:'string'},'training-through':{type:'string',default:'0'},rpc:{type:'string'},offset:{type:'string',default:'0'},limit:{type:'string',default:'20'},'proposal-hash':{type:'string'},'approve-draft':{type:'string'},owner:{type:'string'},'profit-floor-wei':{type:'string'},'max-amount-wei':{type:'string'},tx:{type:'string'},registry:{type:'string'},recorder:{type:'string'},'code-hash':{type:'string'}}});
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const print=(o:unknown)=>process.stdout.write(JSON.stringify(o,null,2)+'\n');
 async function main(){
@@ -36,14 +38,12 @@ async function main(){
     const report=evaluate(bundle.experiment,bundle.observations);if(canonical(report)!==canonical(bundle.report))throw Error('Report mismatch');
     if(digest({experiment:bundle.experiment,observations:bundle.observations,report:bundle.report})!==bundle.bundleHash)throw Error('Bundle digest mismatch');
     if(command==='audit-source'){
-      if(bundle.observations.length>20)throw Error('Source audit bounded to 20 observations per bundle');
-      for(const saved of bundle.observations){
-        const fresh=await snapshot([...new Set<string>(saved.quotes.map((q:{sizeWei:string})=>q.sizeWei))],{extraGasWei:saved.extraGasWei,infrastructureWei:saved.infrastructureWei},v.rpc,saved.block);
-        const fields=['chainId','block','blockHash','timestamp','factory','quoter','codeHashes','gasPriceWei','gasModel','quotes','errors'] as const;
-        for(const field of fields)if(canonical(fresh[field])!==canonical(saved[field]))throw Error(`Independent source mismatch: block ${saved.block}, ${field}`);
-      }
+      const rpc=archiveRpc(v.rpc),restore=installRpcPacing(rpc);
+      try{const receipt=await auditSource(bundle,{rpc,offset:Number(v.offset),limit:Number(v.limit)});
+        if(v.output)writeFileSync(v.output,JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});print(receipt);return;
+      }finally{restore();}
     }
-    print({verified:true,sourceRequoted:command==='audit-source',bundleHash:bundle.bundleHash,kind:report.kind,researchGate:report.researchGate,issues:report.issues});return;
+    print({verified:true,sourceRequoted:false,bundleHash:bundle.bundleHash,kind:report.kind,researchGate:report.researchGate,issues:report.issues});return;
   }
   if(!id||!/^[a-zA-Z0-9-]{1,64}$/.test(id))throw Error('Usage: npm run mevy -- freeze|observe|report|export EXPERIMENT [options], or verify --file PATH');
   const store=new Store(v.db!);try{

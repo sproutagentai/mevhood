@@ -1,0 +1,282 @@
+{
+  "experiment": {
+    "acceptance": {
+      "maxDrawdownWei": "1000000000000000",
+      "maxGapSeconds": 300,
+      "maxTradeLossWei": "100000000000000",
+      "minImprovementWei": "100000000000000",
+      "minObservations": 1000,
+      "minSeconds": 604800
+    },
+    "baseline": {
+      "gasSafetyBps": 15000,
+      "minEdgeBps": 20,
+      "name": "mevy-control-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "candidate": {
+      "gasSafetyBps": 20000,
+      "minEdgeBps": 35,
+      "name": "mevy-candidate-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "commitment": "0x17224fe1e944e7b64eb87b2ef1a16fa485d470018aea9d9ecf935c9dfd07f546",
+    "createdAt": 1792575058,
+    "engineHash": "0x6c0766619a727ad4205b236069f2ae1814db510d0c6a77278596e5e226efe28c",
+    "freezeBlock": 94179472,
+    "freezeBlockHash": "0xae486937a80e42f4a1e89599081414fd3a7611a9b7655548b76fadb155937ca3",
+    "id": "integration-2026-10-21",
+    "llmCostNote": "Hand-authored integration policies; no model call in this experiment. Gas and infrastructure costs remain unknown.",
+    "llmCostWei": "0",
+    "trainingThroughBlock": 0,
+    "version": 1
+  },
+  "observations": [
+    {
+      "chainId": 4663,
+      "block": 94179906,
+      "blockHash": "0xbf0a4a7e5988ddce1cc330f9809c370c8c4cef5c8008928073710b7a9326fd7f",
+      "timestamp": 1792575101,
+      "collectedAt": 1792575119,
+      "provider": "https://rpc.mainnet.chain.robinhood.com",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "quoter": "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7",
+      "codeHashes": {
+        "0x0bd7d308f8e1639fab988df18a8011f41eacad73": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+        "0x1f7d7550b1b028f7571e69a784071f0205fd2efa": "0xec72b1abd1f2faee020cfea9c646bd8994f9fb389054f6e574f103a895091739",
+        "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7": "0x3db0868d945e9304c9bc6a8b2181948109ea617647142f3c4083e14393496a28",
+        "0x52e65b17fb6e5ba00ed806f37afcd2daa50271ca": "0x3298b5dd4e6f115074c526a55ad05a36fd73a0034ac22ec6cbaab32cc9c1e8d2",
+        "0x5f009e071f07e92b6c624e83f52f17bbda34680d": "0xe20600974a722992eb4622b85b2a77ccac5e4aaa2f781bd93cae4334ca18d686",
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+        "0x69bfaf19c9f377bb306a89aed9f6b07e2c1a8d9a": "0x74a16c3b1b4ac8903c54a9edad666d4c87512cb78ed0723538acd84d1b56c5b5",
+        "0xa9188730fe85be88ad499d7d52b099e800fb0334": "0x0fc31cfc533a5922261eaa33ff62c43ffd3839dc5204fb6dbbe6effd7bd9d63d",
+        "0xcaf681a66d020601342297493863e78c959e5cb2": "0x6f36c378e272c6324c48f045182bcb54bd8ad654cf9ebd42e8893d52c4cb25dc"
+      },
+      "gasPriceWei": "20098000",
+      "extraGasWei": null,
+      "infrastructureWei": null,
+      "gasModel": "quoter-plus-overhead-v1",
+      "quotes": [
+        {
+          "route": "WETH/USDG 100 → 500",
+          "feeOut": 100,
+          "feeBack": 500,
+          "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "999241170710086",
+          "gasUnits": "342118",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 100 → 3000",
+          "feeOut": 100,
+          "feeBack": 3000,
+          "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "998735194843606",
+          "gasUnits": "341154",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 100 → 10000",
+          "feeOut": 100,
+          "feeBack": 10000,
+          "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "995438500336007",
+          "gasUnits": "342092",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 500 → 100",
+          "feeOut": 500,
+          "feeBack": 100,
+          "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "999557523935861",
+          "gasUnits": "342064",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 500 → 3000",
+          "feeOut": 500,
+          "feeBack": 3000,
+          "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "998493803159055",
+          "gasUnits": "341103",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 500 → 10000",
+          "feeOut": 500,
+          "feeBack": 10000,
+          "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "995197839289859",
+          "gasUnits": "342041",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 3000 → 100",
+          "feeOut": 3000,
+          "feeBack": 100,
+          "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "995067681775021",
+          "gasUnits": "341171",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 3000 → 500",
+          "feeOut": 3000,
+          "feeBack": 500,
+          "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "994511942391716",
+          "gasUnits": "341174",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 3000 → 10000",
+          "feeOut": 3000,
+          "feeBack": 10000,
+          "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "990727018914705",
+          "gasUnits": "341148",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 10000 → 100",
+          "feeOut": 10000,
+          "feeBack": 100,
+          "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "984387952238414",
+          "gasUnits": "342018",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 10000 → 500",
+          "feeOut": 10000,
+          "feeBack": 500,
+          "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "983838373481831",
+          "gasUnits": "342021",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 10000 → 3000",
+          "feeOut": 10000,
+          "feeBack": 3000,
+          "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "983340267133981",
+          "gasUnits": "341057",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "report": {
+    "version": 1,
+    "kind": "paper-quote-comparison",
+    "experiment": "0x17224fe1e944e7b64eb87b2ef1a16fa485d470018aea9d9ecf935c9dfd07f546",
+    "dataHash": "0x8ee436b4163ba18c9a682c7b3e47153c13d42660bee7b343de344a4b7a02930e",
+    "observations": 1,
+    "durationSeconds": 43,
+    "baseline": {
+      "trades": 0,
+      "paperNetWei": null,
+      "subtotalBeforeUnknownCostsWei": "0",
+      "costsComplete": false,
+      "maxDrawdownWei": "0",
+      "worstTradeWei": "0"
+    },
+    "candidate": {
+      "trades": 0,
+      "paperNetWei": null,
+      "subtotalBeforeUnknownCostsWei": "0",
+      "costsComplete": false,
+      "maxDrawdownWei": "0",
+      "worstTradeWei": "0"
+    },
+    "ledger": [
+      {
+        "block": 94179906,
+        "blockHash": "0xbf0a4a7e5988ddce1cc330f9809c370c8c4cef5c8008928073710b7a9326fd7f",
+        "observationHash": "0x034a14c8c85492b1cda5cfb8505ebf8db3c23e8cd4550d963892db4d54f9d8e3",
+        "baseline": {
+          "trade": false,
+          "route": null,
+          "quote": {
+            "route": "WETH/USDG 500 → 100",
+            "grossWei": "-442476064139",
+            "gasWei": "6874802272000",
+            "decisionGasBudgetWei": "10312203408000",
+            "netWei": "-7317278336139"
+          },
+          "paperTradeWei": "0",
+          "reason": "no-eligible-edge"
+        },
+        "candidate": {
+          "trade": false,
+          "route": null,
+          "quote": {
+            "route": "WETH/USDG 500 → 100",
+            "grossWei": "-442476064139",
+            "gasWei": "6874802272000",
+            "decisionGasBudgetWei": "13749604544000",
+            "netWei": "-7317278336139"
+          },
+          "paperTradeWei": "0",
+          "reason": "no-eligible-edge"
+        },
+        "infrastructureWei": null
+      }
+    ],
+    "researchGate": "HOLD",
+    "issues": [
+      "EXTRA_GAS_UNKNOWN",
+      "INFRA_COST_UNKNOWN",
+      "INSUFFICIENT_FORWARD_TIME",
+      "INSUFFICIENT_OBSERVATIONS",
+      "NO_COST_ADJUSTED_IMPROVEMENT"
+    ],
+    "livePromotion": "DISABLED",
+    "limitations": [
+      "Quote estimates are not executed fills.",
+      "Private orderflow, competition, reverts and MEV leakage are not simulated.",
+      "Passing the research gate does not authorize trading."
+    ],
+    "resultHash": "0x0c5b07c533892294752d4bf8eab064c6d2fb294ceeb41a58bbc6564053f06942"
+  },
+  "bundleHash": "0xd79b76a0485359506fb3d61333545652be61cf4059ffbb342f0c0a5b3c6e09b0"
+}

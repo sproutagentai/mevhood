@@ -33,3 +33,21 @@ Bundle digest:
 - Any integration with the old private MEVHOOD searcher, token, holder payouts or vault.
 
 CI status belongs to its actual Git commit. Inspect the latest workflow result rather than treating this dated local record as proof that every future change passed.
+
+## Completion checks — 2026-10-21
+
+The extended CLI imports the real bundle idempotently, binds exact reviewed proposals to successor experiments, shares the researcher's configured database, and prepares unsigned creation/registry transactions. **28 state/economic/CLI/lineage/ABI tests**, type checking and the eve build pass. The old evaluator files and integration bundle are unchanged; offline replay still returns the same digest and HOLD.
+
+Both bundled deployment artifacts match locally compiled ABI/creation bytecode and their Solidity source digests. CI rebuilds them independently. Ten local contract tests, including256 fuzz cases, pass. No public deployment or real signing is claimed by these tests.
+
+The RPC currently refuses historical state for the original94,175,060 fork and94,179,906 source-audit block. These new attempts failed visibly; they do not overwrite the earlier dated successful checks or count as successful re-verification. An archive-capable provider is needed to repeat those old state reads.
+
+A separate actual fork check passes at **94,254,082** with the same real WETH/router loss-rollback test:
+
+```sh
+FOUNDRY_PROFILE=fork forge test --rpc-url https://rpc.mainnet.chain.robinhood.com --fork-block-number 94254082 -vvv
+```
+
+A fresh public source read at that same pinned block (**2026-10-21 11:39:39 UTC**) obtained12 successful two-pool quotes, zero source errors. Best output for1,000,000,000,000,000 wei was **999,716,082,448,806 wei**, still below input before gas. This read verifies current connectivity; it is not a new forward performance experiment. Historical-state availability can change.
+
+Live provider generation/invoice, continuous collection, public registry deployment and funded execution remain unverified and unlaunched.

@@ -29,6 +29,8 @@ An experiment binds baseline, candidate, exact evaluator source digest, acceptan
 
 Forward gate: at least 7 days, at least 1,000 observations, gaps no greater than 300 seconds, complete costs, adequate paired improvement and bounded modelled drawdown/loss. Passing only makes a candidate eligible for review. Live promotion is disabled. A new candidate needs a new freeze after **every** inspected training observation. The gate values are design choices, not a statistically proven alpha test. Repeated candidate selection still requires multiple-testing controls and fresh holdouts before a deployment decision.
 
+`prepare-next` binds the proposal receipt, parent evidence bundle and the full current training cutoff into an approval draft. `freeze-next` accepts only that exact draft hash and rechecks the parent under a SQLite writer lock. Control and acceptance rules are copied unchanged; lineage is included in the successor's commitment. An extra parent observation invalidates the old approval. A policy that only renames unchanged economics is rejected.
+
 ## Runtime
 
 The collector is a bounded read-only process (30–240 second cadence, at most 24 hours per invocation) with a single-writer lock. Provider failures stop visibly; restarting does not hide missing intervals. It does not run at install or on a schedule. The operator must authorize and provision continuous collection separately.
@@ -38,5 +40,7 @@ eve is the separate durable research layer. Only read_experiment and propose_can
 ## Onchain boundary
 
 ExperimentRegistry is a recorder-owned, immutable commitment/result registry. It enforces uniqueness, recorder authorization, ordering, seven elapsed days and a declared observation count. That count is attested by the recorder, not proven onchain. It has no custody, profit oracle, token or payout function.
+
+Unsigned onchain preparation binds a domain-separated ID, exact experiment/result digests and registry runtime/recorder identity. Creation-receipt verification compares actual deployment input with the source-bound compiled artifact. A result transaction requires observations after the actual public anchor and a full evidence duration measured from that anchor, in addition to the local research gate. No signing or broadcast capability is added. Bundled deployment artifacts are rebuilt and compared in CI.
 
 AtomicRoundTrip supports one fixed asset/quote/factory/router family, two distinct pools, maximum size, nonce, a short deadline, an absolute gain floor and actual before/after WETH balances. It resets approvals. Its balance gain excludes gas. Tests cover local invariants; public deployment, independent audit and a real signed canary are separate gates. This does not connect to or replace the inaccessible old searcher.

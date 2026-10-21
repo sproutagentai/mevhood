@@ -4,6 +4,8 @@
 |---|---|---|
 | Real Robinhood Chain / Uniswap quotes | VERIFIED integration snapshot | evidence file + audit-source |
 | Frozen policies, durable storage, deterministic replay | VERIFIED locally | npm test; verify bundle |
+| Exact proposal approval and successor lineage | VERIFIED locally | evolution tests, import/prepare-next/freeze-next |
+| Unsigned creation/registry calldata and public-anchor checks | BUILT / local tests | registry tests; compiled artifact comparison; no public deployment receipt |
 | Candidate improves profit | NOT ESTABLISHED | No seven-day trial; integration sample is HOLD |
 | Local contract invariants | VERIFIED locally | forge test |
 | Contract deployed / funded / signed trades | NOT DONE | No deployment address or receipts |

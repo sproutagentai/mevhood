@@ -38,13 +38,13 @@ npm run mevy -- verify --file evidence/integration-2026-10-21.json
 
 The bundle is a dated **integration sample**, not a performance trial. Expected result: `verified: true`, `researchGate: HOLD`. Missing gas/infrastructure cost and insufficient forward data are explicit. No zero is substituted for an unknown expense.
 
-To independently re-read and re-quote the saved block from the public RPC:
+To independently re-read and re-quote the saved block from the configured archive RPC:
 
 ```sh
 npm run mevy -- audit-source --file evidence/integration-2026-10-21.json
 ```
 
-Source audit needs archive-capable RPC access. A provider outage is a failed source check, not zero activity. An offline replay proves internal consistency; source audit separately checks saved onchain data.
+Source audit defaults to the verified keyless Blockmachine endpoint and paces requests for its free-tier allowance. Override it with `MEVY_ARCHIVE_RPC_URL` or `--rpc`. The original block was independently re-quoted successfully on 21 October 2026. A provider outage is a failed source check; offline replay separately checks internal consistency. The [archive guide](docs/runbook.md#archive-rpc-and-historical-quote-audit) covers longer histories, bounded ranges and resumable per-block receipts.
 
 Contract checks require [Foundry](https://getfoundry.sh/) **v1.8.5**:
 
@@ -68,6 +68,9 @@ Even a passing research report says `ELIGIBLE_FOR_REVIEW`. `livePromotion` remai
 ## Current evidence
 
 - [Dated integration bundle](evidence/integration-2026-10-21.json): real chain data, 12 two-pool quotes, zero paper trades, replayable `HOLD`.
+- [Preliminary VPS snapshot](evidence/preliminary-vps-2026-10-21.json): 40 observations and 480 quotes before a source outage, with the original policies and report retained. This is a bounded engineering sample, not a completed forward trial. The [archive guide](docs/runbook.md#archive-rpc-and-historical-quote-audit) gives the exact offline and historical re-quote commands.
+- [Original-block archive receipt](evidence/source-audit-2026-10-21.json): actual source comparison through the connected archive endpoint; historical availability is separate from offline replay.
+- [Snapshot archive receipts](evidence/history-source-audit-2026-10-21.json): summary and per-block comparison receipts bound to the published preliminary snapshot.
 - [Verification record](docs/verification.md): exact local checks, fork scope and remaining gates.
 - [Source and economic boundaries](docs/architecture.md), [claims ledger](docs/claims.md), [implementation decisions](implementation-notes.html).
 - CI reproduces type checks, state/economic tests, agent compilation, offline evidence replay and contract tests. A green build does not establish alpha.

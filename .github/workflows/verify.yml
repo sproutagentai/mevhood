@@ -32,3 +32,17 @@ jobs:
         with:
           version: v1.8.5
       - run: forge test -vv
+      - name: Reproduce bundled deployment bytecode
+        run: |
+          node --import tsx --input-type=module <<'JS'
+          import {readFileSync} from 'node:fs';
+          import assert from 'node:assert/strict';
+          import {digest} from './src/model.ts';
+          for(const name of ['ExperimentRegistry','AtomicRoundTrip']){
+            const bundled=JSON.parse(readFileSync('contracts/artifacts/'+name+'.json','utf8'));
+            const built=JSON.parse(readFileSync('out/'+name+'.sol/'+name+'.json','utf8'));
+            assert.equal(bundled.bytecode,built.bytecode.object);
+            assert.deepEqual(bundled.abi,built.abi);
+            assert.equal(bundled.sourceDigest,digest(readFileSync(bundled.source,'utf8')));
+          }
+          JS

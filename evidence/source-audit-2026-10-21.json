@@ -1,0 +1,26 @@
+{
+  "format": "mevy-source-audit/v1",
+  "verified": true,
+  "sourceRequoted": true,
+  "sourceAudit": "PASS",
+  "auditComplete": true,
+  "bundleHash": "0xd79b76a0485359506fb3d61333545652be61cf4059ffbb342f0c0a5b3c6e09b0",
+  "source": "https://rpc-robinhood.blockmachine.io",
+  "sourceId": "0x17485a8cb4ec501a37660589d750122b855356a608f1bdfa9921f0343c36dff9",
+  "checkedAt": "2026-10-21T13:37:33.051Z",
+  "offset": 0,
+  "auditedObservations": 1,
+  "totalObservations": 1,
+  "nextOffset": null,
+  "checks": [
+    {
+      "block": 94179906,
+      "blockHash": "0xbf0a4a7e5988ddce1cc330f9809c370c8c4cef5c8008928073710b7a9326fd7f",
+      "observationHash": "0x034a14c8c85492b1cda5cfb8505ebf8db3c23e8cd4550d963892db4d54f9d8e3",
+      "sourceDigest": "0x4d2035b90e51d4e2ffe75bbcf4375c4098c0a8a332b8a3a81bc2675cc07d53f8",
+      "quotes": 12
+    }
+  ],
+  "researchGate": "HOLD",
+  "receiptHash": "0x369d2f775de1b7a3d9a8e7810b117d0a57113fe943ab7422f5e82671b4d018e2"
+}

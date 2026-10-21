@@ -1,0 +1,31 @@
+{
+  "name": "@mevhood/mevy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "ai": "7.0.137",
+    "eve": "0.81.1",
+    "viem": "2.57.7",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "description": "Mevy: frozen-control experiments for cost-aware MEV research",
+  "scripts": {
+    "collect": "node --import tsx src/collector.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:contracts": "forge test -vv",
+    "build:agent": "eve build --skip-sandbox-prewarm",
+    "mevy": "node --import tsx src/cli.ts",
+    "dev": "eve dev",
+    "verify": "npm run typecheck && npm test && npm run build:agent"
+  }
+}

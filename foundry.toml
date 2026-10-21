@@ -1,0 +1,15 @@
+[profile.default]
+src = "contracts"
+test = "tests/contracts"
+out = "out"
+solc_version = "0.8.28"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+fuzz.runs = 256
+
+[profile.fork]
+test = "tests/fork"
+eth_rpc_url = "https://rpc.mainnet.chain.robinhood.com"
+eth_rpc_headers = ["User-Agent: Mozilla/5.0"]
+fork_block_number = 94175060

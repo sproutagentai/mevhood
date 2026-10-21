@@ -19,6 +19,7 @@
   },
   "description": "Mevy: frozen-control experiments for cost-aware MEV research",
   "scripts": {
+    "audit:history": "node --env-file-if-exists=.env.local --import tsx src/audit-history.ts",
     "collect": "node --env-file-if-exists=.env.local --import tsx src/collector.ts",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",

@@ -53,9 +53,27 @@ npm run mevy -- import --file evidence/integration-2026-10-21.json
 
 Import verifies the complete bundle before writing. Repeated identical imports are idempotent. It does not re-read the chain or turn the dated sample into a forward trial. CLI, collector and researcher share `MEVY_DB`; npm CLI/collector commands also read ignored `.env.local`. The checked-in `.env.example` contains no credential.
 
-The eve config compiles without credentials. Actual model use requires separate authorization, a chosen Gateway credential and an explicit budget. Keep credentials in an ignored local .env.local file or the framework's documented login flow; never put them in a proposal or GitHub issue. No key value is provided by this project.
+The researcher now uses direct OpenAI access. Keep `OPENAI_API_KEY` in ignored `.env.llm.local`, readable only by its owner, and never paste the value into chat, source, a proposal or a GitHub issue. The research CLI and approved interactive launcher explicitly load this file. Builds and tests do not make paid requests. Model use still needs a specific budget and runtime authorization.
 
-After an approved local runtime launch, `npm run dev` starts eve. Ask Mevy to inspect an existing experiment by ID and propose one testable change. Only two tools are available. A proposal save prompts for approval, is capped at three per experiment and records session/configured-model provenance. Model usage/actual billed cost must be reconciled independently before freezing a subsequent paid experiment.
+For the complete archived preliminary snapshot, prepare the request without calling a model:
+
+```sh
+npm run research:llm -- --file evidence/preliminary-vps-2026-10-21.json --source-audit evidence/history-source-audit-2026-10-21.json --budget-usd 1
+```
+
+The preflight verifies the original bundle and every archive receipt, includes all40 observations and480 quotes, and prints a hash-bound plan and conservative request reserve. It refuses a budget below that reserve and refuses oversized contexts rather than silently sampling. It starts no server, collector or model request.
+
+Only after approval of the actual request and its budget, use a new private output directory and add execution:
+
+```sh
+npm run research:llm -- --file evidence/preliminary-vps-2026-10-21.json --source-audit evidence/history-source-audit-2026-10-21.json --budget-usd 1 --output data/llm-review-001 --execute
+```
+
+This sends one Responses API request to OpenAI, with no tools or automatic client retries. It saves the exact context, instructions, plan, returned response ID/model/usage and validated analysis. An existing run directory prevents a repeated attempt. A failed request retains its reserved/unknown cost and requires operator review before any further spend. The application reserve uses conservative token/price assumptions; it is not a provider-enforced billing cap. Recheck the dated pricing basis before later reuse.
+
+The result is either `NO_CHANGE` or one bounded `PROPOSE_TEST` draft with real source blocks. Fabricated citations, rename-only changes, multiple changed economic fields and incomplete model output fail validation. `analysis.json` stays `AWAITING_HUMAN_REVIEW`; no database proposal, successor freeze or strategy is automatically approved. To adopt a proposal, inspect its evidence and use the existing approval-gated proposal/successor workflow below. Token-based USD cost is an estimate, not an invoice or a reconciled WETH cost; the original experiment is never rewritten.
+
+After an approved local runtime launch, `npm run dev` starts eve. Ask Mevy to inspect an existing experiment by ID and propose one testable change. Only two tools are available. The reader returns full-history totals and explicit pages of original quotes; `nextOffset` permits inspection beyond the old last20-row window. A proposal save prompts for approval, is capped at three per experiment and records session/configured-model provenance. Model usage/actual billed cost must be reconciled independently before freezing a subsequent paid experiment.
 
 The configured $0.10 session token-cost limit is not a hard spend cap. The final call can cross it and unreported provider cost does not accrue against it. Do not enable a paid runtime without provider-side limits. The public HTTP surface is not authenticated for hosting; keep it local until deployment authentication is implemented.
 

@@ -1,0 +1,76 @@
+{
+  "format": "mevy-llm-analysis/v1",
+  "state": "AWAITING_HUMAN_REVIEW",
+  "planHash": "0x4a5e4820066b2294a83dde8397670d098ab340783b806d711244c7dc88b586db",
+  "contextHash": "0xca77f14fa8a2924f09dacf51956502098de28220ccf5796b9e47bf7279c4a792",
+  "bundleHash": "0x1eaca2af51da7b19be6fdca68f1ff913b3c48e9d20cd371a9e8050bafa87c8a2",
+  "model": "gpt-6.1-sol",
+  "responseId": "resp_085aefc2f30f5b70016ad8d7a6e74887d2b8f380b40762907c",
+  "usage": {
+    "inputTokens": 14832,
+    "outputTokens": 1039
+  },
+  "serviceTier": "default",
+  "estimatedStandardCostUsd": "0.040054000",
+  "actualInvoiceCostUsd": null,
+  "costStatus": "TOKEN_BASED_ESTIMATE_NOT_INVOICE",
+  "analysis": {
+    "decision": "NO_CHANGE",
+    "summary": "All 480 supplied route quotes returned less WETH than the 1000000000000000 wei input, before gas. Neither frozen policy selected a paper trade. The history does not support a useful bounded economic-policy change; preserve the frozen control, research gate HOLD and disabled live promotion.",
+    "findings": [
+      {
+        "observation": "Across all 40 observations, none of the 12 routes produced a positive gross edge. The highest gross route output was 999825874745286 wei for WETH/USDG 100 → 500 at block 94284606: a shortfall of 174125254714 wei, approximately 1.7413 bps. Lowering minEdgeBps cannot create a positive gross edge.",
+        "evidenceBlocks": [
+          94280091,
+          94284606,
+          94303272
+        ]
+      },
+      {
+        "observation": "Known gas makes the quoted economics worse. For the highest-gross-output quote at block 94284606, 342072 gas units at 20566000 wei per unit model 7035052752000 wei of known gas before either policy's safety multiplier. Output minus input minus that gas is -7209178006714 wei. Gas units already include frozen reader overhead; extra gas and infrastructure costs remain unknown in every observation.",
+        "evidenceBlocks": [
+          94284606,
+          94280091,
+          94303272
+        ]
+      },
+      {
+        "observation": "The baseline and candidate each selected zero paper trades. Their zero subtotals, drawdowns and worst-trade values do not establish profitability or execution safety: paperNetWei is null, costs are incomplete, and the packet contains quotes rather than actual fills.",
+        "evidenceBlocks": [
+          94280091,
+          94303272
+        ]
+      },
+      {
+        "observation": "The supplied window contains 40 observations over 2377 seconds, below the unchanged acceptance minimums of 1000 observations and 604800 seconds. There is no demonstrated cost-adjusted improvement, so the original HOLD gate remains appropriate.",
+        "evidenceBlocks": [
+          94280091,
+          94303272
+        ]
+      },
+      {
+        "observation": "Only sizeWei 1000000000000000 was quoted. Changing size would require fresh quotes, not an extrapolated backtest. Changing either the edge threshold or gas safety factor is not supported as a useful test by a history with no positive gross quotes.",
+        "evidenceBlocks": [
+          94280091,
+          94284606,
+          94303272
+        ]
+      }
+    ],
+    "proposal": null,
+    "nextTest": "Continue quote-only collection with mevy-control-v1 frozen at sizeWei 1000000000000000, minEdgeBps 20 and gasSafetyBps 15000; leave the existing candidate and acceptance rules unchanged. Reconcile extra gas and infrastructure costs, then assess whether fully costed forward evidence meets every original acceptance requirement, including at least 1000 observations, 604800 seconds and the 300-second maximum gap. Any successor experiment must freeze and begin after block 94303272; this inspected history cannot validate its out-of-sample improvement.",
+    "limitations": [
+      "The matched saved snapshot supports provider consistency only; it is not signed consensus, execution or profit proof.",
+      "Private orderflow, competition, reverts and MEV leakage are not simulated.",
+      "Missing extra gas and infrastructure costs prevent a complete net-cost comparison.",
+      "The short, single-size quote history does not establish future opportunity frequency or economics at other sizes.",
+      "Passing the research gate would not authorize trading; live promotion remains disabled."
+    ]
+  },
+  "createdAt": "2026-10-21T15:18:21.291Z",
+  "parentResearchGate": "HOLD",
+  "trainingThroughBlock": 94303272,
+  "livePromotion": "DISABLED",
+  "boundary": "Unapproved research draft. No database proposal approval, strategy change, successor freeze, signing or trading.",
+  "analysisHash": "0x33bdeea58ab9731078099191bac7b27b3fd6aba18193c00afaa1a61befa32396"
+}

@@ -1,0 +1,18 @@
+{
+  "format": "mevy-llm-plan/v1",
+  "model": "gpt-6.1-sol",
+  "contextHash": "0xca77f14fa8a2924f09dacf51956502098de28220ccf5796b9e47bf7279c4a792",
+  "instructionsHash": "0x9311a20cf73a9dd02d74907bf013341f66134a75242cb8a06d5209737162700f",
+  "schemaHash": "0x100a81cba15b9cc1463b4960a6b5e6eb377c76afc48a3bc6643b961cbd4e7c6f",
+  "bundleHash": "0x1eaca2af51da7b19be6fdca68f1ff913b3c48e9d20cd371a9e8050bafa87c8a2",
+  "observations": 40,
+  "quotes": 480,
+  "inputBytes": 40048,
+  "maxOutputTokens": 12000,
+  "approvedBudgetUsd": "1.000000000",
+  "reservedUsd": "0.490292000",
+  "pricingReviewedAt": "2026-10-21",
+  "reserveBasis": "UTF-8 byte input bound +4096 framing; $4.40/$16.50 per MTok; 25% margin; one request/no retries. Recheck pricing before reuse.",
+  "automaticPromotion": "DISABLED",
+  "planHash": "0x4a5e4820066b2294a83dde8397670d098ab340783b806d711244c7dc88b586db"
+}

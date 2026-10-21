@@ -35,7 +35,9 @@ Forward gate: at least 7 days, at least 1,000 observations, gaps no greater than
 
 The collector is a bounded read-only process (30–240 second cadence, at most 24 hours per invocation) with a single-writer lock. Provider failures stop visibly; restarting does not hide missing intervals. It does not run at install or on a schedule. The operator must authorize and provision continuous collection separately.
 
-eve is the separate durable research layer. Only read_experiment and propose_candidate are exposed. It sees report totals plus the last 20 rows to bound context; the complete bundle stays inspectable. The LLM is outside the latency-sensitive execution path. Token budgets, provenance and human approval do not substitute for actual invoice reconciliation. No paid model call has been validated in this release.
+eve is the separate durable research layer, configured for direct OpenAI access. Only read_experiment and propose_candidate are exposed. The reader exposes complete totals and explicitly bounded pages of original route quotes, with `nextOffset`; it no longer silently limits inspection to the most recent20 ledger rows. The LLM remains outside the latency-sensitive execution path.
+
+The separate one-shot `research:llm` command needs no HTTP server. It validates an exported bundle and its complete source receipt package, sends all supplied quotes in a dictionary-compressed packet and validates a structured no-change result or a single-field policy draft. Oversized contexts fail before a request rather than being truncated. The reserve is recorded before the only request, automatic client retries are disabled, and failures/unknown cost remain visible. The draft is not an approved database proposal. Token budgets, provenance and human approval do not substitute for actual invoice reconciliation. One actual direct OpenAI analysis of the complete archive-checked40-row snapshot is recorded in the verification ledger. It returned NO_CHANGE. An offline request-wiring test is still separate from that real provider response, and neither establishes a useful profitable improvement cycle.
 
 ## Onchain boundary
 

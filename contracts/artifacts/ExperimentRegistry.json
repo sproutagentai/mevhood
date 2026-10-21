@@ -1,0 +1,222 @@
+{
+  "contract": "ExperimentRegistry",
+  "compiler": {
+    "version": "0.8.28+commit.7893614a"
+  },
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "contracts/ExperimentRegistry.sol": "ExperimentRegistry"
+    },
+    "evmVersion": "cancun",
+    "libraries": {}
+  },
+  "source": "contracts/ExperimentRegistry.sol",
+  "sourceDigest": "0x614e3a8e5ce46742af1f4d95cab63352734014cc7c0e1195682938d07ae57c22",
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "recorder_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "MIN_DURATION",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "MIN_OBSERVATIONS",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "freeze",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "commitment",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "recorder",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "records",
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "commitment",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "result",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "blockNumber",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "timestamp",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "report",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "result",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "lastBlock",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "observations",
+          "type": "uint32",
+          "internalType": "uint32"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "Frozen",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "commitment",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "blockNumber",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Reported",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "result",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "lastBlock",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "observations",
+          "type": "uint32",
+          "indexed": false,
+          "internalType": "uint32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "InvalidRecord",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "Unauthorized",
+      "inputs": []
+    }
+  ],
+  "bytecode": "0x60a060405234801561000f575f5ffd5b506040516105d93803806105d983398101604081905261002e91610066565b6001600160a01b0381166100555760405163f2a3e8db60e01b815260040160405180910390fd5b6001600160a01b0316608052610093565b5f60208284031215610076575f5ffd5b81516001600160a01b038116811461008c575f5ffd5b9392505050565b6080516105206100b95f395f818161014a0152818161018f01526102ec01526105205ff3fe608060405234801561000f575f5ffd5b5060043610610060575f3560e01c806301e64725146100645780630390052d146100dc57806339cee407146100f157806344ef32441461010f578063b6a6d17714610122578063f33930d914610145575b5f5ffd5b6100a7610072366004610433565b5f6020819052908152604090208054600182015460029092015490919067ffffffffffffffff80821691600160401b90041684565b60408051948552602085019390935267ffffffffffffffff918216928401929092521660608201526080015b60405180910390f35b6100ef6100ea36600461044a565b610184565b005b6100fa6103e881565b60405163ffffffff90911681526020016100d3565b6100ef61011d3660046104a5565b6102e1565b61012c62093a8081565b60405167ffffffffffffffff90911681526020016100d3565b61016c7f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020016100d3565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146101cc576040516282b42960e81b815260040160405180910390fd5b5f848152602081905260409020805415806101ea5750600181015415155b806101f3575083155b806102205750600281015461021d9062093a8090600160401b900467ffffffffffffffff166104c5565b42105b8061023d5750600281015467ffffffffffffffff90811690841611155b806102525750438367ffffffffffffffff1610155b8061026457506103e863ffffffff8316105b156102825760405163f2a3e8db60e01b815260040160405180910390fd5b600181018490556040805185815267ffffffffffffffff8516602082015263ffffffff841681830152905186917fa0e8cfbc50a8d972603a0de598e26067c7bd1b83b5f8bf17522b06ba5efa0276919081900360600190a25050505050565b336001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001614610329576040516282b42960e81b815260040160405180910390fd5b811580610334575080155b8061034b57505f8281526020819052604090205415155b156103695760405163f2a3e8db60e01b815260040160405180910390fd5b604080516080810182528281525f602080830182815267ffffffffffffffff43818116868801908152428316606088019081528a87529486905294879020955186559151600186015592516002909401805492518416600160401b026fffffffffffffffffffffffffffffffff199093169490931693909317179055905183917f39603cc9ed188e85837114bca8ab65eb039d3e15d014f07b00b0d4098584fbf3916104279185825267ffffffffffffffff16602082015260400190565b60405180910390a25050565b5f60208284031215610443575f5ffd5b5035919050565b5f5f5f5f6080858703121561045d575f5ffd5b8435935060208501359250604085013567ffffffffffffffff81168114610482575f5ffd5b9150606085013563ffffffff8116811461049a575f5ffd5b939692955090935050565b5f5f604083850312156104b6575f5ffd5b50508035926020909101359150565b808201808211156104e457634e487b7160e01b5f52601160045260245ffd5b9291505056fea26469706673582212206d03ec34a3b25d16456b20ec8255be065ba60ea3e200c5093b76a9fcc29aef4c64736f6c634300081c0033"
+}

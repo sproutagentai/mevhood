@@ -19,12 +19,12 @@
   },
   "description": "Mevy: frozen-control experiments for cost-aware MEV research",
   "scripts": {
-    "collect": "node --import tsx src/collector.ts",
+    "collect": "node --env-file-if-exists=.env.local --import tsx src/collector.ts",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
     "test:contracts": "forge test -vv",
     "build:agent": "eve build --skip-sandbox-prewarm",
-    "mevy": "node --import tsx src/cli.ts",
+    "mevy": "node --env-file-if-exists=.env.local --import tsx src/cli.ts",
     "dev": "eve dev",
     "verify": "npm run typecheck && npm test && npm run build:agent"
   }

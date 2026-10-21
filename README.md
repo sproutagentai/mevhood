@@ -18,7 +18,8 @@ Mevy is MEVHOOD's research agent. It examines public onchain quotes, compares a 
 | Experiment engine | Runs frozen control and candidate on identical observations; accounts for fees, gas, infrastructure and research cost | Paper estimates; seven-day gate |
 | Evidence store | SQLite transactions, immutable rows, hash-linked journal, reproducible bundles | Local integrity; anchoring remains separate |
 | Mevy researcher | eve agent with two typed tools: inspect results and propose a bounded policy | No shell, self-editing, deploy or signing tools |
-| Registry | Records immutable experiment/result digests and ordering | Receipts do not prove P&L |
+| Reviewed evolution | Binds a saved proposal and exact human-approved draft to a fresh immutable experiment | Original control/gate retained; stale approvals fail |
+| Registry | Prepared creation/call calldata, creation-receipt checks and actual public-anchor timing validation | Unsigned; receipts do not prove P&L |
 | Atomic executor | Executes a fixed two-pool round trip only when actual WETH balance increases by the required floor | Unaudited; not deployed or funded |
 
 The first strategy family is WETH → USDG → WETH across **different** v3 fee-tier pools. A proposal can change size, minimum edge and a gas decision buffer. General autonomous code generation is not enabled.
@@ -70,5 +71,7 @@ Even a passing research report says `ELIGIBLE_FOR_REVIEW`. `livePromotion` remai
 - [Verification record](docs/verification.md): exact local checks, fork scope and remaining gates.
 - [Source and economic boundaries](docs/architecture.md), [claims ledger](docs/claims.md), [implementation decisions](implementation-notes.html).
 - CI reproduces type checks, state/economic tests, agent compilation, offline evidence replay and contract tests. A green build does not establish alpha.
+
+The [operator guide](docs/runbook.md#review-a-proposal-and-freeze-its-successor) covers verified sample import, proposal approval, fresh experiment lineage and unsigned onchain preparation. Prepared calldata is not a public deployment. The LLM still needs an authorized provider/runtime; compilation and handoff tests do not establish a useful live model cycle.
 
 No token, payout pool or vault is created by this repository. Do not send assets to an example or old executor address expecting this code to control it.

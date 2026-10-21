@@ -1,0 +1,34 @@
+name: Reproduce Mevy
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.13.0'
+          cache: npm
+      - run: npm ci
+      - name: Verify published file manifest
+        run: |
+          node --input-type=module <<'JS'
+          import {readFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          import {execFileSync} from 'node:child_process';
+          import assert from 'node:assert/strict';
+          const {files}=JSON.parse(readFileSync('PUBLIC_FILES.json','utf8'));
+          for(const [path,hash] of Object.entries(files)) assert.equal(createHash('sha256').update(readFileSync(path)).digest('hex'),hash,path);
+          assert.deepEqual(execFileSync('git',['ls-files','-z'],{encoding:'utf8'}).split('\0').filter(Boolean).sort(),[...Object.keys(files),'PUBLIC_FILES.json'].sort());
+          console.log('Published files match the reviewed manifest.');
+          JS
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build:agent
+      - run: npm run mevy -- verify --file evidence/integration-2026-10-21.json
+      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09
+        with:
+          version: v1.8.5
+      - run: forge test -vv

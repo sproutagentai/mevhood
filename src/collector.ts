@@ -17,7 +17,9 @@ async function main(){
     while(Date.now()<until&&!abort.signal.aborted){
       // Provider failures stop visibly. Restarting must not erase the resulting collection gap.
       const o=await snapshot([e.baseline.sizeWei,e.candidate.sizeWei],{extraGasWei:v['extra-gas-wei']??null,infrastructureWei:v['infra-wei']??null});
-      const last=s.observations(id).at(-1);if(last?.block!==o.block){s.add(id,o);console.log(JSON.stringify({block:o.block,quotes:o.quotes.length,sourceErrors:o.errors}));}
+      const last=s.observations(id).at(-1);
+      if(o.block<=e.freezeBlock||o.timestamp<e.createdAt)console.log(JSON.stringify({state:'WAITING_FOR_POST_COMMIT_BLOCK',block:o.block}));
+      else if(last?.block!==o.block){s.add(id,o);console.log(JSON.stringify({block:o.block,quotes:o.quotes.length,sourceErrors:o.errors}));}
       await pause(Math.min(interval*1000,Math.max(0,until-Date.now())),undefined,{signal:abort.signal}).catch(err=>{if(err.name!=='AbortError')throw err;});
     }
   }finally{if(fd!==undefined){closeSync(fd);unlinkSync(lock);}s.close();}

@@ -34,6 +34,7 @@ async function main(){
     }else if(command==='observe'){
       const e=store.experiment(id);if(e.engineHash!==engineHash())throw Error('Engine changed after freeze');
       const o=await snapshot([e.baseline.sizeWei,e.candidate.sizeWei],{extraGasWei:v['extra-gas-wei']??null,infrastructureWei:v['infra-wei']??null},v.rpc);
+      if(o.block<=e.freezeBlock||o.timestamp<e.createdAt){print({inserted:false,state:'WAITING_FOR_POST_COMMIT_BLOCK',block:o.block});return;}
       print({inserted:store.add(id,o),block:o.block,quotes:o.quotes.length,errors:o.errors});
     }else if(command==='report'||command==='export'){
       const experiment=store.experiment(id),observations=store.observations(id),report=evaluate(experiment,observations);

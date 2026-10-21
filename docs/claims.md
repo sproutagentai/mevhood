@@ -2,7 +2,7 @@
 
 | Claim | Release status | How to check |
 |---|---|---|
-| Real Robinhood Chain / Uniswap quotes | VERIFIED integration snapshot | evidence file + audit-source |
+| Real Robinhood Chain / Uniswap quotes | VERIFIED integration snapshot + archive re-quote | evidence file + audit-source; Blockmachine re-quote passed21Oct2026 |
 | Frozen policies, durable storage, deterministic replay | VERIFIED locally | npm test; verify bundle |
 | Exact proposal approval and successor lineage | VERIFIED locally | evolution tests, import/prepare-next/freeze-next |
 | Unsigned creation/registry calldata and public-anchor checks | BUILT / local tests | registry tests; compiled artifact comparison; no public deployment receipt |
@@ -11,7 +11,7 @@
 | Contract deployed / funded / signed trades | NOT DONE | No deployment address or receipts |
 | eve typed agent and two restricted tools | BUILT | npm run build:agent |
 | Paid LLM provider / invoice / useful autonomous cycle | UNVERIFIED | Requires approved credential and budget |
-| Continuous forward collection | NOT RUNNING | Collector code exists; no uptime claim |
+| Preliminary bounded VPS collection | STARTED / source gap preserved | 24-hour authorization, fixed stop deadline; not a completed forward trial |
 | Upgrade of the old funded MEVHOOD engine | NOT CLAIMED | Independent implementation; no private-engine access |
 | Token-holder distribution / vault | NOT IMPLEMENTED HERE | Separate product and contracts |
 

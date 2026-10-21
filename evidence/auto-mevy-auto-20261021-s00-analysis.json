@@ -1,0 +1,55 @@
+{
+  "format": "mevy-llm-analysis/v1",
+  "state": "AWAITING_HUMAN_REVIEW",
+  "planHash": "0x9b238ce0b5370002676487cbc2c11553d839bd3ed3dc94427f22c9667ab3985d",
+  "contextHash": "0xf699bae7ef80882ade2f0bace78f24955173af7a651e9551baa7bf3834b6f3a0",
+  "bundleHash": "0xfe86991dc145c076a5721ad823248c5b7be993ea5f52b19d74dbc6302ee3b8a7",
+  "model": "gpt-6-luna",
+  "responseId": "resp_07891169cb3fc0c3016ad903bb483487d29827763ce230a64e",
+  "usage": {
+    "inputTokens": 3830,
+    "outputTokens": 1093
+  },
+  "serviceTier": "default",
+  "estimatedStandardCostUsd": "0.000929500",
+  "actualInvoiceCostUsd": null,
+  "costStatus": "TOKEN_BASED_ESTIMATE_NOT_INVOICE",
+  "analysis": {
+    "decision": "NO_CHANGE",
+    "summary": "At block 94488581, all 12 quotes for 0.001 WETH returned less than the input before gas; the best gross output was 0.000999570115907177 WETH. Known modelled gas makes those quotes less favorable, while extra gas and infrastructure costs remain unknown. There were no trades or actual fills, and the history is far too short to evaluate either policy. Keep the frozen control and original research gate; do not propose an economic change from this evidence.",
+    "findings": [
+      {
+        "observation": "All 12 quoted routes had negative gross output versus the 1000000000000000 wei input. The best returned 999570115907177 wei, a gross shortfall of 429884092823 wei; the lowest returned 982009529052375 wei. Thus lowering the edge threshold would not create a positive gross edge in this observation.",
+        "evidenceBlocks": [
+          94488581
+        ]
+      },
+      {
+        "observation": "Modelled known gas was approximately 6.97e12 wei per quote (gas units multiplied by the recorded gas price), making every route more negative before any unmodelled costs. Extra gas and infrastructure costs are null, so fully cost-adjusted results cannot be established.",
+        "evidenceBlocks": [
+          94488581
+        ]
+      },
+      {
+        "observation": "The packet contains one observation and 12 quotes, but zero baseline and candidate trades; paper net is null and costs are incomplete. Quotes are not actual fills. The saved-snapshot source check indicates provider consistency, not signed consensus or execution proof.",
+        "evidenceBlocks": [
+          94488581
+        ]
+      }
+    ],
+    "proposal": null,
+    "nextTest": "Continue forward collection with the frozen control and unchanged acceptance rules. Start any successor only after block 94488581, and wait for at least the original 1000 observations and 604800 seconds with gaps no greater than 300 seconds. Reconcile extra gas, infrastructure, and LLM costs before evaluating cost-adjusted outcomes; do not treat quote output as fills or profit.",
+    "limitations": [
+      "The observed quotes cover only one block and one size; this history cannot establish an out-of-sample policy improvement.",
+      "Extra gas, infrastructure costs, and the WETH equivalent of LLM costs are unknown.",
+      "Private orderflow, competition, reverts, and MEV leakage are not simulated.",
+      "The research gate remains HOLD; passing it would not authorize live trading."
+    ]
+  },
+  "createdAt": "2026-10-21T18:26:17.312Z",
+  "parentResearchGate": "HOLD",
+  "trainingThroughBlock": 94488581,
+  "livePromotion": "DISABLED",
+  "boundary": "Unapproved research draft. No database proposal approval, strategy change, successor freeze, signing or trading.",
+  "analysisHash": "0xdd3de2ab978e44fb81d141e07e2628c0460a3f44bcec3bd35ac001b4a6bb9573"
+}

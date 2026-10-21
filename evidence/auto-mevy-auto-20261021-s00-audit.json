@@ -1,0 +1,76 @@
+{
+  "format": "mevy-history-audit-package/v1",
+  "summary": {
+    "format": "mevy-history-audit/v1",
+    "bundleHash": "0xfe86991dc145c076a5721ad823248c5b7be993ea5f52b19d74dbc6302ee3b8a7",
+    "source": "https://rpc-robinhood.blockmachine.io",
+    "sourceId": "0x17485a8cb4ec501a37660589d750122b855356a608f1bdfa9921f0343c36dff9",
+    "auditComplete": true,
+    "sourceRequoted": true,
+    "auditedObservations": 1,
+    "totalObservations": 1,
+    "auditedQuotes": 12,
+    "nextOffset": null,
+    "checkedAt": "2026-10-21T18:26:01.898Z",
+    "receiptHashes": [
+      "0xaac69ba6dd81dea55eeaecb2bda3279ae295fd78c1b587596af67909e5982e8e"
+    ],
+    "researchGate": "HOLD",
+    "receiptHash": "0xa5c021042199a8750b5c755fcb114a8b4d816039d898441792998e06881d3dd2"
+  },
+  "receipts": [
+    {
+      "auditComplete": true,
+      "auditedObservations": 1,
+      "bundleHash": "0xfe86991dc145c076a5721ad823248c5b7be993ea5f52b19d74dbc6302ee3b8a7",
+      "checkedAt": "2026-10-21T18:26:01.898Z",
+      "checks": [
+        {
+          "block": 94488581,
+          "blockHash": "0x3ef90c5513073975ad9fe848c359c1b3fb3c781ff678f9b9d90b740a50e90fac",
+          "observationHash": "0x8511c4a750b70b6295af5a8492cd30a00404792813735188d144613c84ebf37c",
+          "quotes": 12,
+          "sourceDigest": "0x54abd90f4e73f6ceba114a380cf826ea15e0c640ba566647fb4c577930dbba23"
+        }
+      ],
+      "format": "mevy-source-audit/v1",
+      "nextOffset": null,
+      "offset": 0,
+      "researchGate": "HOLD",
+      "source": "https://rpc-robinhood.blockmachine.io",
+      "sourceAudit": "PASS",
+      "sourceId": "0x17485a8cb4ec501a37660589d750122b855356a608f1bdfa9921f0343c36dff9",
+      "sourceRequoted": true,
+      "totalObservations": 1,
+      "verified": true,
+      "captureReceipt": {
+        "auditComplete": true,
+        "auditedObservations": 1,
+        "bundleHash": "0xfe86991dc145c076a5721ad823248c5b7be993ea5f52b19d74dbc6302ee3b8a7",
+        "checkedAt": "2026-10-21T18:26:01.898Z",
+        "checks": [
+          {
+            "block": 94488581,
+            "blockHash": "0x3ef90c5513073975ad9fe848c359c1b3fb3c781ff678f9b9d90b740a50e90fac",
+            "observationHash": "0x8511c4a750b70b6295af5a8492cd30a00404792813735188d144613c84ebf37c",
+            "quotes": 12,
+            "sourceDigest": "0x54abd90f4e73f6ceba114a380cf826ea15e0c640ba566647fb4c577930dbba23"
+          }
+        ],
+        "format": "mevy-source-audit/v1",
+        "nextOffset": null,
+        "offset": 0,
+        "receiptHash": "0xde40637d97ea6ad4f78f7b475a3d32e0d4b51d9467c67d9e0d4c33a0fccbbc7e",
+        "researchGate": "HOLD",
+        "source": "https://rpc-robinhood.blockmachine.io",
+        "sourceAudit": "PASS",
+        "sourceId": "0x17485a8cb4ec501a37660589d750122b855356a608f1bdfa9921f0343c36dff9",
+        "sourceRequoted": true,
+        "totalObservations": 1,
+        "verified": true
+      },
+      "receiptHash": "0xaac69ba6dd81dea55eeaecb2bda3279ae295fd78c1b587596af67909e5982e8e"
+    }
+  ],
+  "packageHash": "0x0b1b20544005132568d1e3bb041d183e9cf9653a40f8a9838aacd1aacd0be7c9"
+}

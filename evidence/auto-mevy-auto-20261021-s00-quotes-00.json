@@ -1,0 +1,178 @@
+{
+  "format": "mevy-quote-source/v1",
+  "bundleHash": "0xfe86991dc145c076a5721ad823248c5b7be993ea5f52b19d74dbc6302ee3b8a7",
+  "observations": [
+    {
+      "chainId": 4663,
+      "block": 94488581,
+      "blockHash": "0x3ef90c5513073975ad9fe848c359c1b3fb3c781ff678f9b9d90b740a50e90fac",
+      "timestamp": 1792607049,
+      "collectedAt": 1792607107,
+      "provider": "https://rpc-robinhood.blockmachine.io",
+      "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+      "quoter": "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7",
+      "codeHashes": {
+        "0x0bd7d308f8e1639fab988df18a8011f41eacad73": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+        "0x1f7d7550b1b028f7571e69a784071f0205fd2efa": "0xec72b1abd1f2faee020cfea9c646bd8994f9fb389054f6e574f103a895091739",
+        "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7": "0x3db0868d945e9304c9bc6a8b2181948109ea617647142f3c4083e14393496a28",
+        "0x52e65b17fb6e5ba00ed806f37afcd2daa50271ca": "0x3298b5dd4e6f115074c526a55ad05a36fd73a0034ac22ec6cbaab32cc9c1e8d2",
+        "0x5f009e071f07e92b6c624e83f52f17bbda34680d": "0xe20600974a722992eb4622b85b2a77ccac5e4aaa2f781bd93cae4334ca18d686",
+        "0x5fc5360d0400a0fd4f2af552add042d716f1d168": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+        "0x69bfaf19c9f377bb306a89aed9f6b07e2c1a8d9a": "0x74a16c3b1b4ac8903c54a9edad666d4c87512cb78ed0723538acd84d1b56c5b5",
+        "0xa9188730fe85be88ad499d7d52b099e800fb0334": "0x0fc31cfc533a5922261eaa33ff62c43ffd3839dc5204fb6dbbe6effd7bd9d63d",
+        "0xcaf681a66d020601342297493863e78c959e5cb2": "0x6f36c378e272c6324c48f045182bcb54bd8ad654cf9ebd42e8893d52c4cb25dc"
+      },
+      "gasPriceWei": "20384000",
+      "extraGasWei": null,
+      "infrastructureWei": null,
+      "gasModel": "quoter-plus-overhead-v1",
+      "quotes": [
+        {
+          "route": "WETH/USDG 100 → 500",
+          "feeOut": 100,
+          "feeBack": 500,
+          "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "999570115907177",
+          "gasUnits": "342164",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 100 → 3000",
+          "feeOut": 100,
+          "feeBack": 3000,
+          "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "999482358454337",
+          "gasUnits": "342118",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 100 → 10000",
+          "feeOut": 100,
+          "feeBack": 10000,
+          "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "997533814247669",
+          "gasUnits": "342136",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 500 → 100",
+          "feeOut": 500,
+          "feeBack": 100,
+          "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "999229233167302",
+          "gasUnits": "342161",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 500 → 3000",
+          "feeOut": 500,
+          "feeBack": 3000,
+          "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "998911986163476",
+          "gasUnits": "342130",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 500 → 10000",
+          "feeOut": 500,
+          "feeBack": 10000,
+          "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "996964533627117",
+          "gasUnits": "342148",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 3000 → 100",
+          "feeOut": 3000,
+          "feeBack": 100,
+          "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "994324071133376",
+          "gasUnits": "342133",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 3000 → 500",
+          "feeOut": 3000,
+          "feeBack": 500,
+          "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "994095916465099",
+          "gasUnits": "342148",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 3000 → 10000",
+          "feeOut": 3000,
+          "feeBack": 10000,
+          "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "992070401644347",
+          "gasUnits": "342120",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 10000 → 100",
+          "feeOut": 10000,
+          "feeBack": 100,
+          "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "982321182936531",
+          "gasUnits": "342099",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 10000 → 500",
+          "feeOut": 10000,
+          "feeBack": 500,
+          "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "982095749701470",
+          "gasUnits": "342114",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        },
+        {
+          "route": "WETH/USDG 10000 → 3000",
+          "feeOut": 10000,
+          "feeBack": 3000,
+          "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+          "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "sizeWei": "1000000000000000",
+          "amountOutWei": "982009529052375",
+          "gasUnits": "342068",
+          "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+          "error": null
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "format": "mevy-research-index/v1",
+  "campaign": {
+    "id": "mevy-auto-20261021",
+    "startsAt": 1792606905,
+    "endsAt": 1793211705,
+    "intervalSeconds": 21600,
+    "collectionSeconds": 120,
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "model": "gpt-6-luna",
+    "repository": "sproutagentai/mevhood",
+    "bootstrap": true
+  },
+  "reports": [
+    {
+      "quoteShards": [
+        {
+          "path": "evidence/auto-mevy-auto-20261021-s00-quotes-00.json",
+          "firstBlock": 94488581,
+          "lastBlock": 94488581,
+          "observations": 1
+        }
+      ],
+      "id": "0xdd3de2ab978e44fb81d141e07e2628c0460a3f44bcec3bd35ac001b4a6bb9573",
+      "createdAt": "2026-10-21T18:26:17.312Z",
+      "decision": "NO_CHANGE",
+      "model": "gpt-6-luna",
+      "observations": 1,
+      "quotes": 12,
+      "paths": {
+        "analysis": "evidence/auto-mevy-auto-20261021-s00-analysis.json",
+        "plan": "evidence/auto-mevy-auto-20261021-s00-plan.json",
+        "bundle": "evidence/auto-mevy-auto-20261021-s00-bundle.json",
+        "audit": "evidence/auto-mevy-auto-20261021-s00-audit.json"
+      },
+      "bootstrap": true,
+      "window": {
+        "firstBlock": 94488581,
+        "lastBlock": 94488581,
+        "startAt": 1792607049,
+        "endAt": 1792607049
+      }
+    },
+    {
+      "id": "0x33bdeea58ab9731078099191bac7b27b3fd6aba18193c00afaa1a61befa32396",
+      "createdAt": "2026-10-21T15:18:21.291Z",
+      "decision": "NO_CHANGE",
+      "model": "gpt-6.1-sol",
+      "observations": 40,
+      "quotes": 480,
+      "paths": {
+        "analysis": "evidence/llm-analysis-2026-10-21.json",
+        "plan": "evidence/llm-plan-2026-10-21.json",
+        "bundle": "evidence/preliminary-vps-2026-10-21.json",
+        "audit": "evidence/history-source-audit-2026-10-21.json"
+      },
+      "bootstrap": false,
+      "window": {
+        "firstBlock": 94280091,
+        "lastBlock": 94303272,
+        "startAt": 1792585476,
+        "endAt": 1792587853
+      }
+    }
+  ]
+}

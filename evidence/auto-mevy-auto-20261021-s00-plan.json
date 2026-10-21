@@ -1,0 +1,18 @@
+{
+  "format": "mevy-llm-plan/v1",
+  "model": "gpt-6-luna",
+  "contextHash": "0xf699bae7ef80882ade2f0bace78f24955173af7a651e9551baa7bf3834b6f3a0",
+  "instructionsHash": "0x9311a20cf73a9dd02d74907bf013341f66134a75242cb8a06d5209737162700f",
+  "schemaHash": "0x100a81cba15b9cc1463b4960a6b5e6eb377c76afc48a3bc6643b961cbd4e7c6f",
+  "bundleHash": "0xfe86991dc145c076a5721ad823248c5b7be993ea5f52b19d74dbc6302ee3b8a7",
+  "observations": 1,
+  "quotes": 12,
+  "inputBytes": 11432,
+  "maxOutputTokens": 12000,
+  "approvedBudgetUsd": "0.250000000",
+  "reservedUsd": "0.016645200",
+  "pricingReviewedAt": "2026-10-21",
+  "reserveBasis": "UTF-8 byte input bound +4096 framing; $0.22/$0.825 per MTok long-context/regional bound; 25% margin; one request/no retries. Recheck pricing before reuse.",
+  "automaticPromotion": "DISABLED",
+  "planHash": "0x9b238ce0b5370002676487cbc2c11553d839bd3ed3dc94427f22c9667ab3985d"
+}

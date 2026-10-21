@@ -10,7 +10,8 @@
 | Local contract invariants | VERIFIED locally | forge test |
 | Contract deployed / funded / signed trades | NOT DONE | No deployment address or receipts |
 | eve typed agent and two restricted tools | BUILT | npm run build:agent |
-| Paid LLM provider / invoice / useful autonomous cycle | UNVERIFIED | Requires approved credential and budget |
+| Direct OpenAI batch analysis with bounded draft output | VERIFIED one genuine response | GPT-6.1 Sol analysed all 40 rows/480 quotes; actual response/usage/source-bound plan published; NO_CHANGE |
+| Provider invoice / useful autonomous improvement cycle | UNVERIFIED | Token-based charge estimate only; no improved candidate or recurring paid runtime established |
 | Preliminary bounded VPS collection | STARTED / source gap preserved | 24-hour authorization, fixed stop deadline; not a completed forward trial |
 | Upgrade of the old funded MEVHOOD engine | NOT CLAIMED | Independent implementation; no private-engine access |
 | Token-holder distribution / vault | NOT IMPLEMENTED HERE | Separate product and contracts |

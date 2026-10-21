@@ -1,0 +1,18 @@
+# Claims and evidence
+
+| Claim | Release status | How to check |
+|---|---|---|
+| Real Robinhood Chain / Uniswap quotes | VERIFIED integration snapshot | evidence file + audit-source |
+| Frozen policies, durable storage, deterministic replay | VERIFIED locally | npm test; verify bundle |
+| Candidate improves profit | NOT ESTABLISHED | No seven-day trial; integration sample is HOLD |
+| Local contract invariants | VERIFIED locally | forge test |
+| Contract deployed / funded / signed trades | NOT DONE | No deployment address or receipts |
+| eve typed agent and two restricted tools | BUILT | npm run build:agent |
+| Paid LLM provider / invoice / useful autonomous cycle | UNVERIFIED | Requires approved credential and budget |
+| Continuous forward collection | NOT RUNNING | Collector code exists; no uptime claim |
+| Upgrade of the old funded MEVHOOD engine | NOT CLAIMED | Independent implementation; no private-engine access |
+| Token-holder distribution / vault | NOT IMPLEMENTED HERE | Separate product and contracts |
+
+The dated sample proves connectivity, negative/no-op decisions and reproducible computation. It does not establish profitability, a statistically sound strategy improvement, public commitment timing, or autonomous self-improvement in production. A hash is an integrity receipt, not a proof that the underlying economic claim is true.
+
+Official deployment source: [Uniswap v3 on Robinhood Chain](https://developers.uniswap.org/docs/protocols/v3/deployments/v3-robinhood-chain-deployments). Runtime: [eve](https://github.com/vercel/eve). Addresses are verified at read time rather than assumed to match another chain.

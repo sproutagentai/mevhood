@@ -10,6 +10,7 @@ async function main(){
  if(!v.file||!v.output)throw Error('--file BUNDLE --output RECEIPT_DIRECTORY required');
  const seconds=Number(v['max-seconds']);if(!Number.isSafeInteger(seconds)||seconds<60||seconds>86400)throw Error('--max-seconds must be60..86400');
  const bundle=JSON.parse(readFileSync(v.file,'utf8')) as EvidenceBundle;verifyBundle(bundle);
+ if(bundle.observations.length===0)throw Error('No observations to source-audit');
  const rpc=archiveRpc(v.rpc),dir=resolve(v.output),until=Date.now()+seconds*1000,restore=installRpcPacing(rpc);
  mkdirSync(dir,{recursive:true});const receipts=[];
  try{

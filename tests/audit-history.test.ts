@@ -1,5 +1,6 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {mkdtempSync,readFileSync,writeFileSync,mkdirSync,rmSync} from 'node:fs';import {tmpdir} from 'node:os';import {join} from 'node:path';import {spawnSync} from 'node:child_process';
 import {auditSource,type EvidenceBundle} from '../src/source-audit.ts';
+import {evaluate} from '../src/engine.ts';import {digest} from '../src/model.ts';
 test('history CLI resumes bound receipts without network and rejects a changed receipt',async()=>{
  const dir=mkdtempSync(join(tmpdir(),'mevy-source-resume-'));
  try{
@@ -11,5 +12,7 @@ test('history CLI resumes bound receipts without network and rejects a changed r
   const ok=spawnSync(process.execPath,args,{encoding:'utf8'});assert.equal(ok.status,0,ok.stderr);assert.match(ok.stdout,/"auditComplete":true/);
   receipt.checks[0]!.observationHash='0x'+'0'.repeat(64);writeFileSync(path,JSON.stringify(receipt));
   const bad=spawnSync(process.execPath,args,{encoding:'utf8'});assert.notEqual(bad.status,0);assert.match(bad.stderr,/Saved audit receipt mismatch/);assert.doesNotMatch(bad.stderr,/Unexpected network/);
+  const empty={...b,observations:[],report:evaluate(b.experiment,[])};empty.bundleHash=digest({experiment:empty.experiment,observations:empty.observations,report:empty.report});writeFileSync(join(dir,'bundle.json'),JSON.stringify(empty));
+  const zero=spawnSync(process.execPath,args,{encoding:'utf8'});assert.notEqual(zero.status,0);assert.match(zero.stderr,/No observations to source-audit/);assert.doesNotMatch(zero.stderr,/Unexpected network/);
  }finally{rmSync(dir,{recursive:true,force:true});}
 });

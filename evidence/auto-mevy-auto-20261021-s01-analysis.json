@@ -1,0 +1,65 @@
+{
+  "format": "mevy-llm-analysis/v1",
+  "state": "AWAITING_HUMAN_REVIEW",
+  "planHash": "0xe4eb90cea8fb6412c289c8d5119463ceff3fe7ca0b3a659f8b02c6e8ac995f5b",
+  "contextHash": "0xfc1ce781022a47252171b676339466ca102a469917c7725a12c4946632fe47dd",
+  "bundleHash": "0xbb28fe50f76819000dd6763430611fad4f4a0e3a89ce954c57dabf9c40c0ae88",
+  "model": "gpt-6-luna",
+  "responseId": "resp_0a6a184ee297117d016ad957ab563887d295d6ea5a17fc6946",
+  "usage": {
+    "inputTokens": 54020,
+    "outputTokens": 1535
+  },
+  "serviceTier": "default",
+  "estimatedStandardCostUsd": "0.006169500",
+  "actualInvoiceCostUsd": null,
+  "costStatus": "TOKEN_BASED_ESTIMATE_NOT_INVOICE",
+  "analysis": {
+    "decision": "NO_CHANGE",
+    "summary": "The packet contains 2,148 quotes at a size of 1,000,000,000,000,000 wei, and reports zero positive-gross quotes and zero positive-after-known-gas quotes. The baseline and candidate each recorded zero trades; there are no actual fills or measured trading profits. The research gate remains HOLD. The history supports no useful threshold or other economic-field change: lowering the edge threshold cannot make a negative gross quote positive.",
+    "findings": [
+      {
+        "observation": "Gross route output was below the input size: the packet reports zero positive-gross quotes across all 2,148 quotes. For example, at block 94489834 quote 0 returns 999766153613597 wei on a 1000000000000000-wei input; at block 94695177 quote 0 returns 998998228090957 wei.",
+        "evidenceBlocks": [
+          94489834,
+          94695177
+        ]
+      },
+      {
+        "observation": "Known gas cannot turn these negative gross quotes into positive edges. The packet reports zero positive-after-known-gas quotes; gas estimates include frozen reader overhead. Extra gas and infrastructure costs remain unknown, so known-gas estimates are not complete costs or profit. For example, block 94489834 lists 342141 gas units for quote 0, with a gas price of 20496000 wei.",
+        "evidenceBlocks": [
+          94489834,
+          94695177
+        ]
+      },
+      {
+        "observation": "Neither policy recorded a trade; both paperNetWei values are null and costsComplete is false. The research gate is HOLD: the run covers 21,603 seconds and 179 observations, below the unchanged acceptance requirements of 604,800 seconds and 1,000 observations, with LLM, infrastructure, and extra-gas costs unresolved.",
+        "evidenceBlocks": [
+          94489834,
+          94695177
+        ]
+      },
+      {
+        "observation": "These are quote comparisons, not executed fills or profit evidence. The source check establishes provider consistency with a saved snapshot, not signed consensus or execution; it does not establish that any route could be filled.",
+        "evidenceBlocks": [
+          94489834,
+          94695177
+        ]
+      }
+    ],
+    "proposal": null,
+    "nextTest": "Make no policy change. If research continues, start a fresh forward run strictly after the last inspected block, 94695177, preserving the frozen control and the existing acceptance rules. Collect at least 1,000 observations over at least 604,800 seconds, reconcile extra-gas, infrastructure, and LLM costs, and continue to treat quotes separately from fills. Reassess only on that new evidence.",
+    "limitations": [
+      "Quote outputs are estimates; the packet contains no actual fills or realized trading profit.",
+      "Extra gas and infrastructure costs are unknown, and the LLM cost is not converted into WETH.",
+      "Private orderflow, competition, reverts, and MEV leakage are not simulated.",
+      "Provider consistency is not signed consensus proof, and passing the research gate would not authorize trading."
+    ]
+  },
+  "createdAt": "2026-10-22T00:24:24.993Z",
+  "parentResearchGate": "HOLD",
+  "trainingThroughBlock": 94695177,
+  "livePromotion": "DISABLED",
+  "boundary": "Unapproved research draft. No database proposal approval, strategy change, successor freeze, signing or trading.",
+  "analysisHash": "0x7022a4669cea6a88702a36e660d813089d2339a17993e5b14d762af416f84c99"
+}

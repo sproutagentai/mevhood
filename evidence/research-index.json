@@ -16,6 +16,59 @@
     {
       "quoteShards": [
         {
+          "path": "evidence/auto-mevy-auto-20261021-s01-quotes-00.json",
+          "firstBlock": 94489834,
+          "lastBlock": 94534927,
+          "observations": 40
+        },
+        {
+          "path": "evidence/auto-mevy-auto-20261021-s01-quotes-01.json",
+          "firstBlock": 94536117,
+          "lastBlock": 94581149,
+          "observations": 40
+        },
+        {
+          "path": "evidence/auto-mevy-auto-20261021-s01-quotes-02.json",
+          "firstBlock": 94582202,
+          "lastBlock": 94627345,
+          "observations": 40
+        },
+        {
+          "path": "evidence/auto-mevy-auto-20261021-s01-quotes-03.json",
+          "firstBlock": 94628529,
+          "lastBlock": 94673488,
+          "observations": 40
+        },
+        {
+          "path": "evidence/auto-mevy-auto-20261021-s01-quotes-04.json",
+          "firstBlock": 94674680,
+          "lastBlock": 94695177,
+          "observations": 19
+        }
+      ],
+      "id": "0x7022a4669cea6a88702a36e660d813089d2339a17993e5b14d762af416f84c99",
+      "createdAt": "2026-10-22T00:24:24.993Z",
+      "decision": "NO_CHANGE",
+      "model": "gpt-6-luna",
+      "observations": 179,
+      "quotes": 2148,
+      "paths": {
+        "analysis": "evidence/auto-mevy-auto-20261021-s01-analysis.json",
+        "plan": "evidence/auto-mevy-auto-20261021-s01-plan.json",
+        "bundle": "evidence/auto-mevy-auto-20261021-s01-bundle.json",
+        "audit": "evidence/auto-mevy-auto-20261021-s01-audit.json"
+      },
+      "bootstrap": false,
+      "window": {
+        "firstBlock": 94489834,
+        "lastBlock": 94695177,
+        "startAt": 1792607174,
+        "endAt": 1792628535
+      }
+    },
+    {
+      "quoteShards": [
+        {
           "path": "evidence/auto-mevy-auto-20261021-s00-quotes-00.json",
           "firstBlock": 94488581,
           "lastBlock": 94488581,

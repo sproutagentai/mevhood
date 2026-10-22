@@ -8,6 +8,7 @@ import { engineHash,digest,type Experiment } from './model.ts';
 import { auditSource,defaultArchiveRpc } from './source-audit.ts';
 import { installRpcPacing } from './rpc-pacing.ts';
 import { generateResearch } from './openai-research.ts';
+import { LabRuntime } from './lab-runtime.ts';
 const configPath=process.env.MEVY_CAMPAIGN_CONFIG,stateRoot=process.env.MEVY_AUTO_STATE,spool=process.env.MEVY_PUBLIC_SPOOL;
 if(!configPath||!stateRoot||!spool)throw Error('Explicit campaign, private state and public spool paths required');
 const config=JSON.parse(readFileSync(configPath,'utf8')) as Campaign,configHash=digest(config);
@@ -19,6 +20,7 @@ const store=new Store(join(stateRoot,'quotes.sqlite')),state=new AutoStore(join(
 const log=(data:unknown)=>console.log(JSON.stringify({at:new Date().toISOString(),...data as object}));
 let stopping=false;process.on('SIGTERM',()=>{stopping=true;});process.on('SIGINT',()=>{stopping=true;});
 let experiment:Experiment;
+let lab:LabRuntime|undefined;
 async function freeze(){
  if(store.db.prepare('SELECT id FROM experiments WHERE id=?').get(config.id))return store.experiment(config.id);
  const h=await head(rpc),baseline=JSON.parse(readFileSync(new URL('../policies/baseline.json',import.meta.url),'utf8')),candidate=JSON.parse(readFileSync(new URL('../policies/candidate.json',import.meta.url),'utf8')),acceptance=JSON.parse(readFileSync(new URL('../policies/acceptance.json',import.meta.url),'utf8'));
@@ -27,7 +29,7 @@ async function freeze(){
 }
 const restore=installRpcPacing(rpc,1100);
 try{
- experiment=await freeze();log({state:'COLLECTING',experiment:experiment.id,endsAt:config.endsAt,intervalSeconds:config.intervalSeconds});
+ experiment=await freeze();if(process.env.MEVY_STRATEGY_LAB==='1')lab=new LabRuntime(stateRoot!,spool!,config,experiment,state,rpc);log({state:'COLLECTING',experiment:experiment.id,endsAt:config.endsAt,intervalSeconds:config.intervalSeconds,strategyLab:!!lab});
  let next=Date.now();
  while(!stopping&&Math.floor(Date.now()/1000)<config.endsAt){
   if(digest(JSON.parse(readFileSync(configPath!,'utf8')))!==configHash)throw Error('Campaign authorization changed during runtime');
@@ -49,7 +51,8 @@ try{
    const rows=store.observations(experiment.id),captures=state.captures();
    // Never silently discard a saved observation whose source check failed.
    if(rows.some(o=>!captures[String(o.block)]))throw Error('A saved observation lacks a successful source pair; analysis is blocked');
-   if(rows.length&&slot<28&&Math.floor(Date.now()/1000)+190<config.endsAt){
+   if(lab&&rows.length){await lab.collect(rows.at(-1)!);await lab.cycle(slot);log({state:'STRATEGY_LAB_COLLECTED',frames:lab.store.frames().length,trials:lab.store.trials().length});}
+   if(!lab&&rows.length&&slot<28&&Math.floor(Date.now()/1000)+190<config.endsAt){
     const result=await analyseSlot({state,experiment,observations:rows,slot,now:Math.floor(Date.now()/1000),root:join(stateRoot!,'runs'),spool:spool!,generate:prompt=>generateResearch(config.model,prompt)});log(result);
    }
   }catch(error){const event={state:'CYCLE_FAILED',errorType:error instanceof Error?error.name:'UnknownError',reason:error instanceof Error&&/^(Campaign|A saved observation|New quote|Authorized|History exceeds|Conservative|Missing physical|Capture source|Slot |Private slot|Recovery|Recovered|Conflicting)/.test(error.message)?error.message:'Source or model cycle failed; private receipts retain the boundary.'};state.event(event);log(event);}
@@ -57,4 +60,4 @@ try{
   const until=Math.min(next,config.endsAt*1000);while(!stopping&&Date.now()<until)await sleep(Math.min(1000,until-Date.now()));
  }
  log({state:stopping?'STOPPED':'CAMPAIGN_COMPLETE',endsAt:config.endsAt});
-}finally{restore();store.close();state.close();}
+}finally{restore();lab?.close();store.close();state.close();}

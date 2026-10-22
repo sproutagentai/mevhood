@@ -35,7 +35,7 @@ export class AutoStore{
  db:DatabaseSync;
  constructor(path:string,readonly campaign:Campaign){
   checkCampaign(campaign,campaign.startsAt);mkdirSync(dirname(path),{recursive:true,mode:0o700});this.db=new DatabaseSync(path);
-  this.db.exec(`PRAGMA journal_mode=WAL;PRAGMA busy_timeout=5000;CREATE TABLE IF NOT EXISTS config(id INTEGER PRIMARY KEY CHECK(id=1),hash TEXT NOT NULL);CREATE TABLE IF NOT EXISTS captures(block INTEGER PRIMARY KEY,body TEXT NOT NULL);CREATE TABLE IF NOT EXISTS jobs(slot INTEGER PRIMARY KEY,body TEXT NOT NULL);CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY,body TEXT NOT NULL);`);
+  this.db.exec(`PRAGMA journal_mode=WAL;PRAGMA busy_timeout=5000;CREATE TABLE IF NOT EXISTS config(id INTEGER PRIMARY KEY CHECK(id=1),hash TEXT NOT NULL);CREATE TABLE IF NOT EXISTS captures(block INTEGER PRIMARY KEY,body TEXT NOT NULL);CREATE TABLE IF NOT EXISTS jobs(slot INTEGER PRIMARY KEY,body TEXT NOT NULL);CREATE TABLE IF NOT EXISTS extra_requests(id TEXT PRIMARY KEY,body TEXT NOT NULL);CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY,body TEXT NOT NULL);`);
   const r=this.db.prepare('SELECT hash FROM config WHERE id=1').get() as any;if(r&&r.hash!==digest(campaign))throw Error('Campaign configuration changed');if(!r)this.db.prepare('INSERT INTO config VALUES(1,?)').run(digest(campaign));
  }
  close(){this.db.close();}
@@ -43,12 +43,22 @@ export class AutoStore{
  capture(o:Observation,receipt:Awaited<ReturnType<typeof auditSource>>){const body=canonical({observationHash:digest(o),receipt});const old=this.db.prepare('SELECT body FROM captures WHERE block=?').get(o.block) as any;if(old&&old.body!==body)throw Error('Conflicting physical source capture');if(!old)this.db.prepare('INSERT INTO captures VALUES(?,?)').run(o.block,body);}
  captures(){return Object.fromEntries((this.db.prepare('SELECT block,body FROM captures ORDER BY block').all() as any[]).map(x=>[String(x.block),JSON.parse(x.body).receipt]));}
  jobs(){return(this.db.prepare('SELECT body FROM jobs ORDER BY slot').all() as any[]).map(x=>JSON.parse(x.body));}
+ reservations(){return [...this.jobs(),...(this.db.prepare('SELECT body FROM extra_requests ORDER BY id').all() as any[]).map(x=>JSON.parse(x.body))];}
+ extra(id:string){const r=this.db.prepare('SELECT body FROM extra_requests WHERE id=?').get(id) as any;return r?JSON.parse(r.body):null;}
+ reserveUpgrade(now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
+  const id='strategy-lab-upgrade-20261022';this.db.exec('BEGIN IMMEDIATE');try{
+   if(!checkCampaign(this.campaign,now)||this.extra(id))throw Error('Upgrade request outside authorization or already claimed');
+   const amount=nano(reservedUsd),jobs=this.reservations(),rolling=jobs.filter(j=>j.startedAt>now-86400).reduce((n,j)=>n+nano(j.reservedUsd),0n),total=jobs.reduce((n,j)=>n+nano(j.reservedUsd),0n);
+   if(amount<=0n||amount>250_000_000n||rolling+amount>1_000_000_000n||total+amount>7_000_000_000n)throw Error('Authorized rolling or campaign budget exhausted');
+   const body={id,startedAt:now,bundleHash,throughBlock,reservedUsd,state:'REQUEST_RESERVED_NO_RETRY'};this.db.prepare('INSERT INTO extra_requests VALUES(?,?)').run(id,canonical(body));this.db.exec('COMMIT');return body;
+  }catch(e){this.db.exec('ROLLBACK');throw e;}
+ }
  job(slot:number){const r=this.db.prepare('SELECT body FROM jobs WHERE slot=?').get(slot) as any;return r?JSON.parse(r.body):null;}
  reserve(slot:number,now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
   this.db.exec('BEGIN IMMEDIATE');try{
    if(!checkCampaign(this.campaign,now)||!Number.isSafeInteger(slot)||slot<0||slot>27||slot>Math.floor((now-this.campaign.startsAt)/21600))throw Error('Slot outside authorization');
    if(this.job(slot))throw Error('Slot already claimed; no repeated paid attempt');
-   const amount=nano(reservedUsd),jobs=this.jobs(),total=jobs.reduce((n,j)=>n+nano(j.reservedUsd),0n),rolling=jobs.filter(j=>j.startedAt>now-86400).reduce((n,j)=>n+nano(j.reservedUsd),0n);
+   const amount=nano(reservedUsd),jobs=this.reservations(),total=jobs.reduce((n,j)=>n+nano(j.reservedUsd),0n),rolling=jobs.filter(j=>j.startedAt>now-86400).reduce((n,j)=>n+nano(j.reservedUsd),0n);
    if(jobs.some(j=>j.bundleHash===bundleHash))throw Error('Bundle already reserved; no duplicate inference');
    if(amount<=0n||rolling+amount>1_000_000_000n||total+amount>7_000_000_000n)throw Error('Authorized rolling or campaign budget exhausted');
    const body={slot,startedAt:now,bundleHash,throughBlock,reservedUsd,state:'REQUEST_RESERVED_NO_RETRY'};this.db.prepare('INSERT INTO jobs VALUES(?,?)').run(slot,canonical(body));this.db.exec('COMMIT');return body;

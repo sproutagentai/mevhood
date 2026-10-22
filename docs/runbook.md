@@ -185,3 +185,12 @@ The authorized campaign runs from **21 October 18:21:45 UTC to 28 October 18:21:
 The first three slots published without manual inference or publication: one startup observation and two new 179-observation / 2,148-quote cohorts. The [report index](../evidence/research-index.json) links all evidence. Each saved observation was physically re-quoted; missing source checks block inference. Research remains `HOLD` and strategy execution remains disabled. Later slots are future work until their actual receipts appear.
 
 The website checks the public revision every five minutes while visible, keeps selected reports cached when the revision is unchanged, and loads an older report only when selected. Small exact quote-source files provide GitHub line links alongside the complete replay bundle.
+
+
+## Strategy lab
+
+`MEVY_STRATEGY_LAB=1` enables the separate paper search in the existing bounded VPS worker. It retains the exact campaign config, budget database, expiry timer, private provider key and isolated repository publisher. The source-controlled graph is pinned to a real discovery block. The lab adds exact-size cyclic-route quotes and actual same-block re-quotes after the unchanged control source pair. Persistent state is `lab.sqlite` inside the already isolated state root; original databases and evidence are retained.
+
+One upgrade request, up to a $0.25 conservative reservation and within the existing $1 rolling day/$7 campaign cap, verifies the new cycle. Scheduled slots then use the discovery schema. Unknown attempts are never paid again. Proposals activate only after their exact trial hash is found in a hash-checked public GitHub report; a fresh chain head starts their forward boundary. Training rows are excluded. Progress reports are deterministic and incur no model call. They publish on the first paired results, screen completion and then at most every30minutes. Promising screens continue collecting under the unchanged long gate.
+
+The old reports remain in research-index.json; new research/trials use discovery-index.json and immutable per-block frame files. `npm run lab:verify -- --report PATH` replays every linked source, model context and trial. Public file hashes do not prove consensus, execution or actual profit. The initial remaining campaign is shorter than seven days from a new freeze, so this upgrade cannot claim full seven-day acceptance inside the current consent window.

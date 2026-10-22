@@ -67,6 +67,16 @@ The second command reads a pinned Robinhood Chain fork. It uses the real WETH an
 
 Even a passing research report says `ELIGIBLE_FOR_REVIEW`. `livePromotion` remains `DISABLED`. Paper quotes do not capture inclusion, competition, failed attempts or private orderflow, and they are not realized trading profit.
 
+## Strategy discovery
+
+The optional strategy lab quotes new two/three-pool WETH cycles through a verified USDG/PONS/CASHCAT universe, at four exact sizes up to0.02WETH. Mevy proposes new route/size/entry-rule hypotheses, remembers earlier tests and freezes each before public publication and subsequent paired observations. A ten-observation futility screen can reject an idea; promising ideas keep collecting forward evidence. The original seven-day/1,000-observation gate remains unchanged and live execution remains disabled. [Implementation scope and acceptance checks](docs/strategy-lab-spec.md). Integration status is recorded in the verification ledger; source code alone does not establish a working research run.
+
+To replay a published lab report after cloning its exact source revision:
+
+```sh
+npm run lab:verify -- --report evidence/lab-CAMPAIGN-RUN-report.json
+```
+
 ## Current evidence
 
 - **Automatic research, checked 22 October 2026 at 08:19 UTC:** the VPS published a short startup report and two scheduled reports of 179 observations / 2,148 quotes each. All three returned `NO_CHANGE`; proposed policies remain unapproved and trading is disabled. The [index](evidence/research-index.json) links every original response, request plan, complete replay bundle and per-block source checks. The two full cohorts contain every newly collected observation in their respective windows. Token usage implies **$0.0130764 total** for the three automatic calls; invoices remain unreconciled. The [campaign record](evidence/auto-campaign-2026-10-21.json) distinguishes the observed run from future uptime.

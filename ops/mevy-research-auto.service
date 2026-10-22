@@ -11,6 +11,7 @@ SupplementaryGroups=mevy-publish
 WorkingDirectory=/opt/mevy-research/autonomous-current
 Environment=PATH=/opt/mevy-research/runtime/node-v24.13.0-linux-x64/bin:/usr/bin:/bin
 Environment=NODE_ENV=production
+Environment=MEVY_STRATEGY_LAB=1
 Environment=MEVY_CAMPAIGN_CONFIG=/etc/mevy-auto/campaign.json
 Environment=MEVY_AUTO_STATE=/var/lib/mevy-research/auto
 Environment=MEVY_PUBLIC_SPOOL=/var/spool/mevy-research-auto

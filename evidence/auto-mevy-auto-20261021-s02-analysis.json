@@ -1,0 +1,58 @@
+{
+  "format": "mevy-llm-analysis/v1",
+  "state": "AWAITING_HUMAN_REVIEW",
+  "planHash": "0x499d526e8648d8c52cc34f4037f29ae38d4289206d977af2687aab75d3517722",
+  "contextHash": "0xfa0be2bb00e64fd0926a56d93a97261d84152bc040b619aa5726093abd719b7d",
+  "bundleHash": "0xdeff592bad1675922a8f4db677b01b8e607b47a59e910a1281a13839b61ef6eb",
+  "model": "gpt-6-luna",
+  "responseId": "resp_0dad1e9803c0b58f016ad9ac366b2c87d29d29e9b95917a0a9",
+  "usage": {
+    "inputTokens": 54019,
+    "outputTokens": 1151
+  },
+  "serviceTier": "default",
+  "estimatedStandardCostUsd": "0.005977400",
+  "actualInvoiceCostUsd": null,
+  "costStatus": "TOKEN_BASED_ESTIMATE_NOT_INVOICE",
+  "analysis": {
+    "decision": "NO_CHANGE",
+    "summary": "The measured issue is absent gross-positive opportunities at the tested size: all 2,148 quote outputs are below the 0.001 WETH input, and the packet reports zero positive-gross quotes. Lowering the edge threshold cannot turn those negative gross edges positive, so this history does not support a useful bounded economic-policy test.",
+    "findings": [
+      {
+        "observation": "At the observed sizeWei of 1000000000000000, the packet reports 0 positive-gross quotes out of 2,148. For example, at block 94696456 the highest shown output is 999807508124178 wei, below the 1000000000000000 wei input; at block 94901885, quote outputs are also below input. These are quote estimates, not fills.",
+        "evidenceBlocks": [
+          94696456,
+          94901885
+        ]
+      },
+      {
+        "observation": "Known-gas accounting does not reveal an opportunity: the packet reports 0 positive-after-known-gas quotes. GasUnits already includes frozen reader overhead, but extra gas and infrastructure costs are unknown for all 179 observations; LLM costs are also unknown. Therefore neither gross output nor modelled known gas establishes cost-adjusted profit.",
+        "evidenceBlocks": [
+          94696456,
+          94901885
+        ]
+      },
+      {
+        "observation": "There were no actual fills: both baseline and candidate report 0 trades, and paperNetWei is null. The research gate is HOLD. The 43,246-second, 179-observation history is below the acceptance requirements of 604,800 seconds and 1,000 observations; the packet also flags SOURCE_GAP. Snapshot matching establishes provider consistency, not signed consensus or execution.",
+        "evidenceBlocks": [
+          94696456,
+          94901885
+        ]
+      }
+    ],
+    "proposal": null,
+    "nextTest": "Keep the frozen mevy-control-v1 unchanged and do not promote the candidate. Reassess only with fresh observations after block 94901885, retaining the original acceptance rules and requiring reconciled extra-gas, infrastructure, and LLM costs; a successor must independently meet the duration, observation-count, gap, and improvement gates.",
+    "limitations": [
+      "Quotes are estimates and do not simulate executed fills, reverts, competition, private orderflow, or MEV leakage.",
+      "The packet only supports conclusions at the observed 0.001 WETH size; it provides no basis to extrapolate results to another size.",
+      "Unknown costs and the source-gap flag prevent a complete cost-adjusted performance assessment.",
+      "Passing a research gate would not itself authorize trading."
+    ]
+  },
+  "createdAt": "2026-10-22T06:25:06.869Z",
+  "parentResearchGate": "HOLD",
+  "trainingThroughBlock": 94901885,
+  "livePromotion": "DISABLED",
+  "boundary": "Unapproved research draft. No database proposal approval, strategy change, successor freeze, signing or trading.",
+  "analysisHash": "0x416978cf333717f69c6fa0b08f8fdb61950c8cab7f3ee4b2add84460fbca856d"
+}

@@ -1,4 +1,4 @@
-import { readFileSync,readdirSync,existsSync,mkdirSync,writeFileSync,renameSync,unlinkSync } from 'node:fs';
+import { readFileSync,readdirSync,existsSync,mkdirSync,writeFileSync,renameSync } from 'node:fs';
 import { join } from 'node:path';
 import { digest } from './model.ts';
 import { publishGit } from './auto-publish.ts';
@@ -14,7 +14,6 @@ for(const name of readdirSync(spool).filter(x=>/^(?:slot-\d+|lab-[a-z0-9-]+)\.js
   const record=JSON.parse(readFileSync(join(spool,name),'utf8'));
   if(digest(record.campaign)!==digest(campaign))throw Error('Publisher campaign differs from root authorization');
   const result=publishGit(record,root,key,hosts);
-  const tmp=join(state,'.'+name);writeFileSync(tmp,JSON.stringify({slot:record.slot,analysisHash:record.analysisHash,...result,publishedAt:new Date().toISOString()},null,2)+'\n',{mode:0o600});renameSync(tmp,join(state,name));console.log(JSON.stringify({slot:record.slot,...result}));
-  if(name.startsWith('lab-'))unlinkSync(join(spool,name));
+  const tmp=join(state,'.'+name);writeFileSync(tmp,JSON.stringify({slot:record.slot,analysisHash:record.analysisHash,runId:record.id,reportHash:record.reportHash,kind:record.format,...result,publishedAt:new Date().toISOString()},null,2)+'\n',{mode:0o600});renameSync(tmp,join(state,name));console.log(JSON.stringify({slot:record.slot,runId:record.id,...result}));
  }catch{console.error(JSON.stringify({state:'PUBLICATION_FAILED_RETRY_WITHOUT_INFERENCE',slotFile:name}));process.exitCode=1;break;}
 }

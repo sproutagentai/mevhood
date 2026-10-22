@@ -1,4 +1,4 @@
-import { readFileSync,writeFileSync,renameSync,existsSync,mkdirSync } from 'node:fs';
+import { readFileSync,writeFileSync,renameSync,existsSync,mkdirSync,readdirSync,unlinkSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { digest,type Experiment } from './model.ts';
@@ -10,6 +10,7 @@ import { planDiscovery,runDiscovery } from './lab-research.ts';
 import { labRecord,type LabRun } from './lab-publication.ts';
 export class LabRuntime{
  store:LabStore;graph:LabGraph;
+ lastPublicCheck=0;
  constructor(readonly root:string,readonly spool:string,readonly campaign:Campaign,readonly control:Experiment,readonly budget:AutoStore,readonly rpc:string){
   this.store=new LabStore(join(root,'lab.sqlite'));this.graph=verifyGraph(JSON.parse(readFileSync(new URL('../evidence/lab-universe-2026-10-22.json',import.meta.url),'utf8')));this.store.put('graph',this.graph.graphHash,this.graph);
  }
@@ -19,13 +20,17 @@ export class LabRuntime{
   const frame=await quoteLabFrame(this.graph,control,cells,this.rpc,this.budget.captures()[String(control.block)]!);this.store.put('frame',String(control.block),frame);
  }
  async activate(){
-  const waiting=this.store.trials().filter(t=>!t.publicAnchor);if(!waiting.length)return;
+  const waiting=this.store.trials().filter(t=>!t.publicAnchor);if(!waiting.length&&Date.now()-this.lastPublicCheck<600000)return;this.lastPublicCheck=Date.now();
   const read=async(url:string)=>{const r=await fetch(url,{signal:AbortSignal.timeout(18000),headers:{'User-Agent':'Mevy-research-source-check'}});if(!r.ok)throw Error('Public freeze check unavailable');const t=await r.text();if(t.length>8_000_000)throw Error('Public freeze response too large');return t;};
   const meta=JSON.parse(await read('https://api.github.com/repos/sproutagentai/mevhood/commits/main'));if(!/^[a-f0-9]{40}$/.test(meta.sha))throw Error('Invalid public freeze revision');
   const base=`https://raw.githubusercontent.com/sproutagentai/mevhood/${meta.sha}/`,manifest=JSON.parse(await read(base+'PUBLIC_FILES.json'));
   const verified=async(p:string)=>{if(!/^evidence\/[a-z0-9-]+\.json$/.test(p))throw Error('Invalid public freeze path');const t=await read(base+p);if(createHash('sha256').update(t).digest('hex')!==manifest.files[p])throw Error('Public freeze hash mismatch');return JSON.parse(t);};
   if(!manifest.files['evidence/discovery-index.json'])return;const index=await verified('evidence/discovery-index.json'),report=await verified(index.latest.path);
   const {reportHash,...body}=report;if(reportHash!==index.latest.reportHash||digest(body)!==reportHash)throw Error('Public trial report mismatch');
+  // The publisher has read-only spool access. Only the producer removes a
+  // delivered envelope, after its hash appears in the verified public index.
+  const published=new Set(index.reports.map((r:any)=>r.reportHash));for(const name of readdirSync(this.spool).filter(n=>/^lab-[a-z0-9-]+\.json$/.test(n))){const p=join(this.spool,name),r=JSON.parse(readFileSync(p,'utf8'));if(digest(r.campaign)===digest(this.campaign)&&published.has(r.reportHash))unlinkSync(p);}
+  if(!waiting.length)return;
   const h=await head(this.rpc),now=new Date().toISOString();
   for(const t of waiting)if(report.trials.some((r:any)=>r.trial.trialHash===t.trialHash))this.store.put('anchor',t.id,{commit:meta.sha,seenAt:now,startBlock:h.number,startTimestamp:Math.max(h.timestamp,Math.floor(Date.now()/1000))});
  }

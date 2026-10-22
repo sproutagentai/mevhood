@@ -1,0 +1,498 @@
+{
+  "format": "mevy-strategy-lab-report/v1",
+  "createdAt": "2026-10-22T11:12:49.207Z",
+  "campaign": {
+    "id": "mevy-auto-20261021",
+    "startsAt": 1792606905,
+    "endsAt": 1793211705,
+    "intervalSeconds": 21600,
+    "collectionSeconds": 120,
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "model": "gpt-6-luna",
+    "repository": "sproutagentai/mevhood",
+    "bootstrap": true
+  },
+  "graphPath": "evidence/lab-mevy-auto-20261021-graph.json",
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+  "control": {
+    "acceptance": {
+      "maxDrawdownWei": "1000000000000000",
+      "maxGapSeconds": 300,
+      "maxTradeLossWei": "100000000000000",
+      "minImprovementWei": "100000000000000",
+      "minObservations": 1000,
+      "minSeconds": 604800
+    },
+    "baseline": {
+      "gasSafetyBps": 15000,
+      "minEdgeBps": 20,
+      "name": "mevy-control-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "candidate": {
+      "gasSafetyBps": 20000,
+      "minEdgeBps": 35,
+      "name": "mevy-candidate-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "commitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+    "createdAt": 1792606932,
+    "engineHash": "0x6c0766619a727ad4205b236069f2ae1814db510d0c6a77278596e5e226efe28c",
+    "freezeBlock": 94487422,
+    "freezeBlockHash": "0xd29ea25c4cf43ce9f3abc5dbaa4033611e1b6f2ce7b4e28756a7229f0639a562",
+    "id": "mevy-auto-20261021",
+    "llmCostNote": "Unattended preliminary research. Model USD reservations and response usage are retained separately; WETH invoice conversion and infrastructure costs unknown. No public anchor or live promotion.",
+    "llmCostWei": null,
+    "trainingThroughBlock": 94487421,
+    "version": 1
+  },
+  "sources": [
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95046937.json",
+      "block": 95046937,
+      "frameHash": "0x49f8d2c9f07ccdc36d8bd3c4b2837c7252e3d6b1e12d80da911380de9d861931"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95048069.json",
+      "block": 95048069,
+      "frameHash": "0xa081e4ade042d1f78255786cbb91dcf13ef3d8269092310f3d3acc1591719219"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95049272.json",
+      "block": 95049272,
+      "frameHash": "0x44804f31b8b4f43f3af6b443d4d78684380812e2150fd3946c45d6f151759259"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95050541.json",
+      "block": 95050541,
+      "frameHash": "0x788c72d3fbcd15c5fcba2eac0507941a93a75a6b8631ee896300c9c60f1b830a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95051756.json",
+      "block": 95051756,
+      "frameHash": "0x65ff31bf31c1e76ddb0fd6f2d2fd0715037ba9606a009c02e4b1d95250cfcbd9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95053024.json",
+      "block": 95053024,
+      "frameHash": "0x5b46081bf0f374f9e2dbeb3116b50fb7685e0679ca7e25fc281d30b82880692c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95054830.json",
+      "block": 95054830,
+      "frameHash": "0x4f21fcd33c456e7bf70331404b1ed8fe3be87eddf35aaf96db63bfe0fe261dc6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95056149.json",
+      "block": 95056149,
+      "frameHash": "0x9d6e77b4eda73ef63b44d2b1165d9a050a10dd9bf630104b3f6de64f0a858295"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95057227.json",
+      "block": 95057227,
+      "frameHash": "0xaf150f15e083b332c41c5305168f2412ca2d7d67301f5ff1222acc86a8ab776d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95058495.json",
+      "block": 95058495,
+      "frameHash": "0x86b32ebbeb279e4fc834fd71e8e2699d5b283b76cbad1b4ecf017dc978b51d86"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95059725.json",
+      "block": 95059725,
+      "frameHash": "0x1d47cfb7b44c92db68e2733f3030fa5a8e8afb895e2b8eb5bb87a560a5dd45cb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95061017.json",
+      "block": 95061017,
+      "frameHash": "0x2fa05e97f260bd4133a45256e12dde1a33fd3682f720c6b4cbe140cd4d661445"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95062258.json",
+      "block": 95062258,
+      "frameHash": "0x0e89b7c7ee4a9cf16d01fe95c09c92a3cf8bd1e982af81a3ebfcf69f81bd8918"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95063583.json",
+      "block": 95063583,
+      "frameHash": "0x993e0ec950391466c3e4d6a3b41d2045df95ecfa272a040cca3ac7238d70ac2a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95064822.json",
+      "block": 95064822,
+      "frameHash": "0x895bfea777745bb0011a3f80268ab9af79eb368f0170345b5147073074912d1b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95066012.json",
+      "block": 95066012,
+      "frameHash": "0xbd90842961763529c689b41cef916741005ace1ed2da13441c3cd7c22f67d8e7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95067297.json",
+      "block": 95067297,
+      "frameHash": "0xd60fa08c3d3d6ab06cd79cc17716ef33d19677a982677f95e54e7751be845f61"
+    }
+  ],
+  "modelRuns": [
+    {
+      "id": "launch-20261022",
+      "priorTrials": [],
+      "trainingBlocks": [
+        95046937,
+        95048069,
+        95049272,
+        95050541,
+        95051756,
+        95053024
+      ],
+      "analysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+      "createdAt": "2026-10-22T10:48:57.372Z",
+      "paths": {
+        "analysis": "evidence/lab-mevy-auto-20261021-launch-20261022-analysis.json",
+        "plan": "evidence/lab-mevy-auto-20261021-launch-20261022-plan.json",
+        "context": "evidence/lab-mevy-auto-20261021-launch-20261022-context.json"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95046937,
+            95048069,
+            95049272,
+            95050541,
+            95051756,
+            95053024
+          ],
+          "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quote results alone do not establish fills, inclusion, or profit.",
+          "name": "Hypothesis: WETH–CASHCAT–USDG triangle at 0.005 WETH",
+          "rationale": "The graph contains this distinct WETH → CASHCAT → USDG → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary price dislocation involving the CASHCAT–USDG pool could overcome the route’s fees and gas reserve at this exact size; it is worth testing only if fresh quotes satisfy the stated entry rule. No supplied training quote measures this route at this size, so its output and edge remain unknown.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x215aac4318600ac80b12127dd0bb17f8c981f97ba7c88eb6031a9dbf51745ee5",
+            "sizeWei": "5000000000000000"
+          }
+        },
+        "id": "0x412b3589d3db3b2b517f5f634ad72eb83c182943cc2448688124f368d394ceb2",
+        "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+        "proposalHead": 95054822,
+        "proposedAt": "2026-10-22T10:48:58.543Z",
+        "publicAnchor": {
+          "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+          "seenAt": "2026-10-22T10:51:12.041Z",
+          "startBlock": 95056142,
+          "startTimestamp": 1792666272
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+        "trainingThroughBlock": 95053024,
+        "trialHash": "0xb2558da311aec32ef58fca65aaf3e9de666d2899a7d80150aedd4c049783886d"
+      },
+      "result": {
+        "trialId": "0x412b3589d3db3b2b517f5f634ad72eb83c182943cc2448688124f368d394ceb2",
+        "trialHash": "0xb2558da311aec32ef58fca65aaf3e9de666d2899a7d80150aedd4c049783886d",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95053024,
+        "forwardStartBlock": 95056142,
+        "firstBlock": 95056149,
+        "lastBlock": 95067297,
+        "maxGapSeconds": 133,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95056149,
+            "frameHash": "0x9d6e77b4eda73ef63b44d2b1165d9a050a10dd9bf630104b3f6de64f0a858295",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95057227,
+            "frameHash": "0xaf150f15e083b332c41c5305168f2412ca2d7d67301f5ff1222acc86a8ab776d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95058495,
+            "frameHash": "0x86b32ebbeb279e4fc834fd71e8e2699d5b283b76cbad1b4ecf017dc978b51d86",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95059725,
+            "frameHash": "0x1d47cfb7b44c92db68e2733f3030fa5a8e8afb895e2b8eb5bb87a560a5dd45cb",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95061017,
+            "frameHash": "0x2fa05e97f260bd4133a45256e12dde1a33fd3682f720c6b4cbe140cd4d661445",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95062258,
+            "frameHash": "0x0e89b7c7ee4a9cf16d01fe95c09c92a3cf8bd1e982af81a3ebfcf69f81bd8918",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95063583,
+            "frameHash": "0x993e0ec950391466c3e4d6a3b41d2045df95ecfa272a040cca3ac7238d70ac2a",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95064822,
+            "frameHash": "0x895bfea777745bb0011a3f80268ab9af79eb368f0170345b5147073074912d1b",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95066012,
+            "frameHash": "0xbd90842961763529c689b41cef916741005ace1ed2da13441c3cd7c22f67d8e7",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95067297,
+            "frameHash": "0xd60fa08c3d3d6ab06cd79cc17716ef33d19677a982677f95e54e7751be845f61",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0x3691700930a8b9bb7f836ea4e8ff2ae5deef6b72faab5b145e0b2330ccda742c"
+      }
+    },
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95046937,
+            95048069,
+            95049272,
+            95050541,
+            95051756,
+            95053024
+          ],
+          "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quotes are not fills or earned returns.",
+          "name": "Hypothesis: WETH–PONS–CASHCAT triangle at 0.005 WETH",
+          "rationale": "The graph contains this WETH → PONS → CASHCAT → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary relative-price mismatch across these three pools could produce a positive round-trip edge at this exact size, but only if fresh same-block quotes show at least 30 bps after applying a 1.5× gas-cost reserve. The 36 training quotes sampled other route/size combinations; none is evidence for this cell.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x04272235c51d865c81df79e81a5d749b233a9fde48aab6d33ea9498e54819c2e",
+            "sizeWei": "5000000000000000"
+          }
+        },
+        "id": "0xae93b4a88aa3d06de22c4db4a0cb8131423f36ab4abc4262d83459be2f6caf03",
+        "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+        "proposalHead": 95054822,
+        "proposedAt": "2026-10-22T10:48:58.542Z",
+        "publicAnchor": {
+          "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+          "seenAt": "2026-10-22T10:51:12.041Z",
+          "startBlock": 95056142,
+          "startTimestamp": 1792666272
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+        "trainingThroughBlock": 95053024,
+        "trialHash": "0xf7cf86e62d3480fcc6bc4e0b73c6eab7a873514a7fbb747eeeb38016c8dbaeed"
+      },
+      "result": {
+        "trialId": "0xae93b4a88aa3d06de22c4db4a0cb8131423f36ab4abc4262d83459be2f6caf03",
+        "trialHash": "0xf7cf86e62d3480fcc6bc4e0b73c6eab7a873514a7fbb747eeeb38016c8dbaeed",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95053024,
+        "forwardStartBlock": 95056142,
+        "firstBlock": 95056149,
+        "lastBlock": 95067297,
+        "maxGapSeconds": 133,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95056149,
+            "frameHash": "0x9d6e77b4eda73ef63b44d2b1165d9a050a10dd9bf630104b3f6de64f0a858295",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95057227,
+            "frameHash": "0xaf150f15e083b332c41c5305168f2412ca2d7d67301f5ff1222acc86a8ab776d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95058495,
+            "frameHash": "0x86b32ebbeb279e4fc834fd71e8e2699d5b283b76cbad1b4ecf017dc978b51d86",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95059725,
+            "frameHash": "0x1d47cfb7b44c92db68e2733f3030fa5a8e8afb895e2b8eb5bb87a560a5dd45cb",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95061017,
+            "frameHash": "0x2fa05e97f260bd4133a45256e12dde1a33fd3682f720c6b4cbe140cd4d661445",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95062258,
+            "frameHash": "0x0e89b7c7ee4a9cf16d01fe95c09c92a3cf8bd1e982af81a3ebfcf69f81bd8918",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95063583,
+            "frameHash": "0x993e0ec950391466c3e4d6a3b41d2045df95ecfa272a040cca3ac7238d70ac2a",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95064822,
+            "frameHash": "0x895bfea777745bb0011a3f80268ab9af79eb368f0170345b5147073074912d1b",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95066012,
+            "frameHash": "0xbd90842961763529c689b41cef916741005ace1ed2da13441c3cd7c22f67d8e7",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95067297,
+            "frameHash": "0xd60fa08c3d3d6ab06cd79cc17716ef33d19677a982677f95e54e7751be845f61",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0xe2020626babee42c986ef0f088757a14dd7af835bab1aecbf4ea02bfff1d85b2"
+      }
+    }
+  ],
+  "search": {
+    "pools": 14,
+    "routes": 120,
+    "triangularRoutes": 100,
+    "sizes": 4,
+    "totalCells": 480,
+    "quotedCells": 82,
+    "observations": 17,
+    "quotes": 102,
+    "quoteErrors": 0
+  },
+  "livePromotion": "DISABLED",
+  "boundary": "Versioned bounded strategy search. Training and publicly activated forward rows are distinct. Unknown costs and the unchanged seven-day gate prevent a profit or live-promotion claim.",
+  "reportHash": "0x331242ef638014ab6d6803d7c5494364a19274aeafd01f42c0f7cf51a0bbce9b"
+}

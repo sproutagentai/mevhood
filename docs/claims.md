@@ -10,9 +10,10 @@
 | Local contract invariants | VERIFIED locally | forge test |
 | Contract deployed / funded / signed trades | NOT DONE | No deployment address or receipts |
 | eve typed agent and two restricted tools | BUILT | npm run build:agent |
-| Direct OpenAI batch analysis with bounded draft output | VERIFIED one genuine response | GPT-6.1 Sol analysed all 40 rows/480 quotes; actual response/usage/source-bound plan published; NO_CHANGE |
-| Provider invoice / useful autonomous improvement cycle | UNVERIFIED | Token-based charge estimate only; no improved candidate or recurring paid runtime established |
-| Preliminary bounded VPS collection | STARTED / source gap preserved | 24-hour authorization, fixed stop deadline; not a completed forward trial |
+| Direct OpenAI analysis with bounded draft output | VERIFIED manual + three automatic responses | Original 40-row Sol response plus Luna startup/two 179-row reports; source-bound plans, usage and actual responses in research-index.json; all NO_CHANGE |
+| Scheduled VPS analysis and evidence publication | RUNNING / three automatic publications observed | Six-hour slots; campaign ends 28Oct2026 18:21UTC; launch receipt and report index. Future seven-day uptime is unverified |
+| Provider invoice / useful strategy improvement | UNVERIFIED | Automatic token estimate $0.0130764 as of 22Oct08:19UTC; no reconciled invoice or improved approved candidate |
+| Preliminary VPS collection | Original collector replaced; historical gap preserved | Separate authorized seven-day campaign: 120-second source cadence, rolling $1/day and $7 total reservations. Not a completed forward trial |
 | Upgrade of the old funded MEVHOOD engine | NOT CLAIMED | Independent implementation; no private-engine access |
 | Token-holder distribution / vault | NOT IMPLEMENTED HERE | Separate product and contracts |
 

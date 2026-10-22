@@ -37,7 +37,8 @@ test('window receipts preserve actual single-block source checks and reject a mi
   captures[String(original.observations[0].block)]!.checks[0]!.sourceDigest='changed';assert.throws(()=>bindWindowAudit(bundle,captures),/proof mismatch/);
  }finally{s.close();}
 });
-test('one reserved inference survives publication retry/restart; recovered output is published without calling the model again',async()=>{
+test('one reserved inference survives publication retry/restart; recovered output is published without calling the model again',async t=>{
+ t.mock.timers.enable({apis:['Date'],now:(c.startsAt+86400)*1000});
  const s=await setup();let calls=0;const args={state:s.state,experiment,observations:original.observations,slot:0,now:original.observations.at(-1).timestamp+10,root:join(s.dir,'runs'),spool:join(s.dir,'spool'),generate:async()=>{calls++;return generation();}};
  try{
   const first=await analyseSlot(args);assert.equal(first.state,'ANALYSED');assert.equal(calls,1);

@@ -27,8 +27,8 @@ Bundle digest:
 ## Still unverified
 
 - A seven-day forward comparison and useful net improvement.
-- A paid LLM generation, provider invoice reconciliation and a useful approved candidate cycle.
-- Continuous hosted collection and restart monitoring.
+- Provider invoice reconciliation and a useful approved candidate cycle.
+- A complete seven-day continuous record and future restart monitoring.
 - An onchain commitment, public contract deployment, independent security review or a signed funded canary.
 - Any integration with the old private MEVHOOD searcher, token, holder payouts or vault.
 
@@ -50,7 +50,7 @@ FOUNDRY_PROFILE=fork forge test --rpc-url https://rpc.mainnet.chain.robinhood.co
 
 A fresh public source read at that same pinned block (**2026-10-21 11:39:39 UTC**) obtained12 successful two-pool quotes, zero source errors. Best output for1,000,000,000,000,000 wei was **999,716,082,448,806 wei**, still below input before gas. This read verifies current connectivity; it is not a new forward performance experiment. Historical-state availability can change.
 
-Live provider generation/invoice, continuous collection, public registry deployment and funded execution remain unverified and unlaunched.
+At that preparation checkpoint, live provider generation, continuous collection and deployment had not been launched. Later dated records below supersede those integration blockers; invoices, profit improvement and funded execution remain unverified.
 
 ## Archive connection — 2026-10-21
 
@@ -71,3 +71,20 @@ The model's numerical findings were recomputed independently: all 480 outputs ar
 Returned usage is **14,832 input and 1,039 output tokens**, standard service tier. At the reviewed $2/$10 per million input/output token rates, the conservative uncached estimate is **$0.040054**. `actualInvoiceCostUsd` remains null; this is a token-based estimate, not an independently reconciled provider invoice. The application reserved about $0.49 before the one request. No recurring paid process was launched.
 
 **46 offline tests**, type checking, agent compilation, 10 local contract tests/256 fuzz and both historical bundle replays pass. The tests include direct OpenAI request wiring with network blocked, complete real quote coverage/source bindings, citation/policy rejection, explicit quote pagination, failed/unknown-cost receipts and repeated-attempt prevention. The new genuine-response fixture is checked offline. Four frozen engine files, policies and historical bundles remain unchanged. The model saw the fixed pre-outage snapshot; newer collection records and its later source gap were outside that context. A no-change recommendation does not establish profitability, a useful improved strategy or public commitment timing.
+
+
+## Automatic VPS campaign — observed 22 October 2026
+
+Public source PR3 passed branch, PR and merged-main CI before activation. The 73-file launch tree was independently fetched and byte-compared to the reviewed source. The four frozen engine/source files, policies and earlier evidence remain unchanged. The campaign worker started at **21 October 18:22:12 UTC**, with an absolute stop at **28 October 18:21:45 UTC**. Source collection and actual same-block re-quotes run at a nominal 120-second cadence.
+
+At **22 October 08:19 UTC**, the worker had saved and source-paired **416 observations**, with zero quote errors and zero process restarts. Exactly three request markers, three saved provider results and three successful publication receipts were present. The startup report was published at 18:26 UTC; subsequent scheduled reports were published at **00:24 UTC** and **06:25 UTC** on 22 October. Their non-overlapping cohorts contain 179 observations / 2,148 quotes each. All three actual responses are `NO_CHANGE`, proposals are null and the research gate is `HOLD`. The [index](../evidence/research-index.json) retains original responses, plans, complete quote bundles and source checks; exact smaller quote files preserve readable GitHub line anchors.
+
+Independent offline validation reproduced each plan, checked every response/source binding and every quote-source file, replayed the original evaluator and verified that the published cohorts do not overlap. The published 359-observation prefix contains 4,308 quotes. This observed sequence establishes that scheduled analysis and publication occurred; it does not prove future seven-day uptime or profitable trading.
+
+The three automatic token estimates are **$0.0009295**, **$0.0061695** and **$0.0059774**: **$0.0130764 total**. Conservative reservations remain held at **$0.122004575 total**. `actualInvoiceCostUsd` remains null. The application permits at most $1 of reservations in rolling 24 hours and $7 for this campaign; this is not an account-wide provider billing cap.
+
+The researcher cannot read the dedicated repository private key, and the publisher cannot read the OpenAI key. The public GitHub key registration does not expire itself; the absolute-expiry service stops the workers and removes their dedicated private key/API credential copies. Model outputs remain unapproved proposals. No signing, strategy promotion or funded execution was added.
+
+The existing crash/publication test now fixes its clock explicitly, so future CI runs do not fail merely because the fixture's seven-day authorization window has elapsed. This changes the test only; the production authorization check is retained.
+
+The evaluator remains bound to the original experiment freeze. Window reports retain its elapsed-since-freeze duration and gap rules: later windows exclude previously analysed rows, so their `SOURCE_GAP` flag also reflects that omitted prefix. Inspect the quoted-window timestamps for the actual cohort span. The second full cohort's maximum internal timestamp gap was 271 seconds; this does not establish a complete seven-day comparison. No flag, raw response or gate was removed.

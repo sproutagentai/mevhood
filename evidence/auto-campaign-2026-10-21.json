@@ -1,0 +1,73 @@
+{
+  "format": "mevy-campaign-launch/v1",
+  "campaign": {
+    "id": "mevy-auto-20261021",
+    "startsAt": 1792606905,
+    "endsAt": 1793211705,
+    "intervalSeconds": 21600,
+    "collectionSeconds": 120,
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "model": "gpt-6-luna",
+    "repository": "sproutagentai/mevhood",
+    "bootstrap": true
+  },
+  "publicSourceCommit": "e8250786d3b805ae3c959df9d37f75d9d5f2c84e",
+  "workerObservedAt": "2026-10-21T18:22:17+00:00",
+  "workerState": "COLLECTING",
+  "workerStartedAt": "2026-10-21T18:22:12.763Z",
+  "expiryConfiguredAt": "2026-10-28T18:21:45+00:00",
+  "sourceUnitPaths": [
+    "ops/mevy-research-auto.service",
+    "ops/mevy-research-publish.service",
+    "ops/mevy-research-publish.timer",
+    "ops/mevy-research-expire.service"
+  ],
+  "budgetBoundary": "Conservative request reservations, not a provider-enforced billing cap or reconciled invoice.",
+  "livePromotion": "DISABLED",
+  "provenance": "Operator-observed runtime/configuration receipt. Not a signed provider attestation, onchain commitment, seven-day uptime proof or profitability result.",
+  "latestObservedAt": "2026-10-22T08:19:08+00:00",
+  "savedObservations": 416,
+  "sourcePairedObservations": 416,
+  "quoteErrors": 0,
+  "modelRequestMarkers": 3,
+  "publishedReports": [
+    {
+      "slot": 0,
+      "createdAt": "2026-10-21T18:26:17.312Z",
+      "decision": "NO_CHANGE",
+      "observations": 1,
+      "quotes": 12,
+      "analysisPath": "evidence/auto-mevy-auto-20261021-s00-analysis.json",
+      "bundlePath": "evidence/auto-mevy-auto-20261021-s00-bundle.json",
+      "costEstimate": "0.000929500",
+      "reservedUsd": "0.016645200"
+    },
+    {
+      "slot": 1,
+      "createdAt": "2026-10-22T00:24:24.993Z",
+      "decision": "NO_CHANGE",
+      "observations": 179,
+      "quotes": 2148,
+      "analysisPath": "evidence/auto-mevy-auto-20261021-s01-analysis.json",
+      "bundlePath": "evidence/auto-mevy-auto-20261021-s01-bundle.json",
+      "costEstimate": "0.006169500",
+      "reservedUsd": "0.052677900"
+    },
+    {
+      "slot": 2,
+      "createdAt": "2026-10-22T06:25:06.869Z",
+      "decision": "NO_CHANGE",
+      "observations": 179,
+      "quotes": 2148,
+      "analysisPath": "evidence/auto-mevy-auto-20261021-s02-analysis.json",
+      "bundlePath": "evidence/auto-mevy-auto-20261021-s02-bundle.json",
+      "costEstimate": "0.005977400",
+      "reservedUsd": "0.052681475"
+    }
+  ],
+  "latestObservedPublicationCommit": "a882353e099dc48aab8b3331cce220f28536123a",
+  "publishedPrefixHash": "0x6fd15bb8e0bac034a28dc24df43fe80b75a18859f1b98dee99216d2ae689b48e",
+  "estimatedAutomaticTokenCostUsd": "0.013076400",
+  "providerInvoiceCostUsd": null
+}

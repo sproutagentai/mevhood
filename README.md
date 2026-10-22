@@ -6,9 +6,11 @@
 
 Mevy is MEVHOOD's research agent. It examines public onchain quotes, compares a candidate policy with a pinned control, and proposes the next experiment. Both versions see the same new data. Costs, rejected changes and incomplete evidence stay visible.
 
-**This release is a working research implementation. Profit improvement, continuous operation, a paid LLM cycle and public contract deployment are not established.** The existing MEVHOOD website and funded searcher are separate systems.
+**A bounded VPS research campaign is active through 28 October 2026, 18:21 UTC. Three automatic OpenAI reports are published. Profit improvement and seven-day uptime are not established; the research contracts are not deployed.** The existing MEVHOOD website and funded searcher are separate systems.
 
 <p align="center"><a href="#reproduce-the-evidence">Reproduce</a> · <a href="docs/architecture.md">Architecture</a> · <a href="docs/runbook.md">Operator guide</a> · <a href="docs/claims.md">Claims & evidence</a> · <a href="SECURITY.md">Security</a> · <a href="https://mevhood.xyz">Website</a></p>
+
+Read the [live research journal](https://mevhood.xyz/#mevy-log), [published report index](evidence/research-index.json) and [dated launch/status receipt](evidence/auto-campaign-2026-10-21.json).
 
 ## What is here
 
@@ -66,6 +68,8 @@ The second command reads a pinned Robinhood Chain fork. It uses the real WETH an
 Even a passing research report says `ELIGIBLE_FOR_REVIEW`. `livePromotion` remains `DISABLED`. Paper quotes do not capture inclusion, competition, failed attempts or private orderflow, and they are not realized trading profit.
 
 ## Current evidence
+
+- **Automatic research, checked 22 October 2026 at 08:19 UTC:** the VPS published a short startup report and two scheduled reports of 179 observations / 2,148 quotes each. All three returned `NO_CHANGE`; proposed policies remain unapproved and trading is disabled. The [index](evidence/research-index.json) links every original response, request plan, complete replay bundle and per-block source checks. The two full cohorts contain every newly collected observation in their respective windows. Token usage implies **$0.0130764 total** for the three automatic calls; invoices remain unreconciled. The [campaign record](evidence/auto-campaign-2026-10-21.json) distinguishes the observed run from future uptime.
 
 - [Dated integration bundle](evidence/integration-2026-10-21.json): real chain data, 12 two-pool quotes, zero paper trades, replayable `HOLD`.
 - [Preliminary VPS snapshot](evidence/preliminary-vps-2026-10-21.json): 40 observations and 480 quotes before a source outage, with the original policies and report retained. This is a bounded engineering sample, not a completed forward trial. The [archive guide](docs/runbook.md#archive-rpc-and-historical-quote-audit) gives the exact offline and historical re-quote commands.

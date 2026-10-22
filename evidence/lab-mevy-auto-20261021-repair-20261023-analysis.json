@@ -1,0 +1,62 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          95110040,
+          95112576
+        ],
+        "failureCondition": "Reject if none of the first 10 eligible paired observations meets all entry rules, including two consecutive eligible observations. Passing that futility screen is not acceptance: retain the original control and require the seven-day/1000-observation acceptance gate. Quotes are not fills, inclusion, or earned returns; unknown extra gas, infrastructure, and model invoice costs preclude a full profit claim.",
+        "name": "Hypothesis: WETH–PONS cross-pool loop at 0.02 WETH",
+        "rationale": "The graph contains this WETH → PONS → WETH route across the 10000- and 500-fee pools. Training quotes show the route at other sizes, not at 0.02 WETH; the proposed cell therefore needs fresh quotes. Hypothesis: a temporary relative-price divergence between the two pools could create a gross round-trip surplus large enough to cover the 1.5× known-gas reserve and leave at least 30 bps net edge. The entry rule also requires gas at or below 30000000 wei and two consecutive eligible observations.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x00348e64ad392772b4ab43ab07f413e1c9554ec294a3dc3646c43559877e6d7c",
+          "sizeWei": "20000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          95134826
+        ],
+        "failureCondition": "Reject if none of the first 10 eligible paired observations meets all entry rules, including two consecutive eligible observations. Passing that futility screen is not acceptance: retain the original control and require the seven-day/1000-observation acceptance gate. Quotes are not fills, inclusion, or earned returns; unknown extra gas, infrastructure, and model invoice costs preclude a full profit claim.",
+        "name": "Hypothesis: WETH–PONS–USDG triangle at 0.0001 WETH",
+        "rationale": "The graph contains this WETH → PONS → USDG → WETH triangle using 500-, 3000-, and 500-fee pools. The cited training quote for this route was at 0.001 WETH, not the proposed 0.0001 WETH cell, and returned less than its input; that observation is not evidence of an edge at the proposed size. Hypothesis: a short-lived cross-pool price mismatch, if fresh exact-size quotes confirm it, could overcome the fees and gas reserve. Require at least 30 bps net edge after the 1.5× known-gas reserve, gas no higher than 30000000 wei, and two consecutive eligible observations.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x086c60214164a7e3e512eb06ad8d8aeead83648b861e8da294460335a927bbd5",
+          "sizeWei": "100000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "The proposed route/size cells are unquoted in the supplied cohort; their outputs and edges are unknown and must not be inferred by scaling other quoted sizes.",
+      "No training row validates a forward result. The runner must collect new same-block control/candidate observations after public source publication.",
+      "The ten-observation screen can reject an unproductive idea but cannot establish acceptance or profit. Keep the original control and the seven-day/1000-observation gate.",
+      "Quote opportunities are not fills, trades, inclusion, or earned returns, and unknown extra gas, infrastructure, and model invoice costs remain unresolved."
+    ],
+    "summary": "The supplied forward trials rejected four earlier route/size hypotheses at their ten-observation screens; none of their cells is reused here. The proposed cells are new experiments, not claims of positive edge. Both require fresh same-block quotes and preserve the original control."
+  },
+  "analysisHash": "0x5c6352ab76dbbd908c700484e590d9cfa1c9b2b2c5eb963344808f94b8afe3af",
+  "contextHash": "0x506a93e57dd3add19fa50888956c2d06405e8eb0dd2e1b51c94011bed7c06757",
+  "createdAt": "2026-10-22T21:37:54.947Z",
+  "estimatedStandardCostUsd": "0.013375100",
+  "format": "mevy-discovery-analysis/v1",
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x8f203921da228ba5ba780f00d5a39b9de02f4081847722a36aa2f0eeb08f2546",
+  "responseId": "resp_0ae27eaaaba40b6c016ada8212c92887d28365fa3186d45083",
+  "trainingFramesHash": "0xb71f165eaf28261453642d37b971d7afe18f5034dcf524238189e9587b670181",
+  "usage": {
+    "inputTokens": 125266,
+    "outputTokens": 1697
+  }
+}

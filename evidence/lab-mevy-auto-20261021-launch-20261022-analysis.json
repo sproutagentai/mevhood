@@ -1,0 +1,70 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          95046937,
+          95048069,
+          95049272,
+          95050541,
+          95051756,
+          95053024
+        ],
+        "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quotes are not fills or earned returns.",
+        "name": "Hypothesis: WETH–PONS–CASHCAT triangle at 0.005 WETH",
+        "rationale": "The graph contains this WETH → PONS → CASHCAT → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary relative-price mismatch across these three pools could produce a positive round-trip edge at this exact size, but only if fresh same-block quotes show at least 30 bps after applying a 1.5× gas-cost reserve. The 36 training quotes sampled other route/size combinations; none is evidence for this cell.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x04272235c51d865c81df79e81a5d749b233a9fde48aab6d33ea9498e54819c2e",
+          "sizeWei": "5000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          95046937,
+          95048069,
+          95049272,
+          95050541,
+          95051756,
+          95053024
+        ],
+        "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quote results alone do not establish fills, inclusion, or profit.",
+        "name": "Hypothesis: WETH–CASHCAT–USDG triangle at 0.005 WETH",
+        "rationale": "The graph contains this distinct WETH → CASHCAT → USDG → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary price dislocation involving the CASHCAT–USDG pool could overcome the route’s fees and gas reserve at this exact size; it is worth testing only if fresh quotes satisfy the stated entry rule. No supplied training quote measures this route at this size, so its output and edge remain unknown.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x215aac4318600ac80b12127dd0bb17f8c981f97ba7c88eb6031a9dbf51745ee5",
+          "sizeWei": "5000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "Both selected route/size cells are unquoted in the supplied cohort and require fresh quotes; outputs must not be inferred by scaling other sizes.",
+      "Training observations are not forward validation. Keep the original control and the seven-day, 1000-observation acceptance gate.",
+      "Unknown extra gas, infrastructure, and model-invoice costs prevent full profit claims; quote opportunities are not fills, trades, inclusion, or earned returns."
+    ],
+    "summary": "The six supplied observations contain 36 quotes at blocks 95046937–95053024, with gas prices of 20000000–20166000 wei. Neither proposed route/size cell is quoted in those observations. These are bounded paper experiments requiring fresh same-block quotes; the training data does not validate a forward result."
+  },
+  "analysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+  "contextHash": "0xa6dec31a65df70932af57c5ff7a408288b80838d0cf49e703463154492312ab1",
+  "createdAt": "2026-10-22T10:48:57.372Z",
+  "estimatedStandardCostUsd": "0.010099100",
+  "format": "mevy-discovery-analysis/v1",
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0xd134ac721bfd9cb1cbf7b1128bf649789747c9947f44da3eb5d115ab64d9bf77",
+  "responseId": "resp_0b716490c8a5d088016ad9e9e5b09087d18273e599a2729523",
+  "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+  "usage": {
+    "inputTokens": 72991,
+    "outputTokens": 5600
+  }
+}

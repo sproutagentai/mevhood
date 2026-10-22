@@ -1,0 +1,42 @@
+{
+  "format": "mevy-lab-live-check/v1",
+  "checkedAt": "2026-10-22T11:04:09.813895+00:00",
+  "runtimeSourceCommit": "baa5c9e4e10c8f2199fa28801ad04308749828e7",
+  "sourceCi": {
+    "id": 39767256289,
+    "result": "SUCCESS"
+  },
+  "observedSavedFrames": 13,
+  "observedSavedLabQuotes": 78,
+  "observedQuoteErrors": 0,
+  "genuineDiscoveryResponses": 1,
+  "novelHypotheses": 2,
+  "publishedReportPath": "evidence/lab-mevy-auto-20261021-progress-95057227-report.json",
+  "publishedReportHash": "0xb3258154f7d0a4768075b2233c076bc0d0b6118fbedfe3e3c5695609955c2dcd",
+  "publishedForwardPairsPerHypothesis": [
+    2,
+    2
+  ],
+  "trainingThroughBlock": 95053024,
+  "publicForwardStartBlock": 95056142,
+  "firstPublishedForwardBlock": 95056149,
+  "lastPublishedForwardBlock": 95057227,
+  "completePaperNetWei": null,
+  "livePromotion": "DISABLED",
+  "dailyReservationCapUsd": "1.000000000",
+  "campaignEndsAt": 1793211705,
+  "latestCallTokenEstimateUsd": "0.010099100",
+  "latestCallReservedUsd": "0.048303475",
+  "actualInvoiceCostUsd": null,
+  "websiteDeployment": "dpl_516onjp535SNqqGDHcpvwnUFJRa6",
+  "verification": {
+    "backendTests": 58,
+    "websiteTests": 70,
+    "actualArchiveRequote": "12control+6discoveryquotes matched at95046937",
+    "originalControlAndEvaluatorUnchanged": true,
+    "desktop1280Mobile390Panel700": "PASS",
+    "publicQuoteLink": "95056149 opened in GitHub",
+    "independentIntegerSignalMath": "4candidate/blockchecks matched"
+  },
+  "boundary": "Operator-observed runtime and publication check, not a signed provider attestation, seven-day acceptance, profitable execution or future uptime guarantee."
+}

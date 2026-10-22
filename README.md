@@ -69,12 +69,12 @@ Even a passing research report says `ELIGIBLE_FOR_REVIEW`. `livePromotion` remai
 
 ## Strategy discovery
 
-The optional strategy lab quotes new two/three-pool WETH cycles through a verified USDG/PONS/CASHCAT universe, at four exact sizes up to0.02WETH. Mevy proposes new route/size/entry-rule hypotheses, remembers earlier tests and freezes each before public publication and subsequent paired observations. A ten-observation futility screen can reject an idea; promising ideas keep collecting forward evidence. The original seven-day/1,000-observation gate remains unchanged and live execution remains disabled. [Implementation scope and acceptance checks](docs/strategy-lab-spec.md). The first actual discovery request produced two triangular-route hypotheses at0.005WETH, bound to six training blocks and36new quotes. The verification ledger records their publication and subsequent forward status separately; no profit improvement is claimed.
+The optional strategy lab quotes new two/three-pool WETH cycles through a verified USDG/PONS/CASHCAT universe, at four exact sizes up to 0.02 WETH. Mevy proposes new route/size/entry-rule hypotheses, remembers earlier tests and freezes each before public publication and subsequent paired observations. A ten-observation futility screen can reject an idea; promising ideas keep collecting forward evidence. The original seven-day/1,000-observation gate remains unchanged and live execution remains disabled. [Implementation scope and acceptance checks](docs/strategy-lab-spec.md). The first actual discovery request produced two triangular-route hypotheses at 0.005 WETH, bound to six training blocks and 36 new quotes. The verification ledger records their publication and subsequent forward status separately; no profit improvement is claimed.
 
 To replay a published lab report after cloning its exact source revision:
 
 ```sh
-npm run lab:verify -- --report evidence/lab-CAMPAIGN-RUN-report.json
+npm run lab:verify -- --report evidence/lab-mevy-auto-20261021-progress-95057227-report.json
 ```
 
 ## Current evidence

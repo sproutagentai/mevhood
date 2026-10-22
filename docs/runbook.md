@@ -191,14 +191,14 @@ The website checks the public revision every five minutes while visible, keeps s
 
 `MEVY_STRATEGY_LAB=1` enables the separate paper search in the existing bounded VPS worker. It retains the exact campaign config, budget database, expiry timer, private provider key and isolated repository publisher. The source-controlled graph is pinned to a real discovery block. The lab adds exact-size cyclic-route quotes and actual same-block re-quotes after the unchanged control source pair. Persistent state is `lab.sqlite` inside the already isolated state root; original databases and evidence are retained.
 
-One upgrade request, up to a $0.25 conservative reservation and within the existing $1 rolling day/$7 campaign cap, verifies the new cycle. Scheduled slots then use the discovery schema. Unknown attempts are never paid again. Proposals activate only after their exact trial hash is found in a hash-checked public GitHub report; a fresh chain head starts their forward boundary. Training rows are excluded. Progress reports are deterministic and incur no model call. They publish on the first paired results, screen completion and then at most every30minutes. Promising screens continue collecting under the unchanged long gate.
+One upgrade request, up to a $0.25 conservative reservation and within the existing $1 rolling-day / $7 campaign cap, verifies the new cycle. Scheduled slots then use the discovery schema. Unknown attempts are never paid again. Proposals activate only after their exact trial hash is found in a hash-checked public GitHub report; a fresh chain head starts their forward boundary. Training rows are excluded. Progress reports are deterministic and incur no model call. They publish on the first paired results, screen completion and then at most every 30 minutes. Promising screens continue collecting under the unchanged long gate.
 
 The old reports remain in research-index.json; new research/trials use discovery-index.json and immutable per-block frame files. `npm run lab:verify -- --report PATH` replays every linked source, model context and trial. Public file hashes do not prove consensus, execution or actual profit. The initial remaining campaign is shorter than seven days from a new freeze, so this upgrade cannot claim full seven-day acceptance inside the current consent window.
 
 To actually re-read a selected lab block from the connected archive, including the original control and every new cyclic quote at its exact size:
 
 ```sh
-npm run lab:audit -- --report evidence/lab-CAMPAIGN-RUN-report.json --block BLOCK
+npm run lab:audit -- --report evidence/lab-mevy-auto-20261021-initial-scan-95049272-report.json --block 95046937
 ```
 
-This is a paced, one-block public RPC check with no model, signature or server. Keep the original source revision. A successful receipt establishes provider consistency at that pinned block, not a fill. The real initial frame95046937 was re-quoted on22Oct10:45:46UTC: all12control and6new-route quotes matched; evidence/lab-archive-source-check-2026-10-22.json.
+This is a paced, one-block public RPC check with no model, signature or server. Keep the original source revision. A successful receipt establishes provider consistency at that pinned block, not a fill. The original frame at block 95,046,937 was re-quoted on 22 October at 10:45:46 UTC: all 12 control and six exploration quotes matched. The receipt is evidence/lab-archive-source-check-2026-10-22.json.

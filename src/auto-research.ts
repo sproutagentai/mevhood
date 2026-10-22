@@ -46,7 +46,13 @@ export class AutoStore{
  reservations(){return [...this.jobs(),...(this.db.prepare('SELECT body FROM extra_requests ORDER BY id').all() as any[]).map(x=>JSON.parse(x.body))];}
  extra(id:string){const r=this.db.prepare('SELECT body FROM extra_requests WHERE id=?').get(id) as any;return r?JSON.parse(r.body):null;}
  reserveUpgrade(now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
-  const id='strategy-lab-upgrade-20261022';this.db.exec('BEGIN IMMEDIATE');try{
+  return this.reserveExtra('strategy-lab-upgrade-20261022',now,bundleHash,throughBlock,reservedUsd);
+ }
+ reserveRepair(now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
+  return this.reserveExtra('structured-output-repair-20261023',now,bundleHash,throughBlock,reservedUsd);
+ }
+ private reserveExtra(id:'strategy-lab-upgrade-20261022'|'structured-output-repair-20261023',now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
+  this.db.exec('BEGIN IMMEDIATE');try{
    if(!checkCampaign(this.campaign,now)||this.extra(id))throw Error('Upgrade request outside authorization or already claimed');
    const amount=nano(reservedUsd),jobs=this.reservations(),rolling=jobs.filter(j=>j.startedAt>now-86400).reduce((n,j)=>n+nano(j.reservedUsd),0n),total=jobs.reduce((n,j)=>n+nano(j.reservedUsd),0n);
    if(amount<=0n||amount>250_000_000n||rolling+amount>1_000_000_000n||total+amount>7_000_000_000n)throw Error('Authorized rolling or campaign budget exhausted');

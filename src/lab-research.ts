@@ -1,8 +1,7 @@
 import { existsSync,mkdirSync,writeFileSync,readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { z } from 'zod';
-import { generateText,Output } from 'ai';
-import { openai } from 'eve/models/openai';
+import { generateDiscoveryOutput,discoverySettings,type DiscoveryProfile,type ProviderReceipt } from './lab-generation.ts';
 import { digest,type Experiment } from './model.ts';
 import { researchProfiles,type Generation } from './llm-research.ts';
 import { discoverySchema,validateHypotheses,evaluateTrial,strategyId,type LabTrial } from './strategy-lab.ts';
@@ -18,24 +17,24 @@ export function discoveryContext(graph:LabGraph,frames:LabFrame[],trials:LabTria
  const routeIds=new Map(graph.routes.map((r,i)=>[r.id,i]));
  return {format:'mevy-discovery-context/v1',graph,control:{commitment:control.commitment,baseline:control.baseline,acceptance:control.acceptance},availableCells:cells,coverage:{observations:frames.length,quotes:frames.reduce((n,f)=>n+f.quotes.length,0),truncated:false},columns:['routeIndex','sizeWei','amountOutWei','gasUnits','error'],observations:frames.map(f=>({block:f.control.block,timestamp:f.control.timestamp,frameHash:f.frameHash,gasPriceWei:f.control.gasPriceWei,quotes:f.quotes.map(q=>[routeIds.get(q.routeId),q.sizeWei,q.amountOutWei,q.gasUnits,q.error])})),priorTrials:trials.map(t=>({trialHash:t.trialHash,strategyId:strategyId(t.hypothesis.strategy),hypothesis:t.hypothesis,trainingThroughBlock:t.trainingThroughBlock,publicAnchor:t.publicAnchor,result:evaluateTrial(t,allFrames,graph,control)})),boundary:'Every supplied lab quote is included. Prior trial hypotheses are memory; only subsequent publicly activated rows may enter a forward comparison. Empty cells are unquoted, not zero-output routes.'};
 }
-export function planDiscovery(graph:LabGraph,frames:LabFrame[],trials:LabTrial[],control:Experiment,allFrames=frames){
- const context=discoveryContext(graph,frames,trials,control,allFrames),prompt=JSON.stringify(context),schema=z.toJSONSchema(discoverySchema),inputBytes=Buffer.byteLength(prompt+discoveryInstructions+JSON.stringify(schema)),profile=researchProfiles['gpt-6-luna'],maxOutputTokens=6000;
+export function planDiscovery(graph:LabGraph,frames:LabFrame[],trials:LabTrial[],control:Experiment,allFrames=frames,generationProfile:DiscoveryProfile='v1'){
+ const context=discoveryContext(graph,frames,trials,control,allFrames),prompt=JSON.stringify(context),schema=z.toJSONSchema(discoverySchema),inputBytes=Buffer.byteLength(prompt+discoveryInstructions+JSON.stringify(schema)),profile=researchProfiles['gpt-6-luna'],maxOutputTokens=discoverySettings[generationProfile].maxOutputTokens;
  if(!context.availableCells.length)throw Error('Discovery search universe exhausted');if(inputBytes>profile.maxBytes)throw Error('Complete discovery context exceeds budget; no truncation');
  const reserve=((BigInt(inputBytes+4096)*profile.reserveInput+BigInt(maxOutputTokens)*profile.reserveOutput)*125n+99n)/100n;if(reserve>250_000_000n)throw Error('Discovery request exceeds quarter-dollar reserve');
- const body={format:'mevy-discovery-plan/v1',model:'gpt-6-luna',contextHash:digest(context),graphHash:graph.graphHash,trainingFramesHash:digest(frames.map(f=>f.frameHash)),instructionsHash:digest(discoveryInstructions),schemaHash:digest(schema),inputBytes,maxOutputTokens,reservedUsd:(Number(reserve)/1e9).toFixed(9),coverage:context.coverage,automaticRetry:false,livePromotion:'DISABLED'};
+ const body={format:generationProfile==='v1'?'mevy-discovery-plan/v1':'mevy-discovery-plan/v2',...(generationProfile==='v2'?{generationProfile,reasoning:discoverySettings[generationProfile].reasoning}:{}),model:'gpt-6-luna',contextHash:digest(context),graphHash:graph.graphHash,trainingFramesHash:digest(frames.map(f=>f.frameHash)),instructionsHash:digest(discoveryInstructions),schemaHash:digest(schema),inputBytes,maxOutputTokens,reservedUsd:(Number(reserve)/1e9).toFixed(9),coverage:context.coverage,automaticRetry:false,livePromotion:'DISABLED'};
  return {plan:{...body,planHash:digest(body)},context,prompt};
 }
-export async function generateDiscovery(prompt:string):Promise<Generation>{
- const r=await generateText({model:openai('gpt-6-luna'),system:discoveryInstructions,prompt,output:Output.object({schema:discoverySchema}),reasoning:'medium',maxOutputTokens:6000,maxRetries:0,timeout:180000,providerOptions:{openai:{store:false,serviceTier:'default'}}});
- return {output:r.output,responseId:r.response.id,modelId:r.response.modelId,inputTokens:r.usage.inputTokens,outputTokens:r.usage.outputTokens,finishReason:r.finishReason,serviceTier:typeof r.providerMetadata?.openai?.serviceTier==='string'?r.providerMetadata.openai.serviceTier:null};
+export async function generateDiscovery(prompt:string,profile:DiscoveryProfile='v1',capture:(r:ProviderReceipt)=>void=()=>{}):Promise<Generation>{
+ return generateDiscoveryOutput(prompt,discoveryInstructions,profile,capture);
 }
 export async function runDiscovery(prepared:ReturnType<typeof planDiscovery>,dir:string,graph:LabGraph,frames:LabFrame[],trials:LabTrial[],call=generateDiscovery){
  if(existsSync(join(dir,'analysis.json'))){const saved=JSON.parse(readFileSync(join(dir,'analysis.json'),'utf8')),{analysisHash,...body}=saved;if(digest(body)!==analysisHash||saved.planHash!==prepared.plan.planHash||saved.contextHash!==prepared.plan.contextHash)throw Error('Recovered discovery receipt changed');validateHypotheses(saved.analysis,graph,frames,trials);return saved;}
  if(existsSync(dir))throw Error('Discovery attempt already started; never repeat paid request');mkdirSync(dir,{recursive:true,mode:0o700});
  const save=(name:string,data:unknown)=>writeFileSync(join(dir,name),JSON.stringify(data,null,2)+'\n',{flag:'wx',mode:0o600});save('plan.json',prepared.plan);save('context.json',prepared.context);save('prior-trials.json',trials);save('instructions.json',discoveryInstructions);save('request-started.json',{startedAt:new Date().toISOString(),planHash:prepared.plan.planHash,automaticRetry:false});
- try{const result=await call(prepared.prompt);save('provider-result.json',result);if(!result.responseId||!result.modelId.startsWith('gpt-6-luna')||result.finishReason!=='stop')throw Error('Incomplete discovery response');
+ let metadata:ProviderReceipt|undefined;
+ try{const result=await call(prepared.prompt,prepared.plan.format==='mevy-discovery-plan/v2'?'v2':'v1',r=>{metadata=r;save('provider-metadata.json',r);});save('provider-result.json',result);if(!result.responseId||!result.modelId.startsWith('gpt-6-luna')||result.finishReason!=='stop')throw Error('Incomplete discovery response');
   const output=validateHypotheses(result.output,graph,frames,trials),known=Number.isSafeInteger(result.inputTokens)&&result.inputTokens!>=0&&Number.isSafeInteger(result.outputTokens)&&result.outputTokens!>=0;
   if(known&&(result.inputTokens!>prepared.plan.inputBytes+4096||result.outputTokens!>prepared.plan.maxOutputTokens))throw Error('Discovery usage exceeds reserved bounds');const profile=researchProfiles['gpt-6-luna'];
   const body={format:'mevy-discovery-analysis/v1',createdAt:new Date().toISOString(),planHash:prepared.plan.planHash,contextHash:prepared.plan.contextHash,graphHash:graph.graphHash,trainingFramesHash:prepared.plan.trainingFramesHash,model:result.modelId,responseId:result.responseId,usage:{inputTokens:result.inputTokens??null,outputTokens:result.outputTokens??null},estimatedStandardCostUsd:known?(Number(BigInt(result.inputTokens!)*profile.input+BigInt(result.outputTokens!)*profile.output)/1e9).toFixed(9):null,actualInvoiceCostUsd:null,analysis:output,livePromotion:'DISABLED'};const receipt={...body,analysisHash:digest(body)};save('analysis.json',receipt);return receipt;
- }catch(e){save('failure.json',{state:'FAILED_UNKNOWN_COST_NO_RETRY',planHash:prepared.plan.planHash,reservedUsd:prepared.plan.reservedUsd});throw e;}
+ }catch(e){const code=metadata?.finishReason==='length'?'OUTPUT_TOKEN_LIMIT':e instanceof Error&&e.name==='AI_NoOutputGeneratedError'?'NO_STRUCTURED_OUTPUT':e instanceof Error&&e.name==='AI_NoObjectGeneratedError'?'INVALID_STRUCTURED_OUTPUT':'PROVIDER_OR_VALIDATION_ERROR';save('failure.json',{state:'FAILED_UNKNOWN_COST_NO_RETRY',code,errorType:e instanceof Error?e.name:'UnknownError',planHash:prepared.plan.planHash,reservedUsd:prepared.plan.reservedUsd,provider:metadata??null,automaticRetry:false});throw e;}
 }

@@ -1,0 +1,2782 @@
+{
+  "format": "mevy-route-universe/v1",
+  "block": 95031463,
+  "blockHash": "0x184bbdd2dd27a147287c750d926da39b8272872e36f8ee5588d1b7fc1e0a9b8f",
+  "timestamp": 1792663693,
+  "source": "https://rpc-robinhood.blockmachine.io",
+  "tokens": [
+    {
+      "symbol": "WETH",
+      "address": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+    },
+    {
+      "symbol": "USDG",
+      "address": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168"
+    },
+    {
+      "symbol": "PONS",
+      "address": "0x39dBED3a2bd333467115dE45665cC57F813C4571"
+    },
+    {
+      "symbol": "CASHCAT",
+      "address": "0x020bfC650A365f8BB26819deAAbF3E21291018b4"
+    }
+  ],
+  "pools": [
+    {
+      "address": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+      "token0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 100,
+      "liquidity": "3277356612687286017",
+      "codeHash": "0x3298b5dd4e6f115074c526a55ad05a36fd73a0034ac22ec6cbaab32cc9c1e8d2"
+    },
+    {
+      "address": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+      "token0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 500,
+      "liquidity": "1328791463390455733",
+      "codeHash": "0x74a16c3b1b4ac8903c54a9edad666d4c87512cb78ed0723538acd84d1b56c5b5"
+    },
+    {
+      "address": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+      "token0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 3000,
+      "liquidity": "508400796465019706",
+      "codeHash": "0x0fc31cfc533a5922261eaa33ff62c43ffd3839dc5204fb6dbbe6effd7bd9d63d"
+    },
+    {
+      "address": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+      "token0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 10000,
+      "liquidity": "18109499722380394",
+      "codeHash": "0xe20600974a722992eb4622b85b2a77ccac5e4aaa2f781bd93cae4334ca18d686"
+    },
+    {
+      "address": "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+      "token0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "token1": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "fee": 500,
+      "liquidity": "2255102610172674887",
+      "codeHash": "0x8e5b79c9ed625b1f4170c646a3cc45aa3b979811a58cb88fa75abfad748ea189"
+    },
+    {
+      "address": "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+      "token0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "token1": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "fee": 3000,
+      "liquidity": "71416182793168035090620",
+      "codeHash": "0x195c7d777448794bd8ebe573f2d4a4007abf142d9fcb895ef38603f4de8c2672"
+    },
+    {
+      "address": "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+      "token0": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "token1": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "fee": 10000,
+      "liquidity": "86248105682337723569228",
+      "codeHash": "0x6b805cc147fb0d1392158bffce6dbdc926d32a88063ef74b9142efce5320d774"
+    },
+    {
+      "address": "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+      "token0": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "token1": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "fee": 3000,
+      "liquidity": "198025834525597916986996",
+      "codeHash": "0x4b535b6f1b07cd80f7c9a8259b0856d8d832896b7fd3b11e32b9f89dafe5a3cf"
+    },
+    {
+      "address": "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+      "token0": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "token1": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "fee": 10000,
+      "liquidity": "85914283908609347127945",
+      "codeHash": "0xf54b18fdd4021731542b67112c0f0e745ca7ed610df17dae69a13b06dddf92f8"
+    },
+    {
+      "address": "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+      "token0": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 500,
+      "liquidity": "6585106818407500",
+      "codeHash": "0xc85a2310be8ab72e8448de0f47b1a715cc99d6831b23ec5f0ccae76bae4dad31"
+    },
+    {
+      "address": "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+      "token0": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 3000,
+      "liquidity": "22542773722520462",
+      "codeHash": "0x411b8dd2d9086fb6579d500dab23c7aca4227a42eece1697507093cecb461cd3"
+    },
+    {
+      "address": "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+      "token0": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 10000,
+      "liquidity": "58110460914157473",
+      "codeHash": "0xe643eea3e8f87aacc0b8cec10018ba862c705efb682f8f2acaef9cb69b57b560"
+    },
+    {
+      "address": "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+      "token0": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "token1": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "fee": 10000,
+      "liquidity": "536431846887387653",
+      "codeHash": "0x1a702c928c248f01f3f4f583799bc406e83c5a69311ca8f655dd7f8136f1eda5"
+    },
+    {
+      "address": "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+      "token0": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "token1": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "fee": 10000,
+      "liquidity": "8362829499645819798403",
+      "codeHash": "0x7c5fdc0523f6661c83855da26128a6a66d2ee1d8c40be3fb5f7c87662a7fe449"
+    }
+  ],
+  "routes": [
+    {
+      "id": "0x00348e64ad392772b4ab43ab07f413e1c9554ec294a3dc3646c43559877e6d7c",
+      "label": "WETH → PONS → WETH / 10000 · 500",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x04272235c51d865c81df79e81a5d749b233a9fde48aab6d33ea9498e54819c2e",
+      "label": "WETH → PONS → CASHCAT → WETH / 3000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c4571002710020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x06bd1ee02442a7dd1f5e89f6654069f73c99eb6510cd2a3238a757a7f680b9ff",
+      "label": "WETH → USDG → WETH / 500 · 100",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        100
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x086c60214164a7e3e512eb06ad8d8aeead83648b861e8da294460335a927bbd5",
+      "label": "WETH → PONS → USDG → WETH / 500 · 3000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000,
+        500
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x0d368fac53ea59a0b99f36e54afc7f74e6d570e07ca9b9d86636f1df74df4273",
+      "label": "WETH → USDG → PONS → WETH / 500 · 3000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000,
+        10000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x0dc381ff6acd7fe8ac654bfc38d8d84826dd75497d2490da9b54f9a5e073ab9f",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 3000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        3000,
+        10000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x0eb6aceeca9c965a3a923c5364746ebd7678662e0859507de9f5d95f03dc92b4",
+      "label": "WETH → USDG → PONS → WETH / 100 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x122fffbc1d5f8fd5e136f97282788930e0d02f43a1cbcc55b99c58b63951eb9b",
+      "label": "WETH → CASHCAT → WETH / 3000 · 10000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x12484ebd2aa38e19d85f4eb3bddfeed1501748c408f390652484edcf4baf0b8f",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 500 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500,
+        100
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x12bd448b5d6dce3f47ed4b5813873ce43b2fa519d0d01dbecc1374b1b4d0d61e",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x12e4e360ba2fe025bf880ca38fab11a123be3db320350e0be26f5c4fce471726",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 3000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000,
+        10000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x1396785772c9c69f52915cdc48a504419caebd4147e406c521eb06a9f38ccbb9",
+      "label": "WETH → USDG → WETH / 500 · 10000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x16945acd47ea2d546023a4415bee45fb185d1c9f196e339f00e5570cefa573e1",
+      "label": "WETH → USDG → CASHCAT → WETH / 10000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x19463b49f3bd8ce8c150d011cb246c011f76fb9960e46f49ab08fa4b252bba7f",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 3000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000,
+        3000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x1bf37be32ddbe68365f2bff44343bea57ada8ec8aac304e20133960a65f28cf7",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 500 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500,
+        10000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x1da3d85aa560f47e0c25956d351a2d7633e79b10b534b8e7f54688b12997cd93",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 3000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        3000,
+        500
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x215aac4318600ac80b12127dd0bb17f8c981f97ba7c88eb6031a9dbf51745ee5",
+      "label": "WETH → CASHCAT → USDG → WETH / 3000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x22a848aca6b50270ae9de164b74cf498309b67b9d719032a14741ceb7195bc1b",
+      "label": "WETH → PONS → WETH / 500 · 3000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x24ddc7e227271b91b5818b5fb5a9e5f404ff17afd30164919a5d3129fbbc875e",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x2600100e47c95515358e4f5437a39e8a404abab37c7e32ab14a2d006329510ce",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x26067e356a9328dff1cb2647e0c2c7bace70c494c594f42a02299357b1e3804c",
+      "label": "WETH → PONS → USDG → WETH / 500 · 3000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000,
+        10000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x2aa5974cf9c5f178c7c6ebadf1f0dfecf4517082e749d4a2da342d97efec08a7",
+      "label": "WETH → USDG → WETH / 10000 · 3000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x313fef9562a7c02cb46e2755dd9227083fa6acc64a585fd6c8b7a9689532983d",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x33f65f7b181b6fe6ff1422bfe49bc140f43e4eb2db43d36e250ece1aec4cffff",
+      "label": "WETH → PONS → WETH / 500 · 10000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x33fe33f4907eb17ef91ccedd0904e5a6ccd5926506da6af681db8d71aec67f24",
+      "label": "WETH → USDG → CASHCAT → WETH / 3000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x35e183d3597d0145b972ed85faef00c23a7514a8ffe08205ff4ee5463cf333f1",
+      "label": "WETH → USDG → PONS → WETH / 100 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        10000,
+        500
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x38570a0c3c66865275c379e0b6fa67cd57c766b2dd51f746a02b06ba655af340",
+      "label": "WETH → PONS → CASHCAT → WETH / 3000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c4571002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x38ac37686490102c51e5fe9ac4dd422b3da9e9b35b64a7ebb3477d3776a7db81",
+      "label": "WETH → USDG → WETH / 3000 · 100",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        100
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x3bbc1ef2866dc5a5256cb717e9fb8103af5786fc9310cf83c23595a4afbd2d85",
+      "label": "WETH → USDG → PONS → WETH / 500 · 500 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        500,
+        10000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x3c1ab1ba5c12799c9fb3ef6d87560c03c6ad25425de03a735dbb828724a5dcd6",
+      "label": "WETH → USDG → PONS → WETH / 500 · 3000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000,
+        500
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x3dd6651662bfe332f90fed710093baee5fafc312b42fd8367b468620931902b5",
+      "label": "WETH → PONS → USDG → WETH / 500 · 3000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000,
+        100
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x4060b3829858888f7c3512fbcabd3fe495ab946a8e3faad88f95fa68bd0fab6f",
+      "label": "WETH → USDG → PONS → WETH / 500 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x41052ffacfaf3ef2c870c4d006dfef69ee6229c937e88c04c7f53c4a1c4f7be3",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 3000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        3000,
+        10000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x41eabdfefecd4dedd019c0d6f98b92e8283c2ba9157e5314caffdb96198b398e",
+      "label": "WETH → PONS → USDG → WETH / 500 · 500 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        500,
+        10000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x44fccf7b0f85bc895f01d2de5eff587593c1d5e9f4a0435f01456a3b9c647dfc",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 500 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500,
+        10000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x48a2bcddd73f61b31b53bad82e5aafa64402cc22d1344bf8b11d633609b42db3",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x4f59da04a986b4f91d50f31e7a3df284ca62879892ffcfe79c7cb5c010e41f9a",
+      "label": "WETH → USDG → CASHCAT → WETH / 500 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x501f44a61deb2878a6125d4cb961c7f2cc6e1ebb4b020e4799fa4a3698650639",
+      "label": "WETH → USDG → PONS → WETH / 100 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x593cf11e5690fb045a75b578840a70c8e1118180acc14e81d99a7e9b7a5fe005",
+      "label": "WETH → PONS → CASHCAT → WETH / 10000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c4571002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x593f8ad62296a5c345de6b90e6fc95c860eabfaf075bc9fb8dd11d09af06a563",
+      "label": "WETH → USDG → CASHCAT → WETH / 500 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x5a48d12443a72caa60b650ae4fb23a4f08d76c6780864946c92f4ed9c5c492d6",
+      "label": "WETH → PONS → WETH / 10000 · 3000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x5c9ce2ddef0a52bc27d15551a3754015d8c987ca1f4fa44020f4791ce6f1334e",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x5ebd0d43d8d222ef90d8e7185b1a0b81c990f466ad05209dbd9639e2c35d0a6e",
+      "label": "WETH → USDG → CASHCAT → WETH / 100 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x5f8aa90b25023a1c96e91afcea8679d2affa1d09a60e1f2decb1549aad31e0bf",
+      "label": "WETH → USDG → PONS → WETH / 500 · 500 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        500,
+        500
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x63e637abe3667b9db4a059c669e16b7a3750889d7123296c81cb8641883e00bf",
+      "label": "WETH → PONS → USDG → WETH / 500 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        500
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x6601aceafe3851ab15f528816892c39d65adecb9aebad21a8b8efb5e02da22b8",
+      "label": "WETH → CASHCAT → PONS → WETH / 10000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b400271039dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x679dcce1ddecd24435c1b91a57d129f47585c94ae149d0a05e3c8410ed0236e0",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 500 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500,
+        500
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x6a0ff776f68f7f1351cc2287c2ebe623f846aae6ab1ca1353f7b47e804f1fdeb",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 3000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        3000,
+        3000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x6bf6e906177ed0997fd24729ea9e3b981dc6678dfaad2803e91c03f66abbf467",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 500 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500,
+        500
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x6c2f8ec135166cec9d97c37a2582833fa1933fbd2d66d91049488a337b0b022d",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 3000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000,
+        10000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x6ce92b6604dfd47a970d858965135ab0425bed272d5333d9a816f538fb8aaef7",
+      "label": "WETH → USDG → PONS → WETH / 100 · 500 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        500,
+        500
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x6ea8a0b7f725db873607c00114b35cd786e8acaf24da625c766645bd1322c4ce",
+      "label": "WETH → USDG → PONS → WETH / 100 · 3000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        3000,
+        10000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x707ad4936a262bed9dbdadc2435336229383f51679b56bfb4cb148f204ab79be",
+      "label": "WETH → USDG → PONS → WETH / 100 · 3000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        3000,
+        3000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x72d1a6f7ce2b1674b5983bc7b57dce835dc1ce577567fc9d6be60ddbe51bcff7",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 500 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500,
+        3000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x732ef8a6d182700ea0b9c0cbb64a0068470f471f6f3605868f4b170e4e734e3e",
+      "label": "WETH → USDG → CASHCAT → WETH / 10000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x7c1c8189d2ea9507dd44b0255325cad6543f4480d97a8205b94920ce1c20ed96",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x7ff2d01da93d4da30873b990978dd39742e6e978f91b1e43d6abf49389c7ac86",
+      "label": "WETH → CASHCAT → USDG → WETH / 10000 · 10000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        100
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x80a12ccd9f4216d7a33cf79719e7c0d9a96317464d0058a4eab8f8961640909b",
+      "label": "WETH → CASHCAT → PONS → WETH / 3000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b400271039dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x80fab0e7690b112f67756c11f59211c46228c432561888d773c96d5e64ad24b0",
+      "label": "WETH → PONS → CASHCAT → WETH / 10000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c4571002710020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x81ec25f0a342c60ac394209b7ad444eb17350706752777f0530d470d680aacb1",
+      "label": "WETH → USDG → PONS → WETH / 500 · 3000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000,
+        3000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x843a56ff0b33554dfcbebbac19c86ad4ae115eafcf8732577718aad5847fa6c2",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x8b6266def1f142c11f265941b3405b139aec2f70984d838732260d2905b67bb0",
+      "label": "WETH → PONS → USDG → WETH / 500 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x8ef9a8b36b7f5fb0ed49cb7c78e09efbd7973c09aef37dac9ff8947f20f3727e",
+      "label": "WETH → CASHCAT → USDG → WETH / 3000 · 10000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        100
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x912b5d53123777f9203eeee54cc651bacc0111e43f07676933b9a48a01eb12f7",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 500 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500,
+        10000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x91631f2dc6e58ada04e87045a4ddea6c258d5454943544c201bf84be5c4332de",
+      "label": "WETH → PONS → CASHCAT → WETH / 500 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571002710020bfc650a365f8bb26819deaabf3e21291018b40027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x93f87ee75e0d0322e7d8c9e2c40d5c9f6f2e8fd65d764daac537477474635e95",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 500 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500,
+        100
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x9514dc44d917e9c3488f7874f8e3ba9205f170f10f211b827b6b7421a3551b11",
+      "label": "WETH → USDG → PONS → WETH / 500 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        500
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x994a6c846072e0a114322a2bd4f219074e3d707d169cda8a0b4b7bf893af2a5c",
+      "label": "WETH → USDG → PONS → WETH / 100 · 500 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        500,
+        3000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x9ca8410f13642d99d628a0fe4fea5bc978e4ae359787a72c3d118b507f4038e0",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 500 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500,
+        3000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x9dde45ddb4fc5455061dfa627bac5e8ed6e0b4a760d960e062010730fdb0fda3",
+      "label": "WETH → PONS → USDG → WETH / 500 · 3000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000,
+        3000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x9e1fb5be6285209d2225e17fe5120c943272ee3de4220b2052d0ee9eb1ec8ded",
+      "label": "WETH → CASHCAT → USDG → WETH / 3000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x9e6d36d766e02d4918fb80f2475d3d9a3d41108b005893ed61187e266ea95fcd",
+      "label": "WETH → USDG → PONS → WETH / 500 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0x9feae455a2420dcff3e80413d770817e734e1bf53ead4241c28c9a021003d440",
+      "label": "WETH → CASHCAT → USDG → WETH / 10000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xa39edfba3967e884806ec55add97603246508cc225958ec460ae60e40050f431",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 3000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        3000,
+        500
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xa63d5656680b134348ceb684e151104f689ee997404e9023dd0d86f7d7efb05b",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 3000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        3000,
+        3000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xa9f76c432674fec061d62eb1cfa08ca84c2cdef5301962226d180477140d383e",
+      "label": "WETH → CASHCAT → PONS → WETH / 3000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b400271039dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xaadaebc044f1e8a662461f688856084d6192ada6660be77271632ed753baa3bd",
+      "label": "WETH → PONS → USDG → WETH / 500 · 500 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        500,
+        100
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xace59af741b4809c2be523e1ed9ca6c332e9e93dc05b669e302710cc9292d1ab",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 500 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500,
+        500
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xb3188d300a76eea4cc65cc10fb4261824d6a9a6059c52b75b641745171a71c57",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 3000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000,
+        500
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xb3324febc942a18a0b04141d6101ef2fc9f5928cd77ec3b72f5c96494f44015b",
+      "label": "WETH → CASHCAT → PONS → WETH / 10000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b400271039dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xb51144512ca469176c9d2f3b47cf59a4ce116e5fda7e53b547b7f17a0ab5fd8b",
+      "label": "WETH → PONS → CASHCAT → WETH / 500 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xb5474b2b8106cb9db1d6747d1a168ff6730af91f3fa9c85658400c8acc350705",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 3000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000,
+        3000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xb692da285841be252d87d62be73dc3dbf9a321ab716b84fe4cfb0d157b5c6fa1",
+      "label": "WETH → PONS → USDG → WETH / 500 · 10000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        100
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xb9c224ec6c842c7881161d768e0ed77ac2ec0871e7351d719b8f5e7c38367587",
+      "label": "WETH → USDG → WETH / 3000 · 500",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xbb04e85f4a2965b24bb9795bc5a34170f34ea40299ae24f9e2a0c74e45603cc2",
+      "label": "WETH → CASHCAT → USDG → WETH / 10000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xbd1b7a40c8de80b8b9874f7126650db77100c99415500058212685a3d146c780",
+      "label": "WETH → CASHCAT → PONS → WETH / 3000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b400271039dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xbdba0be7bfbad27b71df0587afc32ba9a33f959588ece1674a2a890f47bdab44",
+      "label": "WETH → CASHCAT → PONS → WETH / 10000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b400271039dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xbe4181b3642b0503d0285c77688e8e11a95243218ea30fd40845aa04a33801b5",
+      "label": "WETH → PONS → WETH / 3000 · 10000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xbfdf6a6f33ce5c66407cc6ec1de120776cb46c59fed0c23b2aa01f3aef266b5c",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 500 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500,
+        3000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xc078ee1e95be1e810c3eb6ed93e842ec21f581fdc58544b2402fd9bf4f2001c2",
+      "label": "WETH → USDG → WETH / 100 · 10000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        10000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xc13936f0f640eac575085ce4c6204909ab4efccd7cdcc0e963af608ba4e00619",
+      "label": "WETH → USDG → WETH / 10000 · 100",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        100
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xc14ab72c937ae32cbc837d6ced34f6a84429be40ab6147646790854a1684772d",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 500 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500,
+        10000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xc43ebe0228da2bc0dd5b5aa46f3834f763b38ca40356382c5d7addc3a40a90fe",
+      "label": "WETH → PONS → USDG → WETH / 500 · 500 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        500,
+        500
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xc6623422aa93278e08fa9712c1ac045bf5e5309b703986f057d011f9a6471308",
+      "label": "WETH → CASHCAT → USDG → WETH / 10000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xca575ecda7af708d124ae31006c4034622f30c9df5fa737620bce05be512ce5b",
+      "label": "WETH → PONS → WETH / 3000 · 500",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xcc94cb1f86915e8399893bfcf48f5eaba8e4f8e77a82c8a67a55b42018597ed7",
+      "label": "WETH → USDG → PONS → WETH / 3000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xce701af4ce826f34a1ab36d82aad6e505bac3ba89a8533cad30f6155c3187e52",
+      "label": "WETH → USDG → WETH / 10000 · 500",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xd1dd583462c2c55bfeadc80c1a16dc0ce3da9d31e157f922ac17c4e20a681648",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xd62940bc87f5271f60b208ff64753cbac7e7a3c9caea9cf384f214b8cdfc4ec3",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 10000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        100
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xd7acbae414694b6fb60529a0f2474aa012f03e0ecedaa04e3bbc44d79f2ed3fc",
+      "label": "WETH → USDG → PONS → WETH / 500 · 500 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        500,
+        3000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xd921943c0cd013b3918d825c7ab8692d0860ee7fe8df0438090a4e090ecc5662",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 500 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        500,
+        500
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xd9728646cd2f5aa14233df5ed5e3c3b81ed442d6fb21fa728537daa17579732d",
+      "label": "WETH → USDG → WETH / 3000 · 10000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xdc1d238ab587cf775af8b8a4c9d2c13be33397f015488570b7a8203652845929",
+      "label": "WETH → CASHCAT → USDG → WETH / 3000 · 10000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        500
+      ],
+      "pools": [
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb8020bfc650a365f8bb26819deaabf3e21291018b40027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xdd24a6215270e6622a7f24035470ce2b0bd3704cc3790e434af2ea28973e3b28",
+      "label": "WETH → PONS → USDG → WETH / 500 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xdd8fbbf27f0ec9342bd16e18cb150cd41e9599f3650d7bdb2074c07592ad8f81",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d16800271039dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xdf6edde2044a2747572664dc6ff4a4db6a5776017cf5a0c0a57eb6af316d6a6c",
+      "label": "WETH → USDG → PONS → WETH / 100 · 500 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        500,
+        10000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xdfe3099f9c829186586ee183b1ceefa4c34f9ca289c4bccd0341e2269f44ee22",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 3000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000,
+        500
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xe02404020d20a6bdae8b5ce8ea33271922ee297a74f7fe8f9b1be924296d6b00",
+      "label": "WETH → CASHCAT → WETH / 10000 · 3000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xe113c8d83c69cb34029f5d8f953ad35e7f4cad2800cebef49368e58f4d248647",
+      "label": "WETH → USDG → WETH / 100 · 500",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        500
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xe51ffe639584d0487e5f7a1d700f785e8ed6ec3dc67567aba8f7727a9f84519e",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 3000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        3000,
+        100
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xebb8b1adf29f43b9e7725db390e86e6fa830accfa74dfc6cffc781983613aadb",
+      "label": "WETH → USDG → PONS → WETH / 10000 · 500 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        500,
+        3000
+      ],
+      "pools": [
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xed1261a2aa452d9e14734831fb09ac71d73c31c33f6a88b2ce38b391e7dc4f52",
+      "label": "WETH → PONS → USDG → WETH / 3000 · 3000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        3000,
+        100
+      ],
+      "pools": [
+        "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c4571000bb85fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xefe92f5c3e4cc4167f9cfbba7ee170bccd39c73c00d63b9d653cc0756261613d",
+      "label": "WETH → USDG → WETH / 500 · 3000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        3000
+      ],
+      "pools": [
+        "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xf095609d1401547f45a58a8790a390f652d96f4d12a755ebac81ef254b305d41",
+      "label": "WETH → PONS → USDG → WETH / 500 · 500 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        500,
+        500,
+        3000
+      ],
+      "pools": [
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+        "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xf43d765812ea8d2e0f6f10e6b2fd9c1f0f151b3cf313e878a0eca7fa2ffd92bd",
+      "label": "WETH → USDG → CASHCAT → WETH / 3000 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        3000,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xf82748fe7c8020acb5ba0ebdfcbcc1caa2d30a77c70604fed3d74fc174e01c1b",
+      "label": "WETH → USDG → PONS → WETH / 100 · 3000 · 500",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        3000,
+        500
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+        "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xf8472705d55b652f4d3c73bae80d19d5a8a276c6cb05b423a11967746f79410f",
+      "label": "WETH → USDG → CASHCAT → WETH / 100 · 10000 · 3000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        10000,
+        3000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0x4B0c312fFbB068F6a0bEa128759E35d94B94D0E1",
+        "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xf93ac76bf49f59166dd8bd5ded9eecc60f60d1fcadcb25ec790405361ba710ad",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 10000 · 100",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        100
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xf9fd90accdb2815b465b5cb706d49cfbe3713ea7e31346bb4478ad6749787f0b",
+      "label": "WETH → PONS → USDG → WETH / 10000 · 10000 · 10000",
+      "family": "triangle",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        10000,
+        10000,
+        10000
+      ],
+      "pools": [
+        "0x10CC6BD38112cAc182db90B6a71d8Bb5939526bA",
+        "0x7A192E71564ec66eE0763e328a3Ac274942dE4e1",
+        "0x5f009E071F07e92B6C624e83F52F17bBDa34680D"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad7300271039dbed3a2bd333467115de45665cc57f813c45710027105fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73"
+    },
+    {
+      "id": "0xfe54342a440e11908b6baeb134fd04d8d63ad3b823d50811c5299440d501bbdb",
+      "label": "WETH → USDG → WETH / 100 · 3000",
+      "family": "cross-pool",
+      "tokens": [
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+      ],
+      "fees": [
+        100,
+        3000
+      ],
+      "pools": [
+        "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "0xa9188730Fe85Be88ad499D7d52B099e800fB0334"
+      ],
+      "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+    }
+  ],
+  "missingPools": [
+    {
+      "a": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "b": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "fee": 100
+    },
+    {
+      "a": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 100
+    },
+    {
+      "a": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 500
+    },
+    {
+      "a": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "b": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "fee": 100
+    },
+    {
+      "a": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 100
+    },
+    {
+      "a": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 500
+    },
+    {
+      "a": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 3000
+    },
+    {
+      "a": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 100
+    },
+    {
+      "a": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 500
+    },
+    {
+      "a": "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+      "b": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+      "fee": 3000
+    }
+  ],
+  "codeHashes": {
+    "0x1f7d7550b1b028f7571e69a784071f0205fd2efa": "0xec72b1abd1f2faee020cfea9c646bd8994f9fb389054f6e574f103a895091739",
+    "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7": "0x3db0868d945e9304c9bc6a8b2181948109ea617647142f3c4083e14393496a28",
+    "0x0bd7d308f8e1639fab988df18a8011f41eacad73": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+    "0x5fc5360d0400a0fd4f2af552add042d716f1d168": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+    "0x39dbed3a2bd333467115de45665cc57f813c4571": "0x16c3d3ede897688ddff79262606f13bead398332e65001f192460fbac4e1fb85",
+    "0x020bfc650a365f8bb26819deaabf3e21291018b4": "0x725781ccca82a0bf9b1f8920b2fe58ea1e4facf46d0db9f50226d6409de890fe"
+  },
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b"
+}

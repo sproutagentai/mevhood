@@ -1,0 +1,31 @@
+{
+  "format": "mevy-strategy-lab-index/v1",
+  "campaign": {
+    "id": "mevy-auto-20261021",
+    "startsAt": 1792606905,
+    "endsAt": 1793211705,
+    "intervalSeconds": 21600,
+    "collectionSeconds": 120,
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "model": "gpt-6-luna",
+    "repository": "sproutagentai/mevhood",
+    "bootstrap": true
+  },
+  "latest": {
+    "path": "evidence/lab-mevy-auto-20261021-initial-scan-95049272-report.json",
+    "reportHash": "0xafb518eeb57278624d06f14ff36f7bfa82d373d2639c1d2d4a2c49a3b50d5478",
+    "createdAt": "2026-10-22T10:42:29.230Z",
+    "trials": 0,
+    "observations": 3
+  },
+  "reports": [
+    {
+      "path": "evidence/lab-mevy-auto-20261021-initial-scan-95049272-report.json",
+      "reportHash": "0xafb518eeb57278624d06f14ff36f7bfa82d373d2639c1d2d4a2c49a3b50d5478",
+      "createdAt": "2026-10-22T10:42:29.230Z",
+      "trials": 0,
+      "observations": 3
+    }
+  ]
+}

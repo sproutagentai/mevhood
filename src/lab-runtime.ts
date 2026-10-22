@@ -8,6 +8,7 @@ import { LabStore,freezeTrial,evaluateTrial,type LabTrial } from './strategy-lab
 import { verifyGraph,quoteLabFrame,searchCells,type LabGraph,type LabFrame } from './lab-source.ts';
 import { planDiscovery,runDiscovery } from './lab-research.ts';
 import { labRecord,validateLabRecord,labStem,type LabRun } from './lab-publication.ts';
+import { readResearchAttempts } from './lab-attempts.ts';
 export class LabRuntime{
  store:LabStore;graph:LabGraph;
  lastPublicCheck=0;
@@ -44,19 +45,20 @@ export class LabRuntime{
   if(this.store.get('spooled',id))return;
   const path=join(this.spool,`lab-${id}.json`);
   if(existsSync(path)){const original=JSON.parse(readFileSync(path,'utf8'));if(original.id!==id||digest(original.campaign)!==digest(this.campaign))throw Error('Conflicting lab spool identity');const {report}=validateLabRecord(original);this.store.put('spooled',id,{id,at:Date.parse(report.createdAt),reportHash:original.reportHash});return;}
-  const frames=this.store.frames(),record=labRecord(this.campaign,id,this.graph,frames,this.store.trials(),this.store.list<LabRun>('run'),this.control);
+  const frames=this.store.frames(),record=labRecord(this.campaign,id,this.graph,frames,this.store.trials(),this.store.list<LabRun>('run'),this.control,readResearchAttempts(join(this.root,'runs')));
   mkdirSync(this.spool,{recursive:true,mode:0o750});const tmp=path+'.tmp';writeFileSync(tmp,JSON.stringify(record)+'\n',{mode:0o640});renameSync(tmp,path);this.store.put('spooled',id,{id,at:Date.now(),reportHash:record.reportHash});
  }
  async analyse(id:string,slot:number|null){
   if(this.campaign.endsAt-Math.floor(Date.now()/1000)<240)return;
   if(this.store.get('run',id)){this.spoolReport('research-'+id);return;}
-  const priorRuns=this.store.list<LabRun>('run'),through=Math.max(this.graph.block,...priorRuns.flatMap(r=>r.trainingBlocks)),frames=this.store.frames(),run=join(this.root,'runs',`lab-${id}`),claimed=slot===null?this.budget.extra('strategy-lab-upgrade-20261022'):this.budget.job(slot);
+  const repair=id==='repair-20261023',priorRuns=this.store.list<LabRun>('run'),through=Math.max(this.graph.block,...priorRuns.flatMap(r=>r.trainingBlocks)),frames=this.store.frames(),run=join(this.root,'runs',`lab-${id}`),claimed=slot===null?this.budget.extra(repair?'structured-output-repair-20261023':'strategy-lab-upgrade-20261022'):this.budget.job(slot);
   let training=frames.filter(f=>f.control.block>through),prior=this.store.trials();
   if(claimed){if(!existsSync(join(run,'analysis.json')))return;const saved=JSON.parse(readFileSync(join(run,'context.json'),'utf8')),blocks=new Set(saved.observations.map((o:any)=>o.block));training=frames.filter(f=>blocks.has(f.control.block));prior=JSON.parse(readFileSync(join(run,'prior-trials.json'),'utf8'));}
   if(training.length<6)return;
   const active=prior.filter(t=>{const s=evaluateTrial(t,frames,this.graph,this.control).status;return s==='AWAITING_PUBLIC_FREEZE'||s.startsWith('FORWARD_TESTING');});if(active.length>1)return;
-  const prepared=planDiscovery(this.graph,training,prior,this.control,frames.filter(f=>f.control.block<=training.at(-1)!.control.block));
-  if(!claimed){if(slot===null)this.budget.reserveUpgrade(Math.floor(Date.now()/1000),prepared.plan.contextHash,training.at(-1)!.control.block,prepared.plan.reservedUsd);else this.budget.reserve(slot,Math.floor(Date.now()/1000),prepared.plan.contextHash,training.at(-1)!.control.block,prepared.plan.reservedUsd);}
+  const generationProfile=claimed?JSON.parse(readFileSync(join(run,'plan.json'),'utf8')).format==='mevy-discovery-plan/v2'?'v2':'v1':'v2';
+  const prepared=planDiscovery(this.graph,training,prior,this.control,frames.filter(f=>f.control.block<=training.at(-1)!.control.block),generationProfile);
+  if(!claimed){if(slot===null){const reserve=repair?this.budget.reserveRepair.bind(this.budget):this.budget.reserveUpgrade.bind(this.budget);reserve(Math.floor(Date.now()/1000),prepared.plan.contextHash,training.at(-1)!.control.block,prepared.plan.reservedUsd);}else this.budget.reserve(slot,Math.floor(Date.now()/1000),prepared.plan.contextHash,training.at(-1)!.control.block,prepared.plan.reservedUsd);}
   const analysis=await runDiscovery(prepared,run,this.graph,training,prior),h=await head(this.rpc);if(analysis.planHash!==prepared.plan.planHash||analysis.contextHash!==prepared.plan.contextHash)throw Error('Recovery discovery context changed');
   const entry={id,analysis,plan:prepared.plan,context:prepared.context,trainingBlocks:training.map(f=>f.control.block),priorTrials:prior};
   this.store.db.exec('BEGIN IMMEDIATE');try{this.store.put('run',id,entry);for(const hypothesis of analysis.analysis.hypotheses){const t=freezeTrial(hypothesis,this.graph,training,this.control,analysis.analysisHash,h);this.store.put('trial',t.id,t);}this.store.db.exec('COMMIT');}catch(e){this.store.db.exec('ROLLBACK');throw e;}
@@ -65,6 +67,7 @@ export class LabRuntime{
  async cycle(slot:number){
   await this.activate();
   await this.analyse('launch-20261022',null);
+  if(process.env.MEVY_RESEARCH_REPAIR==='20261023')await this.analyse('repair-20261023',null);
   if(this.store.get('run','launch-20261022')&&!this.budget.job(slot))await this.analyse(`slot-${slot}`,slot);
   const frames=this.store.frames();if(!frames.length||!this.store.trials().length)return;
   const last=this.store.list<{at:number}>('spooled').sort((a,b)=>b.at-a.at)[0],results=this.store.trials().map(t=>evaluateTrial(t,frames,this.graph,this.control)),n=results.reduce((a,r)=>a+r.observations,0),now=Date.now();

@@ -7,7 +7,7 @@ import { AutoStore,type Campaign } from './auto-research.ts';
 import { LabStore,freezeTrial,evaluateTrial,type LabTrial } from './strategy-lab.ts';
 import { verifyGraph,quoteLabFrame,searchCells,type LabGraph,type LabFrame } from './lab-source.ts';
 import { planDiscovery,runDiscovery } from './lab-research.ts';
-import { labRecord,type LabRun } from './lab-publication.ts';
+import { labRecord,validateLabRecord,labStem,type LabRun } from './lab-publication.ts';
 export class LabRuntime{
  store:LabStore;graph:LabGraph;
  lastPublicCheck=0;
@@ -29,15 +29,23 @@ export class LabRuntime{
   const {reportHash,...body}=report;if(reportHash!==index.latest.reportHash||digest(body)!==reportHash)throw Error('Public trial report mismatch');
   // The publisher has read-only spool access. Only the producer removes a
   // delivered envelope, after its hash appears in the verified public index.
-  const published=new Set(index.reports.map((r:any)=>r.reportHash));for(const name of readdirSync(this.spool).filter(n=>/^lab-[a-z0-9-]+\.json$/.test(n))){const p=join(this.spool,name),r=JSON.parse(readFileSync(p,'utf8'));if(digest(r.campaign)===digest(this.campaign)&&published.has(r.reportHash))unlinkSync(p);}
+  this.adoptPublications(index);
   if(!waiting.length)return;
   const h=await head(this.rpc),now=new Date().toISOString();
   for(const t of waiting)if(report.trials.some((r:any)=>r.trial.trialHash===t.trialHash))this.store.put('anchor',t.id,{commit:meta.sha,seenAt:now,startBlock:h.number,startTimestamp:Math.max(h.timestamp,Math.floor(Date.now()/1000))});
  }
+ adoptPublications(index:any){
+  if(index.format!=='mevy-strategy-lab-index/v1'||digest(index.campaign)!==digest(this.campaign)||!Array.isArray(index.reports))throw Error('Published lab campaign differs');
+  const prefix=labStem(this.campaign)+'-',published=new Set<string>();
+  for(const r of index.reports){if(typeof r.path!=='string'||!r.path.startsWith(prefix)||!r.path.endsWith('-report.json')||!/^0x[a-f0-9]{64}$/.test(r.reportHash)||!Number.isFinite(Date.parse(r.createdAt)))throw Error('Invalid public lab envelope identity');const id=r.path.slice(prefix.length,-'-report.json'.length);if(!/^[a-z0-9-]{1,70}$/.test(id))throw Error('Invalid public lab run identity');const old=this.store.get('spooled',id);if(old&&old.reportHash!==r.reportHash)throw Error('Public and private envelope hashes conflict');if(!old)this.store.put('spooled',id,{id,at:Date.parse(r.createdAt),reportHash:r.reportHash});published.add(r.reportHash);}
+  for(const name of readdirSync(this.spool).filter(n=>/^lab-[a-z0-9-]+\.json$/.test(n))){const p=join(this.spool,name),r=JSON.parse(readFileSync(p,'utf8'));if(digest(r.campaign)===digest(this.campaign)&&published.has(r.reportHash))unlinkSync(p);}
+ }
  spoolReport(id:string){
   if(this.store.get('spooled',id))return;
+  const path=join(this.spool,`lab-${id}.json`);
+  if(existsSync(path)){const original=JSON.parse(readFileSync(path,'utf8'));if(original.id!==id||digest(original.campaign)!==digest(this.campaign))throw Error('Conflicting lab spool identity');const {report}=validateLabRecord(original);this.store.put('spooled',id,{id,at:Date.parse(report.createdAt),reportHash:original.reportHash});return;}
   const frames=this.store.frames(),record=labRecord(this.campaign,id,this.graph,frames,this.store.trials(),this.store.list<LabRun>('run'),this.control);
-  mkdirSync(this.spool,{recursive:true,mode:0o750});const path=join(this.spool,`lab-${id}.json`),tmp=path+'.tmp';if(existsSync(path))throw Error('Conflicting lab spool identity');writeFileSync(tmp,JSON.stringify(record)+'\n',{mode:0o640});renameSync(tmp,path);this.store.put('spooled',id,{id,at:Date.now(),reportHash:record.reportHash});
+  mkdirSync(this.spool,{recursive:true,mode:0o750});const tmp=path+'.tmp';writeFileSync(tmp,JSON.stringify(record)+'\n',{mode:0o640});renameSync(tmp,path);this.store.put('spooled',id,{id,at:Date.now(),reportHash:record.reportHash});
  }
  async analyse(id:string,slot:number|null){
   if(this.campaign.endsAt-Math.floor(Date.now()/1000)<240)return;

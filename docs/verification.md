@@ -88,3 +88,14 @@ The researcher cannot read the dedicated repository private key, and the publish
 The existing crash/publication test now fixes its clock explicitly, so future CI runs do not fail merely because the fixture's seven-day authorization window has elapsed. This changes the test only; the production authorization check is retained.
 
 The evaluator remains bound to the original experiment freeze. Window reports retain its elapsed-since-freeze duration and gap rules: later windows exclude previously analysed rows, so their `SOURCE_GAP` flag also reflects that omitted prefix. Inspect the quoted-window timestamps for the actual cohort span. The second full cohort's maximum internal timestamp gap was 271 seconds; this does not establish a complete seven-day comparison. No flag, raw response or gate was removed.
+
+
+## Strategy discovery — 22 October 2026
+
+The old scheduled researcher saw new observations but only one route family and three economic fields. The separate strategy lab discovers verified pool cycles, rotates exact route/size quotes and feeds original new observations plus prior hypotheses/results to a typed researcher. Original engine/control/acceptance/history remain unchanged.
+
+Actual discovery at95031463 found14liquidpools/120cycles, including100triangles. The first public scan at a89a5bdd18f91acbc55d4cf93663827d3e8c5d05 contains3source-pairedframes/18newquotes. On22Oct10:45:46UTC a real archive re-read reproduced all12control and6new-route quotes at95046937; the source receipt is linked in the runbook.
+
+One genuine directLuna request then inspected all6trainingframes/36newlabquotes and proposed WETH–CASHCAT–USDG and WETH–PONS–CASHCAT triangle hypotheses, each0.005WETH,30bps,1.5×gasbuffer,2consecutive observations and a30,000,000wei base-fee cap. Original response/plan/context and proposals published at d75f34717487821872b9122ecb52365fa4808a82. Usage72,991input/5,600outputtokens implies$0.0100991; conservative shared reservation$0.048303475, invoice unknown. The existing$1rollingday/$7campaign/absoluteexpiry and original3requests were retained.
+
+Source3836ae3 passed57local/VPS tests, typecheck, agentbuild,forge and originalreplay; mainCI39763588898SUCCESS. One additional envelope-crash recovery test verifies exact original-byte adoption after rename/publicpush. Actual public scan/model artifacts replay independently. Public-freeze acknowledgement, subsequent paired test rows, browser/card verification and final source/runtime status are recorded below after observation; their future success is not implied by these source checks.

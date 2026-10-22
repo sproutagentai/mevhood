@@ -6,6 +6,7 @@
 | Frozen policies, durable storage, deterministic replay | VERIFIED locally | npm test; verify bundle |
 | Exact proposal approval and successor lineage | VERIFIED locally | evolution tests, import/prepare-next/freeze-next |
 | Unsigned creation/registry calldata and public-anchor checks | BUILT / local tests | registry tests; compiled artifact comparison; no public deployment receipt |
+| Strategy discovery / new route and entry-rule hypotheses | ACTUAL MODEL OUTPUT PUBLISHED; prospective collection starting | 14verifiedpools/120cycles/480route-sizecells; twoLunahypotheses at0.005WETH, source-bound training and public freeze; discovery-index.json |
 | Candidate improves profit | NOT ESTABLISHED | No seven-day trial; integration sample is HOLD |
 | Local contract invariants | VERIFIED locally | forge test |
 | Contract deployed / funded / signed trades | NOT DONE | No deployment address or receipts |

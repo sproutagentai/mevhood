@@ -31,6 +31,7 @@
     "verify": "npm run typecheck && npm test && npm run build:agent",
     "auto:research": "node --import tsx src/auto-runner.ts",
     "auto:publish": "node --import tsx src/publish-runner.ts",
-    "lab:verify": "node --import tsx src/lab-cli.ts"
+    "lab:verify": "node --import tsx src/lab-cli.ts",
+    "lab:audit": "node --import tsx src/lab-audit-cli.ts"
   }
 }

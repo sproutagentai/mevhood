@@ -10,6 +10,7 @@ import { verifyGraph,verifyFrame,searchCells,type LabFrame } from '../src/lab-so
 import { freezeTrial,evaluateTrial,validateHypotheses,LabStore,type LabHypothesis } from '../src/strategy-lab.ts';
 import { planDiscovery,runDiscovery } from '../src/lab-research.ts';
 import { labRecord,validateLabRecord,appendLabPublication } from '../src/lab-publication.ts';
+import { LabRuntime } from '../src/lab-runtime.ts';
 const original=JSON.parse(readFileSync('evidence/preliminary-vps-2026-10-21.json','utf8')),graph=verifyGraph(JSON.parse(readFileSync('evidence/lab-universe-2026-10-22.json','utf8'))),experiment=original.experiment,base=graph.block+1000,start=graph.timestamp+1000;
 const route=graph.routes.find(r=>r.family==='triangle')!;
 const hypothesis:LabHypothesis={name:'Synthetic test hypothesis',strategy:{routeId:route.id,sizeWei:'100000000000000',minEdgeBps:5,gasSafetyBps:15000,persistence:2,maxGasPriceWei:null},rationale:'Offline fixture for a novel three-pool cycle; no real opportunity is asserted.',failureCondition:'Reject the hypothesis if the first ten paired forward observations have no eligible known-gas signal.',evidenceBlocks:[base]};
@@ -52,4 +53,10 @@ test('saved model output recovers without another inference and public sources r
   const trial=freezeTrial(hypothesis,graph,training,experiment,receipt.analysisHash,{number:base+50,timestamp:start+60}),run={id:'fixture',analysis:receipt,plan:prepared.plan,context:prepared.context,trainingBlocks:[base],priorTrials:[]},record=labRecord(campaign,'fixture',graph,training,[trial],[run],experiment);assert.equal(validateLabRecord(record).report.trials.length,1);
   const manifest={algorithm:'sha256',files:{}},files=appendLabPublication(record,null,manifest,()=>{throw Error('not present');})!;assert.ok(files['evidence/discovery-index.json']);const changed=structuredClone(record),path=Object.keys(changed.files).find(p=>p.includes('-frame-'))!;changed.files[path]=changed.files[path]!.replace('99900000000000','99900000000001');assert.throws(()=>validateLabRecord(changed));
  }finally{rmSync(dir,{recursive:true,force:true});}
+});
+test('a crash after envelope rename or public push adopts the exact original publication without rewriting evidence',async()=>{
+ const dir=mkdtempSync(join(tmpdir(),'mevy-lab-envelope-')),budget=new AutoStore(join(dir,'budget.sqlite'),campaign),lab=new LabRuntime(dir,join(dir,'spool'),campaign,experiment,budget,'https://rpc-robinhood.blockmachine.io');
+ try{const f=await frame(0);lab.store.put('frame',String(f.control.block),f);lab.spoolReport('crash-fixture');const path=join(dir,'spool','lab-crash-fixture.json'),bytes=readFileSync(path,'utf8'),record=JSON.parse(bytes);lab.store.db.prepare("DELETE FROM lab_items WHERE kind='spooled'").run();lab.spoolReport('crash-fixture');assert.equal(readFileSync(path,'utf8'),bytes);
+  lab.store.db.prepare("DELETE FROM lab_items WHERE kind='spooled'").run();const report=JSON.parse(record.files[record.reportPath]);lab.adoptPublications({format:'mevy-strategy-lab-index/v1',campaign,reports:[{path:record.reportPath,reportHash:record.reportHash,createdAt:report.createdAt}]});lab.spoolReport('crash-fixture');assert.equal(lab.store.get('spooled','crash-fixture').reportHash,record.reportHash);assert.throws(()=>readFileSync(path));
+ }finally{lab.close();budget.close();rmSync(dir,{recursive:true,force:true});}
 });

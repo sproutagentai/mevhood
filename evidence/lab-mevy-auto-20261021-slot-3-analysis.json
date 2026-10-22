@@ -1,0 +1,61 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          95098363
+        ],
+        "failureCondition": "Reject after the first 10 eligible paired observations if no two consecutive observations meet the entry rule, including the 30000000 wei gas-price cap. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. A quote is not a fill, inclusion, or earned return.",
+        "name": "Hypothesis: WETH–USDG fee-tier cross-pool loop at 0.005 WETH",
+        "rationale": "Measured: at block 95098363, the exact 0.005 WETH quote returned 4998509295539664 wei, a gross shortfall from input rather than an edge. Hypothesis: a same-block relative-price divergence between the 500-fee and 100-fee WETH–USDG pools could overcome that shortfall and gas reserve. Require at least 30 bps of edge after known gas with a 1.5× gas-cost reserve, and two consecutive eligible observations; the training quote itself fails this entry rule.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x06bd1ee02442a7dd1f5e89f6654069f73c99eb6510cd2a3238a757a7f680b9ff",
+          "sizeWei": "5000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          95100739
+        ],
+        "failureCondition": "Reject after the first 10 eligible paired observations if no two consecutive observations meet the entry rule, including the 30000000 wei gas-price cap. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. A quote is not a fill, inclusion, or earned return.",
+        "name": "Hypothesis: WETH–CASHCAT fee-tier cross-pool loop at 0.001 WETH",
+        "rationale": "Measured: at block 95100739, the exact 0.001 WETH quote returned 984421829356692 wei, below the input. Hypothesis: a temporary relative-price mismatch between the 3000-fee and 10000-fee WETH–CASHCAT pools could create a round-trip edge if it exceeds the fee drag and the stated gas reserve. The observed quote is not positive evidence for entry, and no quote at another size is inferred from it.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x122fffbc1d5f8fd5e136f97282788930e0d02f43a1cbcc55b99c58b63951eb9b",
+          "sizeWei": "1000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "No training row validates a forward result; the runner must collect new same-block control and candidate observations after public source publication.",
+      "Keep the original control and its seven-day, 1000-observation acceptance gate, including the stated drawdown, gap, trade-loss, and improvement requirements.",
+      "Known gas quotes do not establish complete costs. Extra gas, infrastructure, and model invoice costs remain unknown, so full profit claims are unavailable.",
+      "The ten-observation futility screen can reject an unproductive hypothesis; passing it is neither acceptance nor evidence of profit."
+    ],
+    "summary": "Two forward paper hypotheses target distinct cross-pool loops and exact sizes available for testing. The cited training quotes are negative before gas; neither supports an entry or validates a forward result. Keep the original control and acceptance gate; these hypotheses are not live strategy changes."
+  },
+  "analysisHash": "0xe8a6fd35b10014f68a8acf956458e0ade89d1f3139d31819f3bf0cafe61518a0",
+  "contextHash": "0x104fb2588ef3d9fa8d981d64d58a1a8af1c74a6ef0a0b4214c8f0c0a5b9bba6b",
+  "createdAt": "2026-10-22T12:24:58.763Z",
+  "estimatedStandardCostUsd": "0.011141900",
+  "format": "mevy-discovery-analysis/v1",
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x06d60776d9635b2c000b0420df71dc9958009f56f27575ad8bae7dd83246ed78",
+  "responseId": "resp_039c1880d66b6385016ada006730a887d18ddb42c04d0b9676",
+  "trainingFramesHash": "0x96439d4760b1d0f3916045a56829e2b4f7a65f989611fc496c5cefce753949d4",
+  "usage": {
+    "inputTokens": 83224,
+    "outputTokens": 5639
+  }
+}

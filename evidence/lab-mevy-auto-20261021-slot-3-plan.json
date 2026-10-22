@@ -1,0 +1,20 @@
+{
+  "automaticRetry": false,
+  "contextHash": "0x104fb2588ef3d9fa8d981d64d58a1a8af1c74a6ef0a0b4214c8f0c0a5b9bba6b",
+  "coverage": {
+    "observations": 44,
+    "quotes": 264,
+    "truncated": false
+  },
+  "format": "mevy-discovery-plan/v1",
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+  "inputBytes": 177331,
+  "instructionsHash": "0x9387650d86aec2d28da30ea384fd6a53a563d95337505bfbb4ca89316c181f43",
+  "livePromotion": "DISABLED",
+  "maxOutputTokens": 6000,
+  "model": "gpt-6-luna",
+  "planHash": "0x06d60776d9635b2c000b0420df71dc9958009f56f27575ad8bae7dd83246ed78",
+  "reservedUsd": "0.056079925",
+  "schemaHash": "0x02c5ef76c6708dc57d1028a3bc32dffe7d475c81eef05b7fa15ce16a4e0ed307",
+  "trainingFramesHash": "0x96439d4760b1d0f3916045a56829e2b4f7a65f989611fc496c5cefce753949d4"
+}

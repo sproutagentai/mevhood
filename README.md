@@ -69,7 +69,7 @@ Even a passing research report says `ELIGIBLE_FOR_REVIEW`. `livePromotion` remai
 
 ## Expanded autonomous search
 
-The versioned frontier adds verified recent factory pools, four-leg cycles, exact size-curve selection and quote-improvement triggers. Its original snapshot contains28liquid pools /20tokens /262routes, including34routes through newly covered tokens. Daily discovery is bounded and preserves old experiment epochs. [Scope, costs and reproduction](docs/frontier-search.md). Source and offline tests are verified; live deployment status is reported separately in the dated journal.
+The versioned frontier adds verified recent factory pools, four-leg cycles, exact size-curve selection and quote-improvement triggers. Its original snapshot contains28liquid pools /20tokens /262routes, including34routes through newly covered tokens. Daily discovery is bounded and preserves old experiment epochs. [Scope, costs and reproduction](docs/frontier-search.md). The VPS published its first genuine response and two publicly frozen, ten-row comparisons; both were rejected without a qualifying signal. The [dated launch record](evidence/frontier-launch-2026-10-23.json) includes the successful archive recheck and the earlier failure. Future daily scan uptime is unverified.
 
 ## Strategy discovery
 

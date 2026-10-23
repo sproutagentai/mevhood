@@ -35,6 +35,7 @@
     "lab:audit": "node --import tsx src/lab-audit-cli.ts",
     "fork:verify": "node --import tsx src/fork-study.ts",
     "fork:study": "node --import tsx tools/fork-size-study.ts",
-    "frontier:verify": "node --import tsx src/frontier-cli.ts"
+    "frontier:verify": "node --import tsx src/frontier-cli.ts",
+    "frontier:audit": "node --import tsx src/frontier-audit-cli.ts"
   }
 }

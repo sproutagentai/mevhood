@@ -35,3 +35,11 @@ npm run frontier:verify -- --report evidence/lab-frontier-…-report.json
 ```
 
 This verifies source integrity and decision arithmetic offline. It is separate from independently re-reading the chain and from fork execution. Historical60-swap receipts remain in execution-index.json; new quote screens are not new executed swap receipts.
+
+## Observed launch
+
+The genuine first response used189545input/1270outputtokens, estimated$0.0195895; provider invoice remains unknown. It proposed a wPONS four-leg size curve and a different wPONS four-leg exact-size test. Both reached10freshpairedrows after public freeze13f108b and were rejected without a qualifying signal; maximum gap248seconds. `evidence/frontier-launch-2026-10-23.json` links the response and comparisons. Independent archive recheck96049192 matched12control+6frontierquotes. The first failed recheck is retained; its exact differing quote was not captured. Daily rescan uptime is not yet observed.
+
+```sh
+npm run frontier:audit -- --report evidence/lab-frontier-mevy-auto-20261021-96024753-progress-96066325-report.json --block 96049192
+```

@@ -1,0 +1,4170 @@
+{
+  "format": "mevy-strategy-lab-report/v1",
+  "createdAt": "2026-10-23T06:06:45.632Z",
+  "campaign": {
+    "id": "mevy-auto-20261021",
+    "startsAt": 1792606905,
+    "endsAt": 1793211705,
+    "intervalSeconds": 21600,
+    "collectionSeconds": 120,
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "model": "gpt-6-luna",
+    "repository": "sproutagentai/mevhood",
+    "bootstrap": true
+  },
+  "graphPath": "evidence/lab-mevy-auto-20261021-graph.json",
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+  "control": {
+    "acceptance": {
+      "maxDrawdownWei": "1000000000000000",
+      "maxGapSeconds": 300,
+      "maxTradeLossWei": "100000000000000",
+      "minImprovementWei": "100000000000000",
+      "minObservations": 1000,
+      "minSeconds": 604800
+    },
+    "baseline": {
+      "gasSafetyBps": 15000,
+      "minEdgeBps": 20,
+      "name": "mevy-control-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "candidate": {
+      "gasSafetyBps": 20000,
+      "minEdgeBps": 35,
+      "name": "mevy-candidate-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "commitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+    "createdAt": 1792606932,
+    "engineHash": "0x6c0766619a727ad4205b236069f2ae1814db510d0c6a77278596e5e226efe28c",
+    "freezeBlock": 94487422,
+    "freezeBlockHash": "0xd29ea25c4cf43ce9f3abc5dbaa4033611e1b6f2ce7b4e28756a7229f0639a562",
+    "id": "mevy-auto-20261021",
+    "llmCostNote": "Unattended preliminary research. Model USD reservations and response usage are retained separately; WETH invoice conversion and infrastructure costs unknown. No public anchor or live promotion.",
+    "llmCostWei": null,
+    "trainingThroughBlock": 94487421,
+    "version": 1
+  },
+  "sources": [
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95046937.json",
+      "block": 95046937,
+      "frameHash": "0x49f8d2c9f07ccdc36d8bd3c4b2837c7252e3d6b1e12d80da911380de9d861931"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95048069.json",
+      "block": 95048069,
+      "frameHash": "0xa081e4ade042d1f78255786cbb91dcf13ef3d8269092310f3d3acc1591719219"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95049272.json",
+      "block": 95049272,
+      "frameHash": "0x44804f31b8b4f43f3af6b443d4d78684380812e2150fd3946c45d6f151759259"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95050541.json",
+      "block": 95050541,
+      "frameHash": "0x788c72d3fbcd15c5fcba2eac0507941a93a75a6b8631ee896300c9c60f1b830a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95051756.json",
+      "block": 95051756,
+      "frameHash": "0x65ff31bf31c1e76ddb0fd6f2d2fd0715037ba9606a009c02e4b1d95250cfcbd9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95053024.json",
+      "block": 95053024,
+      "frameHash": "0x5b46081bf0f374f9e2dbeb3116b50fb7685e0679ca7e25fc281d30b82880692c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95054830.json",
+      "block": 95054830,
+      "frameHash": "0x4f21fcd33c456e7bf70331404b1ed8fe3be87eddf35aaf96db63bfe0fe261dc6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95056149.json",
+      "block": 95056149,
+      "frameHash": "0x9d6e77b4eda73ef63b44d2b1165d9a050a10dd9bf630104b3f6de64f0a858295"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95057227.json",
+      "block": 95057227,
+      "frameHash": "0xaf150f15e083b332c41c5305168f2412ca2d7d67301f5ff1222acc86a8ab776d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95058495.json",
+      "block": 95058495,
+      "frameHash": "0x86b32ebbeb279e4fc834fd71e8e2699d5b283b76cbad1b4ecf017dc978b51d86"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95059725.json",
+      "block": 95059725,
+      "frameHash": "0x1d47cfb7b44c92db68e2733f3030fa5a8e8afb895e2b8eb5bb87a560a5dd45cb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95061017.json",
+      "block": 95061017,
+      "frameHash": "0x2fa05e97f260bd4133a45256e12dde1a33fd3682f720c6b4cbe140cd4d661445"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95062258.json",
+      "block": 95062258,
+      "frameHash": "0x0e89b7c7ee4a9cf16d01fe95c09c92a3cf8bd1e982af81a3ebfcf69f81bd8918"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95063583.json",
+      "block": 95063583,
+      "frameHash": "0x993e0ec950391466c3e4d6a3b41d2045df95ecfa272a040cca3ac7238d70ac2a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95064822.json",
+      "block": 95064822,
+      "frameHash": "0x895bfea777745bb0011a3f80268ab9af79eb368f0170345b5147073074912d1b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95066012.json",
+      "block": 95066012,
+      "frameHash": "0xbd90842961763529c689b41cef916741005ace1ed2da13441c3cd7c22f67d8e7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95067297.json",
+      "block": 95067297,
+      "frameHash": "0xd60fa08c3d3d6ab06cd79cc17716ef33d19677a982677f95e54e7751be845f61"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95068528.json",
+      "block": 95068528,
+      "frameHash": "0x664cd99eed7b42fb5d5a678a08b29931c7c5658bf8d2cc811c263d7be63a69cc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95069793.json",
+      "block": 95069793,
+      "frameHash": "0xf0a2d96c0711ed9484fd287b26740745bea9a82af4efa1c941ccc1a4e80228af"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95071080.json",
+      "block": 95071080,
+      "frameHash": "0xbd831cf9918392cfe988183f732d03080cd78d18c55262828a001f611723a8e4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95072344.json",
+      "block": 95072344,
+      "frameHash": "0x745f07eb1da1077ca1f367ac4f4c4e699d059084017fc55fb42d083cec10e4c9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95073637.json",
+      "block": 95073637,
+      "frameHash": "0x8246da158e9e81fdbaffa01affc7cd7835c6d6d403e2ef6cbebe50c7b8c58f31"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95074728.json",
+      "block": 95074728,
+      "frameHash": "0x8fdb51e8f295ce02d447c8900685e02dbda5aa925b6417e4c7cdbb15f2be9e9c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95076000.json",
+      "block": 95076000,
+      "frameHash": "0x6b1297a55f83aafaecf29d78c2b6c7c4891accd82e8088be6ab0a251dd1b9ac0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95077242.json",
+      "block": 95077242,
+      "frameHash": "0x24fe88b68d1b7bc74db7dfadc74b818331653553c6ed6fb7c0da6e136ce784c6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95078473.json",
+      "block": 95078473,
+      "frameHash": "0x48d3d689a1f369eaccaa4b986deb9d2649c0dd054cae37a1ec219f21ff07b53e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95079750.json",
+      "block": 95079750,
+      "frameHash": "0xb44f23e6488e6512a02809db5a66a29354ef8f036bcd3c42bff4d1daf8671a4a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95081013.json",
+      "block": 95081013,
+      "frameHash": "0xa8c275da1787832a68392393147a367f38e1b42808015db3cf11291c34b7eb74"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95082217.json",
+      "block": 95082217,
+      "frameHash": "0xa6721f6260d4f30de9bec555f65771539cc589977e62767b56fdd9e62410ea06"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95083413.json",
+      "block": 95083413,
+      "frameHash": "0x0a73a1378d7b4db254baaabffc614b8532b7f92217502d9c92b1b60daa9912e6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95084677.json",
+      "block": 95084677,
+      "frameHash": "0x6f62cb0b4c651254c4e737de7c90662712e272056d1245a16f6248d324b7b26f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95085919.json",
+      "block": 95085919,
+      "frameHash": "0xc0d35642d0f894db648725fb822b33832f35fdf00c574686c3ef9ecb604f0de5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95087180.json",
+      "block": 95087180,
+      "frameHash": "0x512565c28576389d2f87ce63b0bb0d403638c294c233a36dcd31eb5577aaf9c2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95088397.json",
+      "block": 95088397,
+      "frameHash": "0x2b54d5c11dbdaae4e7571f20bbbc89bc859318a16284bf2995bda9d44d9c202d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95089695.json",
+      "block": 95089695,
+      "frameHash": "0xd5a118318c7a5444d405e5d0e45b33deb8555535f8d31c8cadb4b8be3ef1e715"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95090932.json",
+      "block": 95090932,
+      "frameHash": "0x42ecfbdd99e533807409b39c2c1dd017145f0bf504ff466f2604e4b4bf787ccc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95092044.json",
+      "block": 95092044,
+      "frameHash": "0xe2265c897b7e84c769b346427f89e1cf3af95ed281766cdcfd8a8859e61890d0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95093329.json",
+      "block": 95093329,
+      "frameHash": "0x1d0d64b89fa9ea37bab9b8e293ea7bfe61e58b96cefceed48e66cbcbe484ebf2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95094555.json",
+      "block": 95094555,
+      "frameHash": "0xadbb4468f810cc676e223d21d393c86ec6a180202e5bf8588dd420b68485290f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95095801.json",
+      "block": 95095801,
+      "frameHash": "0x0592498847e92b0c389eede89c492a19bfefd63562821145cb3b7926aaa5c911"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95097092.json",
+      "block": 95097092,
+      "frameHash": "0x338c77f69af4a19a23b39228af229d8d433e90c24594db8b9b56a39d21b6c3ad"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95098363.json",
+      "block": 95098363,
+      "frameHash": "0x062e2b482a9172b96093a6d5bc74378d4c224d598d49dd26c08d0ab93ae0f4ad"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95099632.json",
+      "block": 95099632,
+      "frameHash": "0xdeeb824cf527e0b9cecccd3bf6f813381f2d4c5339d9b2b212cbda7c0f9a61f3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95100739.json",
+      "block": 95100739,
+      "frameHash": "0xa448db5863f606f1c6d9c2387314be029d7199e1c8354470ee984e886afb2690"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95102033.json",
+      "block": 95102033,
+      "frameHash": "0x3b1ebc38689c4f2dac7ca05c69309cfcc6e0d2a23f780c327e359f8a9afc12ba"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95103276.json",
+      "block": 95103276,
+      "frameHash": "0x2c1ed7b1ccc5f538cded5cfea22c7a24db8113253d0a2f91f0d3ea81853baf81"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95104561.json",
+      "block": 95104561,
+      "frameHash": "0x05397cdb4f6e4d7431a09c4e838fa37872d815a7199f70bee035b357eb4f8cc7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95105827.json",
+      "block": 95105827,
+      "frameHash": "0x0a51e962ba54c4e798b91c3205b87aefb7478697db8f490cb36d8768a0017a81"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95107109.json",
+      "block": 95107109,
+      "frameHash": "0x4317efc3b8a4e3d68785e95fd0937ab8de0578de7c2a9ca920ee580ac27e5cad"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95108392.json",
+      "block": 95108392,
+      "frameHash": "0x2d589f9a7556467c52f8a116d094307cbaef476c9ee672e2c287534ab8366520"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95110040.json",
+      "block": 95110040,
+      "frameHash": "0x375821a402c61c6b001bca66fda50766453a12d0f3d2a1b03ccec62d086b44dc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95111299.json",
+      "block": 95111299,
+      "frameHash": "0x311e803f08c00224c5c0dc8340715686ae30e634867c46152bd28d643eff1fc8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95112576.json",
+      "block": 95112576,
+      "frameHash": "0x0a4005fc4e3b6a6a9e48843e7d4d679f496c3ee9a6203a59ec7a3c30837f666d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95113771.json",
+      "block": 95113771,
+      "frameHash": "0xa6b5036ac2e52bb24452e32c0c86d3669d90db7463ca8bf7b3b6ce2ad11ca729"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95115054.json",
+      "block": 95115054,
+      "frameHash": "0x20280c2bfbf1c1b52722c114f69bf8c6664442360ae2a1814fa2391fa79f4bb1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95116340.json",
+      "block": 95116340,
+      "frameHash": "0x7c670a6a633984af2630c4646f1b1805a8a9ff021a13bcbe1bc3eedece432566"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95117443.json",
+      "block": 95117443,
+      "frameHash": "0xb60c67e04ab1f0bcb96ca213faea005b7be37bc320d86b67426dd9e1030f43b2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95118732.json",
+      "block": 95118732,
+      "frameHash": "0x426d7d0b8b3b14b1539fe6d278e72f174cf6b5f50a67f99085e3ab32a54a4437"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95119912.json",
+      "block": 95119912,
+      "frameHash": "0x383fc35146af78711266469a2dc1b97fd017e4b0dcdd81a382654491ee2f9e13"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95121177.json",
+      "block": 95121177,
+      "frameHash": "0x79617079e8c98f647e832722f3186d6f6e42c39f1d985a3a1faa4a7b569c9873"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95122462.json",
+      "block": 95122462,
+      "frameHash": "0x6c45cad8fe7ca5adf3c499445d07e48edbb93e6710631c18ca5f90e5fb0a2f1f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95123752.json",
+      "block": 95123752,
+      "frameHash": "0xa4994419f8610419ed3a220a69075046a92b174bbd4ba77ca463cf88be39085b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95125045.json",
+      "block": 95125045,
+      "frameHash": "0x814ab5f87a9a2858256003702ac2f081cf006dc34751fc0b2a0d144cc8a2615d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95126145.json",
+      "block": 95126145,
+      "frameHash": "0xe366becd0ebbc02cfec9b98c011d1280b8a076f06b35285afa00e37d5142b168"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95127367.json",
+      "block": 95127367,
+      "frameHash": "0x4c301a224b67e0826b3de9cda0df70add38ae7d7ec67535beebffd1fd54a7074"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95128557.json",
+      "block": 95128557,
+      "frameHash": "0xbd6ff454964b17bf594003c5fddef7e95dff7ff4ebf608aa045b090a64a39406"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95129863.json",
+      "block": 95129863,
+      "frameHash": "0xe2d947765ddecbd2ef2a9e8bcbf48e5552a6a8d8bff0b099f51651e1204106b8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95131152.json",
+      "block": 95131152,
+      "frameHash": "0xdf41a22bfc5edae7db2c9aae4b97827b85b42e08da7af722050a9d0a1ae3cd56"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95132427.json",
+      "block": 95132427,
+      "frameHash": "0xc73827b835699ef0d501fb237074b4e2527b94a354e4a127c25361597beb2baf"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95133717.json",
+      "block": 95133717,
+      "frameHash": "0xb232d0b4abd5e552efdf94a5f6833329988474de7a38a21f7dbb4d02a8bbd3a1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95134826.json",
+      "block": 95134826,
+      "frameHash": "0x784ffcbdd69d03346d3cefc516f9b84bfa9a1a1438a492499f5c08451d86ad49"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95136121.json",
+      "block": 95136121,
+      "frameHash": "0x91f8dffeb2037a6e377822255dbc7e3903a2e5a7d01d7684b170ca4bdb3dbeab"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95137373.json",
+      "block": 95137373,
+      "frameHash": "0x3fb5a1ee44837ff716c3879d169cd9a981106297d9637a462aee52db002fab16"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95138647.json",
+      "block": 95138647,
+      "frameHash": "0x93c1d5e60fd362a23e550b02763cfdafbd573548b63f78b2cb2cd0d6d74c6757"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95139899.json",
+      "block": 95139899,
+      "frameHash": "0x3735f1c17368cba40a628386b6e26bea10ddc978676886d11bb0ae8cc7c5f076"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95141188.json",
+      "block": 95141188,
+      "frameHash": "0xe7b26ae2ed2e64533a14009a5e1f902a82368751f60860170764f3f53d55ec6e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95142482.json",
+      "block": 95142482,
+      "frameHash": "0x17b4faeeafecd3c4fee477a97353c75920c2d57c4274d219d6fad37c390a47c1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95143592.json",
+      "block": 95143592,
+      "frameHash": "0x84137c40d7d1db82d1bed29f6028cb72521c9f824d02643c3937365cab0ab31e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95144884.json",
+      "block": 95144884,
+      "frameHash": "0x043f84d8e0b39da0e7c14638892edc3912f5fe05956548c00269cb02bf0df73c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95146117.json",
+      "block": 95146117,
+      "frameHash": "0x36e03d5c0cfe6cad5e0759e4789870745b8662ef516934a5f2e47732b5ec0878"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95147358.json",
+      "block": 95147358,
+      "frameHash": "0xc7903aa566f358cbcb1f17da1fe7a74bbe60b8f4ac643b822af2a8239c875b65"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95148495.json",
+      "block": 95148495,
+      "frameHash": "0xb022880eca3ea9033ed3d2d94e204712ca654859c35a091db82d4ab46d6f46d1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95149795.json",
+      "block": 95149795,
+      "frameHash": "0x71dfca0a3a08ac72eb3394025f83519afae7f06b0ff63f4f1dd62f9a905be689"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95151058.json",
+      "block": 95151058,
+      "frameHash": "0x2a216226153d4be67c9ed40a2052c5535f7617808f5dc41018d84181015c0609"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95152161.json",
+      "block": 95152161,
+      "frameHash": "0x38bc333001e126125705d0d1a02ac668a5bedd29c9ab80dacf67c70c9b7798be"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95153404.json",
+      "block": 95153404,
+      "frameHash": "0x737b2948b74a076434afc65a10423756fa8eba8d404d6bf035617604876b62d3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95154711.json",
+      "block": 95154711,
+      "frameHash": "0xcf57ce21ab8656c22741887c37308e988e9892ac09a427f8d2a3d252259079ef"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95156012.json",
+      "block": 95156012,
+      "frameHash": "0x7a798cf9873d7562a2521bc7daf481ddba06c0a19a62d0a8389e66851d0feac3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95157303.json",
+      "block": 95157303,
+      "frameHash": "0x7082438786552f9f5ad60bdc2844eff6a9c5f17b0a88dfbb6b556bd3c931d323"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95158620.json",
+      "block": 95158620,
+      "frameHash": "0xd1e5e3086b372e2b366c30c158e8d27bba3cf091cff25fe2a1cd701abfb0b08e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95159913.json",
+      "block": 95159913,
+      "frameHash": "0xd3f1e9a74685de233f87711bab978f822ab6f578f7b2bca3ced597f02f671846"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95161059.json",
+      "block": 95161059,
+      "frameHash": "0x359a5b2aecd966a2d002d49e4c08369eff0d1d5376346db0275c6d2cd0052b4f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95162375.json",
+      "block": 95162375,
+      "frameHash": "0x7ee756ef81c2b1535bbcdc41a88c12de325e4683f939c51bc093d2af1098191e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95163616.json",
+      "block": 95163616,
+      "frameHash": "0x1dc4652484b25241755a5fe642869244701359e0e99754761459f052d9b4b62e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95164912.json",
+      "block": 95164912,
+      "frameHash": "0x688cdc3924e0803f1d9a45e732cf0f3502dffee9fada366efa1356df96a06b80"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95166161.json",
+      "block": 95166161,
+      "frameHash": "0xaa6a0a1bd418df2004042cd06f2eba3555d5897816df5a16dc22d31356392a8d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95167460.json",
+      "block": 95167460,
+      "frameHash": "0x74eca82b5c6406f1f8a9a69938f18be6b1dd1dd9a8c8daeeeff29f075666b0d0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95168743.json",
+      "block": 95168743,
+      "frameHash": "0x32db1e50f1938bec290a9a14fe5389adf9c5e7f509d9b0e1837ec32acafa766f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95169911.json",
+      "block": 95169911,
+      "frameHash": "0x69d527eef5f4f7254c6b36a9056e35c47dee7ede7885bc844fee9e0d6ab0976a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95171209.json",
+      "block": 95171209,
+      "frameHash": "0xa49231040a47d54c764e29be9399acb861c420bfe50bbddbb8a7f674c68f74f1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95172426.json",
+      "block": 95172426,
+      "frameHash": "0xd73a44cfdc31364eff3a6c9f3f58e435b976da9b4a91312389b7b943e1ac8a11"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95173718.json",
+      "block": 95173718,
+      "frameHash": "0x6451f828c4884798ee017e6d4b0ea14c18f3198f1194eaa278dcb8f64de4af94"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95174994.json",
+      "block": 95174994,
+      "frameHash": "0x4f95855784ccf9817c558586bb75d3ac66735e973329659f3f3589b5854757dd"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95176307.json",
+      "block": 95176307,
+      "frameHash": "0x61d4486c43f039f990f273dcacf48777edb82a8e12a245b931d963e70a3c6084"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95177519.json",
+      "block": 95177519,
+      "frameHash": "0x33d45ec95efdc2c21b959a55c297249ca301cf23240739225305cb8656c1d149"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95178740.json",
+      "block": 95178740,
+      "frameHash": "0x053314a30cd984548e56983fa1a83de80490feb72c0ab20460a05fb5de2f3f24"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95179991.json",
+      "block": 95179991,
+      "frameHash": "0x0aad4935f5fcd19e7a6fa57de50c41386a9497a647fd7d5685ba17e463e92785"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95181222.json",
+      "block": 95181222,
+      "frameHash": "0x764971e7bbcdb1cec190c31d02a02cff3254b6715c49fd234a8aebf9ef742a2c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95182538.json",
+      "block": 95182538,
+      "frameHash": "0xf99a9df3822aca5d8e8389432a6437415d0824ff9945f17b6077a89db7aabd2d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95183841.json",
+      "block": 95183841,
+      "frameHash": "0x41c794a76a08105f13466539a5ce5a64c64c866de6c4420160daea16e6d6c678"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95185150.json",
+      "block": 95185150,
+      "frameHash": "0xb57a79d18cbe935fd463a87835fc80d0c0025b1a3ddc1c8c4b9d5b245c5018b6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95186257.json",
+      "block": 95186257,
+      "frameHash": "0x6d04c6d4741246e997d41969c3ff8678bc94a41b03b9393176658005cc4a3e9f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95187516.json",
+      "block": 95187516,
+      "frameHash": "0x5fa0b8d9fdd9c29a9eff0e0032cd52649c4764c09014eb41a9a9bb7c4f64e4b2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95188827.json",
+      "block": 95188827,
+      "frameHash": "0xda41593de6afb8e2d3eea242d6908f88959052bd9552813bea205444707500f9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95190024.json",
+      "block": 95190024,
+      "frameHash": "0x9e5039feabb7ddb84e248862b044d1cdf277e563e7624b9ae4df4054d55e65b4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95191353.json",
+      "block": 95191353,
+      "frameHash": "0x0f98bdf2b9411dfd9d82314ff9de13d8a3d167d1379003e116745f516da95036"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95192612.json",
+      "block": 95192612,
+      "frameHash": "0x1f40f1ad880ceda02cbeb0bbbcdecfc8486a4394b6ab4db46d059260ba37d7cb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95193917.json",
+      "block": 95193917,
+      "frameHash": "0x68a939b9e73eee6a2ba1b47307b22c541609d121a409cd81be9ac7a372e90fb1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95195024.json",
+      "block": 95195024,
+      "frameHash": "0x8b55d15cea1ee9b6c384cf5b2e8fb1ed29fbfbf18f85a1822f40a3f5750bac66"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95196340.json",
+      "block": 95196340,
+      "frameHash": "0xc88891aaaeeed1f5cf2247e4f5d7056676dee36dd6fc17ce2a962e32094174ed"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95197592.json",
+      "block": 95197592,
+      "frameHash": "0xd367396c36c37c8550cb54c22ee44448a20eb9338a8f94b4d99a25ba49a67960"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95198875.json",
+      "block": 95198875,
+      "frameHash": "0x37a5d76a2c61ba74432e24cf1046d48dcffea719c1319b3aef687ca8334fe873"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95200200.json",
+      "block": 95200200,
+      "frameHash": "0xa7ce199b7e401bd4454efaed807cb22c5cbe50ea28f00e3231d4f7728517359d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95201517.json",
+      "block": 95201517,
+      "frameHash": "0x3777f63acb2d9aebd1623e0ed7d548c582bfedb4702a6d534c5d4652bca16e27"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95202780.json",
+      "block": 95202780,
+      "frameHash": "0xe905ec3938e4a1b073e15d40ca13da522cfe64284126f2368151c3bc3cc9bdaf"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95203890.json",
+      "block": 95203890,
+      "frameHash": "0x54a9c4b8658522937b7b0c316df689d8b3cc7b75da8a472b46f7e3c003129140"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95205199.json",
+      "block": 95205199,
+      "frameHash": "0x37018d6fde487f7389332aeb6bedfacc4c4f21adefb9218659f424a12d9ccb91"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95206351.json",
+      "block": 95206351,
+      "frameHash": "0xf128767ada1c36a2cc9e88d174bc40abb06cffc53a2fa5c9a2e14a2ebf449627"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95207647.json",
+      "block": 95207647,
+      "frameHash": "0x316c39b9b7e1822e0e1feaaeacd322981e794bf0a5f60072da50d589fc60381e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95208950.json",
+      "block": 95208950,
+      "frameHash": "0x81d8599ffcedd0c9535dcbadd710fd6475d8657398c0dd7b11fc502cd6cef6ea"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95210276.json",
+      "block": 95210276,
+      "frameHash": "0x0a4e80ace1302eda49634b436782f2b7d078d6d2f0c86824633e8054abb70dda"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95211587.json",
+      "block": 95211587,
+      "frameHash": "0x7c884d1205be3b0403dc5f43347bfb8ed0e7d5ae29856502b5db2332c60f4383"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95212741.json",
+      "block": 95212741,
+      "frameHash": "0x7231bd444ec1cdb0547228807c3be4c290585a4ccd63ff770fbc6fca96926008"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95214065.json",
+      "block": 95214065,
+      "frameHash": "0x15641e530d371e7aa1d9c71c05d30c04fc965a1756fceaa22682a249f85d2e84"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95215314.json",
+      "block": 95215314,
+      "frameHash": "0x8f95eb2eb7537c614863907bef58f6cb4a47ecf51c5ed3eb8d6666d9ec5f6fbb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95216614.json",
+      "block": 95216614,
+      "frameHash": "0xf33b9363c7857db8460313dcf64ade7fb5c3fb8a39a7f9f6c1ff0a64cce02b0c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95217929.json",
+      "block": 95217929,
+      "frameHash": "0x71246855ff22958f4bf32da07b5b2301800347ca654d92c85bb4ef3026b1f09c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95219174.json",
+      "block": 95219174,
+      "frameHash": "0x91cc73db3805b82eb37bf035f845e96e91a6268d001ff0ce13f9359898b75f7a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95220469.json",
+      "block": 95220469,
+      "frameHash": "0xcb59b9078b39b4ff41a74e4dab3ecce8289d79e13eb9479e239670cc84a05c8b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95221577.json",
+      "block": 95221577,
+      "frameHash": "0x83071f6f00c1823df06169f385211a407cd1d95268c96b19d73854de7f3c8ade"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95222842.json",
+      "block": 95222842,
+      "frameHash": "0x7d700e2a76c03e1a829672fd52c2f5d184b4622f9b3007bf8a0ea3752f42d091"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95224148.json",
+      "block": 95224148,
+      "frameHash": "0x4236f706fa69cd32e5feb6f41f0b92ead4682110ca19c4c4214341971d1fe329"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95225458.json",
+      "block": 95225458,
+      "frameHash": "0x6c79d1c94c747457af95c454b95b6e61c97871274d47850388a0f27825ac8138"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95226756.json",
+      "block": 95226756,
+      "frameHash": "0x6e4305c957b77d757658d4a05bffb0d3237ef55da88c6c4029cf30a4dbf6347e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95228053.json",
+      "block": 95228053,
+      "frameHash": "0x4c75e6d74e4fe07c32bbb83f715cee871f8dc8dbe8e14f60aa9887b1ceb04434"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95229360.json",
+      "block": 95229360,
+      "frameHash": "0x0c8a47ecac4d9e79dc817aedd57f87f166fbf4aab493b9249d6172cbba68b959"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95230516.json",
+      "block": 95230516,
+      "frameHash": "0x1a46ecf7292c793345db8e74a6ddf901a9639d6293ecc73d2509dd8a4abe27ea"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95231815.json",
+      "block": 95231815,
+      "frameHash": "0xb626a18dc085d8d75d11af6524048a8e64744ab9646df7bc257f031cc9f4d8bb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95233044.json",
+      "block": 95233044,
+      "frameHash": "0x9fc12b326f67d3bd290f90ff800f4a574f1cebbbcdba8a2f996f7485da961bdd"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95234338.json",
+      "block": 95234338,
+      "frameHash": "0x5b6523d29d1a64c199cd87bc450c3dcc7cfc9edc3905e14a4d789e3d2197cbdf"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95235638.json",
+      "block": 95235638,
+      "frameHash": "0x5a5453f8fd3e3631d5d216f3b42b1a84c5b6018530214a153538a5e8ff69a601"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95236855.json",
+      "block": 95236855,
+      "frameHash": "0xc9f618db44c1ab11e366b954eb7db84cea552fb4872f99d3eba33c3f7d539bda"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95238072.json",
+      "block": 95238072,
+      "frameHash": "0xa8c4bef659117caea65ad822b71606610b49dfc0fe580fad432f619b91063d28"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95239280.json",
+      "block": 95239280,
+      "frameHash": "0x2bd9fce906bb8a7a3e6410ab14582aff2762e9b63f8f096a0e10246f01a9580d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95240599.json",
+      "block": 95240599,
+      "frameHash": "0x715683054985f017ce7de4d802fa814390e1cbcd481bf376b542e30279be1d1f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95241851.json",
+      "block": 95241851,
+      "frameHash": "0x2c7e28b24ce5b48782da05599c94bbff13876ac95b21986eb9f8b5d4f77c7b46"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95243155.json",
+      "block": 95243155,
+      "frameHash": "0xb7ce718f5397b732a05fe82cc92d25b00820c3c56a391fd8c4510d166df27130"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95244482.json",
+      "block": 95244482,
+      "frameHash": "0x1a24974922ca7323e159a6ce527295fbabcb3e562e9358b4d0bf9cccac2c53fc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95245779.json",
+      "block": 95245779,
+      "frameHash": "0xe899cc04c95e4a4685c3a23534f981673b7171eddfb5144dc002af9871fa8be5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95246921.json",
+      "block": 95246921,
+      "frameHash": "0xda4cfdcf74cf51c6bfd967b05ba8dd7a4e3569dcea980bdba75884bb1fc86d81"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95248236.json",
+      "block": 95248236,
+      "frameHash": "0x8ad31a7513a3a9227f1a8592aa551125ac0c08236e31b63f1980bf147906887d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95249529.json",
+      "block": 95249529,
+      "frameHash": "0xb425e245d0ae7efbc509c3544aedcfe08945e8398860465ec21a8d4bdb814f24"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95250844.json",
+      "block": 95250844,
+      "frameHash": "0x42b11700546c662c810392893d2d1bd96aa065622405fea3bd53700fc724d88b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95252085.json",
+      "block": 95252085,
+      "frameHash": "0x3d6ce9acb232ad84a172c6a4f1eb89fb7995025155af30e5d792724a99e76786"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95253394.json",
+      "block": 95253394,
+      "frameHash": "0xa51e2386025e2b7623eedac7f22c2394e88b0c91703909edc6e44e35f26e56b8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95254718.json",
+      "block": 95254718,
+      "frameHash": "0xf73ff7b187bb4dabbdb6d57e7498583fabc0d35a0f2595580b0941d6acedb611"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95255841.json",
+      "block": 95255841,
+      "frameHash": "0x951ee2a045066bee18d1c1ed83b3ff338141bf5a9375b89f3f6ef1b10cef4111"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95257090.json",
+      "block": 95257090,
+      "frameHash": "0xbfb3838765cb162242bcc3bac392a5b2b6e8bd9096b60a1d15f59b82568a5a13"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95258363.json",
+      "block": 95258363,
+      "frameHash": "0xcf6f95537902c4d83bfc3f8ac74480063d05c6f721cebfb4f1640924195c5104"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95259640.json",
+      "block": 95259640,
+      "frameHash": "0x306c7695d9676c30a2bae2b9ce029d015b0b69f9aa7fc51d1b7c1f98a2b66f3b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95260902.json",
+      "block": 95260902,
+      "frameHash": "0xdc1dd8fa9b39e16b243ecae18aeb08e6ebc2020bf4a6e9a1ac867ed4dc9c92a1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95262363.json",
+      "block": 95262363,
+      "frameHash": "0x14d7d5b8b53441440a6804093cf20f31f4eae07c9306ccc15f347bd2edbaa8c6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95263611.json",
+      "block": 95263611,
+      "frameHash": "0xa2d7eb2ba30de082af996efafd03dcb593ba9d6abea496045c40def59008f45c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95264709.json",
+      "block": 95264709,
+      "frameHash": "0xd5adab86e824f668122cd572bec8a774bdd02c803af703095d34978c696f36f3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95266098.json",
+      "block": 95266098,
+      "frameHash": "0x565e050c9a4c38a511ad542dc3aac51eac167bb5869af6abc32dcd645c690116"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95267338.json",
+      "block": 95267338,
+      "frameHash": "0xe1bfb28ee55e792b2dd6acd70b3930e3cfd9c3172906dbfd9a75e75a6d8cae70"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95268622.json",
+      "block": 95268622,
+      "frameHash": "0x4f8aacb5772321da2f38602c9f40b14b1e3c34505a5283b717a0b4287748b3ee"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95269964.json",
+      "block": 95269964,
+      "frameHash": "0x7ca3fce6e96dd4d4e0f6df64f818a8618dba42e98d72f7d8aebbf96306b45431"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95271278.json",
+      "block": 95271278,
+      "frameHash": "0xfecd458fe17a6f724b291744166e68b78e538ee0b3adf226ad10ab704d14919e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95272528.json",
+      "block": 95272528,
+      "frameHash": "0x875be0f360a38995a7ce477d728e2ac364586230074f84533319501b3e7e6076"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95273716.json",
+      "block": 95273716,
+      "frameHash": "0xa205e4b96e302de7e1b93708c217e1ae4fddb8b298ce401a5310ad42702f19e6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95275034.json",
+      "block": 95275034,
+      "frameHash": "0x07a1a32f5bb922680bcd8a922c5d7b7490970a2a7e30342e40793c6f9b3408f2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95276275.json",
+      "block": 95276275,
+      "frameHash": "0x104d37703f88ece7a4121cd0d4b56fd30782630ff17666e130b9352d6f5ed4e7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95277616.json",
+      "block": 95277616,
+      "frameHash": "0x99f624d76d10af88bb78f19885935650183f82ab0c91945f857f80d08b1b0902"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95278912.json",
+      "block": 95278912,
+      "frameHash": "0xfe164b7f20dd034cb1cacf880f190267ffb6e95c197712f6179429719ca93c69"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95280250.json",
+      "block": 95280250,
+      "frameHash": "0x31a80b51c1e013b13242d8af587cc0109d2dda39243bfc08a36f53df49f485de"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95281578.json",
+      "block": 95281578,
+      "frameHash": "0x14da0ee6c265e36337f4907c9cea1933f3a74d4412da25389518a9250f5ca56a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95282724.json",
+      "block": 95282724,
+      "frameHash": "0x1dc76fabafaf45b2707ce73f713157a5ab38395be7f463375ed28924646c14d8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95284038.json",
+      "block": 95284038,
+      "frameHash": "0xec18ff014aa30db93f108ee3699cebe4852127c968e78015e2d1f4766a73e14c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95285321.json",
+      "block": 95285321,
+      "frameHash": "0x16fea502ae9a9f169bf099b5c333c369ae75aade2aecc96c6d0431c4c4a27d9c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95286534.json",
+      "block": 95286534,
+      "frameHash": "0x4a0a21d9d0ef0dd927757e734975c4b84d84a0c26b08635d19ea549d1eb3390d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95287891.json",
+      "block": 95287891,
+      "frameHash": "0x83dc36e22057d7d96fc08d85419cc0428af05dd4390d589f362dc434a3183e28"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95289198.json",
+      "block": 95289198,
+      "frameHash": "0xd6bfd6fcb921c35ff08067be3866834adc8363581ba415fb207f46976b731dc9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95290322.json",
+      "block": 95290322,
+      "frameHash": "0x669e30f1804abfbfa79b36f376da24fa311dab44265b09798326de646bdf5a22"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95291594.json",
+      "block": 95291594,
+      "frameHash": "0x2f343d70cac92ba50ead8d01fdddd6a66a05767405fbe8a739747be02c3848d8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95292859.json",
+      "block": 95292859,
+      "frameHash": "0xf0024f818a5572182b96be03bf1931d2a5bd262a927ee4d44b1487c7416a72d4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95294184.json",
+      "block": 95294184,
+      "frameHash": "0x5fa2742fe0c5a161f1075e98336eac173c094108f22643aa0dd8e7072d526fac"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95295499.json",
+      "block": 95295499,
+      "frameHash": "0xc3f0e60a2c78a8c04b4671a3e225079bd8c80a74b91483c21922e9f177b42efb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95296762.json",
+      "block": 95296762,
+      "frameHash": "0x1a7554eed18f416099623dad567264d1bc36ee17e7f66140396ea37b936343f6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95298066.json",
+      "block": 95298066,
+      "frameHash": "0xe5ac5f09817d282c16eb71dd6bf4c9e5dae92ac3cd0dec4bdafbd908c925530c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95299254.json",
+      "block": 95299254,
+      "frameHash": "0x45a8f8e090e5b10f497027fbe1f454d6b8a542ec1713be1b3df5fa423b58ce8c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95300567.json",
+      "block": 95300567,
+      "frameHash": "0x7beea228f4ee12a88f3a34b6931dd14976b13744d0ae965f790df36d157a6f94"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95301839.json",
+      "block": 95301839,
+      "frameHash": "0x8086a7abe605be81f119ff81f77030ecf28bbb863918e6af19b799f2212b1cd2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95303183.json",
+      "block": 95303183,
+      "frameHash": "0x7ceea25c661b26f85b8afebd15d1ca664c6cf220ebe0ffdc8679688c17b1a5ec"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95304492.json",
+      "block": 95304492,
+      "frameHash": "0xbf2deb95ca77f15bc4a9c2f6d8c1a0fafa75ce178aeb1cf360f31c595bddf725"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95305799.json",
+      "block": 95305799,
+      "frameHash": "0x2f2d28f8b0ac03aa994f2d3a6abd35889faf3d797e643950b1844b17a45d1509"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95307129.json",
+      "block": 95307129,
+      "frameHash": "0xc2fcd203a647ce088b281b5f32bc71d968c3f7a6eea96505cd5a654942c8b3c2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95308282.json",
+      "block": 95308282,
+      "frameHash": "0xdcf615a7485cddb2e549f993f366d6d9c06a73fca69cec01bd824c91b20b62fb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95309581.json",
+      "block": 95309581,
+      "frameHash": "0x324944b5f84174b661709e0001964b41e5e235773265f4942c60a64eead3c0a4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95310865.json",
+      "block": 95310865,
+      "frameHash": "0xc33f58db34ee1e63b020079134c425864257b5d75ba4b43dadbfa9ba6a8848a5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95312127.json",
+      "block": 95312127,
+      "frameHash": "0x69224c35446b8359480f683c8b1ea4009402b0712e2873265386f016e29a984d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95313404.json",
+      "block": 95313404,
+      "frameHash": "0xab66e87e359184dcd542ad37154f006720905102d2f3977de09f1a736a98d61a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95314736.json",
+      "block": 95314736,
+      "frameHash": "0x23adadc97621dc14e4cbb4bef8c70d122f939d882fd7e7d56933d121f7e4cf40"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95315988.json",
+      "block": 95315988,
+      "frameHash": "0xd9b2cd781a85002fa00118c9d57784996d519e29aaff610443e9920ce6657652"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95317727.json",
+      "block": 95317727,
+      "frameHash": "0x2780d64ca9e8e718a5d9fd16d3e7efffcb570c970241ce6984fc81ac075caf0f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95319012.json",
+      "block": 95319012,
+      "frameHash": "0x1873e0829ebad9cf17b0904ee18d4017e1cf56e54b1b2c54486e352256441fb4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95320353.json",
+      "block": 95320353,
+      "frameHash": "0x8f7fa00a6ccf38965cce7adeb7d06df897b1103bcf07039b88e5ad6396bfc8ff"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95321662.json",
+      "block": 95321662,
+      "frameHash": "0x491cbf06bad2dec0abfc0f94da300e61c7c303f8e20d464aa687ef32e142b026"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95322974.json",
+      "block": 95322974,
+      "frameHash": "0xf0fd94341898727fedc26b786cd0fc374e4ee858bdfef4b444a1948ad4487acd"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95324256.json",
+      "block": 95324256,
+      "frameHash": "0x53342c2c5d0a0b2b103ae9bc84895b076eaf0827cd4e6cfe0f245f3ed81d4075"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95325435.json",
+      "block": 95325435,
+      "frameHash": "0xaeac387f562389027a076f8ef71585eb55a84a38087836b41d71d7051ae830c4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95326701.json",
+      "block": 95326701,
+      "frameHash": "0xefe3b25f150b3f575d85b9c4d832aa4dc7964fd034fd2d8f5db182585f707ea0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95327924.json",
+      "block": 95327924,
+      "frameHash": "0x9a6cd5a6e3ea91b8cfb06a0560935061980b44ed2af70e03bc350c9002c1ac32"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95329198.json",
+      "block": 95329198,
+      "frameHash": "0xc2344c34f2fccdedeb45dde18b46d9c5c6144d817304d3595feb922720753479"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95330534.json",
+      "block": 95330534,
+      "frameHash": "0xd1f55449b1e7c8cb2ac560bcd213c4af78bd9030a7a1183afb0dbae3e71bdc11"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95331851.json",
+      "block": 95331851,
+      "frameHash": "0x2c9cafccdfe9053c38a69952109b239aac668a988385c299ca99d1c2e32403a0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95333140.json",
+      "block": 95333140,
+      "frameHash": "0xb7ddd2cb892f8a2c76230a805fb06f6a70a3b08644990ea0053ff14926799e23"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95334304.json",
+      "block": 95334304,
+      "frameHash": "0x07fa738006c7776a5eb58f691d10e40c74a4caf97ace3c9cb3672f0a288e1cb2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95335614.json",
+      "block": 95335614,
+      "frameHash": "0xc2b37a660f95595c1a7d6d45e0d421abdb7795eae181b0abfc501b6f07a9b4f7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95336843.json",
+      "block": 95336843,
+      "frameHash": "0x43d1fb7cb5e778b8e6a01bcfd8a740d5da2ee33586fcdcc6df974568f0b6ebe7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95338161.json",
+      "block": 95338161,
+      "frameHash": "0x7c009b5cb08f41f904aaee452447e2c1cfecb3bf247368077e4272925b3b2e82"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95339451.json",
+      "block": 95339451,
+      "frameHash": "0x96deca8f6c30673c107d3292b5dabe100bc01b7a6cb5c6100984b2ab35699756"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95340805.json",
+      "block": 95340805,
+      "frameHash": "0xa0ba6d127bc4131702c024c0c3addb193422728c529aa29cea2adf7f9c9c0d70"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95342121.json",
+      "block": 95342121,
+      "frameHash": "0xa861f59c14e8c5a682c84e2080eaa0c461a6bd63f88c9673f46dfcacc2a97226"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95343316.json",
+      "block": 95343316,
+      "frameHash": "0x340a1d0bff1be2ef390138add782be7cf961e1414b4831127f3ed8419e17c65b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95344629.json",
+      "block": 95344629,
+      "frameHash": "0x91c63c4dc45bb78db06b871cf822d7c72085241f4448ec4f81a434305a86f8ad"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95345921.json",
+      "block": 95345921,
+      "frameHash": "0xfe391603cb77348c26565cab106fb31f4feadba944f025c63ef3499729238a6d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95347245.json",
+      "block": 95347245,
+      "frameHash": "0x4cbe7bba62afab871ae9084d6b2ad1e3ae4108524f6b37a85b75e7c67968a586"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95348563.json",
+      "block": 95348563,
+      "frameHash": "0x50c0263eebe745d134f1e8524c7707f9902df578979632b4389ca6f1e486587f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95349875.json",
+      "block": 95349875,
+      "frameHash": "0x24db329e6f412d7dbb14a09704856fd318fb000f5617dc6e81934c145642ece9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95351106.json",
+      "block": 95351106,
+      "frameHash": "0xf2080150cf4f3862dd4dc72bc3c50dbe4942c47eb9e543d73aa7afb4e14ba6fd"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95352334.json",
+      "block": 95352334,
+      "frameHash": "0xbad00c40a55e5ac2d08bebac80468e69c1d4559d43c24e8f6fa0d1f5041a93ae"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95353599.json",
+      "block": 95353599,
+      "frameHash": "0x491307281f2904dd85b85cbccf875c21b2635a931b0d5f8eb043003c8ecb50ba"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95354928.json",
+      "block": 95354928,
+      "frameHash": "0x1b4a4ef2bcd5321f51625a82b7d004afddf895b5e7bd10ad6c1007f8b9e66516"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95356253.json",
+      "block": 95356253,
+      "frameHash": "0x6ef523c9b15b370419d38dd58cd74cdb94d2ef2529e27edd0cbc593eab31de66"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95357547.json",
+      "block": 95357547,
+      "frameHash": "0x538323d98d9c772a22cd4b4ea4945469fa89226d706f8d80ef9e7269abae25b3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95358892.json",
+      "block": 95358892,
+      "frameHash": "0xc5980878ab91b39b942d22a0806fae5ea3d4a62273c2fc28fb774615154799e9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95360021.json",
+      "block": 95360021,
+      "frameHash": "0x19970f354ec69962b43c696aa2d3466094fc35ffa955d274d34cde984bdb246c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95361321.json",
+      "block": 95361321,
+      "frameHash": "0xcb294aee4402dbb799e33665f34b0bfa6ce10cabf10cfb7d6f0531babc16752f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95362502.json",
+      "block": 95362502,
+      "frameHash": "0xa9e772e43ed1eaa3a3a0a29a864a1e4934b2bfbf8bc6e13b410a89d1274a9834"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95363838.json",
+      "block": 95363838,
+      "frameHash": "0x2a11934040c156da21dacfeb176dc53dbdba05d4285039abae5f2ad73849765c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95365157.json",
+      "block": 95365157,
+      "frameHash": "0x1f89207142ce9a6e41fdc3e510e7f5bf0ed809b66099b1fe38ad2a205bbcc682"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95366399.json",
+      "block": 95366399,
+      "frameHash": "0xceefd0be4af032bd7b76272bffa3a232d035f96e087a65e19794588ec9b0964c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95367707.json",
+      "block": 95367707,
+      "frameHash": "0x8c668061a521d8cc6d12a4fb6ff4a7f773934b27c6c29fa11a58b90290a438cb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95368894.json",
+      "block": 95368894,
+      "frameHash": "0x4f0db467515594ccce1100c195ab03fb456bbcb74929eadd3859b1887d42ef65"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95370179.json",
+      "block": 95370179,
+      "frameHash": "0x77423e4da101862721a42cf249c80b0ebdd684d62ec8e9cd0dbf0c6d7efefe3c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95371516.json",
+      "block": 95371516,
+      "frameHash": "0x2b6cb7fbafc24b66a0733a500cfe3572bba44eae1137a00d0d1c62253f4c199a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95372839.json",
+      "block": 95372839,
+      "frameHash": "0xcc9c04b7d584f55d84833cf46733e453d6eedb8cb3c25be378c9911d99379a35"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95374113.json",
+      "block": 95374113,
+      "frameHash": "0xdb5a7a102b6f18366474342ff911074b48a1e81e6548fc3075901d6878b2e975"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95375427.json",
+      "block": 95375427,
+      "frameHash": "0x46ab18ad165aa5d799f4a30b327e6ba82e24536add1388cea0f7fc2f54878e65"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95376782.json",
+      "block": 95376782,
+      "frameHash": "0x14f1b4d3872351e093f315524422483fcd59cc6e753bb68dce962d7142e56110"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95377924.json",
+      "block": 95377924,
+      "frameHash": "0x9e9d42e0befe16417999dcab5536b9860e7d4203cd90d809f89388ba5acceb29"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95379213.json",
+      "block": 95379213,
+      "frameHash": "0x48aa4ee900ebcbb126addb330c329d2fbc744854f72b1d84d8ac31fd8fb3699d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95380505.json",
+      "block": 95380505,
+      "frameHash": "0x0941cedf84d82657865b346606b2256b01d053123db9e08b95c94872474e4e92"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95381823.json",
+      "block": 95381823,
+      "frameHash": "0xd69a3107ca05a99e5c778255439e6d87f54da0acae6b9dd74fc60ae2f9d48c04"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95383141.json",
+      "block": 95383141,
+      "frameHash": "0xf9863949d8407321cc0bfbf9dd55f39dbf45502961cd2531d897b3cb55c269ce"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95384486.json",
+      "block": 95384486,
+      "frameHash": "0x65924dc215875b74949cfa2472254f448ecb0c159554085f0286f07e6b229154"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95385717.json",
+      "block": 95385717,
+      "frameHash": "0x02e0a50a54f0ca33226f12f92fca6a0ffddd72411d0f6a57cefcbad3a7ade64c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95386963.json",
+      "block": 95386963,
+      "frameHash": "0x0f4fa60f103c529dc264f5a504bfbc94c5830c86ffaf0132ce3f8d547d2d8967"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95388248.json",
+      "block": 95388248,
+      "frameHash": "0x7c7d47b25528bd1c9358c1d615f678327c1843ffe0bbdba89c25b53d79ee1909"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95389557.json",
+      "block": 95389557,
+      "frameHash": "0x5584637ff9320138d0217255c0fa986078fe1469c7ed9d013b1934f30d511f6c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95390956.json",
+      "block": 95390956,
+      "frameHash": "0x1480b4c848d10c0287df4703b6b019290d8c3e9e02253935962cb6b7469be816"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95392249.json",
+      "block": 95392249,
+      "frameHash": "0x80e63c97e64ca5cb111731d4c044027e2a01ead6e581864eb7aa7072338df63e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95393568.json",
+      "block": 95393568,
+      "frameHash": "0xbbedbb3e8e4086340c893acea8cc2e2e3247ca63fef20cb7558407c9c960223f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95394726.json",
+      "block": 95394726,
+      "frameHash": "0x58b746775fe42ac03b19855e5e7060e538e1eb5cb2a6ec73804ec8b62420ea61"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95396038.json",
+      "block": 95396038,
+      "frameHash": "0xff1cb3ffdec1c11a981a5d2408f7c0cc43802f3e7b187808b4070cd1dd008d46"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95397312.json",
+      "block": 95397312,
+      "frameHash": "0x885800c24d991d6bb750158910051972f9a8f7b1d02599206f5dd7de49e57bb1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95398613.json",
+      "block": 95398613,
+      "frameHash": "0xc689d05b06a7c6b16477c3865f3af78023d66cc48b94ffee4a6fecaeb69105dc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95399934.json",
+      "block": 95399934,
+      "frameHash": "0x31a966f6ad860549611e78f906aa7a68d49b5b2560617c1657f7ac8ee2eca017"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95401249.json",
+      "block": 95401249,
+      "frameHash": "0xc25eac70983b4c1274edebc5fcd21e6d42b970392281b3a5bea0cffe2bc4be44"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95402574.json",
+      "block": 95402574,
+      "frameHash": "0x6a6037f617f74885e09bc851d079396bcc953a5db0a287c917f91900fc3d62b6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95403767.json",
+      "block": 95403767,
+      "frameHash": "0x6bdb550d1f32152971363bb79b5d8fef7713b75e2fece2d39c115ea9381e3d26"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95405079.json",
+      "block": 95405079,
+      "frameHash": "0x648d2f22cad0e768afed8e42fbfe9ab05f5f6801be598e68a3b5a571f4b3ae43"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95406342.json",
+      "block": 95406342,
+      "frameHash": "0x05a482d863fc8986a9ba3e0fd72c348ea96b6227f3074a3dd39366de72de47ba"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95407690.json",
+      "block": 95407690,
+      "frameHash": "0x4a0c42e3a9c68baa5eb21f5ab7e8292c130427c6b617aebc2610423986bb204e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95408918.json",
+      "block": 95408918,
+      "frameHash": "0x12ea3fe48c04b2d962cbea5168ebc373b41b1109446be6a519fbef462dce9010"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95410257.json",
+      "block": 95410257,
+      "frameHash": "0x8d98fd771c0a526689db7531713cef897a126d6b62e26003fa29fc531baeb2da"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95411568.json",
+      "block": 95411568,
+      "frameHash": "0xe7adc4f635f574e0cfe8e15ad4c5d5178488b8da37899ed1c647e61a5d1742fa"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95412751.json",
+      "block": 95412751,
+      "frameHash": "0x458b9d9631a0978a3ca120cc9a35201e6873e1e46e04d6df356e04618f205a9a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95414014.json",
+      "block": 95414014,
+      "frameHash": "0x798c73da047403fb9c67742be7c178e172a5da588f57ac6ae7f33b34b0e202e2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95415326.json",
+      "block": 95415326,
+      "frameHash": "0xa1500177b47cc68f1f5f7882270159a2122c969c74edee649a731d0fb89eb3ff"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95416581.json",
+      "block": 95416581,
+      "frameHash": "0x8c673e7171a992d2832447f367bc24814e2ee392a892d37368cbe473aded66f7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95417923.json",
+      "block": 95417923,
+      "frameHash": "0x45d89c1f76c3774f6976956b938d7a5ce2d451dc3b170d70bb37d9aef342cabe"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95419202.json",
+      "block": 95419202,
+      "frameHash": "0x0cb1fdb47774547c49615da92246daf0ce331b9baf06e7c0464776720456f687"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95420417.json",
+      "block": 95420417,
+      "frameHash": "0x419a8e0bc08e3d0fade9b0dd5b696ac75f5f278e8308aeb890ebc1dd318d3c54"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95421714.json",
+      "block": 95421714,
+      "frameHash": "0xfafd7243e75858e96ad9e47788112a9412c3a8d07b2406618bc6f77077797ada"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95423060.json",
+      "block": 95423060,
+      "frameHash": "0xb32ea57713ec9186ef4af89842fa05a880314a5bf3a38c34895f579cfa8b1aaf"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95424420.json",
+      "block": 95424420,
+      "frameHash": "0x9e83e57c2e2136c057bd1dbc31ea18ca41aaaa9eb1e8c081be60267b0660c7f3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95425742.json",
+      "block": 95425742,
+      "frameHash": "0x6e77886aa208258e5941c683b7277f3c94e16fdb7d640694c0494ed0ae421be6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95427115.json",
+      "block": 95427115,
+      "frameHash": "0xfbfa675150885f54b1a8764812f1600166f6a5547cd11dbca511b30d7559871f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95428812.json",
+      "block": 95428812,
+      "frameHash": "0x87081c5ea21c449e774d04d693f536040251d2b1ed6f8a21876be01194ca0362"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95430042.json",
+      "block": 95430042,
+      "frameHash": "0xd5d5592f4ffdae1439e7ce5d23a5f7fff164425ccbdd49adccbd3582703ad14d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95431324.json",
+      "block": 95431324,
+      "frameHash": "0x42e65219c7dedb630145e44df5b80ec21780ab8fba103c9b809649a201a30c7f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95432571.json",
+      "block": 95432571,
+      "frameHash": "0x7cf33b34b645eb230e06fa2980a906b18a0b79847c447ef2ec3a056cec000f00"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95433868.json",
+      "block": 95433868,
+      "frameHash": "0x9f4c432019a65424099e4bbd7b99c78dee6f4323db75ebf9aa4edb090867db29"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95435186.json",
+      "block": 95435186,
+      "frameHash": "0xe0221f1fd6dbc63a5a16c4997d8e81b2dc47017c123da22676c8394e4572f561"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95436519.json",
+      "block": 95436519,
+      "frameHash": "0xce6588c98ac7e368b827e2f84e1bf3488280de7594bed39982fe9b242b50cac1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95437686.json",
+      "block": 95437686,
+      "frameHash": "0xa4bdbcb7c945a84748954b071113c4248f98a92dea4e9f70fbdc9983a709fbb4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95439020.json",
+      "block": 95439020,
+      "frameHash": "0x72c47c7d137b23ea257b44249adc518a27a0a0a5bad26f46ca950ae2feaa4ddf"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95440302.json",
+      "block": 95440302,
+      "frameHash": "0x2b18d7b118801016646fa468e0903ee263a5daf72991094c1867f6e473ec4083"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95441655.json",
+      "block": 95441655,
+      "frameHash": "0x6e6add3e0379b3a226ea274b96490515fe13dc3a41dfcf61ca7914d43c7f59dc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95442958.json",
+      "block": 95442958,
+      "frameHash": "0x095868fb5a7f644c4de59e586fe786df40def076865d7809f82dde1245df07c2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95444298.json",
+      "block": 95444298,
+      "frameHash": "0x14243209f1f9f715fc20326e60a3ed1e1acd48199fbf0ea14f1fe1011299c252"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95445589.json",
+      "block": 95445589,
+      "frameHash": "0x28f85fa725e5d5cb1f79f2aa566a7aba1fa3bc68af70e215092197e61bf91f9b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95446783.json",
+      "block": 95446783,
+      "frameHash": "0x1dac1b34cbb3555145580ff4518033c5353fcf498039c5cc7f17d40496d53e5c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95448112.json",
+      "block": 95448112,
+      "frameHash": "0x42f3cdb0df3e3531d51d8e94133c44b2a6473859ac26a4f31d648700d2a3b5ac"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95449420.json",
+      "block": 95449420,
+      "frameHash": "0x3012f9e660c7b0d3d0db748c561aaab77e4b15bccdb119756364abed25be1a61"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95450758.json",
+      "block": 95450758,
+      "frameHash": "0xe463f9edcc597a7b762272d68f89491f0e42d2849f478d66b51cfb5efda9be38"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95452102.json",
+      "block": 95452102,
+      "frameHash": "0x25df43088fa722679f35cad4af0f2d84cb15d85e4edc18b1b825367c57be56f2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95453430.json",
+      "block": 95453430,
+      "frameHash": "0x62dd9d8be49c394a83a0a50440a56d0c1923d9afc281fb1a701b9b2c1a3f6a7b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95454720.json",
+      "block": 95454720,
+      "frameHash": "0xd4583e2bc2d81faa35d77ceb663ca3f86f615b7b2a0515b70a03f2469157b367"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95455910.json",
+      "block": 95455910,
+      "frameHash": "0xa9f86dfa79d455600dc33fe954dc74c218d3ec475875f4a29f54a14a4cc75abc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95457188.json",
+      "block": 95457188,
+      "frameHash": "0xc2397b84def9f46e36aff16457f1538e32530c63577823a15354c52c6adc1702"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95458543.json",
+      "block": 95458543,
+      "frameHash": "0x359eb29961ccb044695c4345669ec62abc90e1a9fa3d75cc0eb8ebabf494fdc3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95459849.json",
+      "block": 95459849,
+      "frameHash": "0xa8de3e9054d295e39bada8d31173f06ead470c078cd3f436c8db532a0c54a4f6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95461201.json",
+      "block": 95461201,
+      "frameHash": "0x5425da3c46ddab8f2554069968f0cdd6f2d69a356bb02d4985c539c1a93e411e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95462531.json",
+      "block": 95462531,
+      "frameHash": "0x9cb40e3577de8410b377cfb72aea4fc53f3493f2dcf2f17410d479df0e9f914a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95463697.json",
+      "block": 95463697,
+      "frameHash": "0x1250c71f3b12f29fd0090eb50538e85b3d1c9bb235430daddccf481324a79d75"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95465041.json",
+      "block": 95465041,
+      "frameHash": "0xaf9769c6abd00569de961833200237f67ce621cdf26427a4eedec213eff8ca21"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95466314.json",
+      "block": 95466314,
+      "frameHash": "0x1ec6194e3aee22333bc1290409a8f750d01e7a282e2316de8b57bd0f796691e5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95467595.json",
+      "block": 95467595,
+      "frameHash": "0x9a7bf3c2d64526ea0617c18fb771faef84a42fa9f5552dbb4cfaa31ed466eef0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95468864.json",
+      "block": 95468864,
+      "frameHash": "0x6d62f6eb3705ba3f5541e5acec83b6aa6489c4c5d2ea13e0b5dd8ae30766e08f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95470192.json",
+      "block": 95470192,
+      "frameHash": "0xfcceefca9c16b43ae5a78abe5af2784a23c97f7065f87501edec520449f01344"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95471497.json",
+      "block": 95471497,
+      "frameHash": "0x30a78bcfa292aa2a755f0bb72df740fdc4047fb3ee3ee50b9bf4042d5dedcf32"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95472705.json",
+      "block": 95472705,
+      "frameHash": "0x1dcde8115cac65e5b3ca0728f1923ce8a9ad9373be3720771ce99bcbe304a449"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95474036.json",
+      "block": 95474036,
+      "frameHash": "0xf3b9bb8939adb3b22597dc4a6b4026158a029e42518f6574ac51cacf5df1b881"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95475333.json",
+      "block": 95475333,
+      "frameHash": "0x60e4fbe6a50ba54b8f34d91ae82139a019c9ef516d37da07d95cbeb47ac0806b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95476621.json",
+      "block": 95476621,
+      "frameHash": "0x7bb8989d0441e897a926d8c10190501b59061200f181f802f7042b3858b5f6f9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95477948.json",
+      "block": 95477948,
+      "frameHash": "0xc1319702a3847378023ea2aa7487d0fd26e12451af9ced68017334f0230eb09c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95479268.json",
+      "block": 95479268,
+      "frameHash": "0x6dfd5796a7b2a6e44f859120e1e64099d8c3ede2c9559529c1997590b75b10fe"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95480601.json",
+      "block": 95480601,
+      "frameHash": "0xbbbde9ee96815a28ec17e5c3153b49a88a0893945ce2bb355516e68457d60d33"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95481741.json",
+      "block": 95481741,
+      "frameHash": "0x499fec6c82efdb60d3cdf6dd68b78bbff4f1e5d1247419c9463cf31e47eea012"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95483030.json",
+      "block": 95483030,
+      "frameHash": "0x4a6205d0aeb29501918f8adf1e73ab5169aaf96d19a9a831a2f764a91a893ed2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95484345.json",
+      "block": 95484345,
+      "frameHash": "0x62188064216b322a729eeac6147cefe41245a98411853d791af3da0abc7771cb"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95485625.json",
+      "block": 95485625,
+      "frameHash": "0xe7261b5346875860fe049b12d8466ab36aaee71446d6e820e0886e0677e81ecf"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95486945.json",
+      "block": 95486945,
+      "frameHash": "0x764a871ef945ca97ed35a8abcf78ae7c40b30a4f3568d65e592170b8d423d67a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95488281.json",
+      "block": 95488281,
+      "frameHash": "0x7df54fee0e40ed0a295c55a44b7b02ea348512fb3664ece1507ab1ec13106fc5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95489428.json",
+      "block": 95489428,
+      "frameHash": "0x43612eea37c33ab78110855295f222d790f4e14fcea3695293e23e9bbb78fc8e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95490759.json",
+      "block": 95490759,
+      "frameHash": "0x789cf44e124ee1853c02efe9c03a4e68edfa44f45a04d7006b7620661710249b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95492033.json",
+      "block": 95492033,
+      "frameHash": "0x651cf7f57b307ff9b06f0a5844fcc1fc753a29aeeb02256dbca2e7274daba5dd"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95493323.json",
+      "block": 95493323,
+      "frameHash": "0xb8e6238878ac1148a6ec7de2b708712d1cfa9abc7aa881ab948b6dc5d43f0539"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95494672.json",
+      "block": 95494672,
+      "frameHash": "0xb04564776c10e1a5da35228f9d36571ed1006dea9ed088d314f3d9f8c2c45bee"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95496013.json",
+      "block": 95496013,
+      "frameHash": "0x52c510b559a30aa8b158e830d9e9c75a522b2c945a806dfc3880c9ad90250b96"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95497310.json",
+      "block": 95497310,
+      "frameHash": "0x095e148fa48b717b34cd017d3a631afc3c2abbc7b35ef5d4ec50b3da1ad15548"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95498512.json",
+      "block": 95498512,
+      "frameHash": "0x7396c9196fa90ec980f4addd00d900090b15def066eb07987de315708b644a47"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95499847.json",
+      "block": 95499847,
+      "frameHash": "0xdc2c046e53426529361d984a65cfc52f0da1002d71c1267cffa784d7c5cc6435"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95501110.json",
+      "block": 95501110,
+      "frameHash": "0x139b123a475d57ef980b2b1e0e95c31a39e9db66790e54db6e2f2f2752eb023d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95502447.json",
+      "block": 95502447,
+      "frameHash": "0xe59bfa71054ddb4a02a0524f81eef63950596fe06bd8844ab6219bbde76d786c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95503680.json",
+      "block": 95503680,
+      "frameHash": "0xe61635b11b8c20e9fdf58d97048349c0821ba56765e937d1bf2f80458ce84d0c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95505017.json",
+      "block": 95505017,
+      "frameHash": "0x809db9736e138db6b5286b6d0fbc9c7a36e9fc8440f05dd88cb6f66f17ff4d41"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95506362.json",
+      "block": 95506362,
+      "frameHash": "0xb5694f163899b90700c6c7609864bdb25e345d40dc0a378e9fa8433cbd5f5036"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95507544.json",
+      "block": 95507544,
+      "frameHash": "0xbf7f6fd09e9f5848bdb5fdb1439553bef1defd7f0a3f73564f2ed9a222b652d0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95508854.json",
+      "block": 95508854,
+      "frameHash": "0xe75734446ccadf98471fa4cde8bb0c33bbeedc79f8a6629878b04b16a131c3c9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95510190.json",
+      "block": 95510190,
+      "frameHash": "0xb74e5e8948a34a91130e8fb12a975dc1288ed7730dfe7ca54f275245081f04f3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95511481.json",
+      "block": 95511481,
+      "frameHash": "0x4a9e94f4dfe8a122d8772027f58101eb12665eaedf63a68aba458ff8e4384afa"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95512822.json",
+      "block": 95512822,
+      "frameHash": "0xa7756d41eb741d688dffa0e6346a4f94a49a4cd4a0dd97ab8831bda9895c159c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95514187.json",
+      "block": 95514187,
+      "frameHash": "0xa564a465b1cb715be82beec99f12d0ec42f0fda5283a933797c5a621db96f321"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95515372.json",
+      "block": 95515372,
+      "frameHash": "0xa365fdd166ec983985a54b3c5aa5dd5beca9cc2c3814e18b162fbe7d8a7aec86"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95516720.json",
+      "block": 95516720,
+      "frameHash": "0xa01393c3e4be599085a6eb79c0cfe39f743632f35b97b3899d55ab4b1e84f5d0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95518012.json",
+      "block": 95518012,
+      "frameHash": "0x683f835672e24234066ff6a7c92e1c3e3eafd7f3bbff28c22bdbe990c2c2905d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95519317.json",
+      "block": 95519317,
+      "frameHash": "0x12c3ff7134dfa6f264289ac3590fd9f303e884308f67834e2357c5edc44fb55d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95520711.json",
+      "block": 95520711,
+      "frameHash": "0x39b336c9d38454d12b64f9fba9bc8e9b9cc4753075d5b63b8f6f7ef9898d87e5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95522047.json",
+      "block": 95522047,
+      "frameHash": "0xf79b00f63c29d1c37500733985533bc8c25f953e99c5235d4fc10527a3eb229b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95523351.json",
+      "block": 95523351,
+      "frameHash": "0x7284d805b16e3dd5db5ef44642179f0e39f8dfb232cbd7bd09286fd8df62eb46"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95524807.json",
+      "block": 95524807,
+      "frameHash": "0x5354349a843d47a2daa431582bf4d69b416075a5dcf828985af76c92c6b7f341"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95526105.json",
+      "block": 95526105,
+      "frameHash": "0x6b7f55fc8b476dbbdf2a9379cec9b1e8953d5fc148fd461723434d8a6c09a6ff"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95527467.json",
+      "block": 95527467,
+      "frameHash": "0xc61afa26886981bae360c51b0a38ee6ebbe80b18cc0a74509fbb50e7bdbefe29"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95528810.json",
+      "block": 95528810,
+      "frameHash": "0xebf7df1c2795798ea7f8ee57bd781c325db51515d501d63a3b5d1c3f5adff569"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95530149.json",
+      "block": 95530149,
+      "frameHash": "0x1cbb060df045ec36ac6d669884f8ba5a8f2738922569014ce066ec9a6f8f7035"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95531478.json",
+      "block": 95531478,
+      "frameHash": "0x5d304af7a7490f0e8be3647ea1ad01ce3f5a38349f69152c04705126d424ea9e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95532661.json",
+      "block": 95532661,
+      "frameHash": "0xe3c556b98a63a117815f0cc4df9242d62f7049b610ae0326e8275ab408f28ad1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95534016.json",
+      "block": 95534016,
+      "frameHash": "0xa55176016a6252956085893816c72766c8d9cef41a70cdf59be54cc38116cc11"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95535323.json",
+      "block": 95535323,
+      "frameHash": "0x0a94521a0fc67e311a3d0bcc65b4deba28b9a5bdd493373a4b65b890d4a67ac1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95536662.json",
+      "block": 95536662,
+      "frameHash": "0x2e345d79866c2fad1f3187e90fa9dbed5e1ee8c66d7dce48da532d1ea341b0dc"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95537968.json",
+      "block": 95537968,
+      "frameHash": "0x0d0957ef870eec5fb0d09c8a7e461549726ea888b21c31802c050200d2c3545e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95539275.json",
+      "block": 95539275,
+      "frameHash": "0x9ff5211317fe5bf54ddcda6f05135bce8a20e8ab5485a28ff20ae9238cc82da4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95540639.json",
+      "block": 95540639,
+      "frameHash": "0x977a97dea05619ef7987443dd901c597abcc9068470e8328aebe1169bd53b907"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95541857.json",
+      "block": 95541857,
+      "frameHash": "0xc8c97474fe370bcfdfac2267b9132881597feb948b48206cfa9bcfa21e0fc8e5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95543157.json",
+      "block": 95543157,
+      "frameHash": "0x66bef3a918972c06252a26dc2edf04a5e4547ee5ea454d707ad2a2b3709f6010"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95544500.json",
+      "block": 95544500,
+      "frameHash": "0x6b2159dbbfd8503b0ed580451f2b52a0af86ec4b8a8d325c3c3ba2f8940689e8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95545841.json",
+      "block": 95545841,
+      "frameHash": "0x53c9757c06ba5fca184d4691161816ff85a23f3053657d67d659f74c0500cef1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95547165.json",
+      "block": 95547165,
+      "frameHash": "0x1f764582ca156ff92b9d773550fe077b9496c41eacf79274b872ebd3537ac896"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95548458.json",
+      "block": 95548458,
+      "frameHash": "0xd2aa102ba3d8791d4c3e6a26014b9135209cea8d57eccced762d3ab2f9cfbe4c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95549687.json",
+      "block": 95549687,
+      "frameHash": "0x9b961160d0ee62599a46cd23ef1eaae25d455d92205f64443be6790a3d749eec"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95551038.json",
+      "block": 95551038,
+      "frameHash": "0xabc2a3480d1b9f2bc0fe63cad8327413e9667f64339afc5a68048b75c3be0d6b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95552299.json",
+      "block": 95552299,
+      "frameHash": "0x3fc084d4c953a07d9817f7593225cf97a8c1c2da05778795253ffc4b8f479b88"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95553669.json",
+      "block": 95553669,
+      "frameHash": "0x7c871594bcfc644f779cf30806b6c8071d29ad564d888a8248f194b58fdba19d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95554994.json",
+      "block": 95554994,
+      "frameHash": "0xabbe9c863300779fe7bc3c6173e2cae74c2f07dba983e71c137804efe36faf11"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95556351.json",
+      "block": 95556351,
+      "frameHash": "0x77b675245a3223e528a79b0a09d56539fffffeab2d2b6791aed4fddc845645ca"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95557704.json",
+      "block": 95557704,
+      "frameHash": "0x474bcd6e27469bc9e1733efbd4f4a387398168441e8cb5d3966eceb0ad8e83bf"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95558930.json",
+      "block": 95558930,
+      "frameHash": "0xf00421576d86069f815f91b96979d848c5959b0fc0ebdce8667ae77b33ab0179"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95560288.json",
+      "block": 95560288,
+      "frameHash": "0x0f708144875ba82850a8137d8f8d7a173eb4af9063a33b8d8a35940956388fd5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95561602.json",
+      "block": 95561602,
+      "frameHash": "0xe83803b5e402a036a9b2b6a85865e0caa406bcf1567d6871db842f29eba96ff4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95562946.json",
+      "block": 95562946,
+      "frameHash": "0xc0f611bfe8c03a625722ca9ab9a3d6bac0e5314e5e962ed5a46638121bc7da6c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95564297.json",
+      "block": 95564297,
+      "frameHash": "0x9d9859be59cd1407619b2da6884f0ed026cf101a657a889c95cd05c1dd735791"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95565599.json",
+      "block": 95565599,
+      "frameHash": "0xd63ce36c860376b7acb039872652c00a181792efff22fe89dd469d0074547498"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95566956.json",
+      "block": 95566956,
+      "frameHash": "0xb6aef4d54ba66445809f0a9f3f37779d357c18df451b6199f9e93f60e75ff348"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95568206.json",
+      "block": 95568206,
+      "frameHash": "0xfa984fda6f0c48cd6befb56239fdb1ba5d019417d05aaf28b3cfe205247c65ce"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95569506.json",
+      "block": 95569506,
+      "frameHash": "0xa4e72dbf63b7157167a09bd5c7971a8fe7e843372c2184b13fae148fa3e5435b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95570852.json",
+      "block": 95570852,
+      "frameHash": "0x0fa44ebcca31bf055ecfb4607b1505525abaa192377ca73e64897e4f9f78286f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95572203.json",
+      "block": 95572203,
+      "frameHash": "0xe632d1b20c764e04db3450d2f283bd4aca22f7073c1b2ad27907330fa3f0ea2e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95573517.json",
+      "block": 95573517,
+      "frameHash": "0xd8ac3e626514e532edcb032e70e7b17cb9cc04287a4f5169ec4007bf481b6dca"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95574849.json",
+      "block": 95574849,
+      "frameHash": "0xa2bd168c4ffdcc77ad3ec0bf18b6c56939692563e00dda378407186ae154e3d8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95576041.json",
+      "block": 95576041,
+      "frameHash": "0xe82d3bb2362c4da4031a12ec90c8589e838ca04c33d5ae983f700666186f91c4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95577395.json",
+      "block": 95577395,
+      "frameHash": "0x14c240923e9e40a933b930fc307d8040d80f31e79bf5972ee6c7810ccbf4ba5e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95578642.json",
+      "block": 95578642,
+      "frameHash": "0x9650a9e80190461b0e7bb56ae54ab9cf6977b883d58b035b3c123f32ad5d24a5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95580021.json",
+      "block": 95580021,
+      "frameHash": "0x98b5980d6dd2ebb0186530346b9c832757df1e438eebcd436001953101917a51"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95581376.json",
+      "block": 95581376,
+      "frameHash": "0x80272060a74cbbc6a948aef605a30b9a54cb4e9fc4640a18c5d4dcf64f3685fd"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95582732.json",
+      "block": 95582732,
+      "frameHash": "0xe00248ac19f13ff4342de6c98651c8a36a4dfa91d6b6ff1c0e9f5daa1da2c044"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95584091.json",
+      "block": 95584091,
+      "frameHash": "0x5cba3cb585bb6edb0fd8cc7e0cba6cc9e259ccd74bd2b1792547a2cea8010c6a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95585387.json",
+      "block": 95585387,
+      "frameHash": "0x1cead93149b73f08d77d940b90d5489a8871e25a6a6aa5247e936bd76a586145"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95586697.json",
+      "block": 95586697,
+      "frameHash": "0xe78aba128735bdfb42f7e8f5a4d73b6670b93dd0c46320213389563ce9da7841"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95588049.json",
+      "block": 95588049,
+      "frameHash": "0x1f803c119b5c4e6e3d9a0d1e6272399753d52b8028c5154e73cb0aa1d5d3d26a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95589398.json",
+      "block": 95589398,
+      "frameHash": "0xf1587fb228a2808569ecb847e7b4314d4def292984e9d3f178a77598aab65bb7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95590779.json",
+      "block": 95590779,
+      "frameHash": "0x3368a97d62e9cd7f548244a9139ad15b1594593b641207d6d40ec4fb4dcbc5f1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95592074.json",
+      "block": 95592074,
+      "frameHash": "0xed067b551d07139c09d3e8d5873a3ab2062bd3c1f7e507459d2dffa7b6e95ce2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95593297.json",
+      "block": 95593297,
+      "frameHash": "0x7984440dcf1e97c38cc91a98dfdbf3d9de7e15706363e39d8caeef464514bdfd"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95594562.json",
+      "block": 95594562,
+      "frameHash": "0x10657398620829f00d2eecf4464e06b658cd8ea4c6a96ab2102fde7bf5bdd76a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95595888.json",
+      "block": 95595888,
+      "frameHash": "0x27d2a2edbff6196b874461bd08fe732b93cc0d6b23c6a8093a4ef843fac65a84"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95597244.json",
+      "block": 95597244,
+      "frameHash": "0x1f1921e777b262483b7255c937bc632a2f516d7703fa1ab7c75f2786ee0f3bec"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95598606.json",
+      "block": 95598606,
+      "frameHash": "0xbe413a25f41c1b0592d5a31348aeb6ca49264c81161f264726c0335fe66c440a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95599991.json",
+      "block": 95599991,
+      "frameHash": "0xf627d12052e4593fdcb2552d10c94a99f945c3850ec919e78e37fd458d3840fe"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95601365.json",
+      "block": 95601365,
+      "frameHash": "0x8ef34dd45c615eedb6fe6c210a5a7b2febdeca5ea9e7bb99d252d07bae2fdfa6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95602590.json",
+      "block": 95602590,
+      "frameHash": "0x7bfd34daba6cfc3720841128be727ba40925d3d5f58d9f319ff32d4a08632083"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95603905.json",
+      "block": 95603905,
+      "frameHash": "0x3be352b1553831f5102b7a317aa6aaed0ffad15bdae18ed3bf2e6af5aa462f81"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95605224.json",
+      "block": 95605224,
+      "frameHash": "0x1c2ebfeaa0da1df4394fca655d58563283c1183635d645fff6482ee64f59d83d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95606590.json",
+      "block": 95606590,
+      "frameHash": "0xb0d0b43ebec1ac789caac8df3ef64b26ab8b16d2c096dd2b70c0b7a1c73c0c0b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95607955.json",
+      "block": 95607955,
+      "frameHash": "0x079688de63d08e0b96098da03bac9be252dd0701fc6b081bddb6a169955c4265"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95609269.json",
+      "block": 95609269,
+      "frameHash": "0x99f12eaf7fa9503f7d041f2678e2c688b847b5305e092be12098bd2695046fb9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95610505.json",
+      "block": 95610505,
+      "frameHash": "0x2db963a2a7b6d88ed819f85cc3e2ef8528ced6444bf56fbedbc4c8b2799bfdda"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95611875.json",
+      "block": 95611875,
+      "frameHash": "0x2060ecf77058ac73af680005f743c9c2ce098aef279ec09b4d6b55746ef51855"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95613190.json",
+      "block": 95613190,
+      "frameHash": "0xe2295baf365fca14d35fcdf6c790213283021b04b6fb75e21a65dd5f26ebbe0f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95614549.json",
+      "block": 95614549,
+      "frameHash": "0xefd2558aca8e3e37fac14dba269203f7dbcafabbf440bb7916cce40389258128"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95615912.json",
+      "block": 95615912,
+      "frameHash": "0x2bc919006fb5b9f7dc4eb4f6e6fb0b9b73d18eb1aa97ef7794f9ecf5490a04e4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95617262.json",
+      "block": 95617262,
+      "frameHash": "0x6287e046defa3d9e1fef64cd16540b742ea5985f0e45081f659b70243858633e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95618573.json",
+      "block": 95618573,
+      "frameHash": "0xd78b24c0fe5d24059668b1536690b70a8f304d5e3446a5a5fc034934a54221f0"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95620159.json",
+      "block": 95620159,
+      "frameHash": "0xd30145ab847e5d39418559adadd6b774eb9d381a1bbc94be62e7827a4f527a38"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95630682.json",
+      "block": 95630682,
+      "frameHash": "0xfaf971ad68527a9b5663fcacf2858f20b564e9fe6b6affcee12a8088e779637e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95631987.json",
+      "block": 95631987,
+      "frameHash": "0x0d62d93f872dc463151a47ae76bdb9c1467078d85a63d9cdd843b85b4bbb5752"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95633348.json",
+      "block": 95633348,
+      "frameHash": "0x44816d38b5595fa502ae196b7afeb9fce6b8a75ed26ca57be9b87b290b38e083"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95634711.json",
+      "block": 95634711,
+      "frameHash": "0xb66cb0ac8646bcb2a16d69b6deb6e7f31f962738e20d7033ec66758fb2f11d04"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95636061.json",
+      "block": 95636061,
+      "frameHash": "0x95fa98078a91408c7977626721705e8237e35b4c4e5c9e03126c81804a908006"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95637280.json",
+      "block": 95637280,
+      "frameHash": "0xd256a9ade211f1d547f4c4e0a719b94c8de0f0738f9a68099ea0de4f670982e3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95638602.json",
+      "block": 95638602,
+      "frameHash": "0xffcc4bc3039e8d8e4991f2f2e9b9fd800705e9dc2c50ca6eb976a445b2943211"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95639958.json",
+      "block": 95639958,
+      "frameHash": "0x9bec800f40c42c7c7c8e97ad1e18e8763bc1f3b8baced51751e730d1c5c853ec"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95641186.json",
+      "block": 95641186,
+      "frameHash": "0xe2f57ac64e74a482716cc65ee47effde393024d3b62f91d336f163d50aa83c01"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95642566.json",
+      "block": 95642566,
+      "frameHash": "0xf009438d1ad8ea3e9ae9cf300c680bc21762c4ce14ea6a32c07cf782fb901ef7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95643939.json",
+      "block": 95643939,
+      "frameHash": "0xff89188502d22c0976f929986b774314d2a76169dedfb91c6b949f5d53dc1df5"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95645105.json",
+      "block": 95645105,
+      "frameHash": "0x82d6dc4953739af880e58499aea7795b7ddfc9a5d58f47c22bbbfecc5657903d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95646456.json",
+      "block": 95646456,
+      "frameHash": "0x616861f4ff8328169a7cdcc3d25e4a72bb3538c1da6c3f478f492a56c25803be"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95647774.json",
+      "block": 95647774,
+      "frameHash": "0xab1c899e4cec0b316454c91798a8dd6456d84af0b9cce5704497d55ec4ad1a07"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95649169.json",
+      "block": 95649169,
+      "frameHash": "0x6b705d22312eaf6371f2c609fab7d7f91c66be0c2c324bc105493a68772a347a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95650543.json",
+      "block": 95650543,
+      "frameHash": "0xeb2074d9b112209eb1a0636f73e848ae6fc34e62f50e371d818ccb203cb74add"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95651899.json",
+      "block": 95651899,
+      "frameHash": "0xa2b4342f75fbb33c085f16a2d452d07a8fdaf2675a65b8fd96f7cf4e39d7d113"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95653255.json",
+      "block": 95653255,
+      "frameHash": "0xdcea9659f38e0728cf0e4a3ff4dccf5332c8c821b79cde856fcf95dc5932f658"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95654515.json",
+      "block": 95654515,
+      "frameHash": "0x2607c3daf49a8ab70bcaaf6bb49d3b6a782433cd6b72223c779ce4a342f6cffa"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95655783.json",
+      "block": 95655783,
+      "frameHash": "0x9aae8e8eceb06bba6ff424bc85ae95e75b83b39df63d3782434fca58990301d2"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95657162.json",
+      "block": 95657162,
+      "frameHash": "0xc4b07269efa7423ffdf57ec8552864917bbb854e374fd6d8fca570b85c2495c1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95658471.json",
+      "block": 95658471,
+      "frameHash": "0xf1049bc09750e91bb8dca265bfd49d446594cfdc62faaf87abdca528922e7e51"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95659831.json",
+      "block": 95659831,
+      "frameHash": "0x2246e212d2387c228eeb7e5e58a670adb5062420dc0bfebf16b852452d0f4124"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95661200.json",
+      "block": 95661200,
+      "frameHash": "0x9253fe8c4299d8a2cc21a8ce7fa47ae0841d61cdd29a0f36f85f1c2cdd44ebe9"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95662416.json",
+      "block": 95662416,
+      "frameHash": "0x16ceaf4eb89dfbc49baf3069c10f91fff29cd1579fa2adf032266be587aa2fb3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95663782.json",
+      "block": 95663782,
+      "frameHash": "0x3c8f2d816dc9a049e75ca4c7c7e9a58b630e5a6c20657fec39cc268f1f22a29f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95665099.json",
+      "block": 95665099,
+      "frameHash": "0x9495e2569e34f9d38d51307477169370adf577f34b8482ffdc2295640a5f15fe"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95666462.json",
+      "block": 95666462,
+      "frameHash": "0xb9ac83479ae9df11540176836c3dbbac8d89739881299609ce874fb8f442fb16"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95667880.json",
+      "block": 95667880,
+      "frameHash": "0x57cc5cbc378e3cf08f0d57d005a9d3e6372fbf5f04702894a1f3b16402276e6d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95669226.json",
+      "block": 95669226,
+      "frameHash": "0x060e401a538017bbe57c7651d63a2eb9a250adc1ae8b37860e520e9c2471b290"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95670593.json",
+      "block": 95670593,
+      "frameHash": "0xcb12f05056e45398e0fb01157ac77207e4fe93369a89130fcbca24fc55e97b8f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95671773.json",
+      "block": 95671773,
+      "frameHash": "0xbfd679851eb7e0d5cd0491630de3c2b4ced97b64aa4773d1691c0a1eb8f876e3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95673101.json",
+      "block": 95673101,
+      "frameHash": "0xa7633a5ca4e0ca43aaa8afc26f30ecd57a5c59796d6845ca4e57f037d4c6b97a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95674443.json",
+      "block": 95674443,
+      "frameHash": "0xcc0dd55481631c60955a5b51e3a58c740f9d3d6ba6a65f9dac786cda72ec6db1"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95675806.json",
+      "block": 95675806,
+      "frameHash": "0x3420f37dd141d22174db23c18261b62296a864a0d932d76cc36fb0e576bf52df"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95677174.json",
+      "block": 95677174,
+      "frameHash": "0x62ba4747600e43b1f2b25e6e813b188686c04b053e5c34fd4be81c7b4f2c8cba"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95678549.json",
+      "block": 95678549,
+      "frameHash": "0x8b79000278d77c70c8fee1ce2fb97b611a3112ee5cb6894557356b1eac2c955c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95679748.json",
+      "block": 95679748,
+      "frameHash": "0x00389b520219e8c78a6993b1a0f2f24acf0e890ef01ab98b828d1020b41283c3"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95681109.json",
+      "block": 95681109,
+      "frameHash": "0x1b8dd7c69f6bd36bb76f7c3a7ef082f212043db33d798254545f1c2393f87a4c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95682451.json",
+      "block": 95682451,
+      "frameHash": "0x8c24f61b67794a34704aaaec9effbe01418d04dda02ff6f0c1940d3fcc20fb49"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95683824.json",
+      "block": 95683824,
+      "frameHash": "0xb85ab49e44d9d65cedd267b1c552598026f620d2ab841cb4f7427d22fc85ad3a"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95685091.json",
+      "block": 95685091,
+      "frameHash": "0x49aee58fad7dd5723d00d818743a2a4825498710a399cba5e52974b6fad57982"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95686437.json",
+      "block": 95686437,
+      "frameHash": "0x45ec9e7ddc65a73004c102bde04bb90072cca6345909baa43c248477eb731d43"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95687739.json",
+      "block": 95687739,
+      "frameHash": "0x24885cb813454e1e338518a6cca79adc1970624fdbc504e4fa6df48d854587da"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95688965.json",
+      "block": 95688965,
+      "frameHash": "0xebf21b084c403f1b2ae80cb4c528b8c518c85ae33499bb3282a3dd0c327f5cf4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95690326.json",
+      "block": 95690326,
+      "frameHash": "0x49d43e033935aeb15f82f151da457a372ce04bddb8c0802cb74e4e5936308cf6"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95691727.json",
+      "block": 95691727,
+      "frameHash": "0x516ddf2d30128fa6026cf27079d6f59f7a65025630e0bcd0bcd5151983cf53e8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95693091.json",
+      "block": 95693091,
+      "frameHash": "0xf1895eb398277fe2d2148db3546b561563754e40e3cba005b63216dfa509cda8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95694438.json",
+      "block": 95694438,
+      "frameHash": "0xf4d6228dd61f31a73de3ed36302d3efe971b0969a6838c6768e6e0d468b0d38f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95695747.json",
+      "block": 95695747,
+      "frameHash": "0x3f031b0b6c01c02b779dc4d914b4ffc74b0fe734b5e0ec6d1f9892548f6003f8"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95696970.json",
+      "block": 95696970,
+      "frameHash": "0xdf0fb983dc7acec0a06d329b55329c779058b3a53f022e997c1148c080dd3ac7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95698290.json",
+      "block": 95698290,
+      "frameHash": "0xfe8e1343f20d308b4613ea09df2547def25c94ee567d6767e1c7f19c4124cd4f"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95699597.json",
+      "block": 95699597,
+      "frameHash": "0xdfd743304fc7201793db347cc4f0a902ad1f9d622e96c23c200ab2c1c91ecb2c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95700975.json",
+      "block": 95700975,
+      "frameHash": "0xf5f440f69b847aa63cf41dd92555c06bd787e411d77dd273e11f3a156e6ceba4"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95702299.json",
+      "block": 95702299,
+      "frameHash": "0xe5923c4efee297a4725185749327e1628b554bb9d6898d3851ad3cf3f7bd0873"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95703695.json",
+      "block": 95703695,
+      "frameHash": "0xa20462392bf37a20b7712aa4bb8039d9c72f2c41d39bfe3b0979d5937217576d"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95705079.json",
+      "block": 95705079,
+      "frameHash": "0x6a9499e68b1576e58a38b6e61a22b6561c2f5c4c967444944c7bc1309fa6d2e7"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95706432.json",
+      "block": 95706432,
+      "frameHash": "0x73fe23b544c4d453a7279217351e7c4f207ce34bad0ce090c0ea925bb15b004e"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95707746.json",
+      "block": 95707746,
+      "frameHash": "0x6a4f2158412ab08ddb9588d589f5102fd8752e688bf6784971b021e9bc1eb585"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95709121.json",
+      "block": 95709121,
+      "frameHash": "0x683d8ffb631f9693c021d9bb3177218e46f824a3511cf202e7fb7ba3ade27f9c"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95710497.json",
+      "block": 95710497,
+      "frameHash": "0x9a9ea9cab1fef21d35f8410e27463a1f15c3d2471f480554f71978c99c5f6988"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95711838.json",
+      "block": 95711838,
+      "frameHash": "0x503cbae52ea2e8f66dae1d7bb57c6cc3ddf2352b941cfd4273035a2a59f7d25b"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95713214.json",
+      "block": 95713214,
+      "frameHash": "0xddf16f2fdc5a9240565e24174d5bbbf8e31e6a4936811c8f6cf03dc4a8eaf108"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95714496.json",
+      "block": 95714496,
+      "frameHash": "0x9dd2a2382a14b6794925e9d09544b8d3381a08dce2d544da30469eac25d62832"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95715823.json",
+      "block": 95715823,
+      "frameHash": "0xf267d18d802934e51a8078e5861ebf55ecd569882453495302ae83430baa6dea"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95717182.json",
+      "block": 95717182,
+      "frameHash": "0x430b8f6baea916a469d8b6aca39b316fa8024b3e2ba45573e62f78a1642063ef"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95718723.json",
+      "block": 95718723,
+      "frameHash": "0x6f4b1c374cf8eb9807f4cd654b253e55df64d328df95a51deebb151088082f46"
+    },
+    {
+      "path": "evidence/lab-mevy-auto-20261021-frame-95720299.json",
+      "block": 95720299,
+      "frameHash": "0x651bd3972cf03f2c20489ecb2b5fd8a0ed8871d358933116ce07bbd177177272"
+    }
+  ],
+  "modelRuns": [
+    {
+      "id": "launch-20261022",
+      "priorTrials": [],
+      "trainingBlocks": [
+        95046937,
+        95048069,
+        95049272,
+        95050541,
+        95051756,
+        95053024
+      ],
+      "analysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+      "createdAt": "2026-10-22T10:48:57.372Z",
+      "paths": {
+        "analysis": "evidence/lab-mevy-auto-20261021-launch-20261022-analysis.json",
+        "plan": "evidence/lab-mevy-auto-20261021-launch-20261022-plan.json",
+        "context": "evidence/lab-mevy-auto-20261021-launch-20261022-context.json"
+      }
+    },
+    {
+      "id": "repair-20261023",
+      "priorTrials": [
+        {
+          "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+          "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+          "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+          "hypothesis": {
+            "evidenceBlocks": [
+              95046937,
+              95048069,
+              95049272,
+              95050541,
+              95051756,
+              95053024
+            ],
+            "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quote results alone do not establish fills, inclusion, or profit.",
+            "name": "Hypothesis: WETH–CASHCAT–USDG triangle at 0.005 WETH",
+            "rationale": "The graph contains this distinct WETH → CASHCAT → USDG → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary price dislocation involving the CASHCAT–USDG pool could overcome the route’s fees and gas reserve at this exact size; it is worth testing only if fresh quotes satisfy the stated entry rule. No supplied training quote measures this route at this size, so its output and edge remain unknown.",
+            "strategy": {
+              "gasSafetyBps": 15000,
+              "maxGasPriceWei": "30000000",
+              "minEdgeBps": 30,
+              "persistence": 2,
+              "routeId": "0x215aac4318600ac80b12127dd0bb17f8c981f97ba7c88eb6031a9dbf51745ee5",
+              "sizeWei": "5000000000000000"
+            }
+          },
+          "id": "0x412b3589d3db3b2b517f5f634ad72eb83c182943cc2448688124f368d394ceb2",
+          "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+          "proposalHead": 95054822,
+          "proposedAt": "2026-10-22T10:48:58.543Z",
+          "publicAnchor": {
+            "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+            "seenAt": "2026-10-22T10:51:12.041Z",
+            "startBlock": 95056142,
+            "startTimestamp": 1792666272
+          },
+          "screenObservations": 10,
+          "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+          "trainingThroughBlock": 95053024,
+          "trialHash": "0xb2558da311aec32ef58fca65aaf3e9de666d2899a7d80150aedd4c049783886d"
+        },
+        {
+          "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+          "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+          "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+          "hypothesis": {
+            "evidenceBlocks": [
+              95098363
+            ],
+            "failureCondition": "Reject after the first 10 eligible paired observations if no two consecutive observations meet the entry rule, including the 30000000 wei gas-price cap. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. A quote is not a fill, inclusion, or earned return.",
+            "name": "Hypothesis: WETH–USDG fee-tier cross-pool loop at 0.005 WETH",
+            "rationale": "Measured: at block 95098363, the exact 0.005 WETH quote returned 4998509295539664 wei, a gross shortfall from input rather than an edge. Hypothesis: a same-block relative-price divergence between the 500-fee and 100-fee WETH–USDG pools could overcome that shortfall and gas reserve. Require at least 30 bps of edge after known gas with a 1.5× gas-cost reserve, and two consecutive eligible observations; the training quote itself fails this entry rule.",
+            "strategy": {
+              "gasSafetyBps": 15000,
+              "maxGasPriceWei": "30000000",
+              "minEdgeBps": 30,
+              "persistence": 2,
+              "routeId": "0x06bd1ee02442a7dd1f5e89f6654069f73c99eb6510cd2a3238a757a7f680b9ff",
+              "sizeWei": "5000000000000000"
+            }
+          },
+          "id": "0x7dc9b64787504a326d97ceb2511dae17a0e6510f3bcb534e13561ab3ce66336e",
+          "modelAnalysisHash": "0xe8a6fd35b10014f68a8acf956458e0ade89d1f3139d31819f3bf0cafe61518a0",
+          "proposalHead": 95110021,
+          "proposedAt": "2026-10-22T12:24:59.931Z",
+          "publicAnchor": {
+            "commit": "25398f82f07d4ee126b41890e1c707301f9ab19f",
+            "seenAt": "2026-10-22T12:27:12.126Z",
+            "startBlock": 95111320,
+            "startTimestamp": 1792672032
+          },
+          "screenObservations": 10,
+          "trainingFramesHash": "0x96439d4760b1d0f3916045a56829e2b4f7a65f989611fc496c5cefce753949d4",
+          "trainingThroughBlock": 95108392,
+          "trialHash": "0x2355086437acbfa91d16dead9ea5f1423a5e61feaa173cd49514629dacb57ed6"
+        },
+        {
+          "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+          "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+          "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+          "hypothesis": {
+            "evidenceBlocks": [
+              95046937,
+              95048069,
+              95049272,
+              95050541,
+              95051756,
+              95053024
+            ],
+            "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quotes are not fills or earned returns.",
+            "name": "Hypothesis: WETH–PONS–CASHCAT triangle at 0.005 WETH",
+            "rationale": "The graph contains this WETH → PONS → CASHCAT → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary relative-price mismatch across these three pools could produce a positive round-trip edge at this exact size, but only if fresh same-block quotes show at least 30 bps after applying a 1.5× gas-cost reserve. The 36 training quotes sampled other route/size combinations; none is evidence for this cell.",
+            "strategy": {
+              "gasSafetyBps": 15000,
+              "maxGasPriceWei": "30000000",
+              "minEdgeBps": 30,
+              "persistence": 2,
+              "routeId": "0x04272235c51d865c81df79e81a5d749b233a9fde48aab6d33ea9498e54819c2e",
+              "sizeWei": "5000000000000000"
+            }
+          },
+          "id": "0xae93b4a88aa3d06de22c4db4a0cb8131423f36ab4abc4262d83459be2f6caf03",
+          "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+          "proposalHead": 95054822,
+          "proposedAt": "2026-10-22T10:48:58.542Z",
+          "publicAnchor": {
+            "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+            "seenAt": "2026-10-22T10:51:12.041Z",
+            "startBlock": 95056142,
+            "startTimestamp": 1792666272
+          },
+          "screenObservations": 10,
+          "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+          "trainingThroughBlock": 95053024,
+          "trialHash": "0xf7cf86e62d3480fcc6bc4e0b73c6eab7a873514a7fbb747eeeb38016c8dbaeed"
+        },
+        {
+          "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+          "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+          "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+          "hypothesis": {
+            "evidenceBlocks": [
+              95100739
+            ],
+            "failureCondition": "Reject after the first 10 eligible paired observations if no two consecutive observations meet the entry rule, including the 30000000 wei gas-price cap. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. A quote is not a fill, inclusion, or earned return.",
+            "name": "Hypothesis: WETH–CASHCAT fee-tier cross-pool loop at 0.001 WETH",
+            "rationale": "Measured: at block 95100739, the exact 0.001 WETH quote returned 984421829356692 wei, below the input. Hypothesis: a temporary relative-price mismatch between the 3000-fee and 10000-fee WETH–CASHCAT pools could create a round-trip edge if it exceeds the fee drag and the stated gas reserve. The observed quote is not positive evidence for entry, and no quote at another size is inferred from it.",
+            "strategy": {
+              "gasSafetyBps": 15000,
+              "maxGasPriceWei": "30000000",
+              "minEdgeBps": 30,
+              "persistence": 2,
+              "routeId": "0x122fffbc1d5f8fd5e136f97282788930e0d02f43a1cbcc55b99c58b63951eb9b",
+              "sizeWei": "1000000000000000"
+            }
+          },
+          "id": "0xfbbeae408e8a74bd873f40b107c6631f826e613f31e2e838444f141b348912ed",
+          "modelAnalysisHash": "0xe8a6fd35b10014f68a8acf956458e0ade89d1f3139d31819f3bf0cafe61518a0",
+          "proposalHead": 95110021,
+          "proposedAt": "2026-10-22T12:24:59.932Z",
+          "publicAnchor": {
+            "commit": "25398f82f07d4ee126b41890e1c707301f9ab19f",
+            "seenAt": "2026-10-22T12:27:12.126Z",
+            "startBlock": 95111320,
+            "startTimestamp": 1792672032
+          },
+          "screenObservations": 10,
+          "trainingFramesHash": "0x96439d4760b1d0f3916045a56829e2b4f7a65f989611fc496c5cefce753949d4",
+          "trainingThroughBlock": 95108392,
+          "trialHash": "0x9d4d7295f766d6761eb283c3c3e76dc5dece815c33db0b28333ec7f4ede80a95"
+        }
+      ],
+      "trainingBlocks": [
+        95110040,
+        95111299,
+        95112576,
+        95113771,
+        95115054,
+        95116340,
+        95117443,
+        95118732,
+        95119912,
+        95121177,
+        95122462,
+        95123752,
+        95125045,
+        95126145,
+        95127367,
+        95128557,
+        95129863,
+        95131152,
+        95132427,
+        95133717,
+        95134826,
+        95136121,
+        95137373,
+        95138647,
+        95139899,
+        95141188,
+        95142482,
+        95143592,
+        95144884,
+        95146117,
+        95147358,
+        95148495,
+        95149795,
+        95151058,
+        95152161,
+        95153404,
+        95154711,
+        95156012,
+        95157303,
+        95158620,
+        95159913,
+        95161059,
+        95162375,
+        95163616,
+        95164912,
+        95166161,
+        95167460,
+        95168743,
+        95169911,
+        95171209,
+        95172426,
+        95173718,
+        95174994,
+        95176307,
+        95177519,
+        95178740,
+        95179991,
+        95181222,
+        95182538,
+        95183841,
+        95185150,
+        95186257,
+        95187516,
+        95188827,
+        95190024,
+        95191353,
+        95192612,
+        95193917,
+        95195024,
+        95196340,
+        95197592,
+        95198875,
+        95200200,
+        95201517,
+        95202780,
+        95203890,
+        95205199,
+        95206351,
+        95207647,
+        95208950,
+        95210276,
+        95211587,
+        95212741,
+        95214065,
+        95215314,
+        95216614,
+        95217929,
+        95219174,
+        95220469,
+        95221577,
+        95222842,
+        95224148,
+        95225458,
+        95226756,
+        95228053,
+        95229360,
+        95230516,
+        95231815,
+        95233044,
+        95234338,
+        95235638,
+        95236855,
+        95238072,
+        95239280,
+        95240599,
+        95241851,
+        95243155,
+        95244482,
+        95245779,
+        95246921,
+        95248236,
+        95249529,
+        95250844,
+        95252085,
+        95253394,
+        95254718,
+        95255841,
+        95257090,
+        95258363,
+        95259640,
+        95260902,
+        95262363,
+        95263611,
+        95264709,
+        95266098,
+        95267338,
+        95268622,
+        95269964,
+        95271278,
+        95272528,
+        95273716,
+        95275034,
+        95276275,
+        95277616,
+        95278912,
+        95280250,
+        95281578,
+        95282724,
+        95284038,
+        95285321,
+        95286534,
+        95287891,
+        95289198,
+        95290322,
+        95291594,
+        95292859,
+        95294184,
+        95295499,
+        95296762,
+        95298066,
+        95299254,
+        95300567,
+        95301839,
+        95303183,
+        95304492,
+        95305799,
+        95307129,
+        95308282,
+        95309581,
+        95310865,
+        95312127,
+        95313404,
+        95314736,
+        95315988,
+        95317727,
+        95319012,
+        95320353,
+        95321662,
+        95322974,
+        95324256,
+        95325435,
+        95326701,
+        95327924,
+        95329198,
+        95330534,
+        95331851,
+        95333140,
+        95334304,
+        95335614,
+        95336843,
+        95338161,
+        95339451,
+        95340805,
+        95342121,
+        95343316,
+        95344629,
+        95345921,
+        95347245,
+        95348563,
+        95349875,
+        95351106,
+        95352334,
+        95353599,
+        95354928,
+        95356253,
+        95357547,
+        95358892,
+        95360021,
+        95361321,
+        95362502,
+        95363838,
+        95365157,
+        95366399,
+        95367707,
+        95368894,
+        95370179,
+        95371516,
+        95372839,
+        95374113,
+        95375427,
+        95376782,
+        95377924,
+        95379213,
+        95380505,
+        95381823,
+        95383141,
+        95384486,
+        95385717,
+        95386963,
+        95388248,
+        95389557,
+        95390956,
+        95392249,
+        95393568,
+        95394726,
+        95396038,
+        95397312,
+        95398613,
+        95399934,
+        95401249,
+        95402574,
+        95403767,
+        95405079,
+        95406342,
+        95407690,
+        95408918,
+        95410257,
+        95411568,
+        95412751,
+        95414014,
+        95415326,
+        95416581,
+        95417923,
+        95419202,
+        95420417,
+        95421714,
+        95423060,
+        95424420,
+        95425742,
+        95427115
+      ],
+      "analysisHash": "0x5c6352ab76dbbd908c700484e590d9cfa1c9b2b2c5eb963344808f94b8afe3af",
+      "createdAt": "2026-10-22T21:37:54.947Z",
+      "paths": {
+        "analysis": "evidence/lab-mevy-auto-20261021-repair-20261023-analysis.json",
+        "plan": "evidence/lab-mevy-auto-20261021-repair-20261023-plan.json",
+        "context": "evidence/lab-mevy-auto-20261021-repair-20261023-context.json"
+      }
+    },
+    {
+      "id": "slot-3",
+      "priorTrials": [
+        {
+          "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+          "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+          "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+          "hypothesis": {
+            "evidenceBlocks": [
+              95046937,
+              95048069,
+              95049272,
+              95050541,
+              95051756,
+              95053024
+            ],
+            "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quote results alone do not establish fills, inclusion, or profit.",
+            "name": "Hypothesis: WETH–CASHCAT–USDG triangle at 0.005 WETH",
+            "rationale": "The graph contains this distinct WETH → CASHCAT → USDG → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary price dislocation involving the CASHCAT–USDG pool could overcome the route’s fees and gas reserve at this exact size; it is worth testing only if fresh quotes satisfy the stated entry rule. No supplied training quote measures this route at this size, so its output and edge remain unknown.",
+            "strategy": {
+              "gasSafetyBps": 15000,
+              "maxGasPriceWei": "30000000",
+              "minEdgeBps": 30,
+              "persistence": 2,
+              "routeId": "0x215aac4318600ac80b12127dd0bb17f8c981f97ba7c88eb6031a9dbf51745ee5",
+              "sizeWei": "5000000000000000"
+            }
+          },
+          "id": "0x412b3589d3db3b2b517f5f634ad72eb83c182943cc2448688124f368d394ceb2",
+          "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+          "proposalHead": 95054822,
+          "proposedAt": "2026-10-22T10:48:58.543Z",
+          "publicAnchor": {
+            "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+            "seenAt": "2026-10-22T10:51:12.041Z",
+            "startBlock": 95056142,
+            "startTimestamp": 1792666272
+          },
+          "screenObservations": 10,
+          "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+          "trainingThroughBlock": 95053024,
+          "trialHash": "0xb2558da311aec32ef58fca65aaf3e9de666d2899a7d80150aedd4c049783886d"
+        },
+        {
+          "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+          "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+          "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+          "hypothesis": {
+            "evidenceBlocks": [
+              95046937,
+              95048069,
+              95049272,
+              95050541,
+              95051756,
+              95053024
+            ],
+            "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quotes are not fills or earned returns.",
+            "name": "Hypothesis: WETH–PONS–CASHCAT triangle at 0.005 WETH",
+            "rationale": "The graph contains this WETH → PONS → CASHCAT → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary relative-price mismatch across these three pools could produce a positive round-trip edge at this exact size, but only if fresh same-block quotes show at least 30 bps after applying a 1.5× gas-cost reserve. The 36 training quotes sampled other route/size combinations; none is evidence for this cell.",
+            "strategy": {
+              "gasSafetyBps": 15000,
+              "maxGasPriceWei": "30000000",
+              "minEdgeBps": 30,
+              "persistence": 2,
+              "routeId": "0x04272235c51d865c81df79e81a5d749b233a9fde48aab6d33ea9498e54819c2e",
+              "sizeWei": "5000000000000000"
+            }
+          },
+          "id": "0xae93b4a88aa3d06de22c4db4a0cb8131423f36ab4abc4262d83459be2f6caf03",
+          "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+          "proposalHead": 95054822,
+          "proposedAt": "2026-10-22T10:48:58.542Z",
+          "publicAnchor": {
+            "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+            "seenAt": "2026-10-22T10:51:12.041Z",
+            "startBlock": 95056142,
+            "startTimestamp": 1792666272
+          },
+          "screenObservations": 10,
+          "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+          "trainingThroughBlock": 95053024,
+          "trialHash": "0xf7cf86e62d3480fcc6bc4e0b73c6eab7a873514a7fbb747eeeb38016c8dbaeed"
+        }
+      ],
+      "trainingBlocks": [
+        95054830,
+        95056149,
+        95057227,
+        95058495,
+        95059725,
+        95061017,
+        95062258,
+        95063583,
+        95064822,
+        95066012,
+        95067297,
+        95068528,
+        95069793,
+        95071080,
+        95072344,
+        95073637,
+        95074728,
+        95076000,
+        95077242,
+        95078473,
+        95079750,
+        95081013,
+        95082217,
+        95083413,
+        95084677,
+        95085919,
+        95087180,
+        95088397,
+        95089695,
+        95090932,
+        95092044,
+        95093329,
+        95094555,
+        95095801,
+        95097092,
+        95098363,
+        95099632,
+        95100739,
+        95102033,
+        95103276,
+        95104561,
+        95105827,
+        95107109,
+        95108392
+      ],
+      "analysisHash": "0xe8a6fd35b10014f68a8acf956458e0ade89d1f3139d31819f3bf0cafe61518a0",
+      "createdAt": "2026-10-22T12:24:58.763Z",
+      "paths": {
+        "analysis": "evidence/lab-mevy-auto-20261021-slot-3-analysis.json",
+        "plan": "evidence/lab-mevy-auto-20261021-slot-3-plan.json",
+        "context": "evidence/lab-mevy-auto-20261021-slot-3-context.json"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95110040,
+            95112576
+          ],
+          "failureCondition": "Reject if none of the first 10 eligible paired observations meets all entry rules, including two consecutive eligible observations. Passing that futility screen is not acceptance: retain the original control and require the seven-day/1000-observation acceptance gate. Quotes are not fills, inclusion, or earned returns; unknown extra gas, infrastructure, and model invoice costs preclude a full profit claim.",
+          "name": "Hypothesis: WETH–PONS cross-pool loop at 0.02 WETH",
+          "rationale": "The graph contains this WETH → PONS → WETH route across the 10000- and 500-fee pools. Training quotes show the route at other sizes, not at 0.02 WETH; the proposed cell therefore needs fresh quotes. Hypothesis: a temporary relative-price divergence between the two pools could create a gross round-trip surplus large enough to cover the 1.5× known-gas reserve and leave at least 30 bps net edge. The entry rule also requires gas at or below 30000000 wei and two consecutive eligible observations.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x00348e64ad392772b4ab43ab07f413e1c9554ec294a3dc3646c43559877e6d7c",
+            "sizeWei": "20000000000000000"
+          }
+        },
+        "id": "0x2d6546050e1a283fe319bac4c8258777d06a9e9521d49e679b6b37c4e3ad9f0a",
+        "modelAnalysisHash": "0x5c6352ab76dbbd908c700484e590d9cfa1c9b2b2c5eb963344808f94b8afe3af",
+        "proposalHead": 95428752,
+        "proposedAt": "2026-10-22T21:37:56.118Z",
+        "publicAnchor": {
+          "commit": "08ddffd72b9251351381004494d3f4fb52e5e725",
+          "seenAt": "2026-10-22T21:40:13.282Z",
+          "startBlock": 95429984,
+          "startTimestamp": 1792705213
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0xb71f165eaf28261453642d37b971d7afe18f5034dcf524238189e9587b670181",
+        "trainingThroughBlock": 95427115,
+        "trialHash": "0x1ddb6ec49c67c29076aad19cec04b9305cf363a2ae73c34976ff9a2bd5bde6c1"
+      },
+      "result": {
+        "trialId": "0x2d6546050e1a283fe319bac4c8258777d06a9e9521d49e679b6b37c4e3ad9f0a",
+        "trialHash": "0x1ddb6ec49c67c29076aad19cec04b9305cf363a2ae73c34976ff9a2bd5bde6c1",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95427115,
+        "forwardStartBlock": 95429984,
+        "firstBlock": 95430042,
+        "lastBlock": 95441655,
+        "maxGapSeconds": 138,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95430042,
+            "frameHash": "0xd5d5592f4ffdae1439e7ce5d23a5f7fff164425ccbdd49adccbd3582703ad14d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95431324,
+            "frameHash": "0x42e65219c7dedb630145e44df5b80ec21780ab8fba103c9b809649a201a30c7f",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95432571,
+            "frameHash": "0x7cf33b34b645eb230e06fa2980a906b18a0b79847c447ef2ec3a056cec000f00",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95433868,
+            "frameHash": "0x9f4c432019a65424099e4bbd7b99c78dee6f4323db75ebf9aa4edb090867db29",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95435186,
+            "frameHash": "0xe0221f1fd6dbc63a5a16c4997d8e81b2dc47017c123da22676c8394e4572f561",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95436519,
+            "frameHash": "0xce6588c98ac7e368b827e2f84e1bf3488280de7594bed39982fe9b242b50cac1",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95437686,
+            "frameHash": "0xa4bdbcb7c945a84748954b071113c4248f98a92dea4e9f70fbdc9983a709fbb4",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95439020,
+            "frameHash": "0x72c47c7d137b23ea257b44249adc518a27a0a0a5bad26f46ca950ae2feaa4ddf",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95440302,
+            "frameHash": "0x2b18d7b118801016646fa468e0903ee263a5daf72991094c1867f6e473ec4083",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95441655,
+            "frameHash": "0x6e6add3e0379b3a226ea274b96490515fe13dc3a41dfcf61ca7914d43c7f59dc",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0xf7f67b0c955a3130e026e8ca6ea1a6f3d97243a2fd300f771dd4c8b64303842c"
+      }
+    },
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95134826
+          ],
+          "failureCondition": "Reject if none of the first 10 eligible paired observations meets all entry rules, including two consecutive eligible observations. Passing that futility screen is not acceptance: retain the original control and require the seven-day/1000-observation acceptance gate. Quotes are not fills, inclusion, or earned returns; unknown extra gas, infrastructure, and model invoice costs preclude a full profit claim.",
+          "name": "Hypothesis: WETH–PONS–USDG triangle at 0.0001 WETH",
+          "rationale": "The graph contains this WETH → PONS → USDG → WETH triangle using 500-, 3000-, and 500-fee pools. The cited training quote for this route was at 0.001 WETH, not the proposed 0.0001 WETH cell, and returned less than its input; that observation is not evidence of an edge at the proposed size. Hypothesis: a short-lived cross-pool price mismatch, if fresh exact-size quotes confirm it, could overcome the fees and gas reserve. Require at least 30 bps net edge after the 1.5× known-gas reserve, gas no higher than 30000000 wei, and two consecutive eligible observations.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x086c60214164a7e3e512eb06ad8d8aeead83648b861e8da294460335a927bbd5",
+            "sizeWei": "100000000000000"
+          }
+        },
+        "id": "0x3b044f3fbd7747a1bc44200167062d888ce2a99e1227b5981c88192f9e88fe32",
+        "modelAnalysisHash": "0x5c6352ab76dbbd908c700484e590d9cfa1c9b2b2c5eb963344808f94b8afe3af",
+        "proposalHead": 95428752,
+        "proposedAt": "2026-10-22T21:37:56.119Z",
+        "publicAnchor": {
+          "commit": "08ddffd72b9251351381004494d3f4fb52e5e725",
+          "seenAt": "2026-10-22T21:40:13.282Z",
+          "startBlock": 95429984,
+          "startTimestamp": 1792705213
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0xb71f165eaf28261453642d37b971d7afe18f5034dcf524238189e9587b670181",
+        "trainingThroughBlock": 95427115,
+        "trialHash": "0x36d90038c8167fc6354e41fcaa7af6a81bd8edffee7d88ec1db3146fd4d26d19"
+      },
+      "result": {
+        "trialId": "0x3b044f3fbd7747a1bc44200167062d888ce2a99e1227b5981c88192f9e88fe32",
+        "trialHash": "0x36d90038c8167fc6354e41fcaa7af6a81bd8edffee7d88ec1db3146fd4d26d19",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95427115,
+        "forwardStartBlock": 95429984,
+        "firstBlock": 95430042,
+        "lastBlock": 95441655,
+        "maxGapSeconds": 138,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95430042,
+            "frameHash": "0xd5d5592f4ffdae1439e7ce5d23a5f7fff164425ccbdd49adccbd3582703ad14d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95431324,
+            "frameHash": "0x42e65219c7dedb630145e44df5b80ec21780ab8fba103c9b809649a201a30c7f",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95432571,
+            "frameHash": "0x7cf33b34b645eb230e06fa2980a906b18a0b79847c447ef2ec3a056cec000f00",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95433868,
+            "frameHash": "0x9f4c432019a65424099e4bbd7b99c78dee6f4323db75ebf9aa4edb090867db29",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95435186,
+            "frameHash": "0xe0221f1fd6dbc63a5a16c4997d8e81b2dc47017c123da22676c8394e4572f561",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95436519,
+            "frameHash": "0xce6588c98ac7e368b827e2f84e1bf3488280de7594bed39982fe9b242b50cac1",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95437686,
+            "frameHash": "0xa4bdbcb7c945a84748954b071113c4248f98a92dea4e9f70fbdc9983a709fbb4",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95439020,
+            "frameHash": "0x72c47c7d137b23ea257b44249adc518a27a0a0a5bad26f46ca950ae2feaa4ddf",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95440302,
+            "frameHash": "0x2b18d7b118801016646fa468e0903ee263a5daf72991094c1867f6e473ec4083",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95441655,
+            "frameHash": "0x6e6add3e0379b3a226ea274b96490515fe13dc3a41dfcf61ca7914d43c7f59dc",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0x654d84b926ea926031b473510c34d8d931315037b48f495259a4deb9eb328c74"
+      }
+    },
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95046937,
+            95048069,
+            95049272,
+            95050541,
+            95051756,
+            95053024
+          ],
+          "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quote results alone do not establish fills, inclusion, or profit.",
+          "name": "Hypothesis: WETH–CASHCAT–USDG triangle at 0.005 WETH",
+          "rationale": "The graph contains this distinct WETH → CASHCAT → USDG → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary price dislocation involving the CASHCAT–USDG pool could overcome the route’s fees and gas reserve at this exact size; it is worth testing only if fresh quotes satisfy the stated entry rule. No supplied training quote measures this route at this size, so its output and edge remain unknown.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x215aac4318600ac80b12127dd0bb17f8c981f97ba7c88eb6031a9dbf51745ee5",
+            "sizeWei": "5000000000000000"
+          }
+        },
+        "id": "0x412b3589d3db3b2b517f5f634ad72eb83c182943cc2448688124f368d394ceb2",
+        "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+        "proposalHead": 95054822,
+        "proposedAt": "2026-10-22T10:48:58.543Z",
+        "publicAnchor": {
+          "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+          "seenAt": "2026-10-22T10:51:12.041Z",
+          "startBlock": 95056142,
+          "startTimestamp": 1792666272
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+        "trainingThroughBlock": 95053024,
+        "trialHash": "0xb2558da311aec32ef58fca65aaf3e9de666d2899a7d80150aedd4c049783886d"
+      },
+      "result": {
+        "trialId": "0x412b3589d3db3b2b517f5f634ad72eb83c182943cc2448688124f368d394ceb2",
+        "trialHash": "0xb2558da311aec32ef58fca65aaf3e9de666d2899a7d80150aedd4c049783886d",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95053024,
+        "forwardStartBlock": 95056142,
+        "firstBlock": 95056149,
+        "lastBlock": 95067297,
+        "maxGapSeconds": 133,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95056149,
+            "frameHash": "0x9d6e77b4eda73ef63b44d2b1165d9a050a10dd9bf630104b3f6de64f0a858295",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95057227,
+            "frameHash": "0xaf150f15e083b332c41c5305168f2412ca2d7d67301f5ff1222acc86a8ab776d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95058495,
+            "frameHash": "0x86b32ebbeb279e4fc834fd71e8e2699d5b283b76cbad1b4ecf017dc978b51d86",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95059725,
+            "frameHash": "0x1d47cfb7b44c92db68e2733f3030fa5a8e8afb895e2b8eb5bb87a560a5dd45cb",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95061017,
+            "frameHash": "0x2fa05e97f260bd4133a45256e12dde1a33fd3682f720c6b4cbe140cd4d661445",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95062258,
+            "frameHash": "0x0e89b7c7ee4a9cf16d01fe95c09c92a3cf8bd1e982af81a3ebfcf69f81bd8918",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95063583,
+            "frameHash": "0x993e0ec950391466c3e4d6a3b41d2045df95ecfa272a040cca3ac7238d70ac2a",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95064822,
+            "frameHash": "0x895bfea777745bb0011a3f80268ab9af79eb368f0170345b5147073074912d1b",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95066012,
+            "frameHash": "0xbd90842961763529c689b41cef916741005ace1ed2da13441c3cd7c22f67d8e7",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95067297,
+            "frameHash": "0xd60fa08c3d3d6ab06cd79cc17716ef33d19677a982677f95e54e7751be845f61",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0x3691700930a8b9bb7f836ea4e8ff2ae5deef6b72faab5b145e0b2330ccda742c"
+      }
+    },
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95098363
+          ],
+          "failureCondition": "Reject after the first 10 eligible paired observations if no two consecutive observations meet the entry rule, including the 30000000 wei gas-price cap. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. A quote is not a fill, inclusion, or earned return.",
+          "name": "Hypothesis: WETH–USDG fee-tier cross-pool loop at 0.005 WETH",
+          "rationale": "Measured: at block 95098363, the exact 0.005 WETH quote returned 4998509295539664 wei, a gross shortfall from input rather than an edge. Hypothesis: a same-block relative-price divergence between the 500-fee and 100-fee WETH–USDG pools could overcome that shortfall and gas reserve. Require at least 30 bps of edge after known gas with a 1.5× gas-cost reserve, and two consecutive eligible observations; the training quote itself fails this entry rule.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x06bd1ee02442a7dd1f5e89f6654069f73c99eb6510cd2a3238a757a7f680b9ff",
+            "sizeWei": "5000000000000000"
+          }
+        },
+        "id": "0x7dc9b64787504a326d97ceb2511dae17a0e6510f3bcb534e13561ab3ce66336e",
+        "modelAnalysisHash": "0xe8a6fd35b10014f68a8acf956458e0ade89d1f3139d31819f3bf0cafe61518a0",
+        "proposalHead": 95110021,
+        "proposedAt": "2026-10-22T12:24:59.931Z",
+        "publicAnchor": {
+          "commit": "25398f82f07d4ee126b41890e1c707301f9ab19f",
+          "seenAt": "2026-10-22T12:27:12.126Z",
+          "startBlock": 95111320,
+          "startTimestamp": 1792672032
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0x96439d4760b1d0f3916045a56829e2b4f7a65f989611fc496c5cefce753949d4",
+        "trainingThroughBlock": 95108392,
+        "trialHash": "0x2355086437acbfa91d16dead9ea5f1423a5e61feaa173cd49514629dacb57ed6"
+      },
+      "result": {
+        "trialId": "0x7dc9b64787504a326d97ceb2511dae17a0e6510f3bcb534e13561ab3ce66336e",
+        "trialHash": "0x2355086437acbfa91d16dead9ea5f1423a5e61feaa173cd49514629dacb57ed6",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95108392,
+        "forwardStartBlock": 95111320,
+        "firstBlock": 95112576,
+        "lastBlock": 95123752,
+        "maxGapSeconds": 131,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95112576,
+            "frameHash": "0x0a4005fc4e3b6a6a9e48843e7d4d679f496c3ee9a6203a59ec7a3c30837f666d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95113771,
+            "frameHash": "0xa6b5036ac2e52bb24452e32c0c86d3669d90db7463ca8bf7b3b6ce2ad11ca729",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95115054,
+            "frameHash": "0x20280c2bfbf1c1b52722c114f69bf8c6664442360ae2a1814fa2391fa79f4bb1",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95116340,
+            "frameHash": "0x7c670a6a633984af2630c4646f1b1805a8a9ff021a13bcbe1bc3eedece432566",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95117443,
+            "frameHash": "0xb60c67e04ab1f0bcb96ca213faea005b7be37bc320d86b67426dd9e1030f43b2",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95118732,
+            "frameHash": "0x426d7d0b8b3b14b1539fe6d278e72f174cf6b5f50a67f99085e3ab32a54a4437",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95119912,
+            "frameHash": "0x383fc35146af78711266469a2dc1b97fd017e4b0dcdd81a382654491ee2f9e13",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95121177,
+            "frameHash": "0x79617079e8c98f647e832722f3186d6f6e42c39f1d985a3a1faa4a7b569c9873",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95122462,
+            "frameHash": "0x6c45cad8fe7ca5adf3c499445d07e48edbb93e6710631c18ca5f90e5fb0a2f1f",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95123752,
+            "frameHash": "0xa4994419f8610419ed3a220a69075046a92b174bbd4ba77ca463cf88be39085b",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0x7177f0d8fd2113dab19c613cd2e9d62543cd3f5a6091de09144d2126deca4ae8"
+      }
+    },
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95046937,
+            95048069,
+            95049272,
+            95050541,
+            95051756,
+            95053024
+          ],
+          "failureCondition": "Reject after the first 10 eligible paired observations if none meets the entry rule: post-gas edge of at least 30 bps, gas price at or below 30000000 wei, and two consecutive eligible observations meeting that rule. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. Quotes are not fills or earned returns.",
+          "name": "Hypothesis: WETH–PONS–CASHCAT triangle at 0.005 WETH",
+          "rationale": "The graph contains this WETH → PONS → CASHCAT → WETH route, using the 3000, 10000, and 10000 fee tiers. Hypothesis: a temporary relative-price mismatch across these three pools could produce a positive round-trip edge at this exact size, but only if fresh same-block quotes show at least 30 bps after applying a 1.5× gas-cost reserve. The 36 training quotes sampled other route/size combinations; none is evidence for this cell.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x04272235c51d865c81df79e81a5d749b233a9fde48aab6d33ea9498e54819c2e",
+            "sizeWei": "5000000000000000"
+          }
+        },
+        "id": "0xae93b4a88aa3d06de22c4db4a0cb8131423f36ab4abc4262d83459be2f6caf03",
+        "modelAnalysisHash": "0xe73d06fb55000c968a966bf830f366e3f86d9adc2179c7c1ec9506f347ba6e83",
+        "proposalHead": 95054822,
+        "proposedAt": "2026-10-22T10:48:58.542Z",
+        "publicAnchor": {
+          "commit": "d75f34717487821872b9122ecb52365fa4808a82",
+          "seenAt": "2026-10-22T10:51:12.041Z",
+          "startBlock": 95056142,
+          "startTimestamp": 1792666272
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0x94c30544e92d81c5b497a9b1041cbee7125379a09784447f057e90c14328be0b",
+        "trainingThroughBlock": 95053024,
+        "trialHash": "0xf7cf86e62d3480fcc6bc4e0b73c6eab7a873514a7fbb747eeeb38016c8dbaeed"
+      },
+      "result": {
+        "trialId": "0xae93b4a88aa3d06de22c4db4a0cb8131423f36ab4abc4262d83459be2f6caf03",
+        "trialHash": "0xf7cf86e62d3480fcc6bc4e0b73c6eab7a873514a7fbb747eeeb38016c8dbaeed",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95053024,
+        "forwardStartBlock": 95056142,
+        "firstBlock": 95056149,
+        "lastBlock": 95067297,
+        "maxGapSeconds": 133,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95056149,
+            "frameHash": "0x9d6e77b4eda73ef63b44d2b1165d9a050a10dd9bf630104b3f6de64f0a858295",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95057227,
+            "frameHash": "0xaf150f15e083b332c41c5305168f2412ca2d7d67301f5ff1222acc86a8ab776d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95058495,
+            "frameHash": "0x86b32ebbeb279e4fc834fd71e8e2699d5b283b76cbad1b4ecf017dc978b51d86",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95059725,
+            "frameHash": "0x1d47cfb7b44c92db68e2733f3030fa5a8e8afb895e2b8eb5bb87a560a5dd45cb",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95061017,
+            "frameHash": "0x2fa05e97f260bd4133a45256e12dde1a33fd3682f720c6b4cbe140cd4d661445",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95062258,
+            "frameHash": "0x0e89b7c7ee4a9cf16d01fe95c09c92a3cf8bd1e982af81a3ebfcf69f81bd8918",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95063583,
+            "frameHash": "0x993e0ec950391466c3e4d6a3b41d2045df95ecfa272a040cca3ac7238d70ac2a",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95064822,
+            "frameHash": "0x895bfea777745bb0011a3f80268ab9af79eb368f0170345b5147073074912d1b",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95066012,
+            "frameHash": "0xbd90842961763529c689b41cef916741005ace1ed2da13441c3cd7c22f67d8e7",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95067297,
+            "frameHash": "0xd60fa08c3d3d6ab06cd79cc17716ef33d19677a982677f95e54e7751be845f61",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0xe2020626babee42c986ef0f088757a14dd7af835bab1aecbf4ea02bfff1d85b2"
+      }
+    },
+    {
+      "trial": {
+        "controlCommitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+        "evaluatorHash": "0x92d35db2944693a802a95e16bdad830a9dbe7b1db34a9ed8d6656e2f39c8c912",
+        "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+        "hypothesis": {
+          "evidenceBlocks": [
+            95100739
+          ],
+          "failureCondition": "Reject after the first 10 eligible paired observations if no two consecutive observations meet the entry rule, including the 30000000 wei gas-price cap. Passing this screen is not acceptance; retain the original control and require the seven-day, 1000-observation acceptance gate. A quote is not a fill, inclusion, or earned return.",
+          "name": "Hypothesis: WETH–CASHCAT fee-tier cross-pool loop at 0.001 WETH",
+          "rationale": "Measured: at block 95100739, the exact 0.001 WETH quote returned 984421829356692 wei, below the input. Hypothesis: a temporary relative-price mismatch between the 3000-fee and 10000-fee WETH–CASHCAT pools could create a round-trip edge if it exceeds the fee drag and the stated gas reserve. The observed quote is not positive evidence for entry, and no quote at another size is inferred from it.",
+          "strategy": {
+            "gasSafetyBps": 15000,
+            "maxGasPriceWei": "30000000",
+            "minEdgeBps": 30,
+            "persistence": 2,
+            "routeId": "0x122fffbc1d5f8fd5e136f97282788930e0d02f43a1cbcc55b99c58b63951eb9b",
+            "sizeWei": "1000000000000000"
+          }
+        },
+        "id": "0xfbbeae408e8a74bd873f40b107c6631f826e613f31e2e838444f141b348912ed",
+        "modelAnalysisHash": "0xe8a6fd35b10014f68a8acf956458e0ade89d1f3139d31819f3bf0cafe61518a0",
+        "proposalHead": 95110021,
+        "proposedAt": "2026-10-22T12:24:59.932Z",
+        "publicAnchor": {
+          "commit": "25398f82f07d4ee126b41890e1c707301f9ab19f",
+          "seenAt": "2026-10-22T12:27:12.126Z",
+          "startBlock": 95111320,
+          "startTimestamp": 1792672032
+        },
+        "screenObservations": 10,
+        "trainingFramesHash": "0x96439d4760b1d0f3916045a56829e2b4f7a65f989611fc496c5cefce753949d4",
+        "trainingThroughBlock": 95108392,
+        "trialHash": "0x9d4d7295f766d6761eb283c3c3e76dc5dece815c33db0b28333ec7f4ede80a95"
+      },
+      "result": {
+        "trialId": "0xfbbeae408e8a74bd873f40b107c6631f826e613f31e2e838444f141b348912ed",
+        "trialHash": "0x9d4d7295f766d6761eb283c3c3e76dc5dece815c33db0b28333ec7f4ede80a95",
+        "status": "REJECTED_NO_SIGNAL",
+        "observations": 10,
+        "pairedObservations": 10,
+        "requiredScreenObservations": 10,
+        "longAcceptance": {
+          "maxDrawdownWei": "1000000000000000",
+          "maxGapSeconds": 300,
+          "maxTradeLossWei": "100000000000000",
+          "minImprovementWei": "100000000000000",
+          "minObservations": 1000,
+          "minSeconds": 604800
+        },
+        "trainingThroughBlock": 95108392,
+        "forwardStartBlock": 95111320,
+        "firstBlock": 95112576,
+        "lastBlock": 95123752,
+        "maxGapSeconds": 131,
+        "candidateSignals": 0,
+        "controlSignals": 0,
+        "actualControlSelections": 0,
+        "candidateKnownGasQuoteWei": "0",
+        "controlKnownGasQuoteWei": "0",
+        "knownGasQuoteDeltaWei": "0",
+        "completePaperNetWei": null,
+        "researchGate": "HOLD",
+        "livePromotion": "DISABLED",
+        "issues": [
+          "EXTRA_GAS_UNKNOWN",
+          "INFRA_COST_UNKNOWN",
+          "LLM_COST_UNRECONCILED",
+          "PRELIMINARY_SCREEN_NOT_SEVEN_DAY_TRIAL"
+        ],
+        "ledger": [
+          {
+            "block": 95112576,
+            "frameHash": "0x0a4005fc4e3b6a6a9e48843e7d4d679f496c3ee9a6203a59ec7a3c30837f666d",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95113771,
+            "frameHash": "0xa6b5036ac2e52bb24452e32c0c86d3669d90db7463ca8bf7b3b6ce2ad11ca729",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95115054,
+            "frameHash": "0x20280c2bfbf1c1b52722c114f69bf8c6664442360ae2a1814fa2391fa79f4bb1",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95116340,
+            "frameHash": "0x7c670a6a633984af2630c4646f1b1805a8a9ff021a13bcbe1bc3eedece432566",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95117443,
+            "frameHash": "0xb60c67e04ab1f0bcb96ca213faea005b7be37bc320d86b67426dd9e1030f43b2",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95118732,
+            "frameHash": "0x426d7d0b8b3b14b1539fe6d278e72f174cf6b5f50a67f99085e3ab32a54a4437",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95119912,
+            "frameHash": "0x383fc35146af78711266469a2dc1b97fd017e4b0dcdd81a382654491ee2f9e13",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95121177,
+            "frameHash": "0x79617079e8c98f647e832722f3186d6f6e42c39f1d985a3a1faa4a7b569c9873",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95122462,
+            "frameHash": "0x6c45cad8fe7ca5adf3c499445d07e48edbb93e6710631c18ca5f90e5fb0a2f1f",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          },
+          {
+            "block": 95123752,
+            "frameHash": "0xa4994419f8610419ed3a220a69075046a92b174bbd4ba77ca463cf88be39085b",
+            "sourceOK": true,
+            "candidateSignal": false,
+            "controlSignal": false,
+            "actualControlSelection": false
+          }
+        ],
+        "boundary": "Ten-observation prospective futility screen followed by longer forward collection for promising ideas. This is not seven-day acceptance. Signals assume known gas only, are not fills or complete profit, and do not authorize a policy change.",
+        "resultHash": "0xb81ba6eb6e5004403f1eccc42d3597fd4ebcd1164daf933eb2fcb252adc3044d"
+      }
+    }
+  ],
+  "search": {
+    "pools": 14,
+    "routes": 120,
+    "triangularRoutes": 100,
+    "sizes": 4,
+    "totalCells": 480,
+    "quotedCells": 480,
+    "observations": 515,
+    "quotes": 3090,
+    "quoteErrors": 0
+  },
+  "livePromotion": "DISABLED",
+  "boundary": "Versioned bounded strategy search. Training and publicly activated forward rows are distinct. Unknown costs and the unchanged seven-day gate prevent a profit or live-promotion claim.",
+  "attemptsPath": "evidence/lab-mevy-auto-20261021-progress-95720299-attempts.json",
+  "reportHash": "0x946814be3dffc705b2d783d1b5acb0bbf0e970cb6180c041df864a1de2ad1b18"
+}

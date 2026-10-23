@@ -1,0 +1,74 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          96036970,
+          96038715,
+          96040406,
+          96041904,
+          96043492,
+          96045193
+        ],
+        "failureCondition": "Reject at the ten-observation futility screen if fewer than two consecutive eligible observations meet both entry thresholds, or if any eligible quote fails the configured route/size checks. Do not interpret passing the screen as acceptance or profit. Preserve the original control and require the seven-day/1,000-observation gate; unknown extra gas, infrastructure, and model invoice costs remain excluded from any full-profit claim.",
+        "name": "wPONS four-hop size-curve probe",
+        "rationale": "Hypothesis needing fresh quotes: this WETH → USDG → PONS → wPONS → WETH route could show size-dependent net quote behavior across its supplied exact sizes. SIZE_CURVE must quote every supplied exact size up to 0.005 WETH and select the greatest current after-gas net; it must not scale outputs. Enter only when the selected quote meets the 20 bps edge floor and covers the 15000 bps gas-safety requirement for two consecutive eligible observations. The supplied training data does not validate this forward hypothesis.",
+        "strategy": {
+          "family": "SIZE_CURVE",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0x429553059dff351a6261e4f0b16172846940095370139fe22bde9f89c6c0a58e",
+          "sizeWei": "5000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          96036970,
+          96038715,
+          96040406,
+          96041904,
+          96043492,
+          96045193
+        ],
+        "failureCondition": "Reject at the ten-observation futility screen if fewer than two consecutive eligible observations satisfy both entry thresholds, or if the route cannot produce a valid quote at the specified size. Passing that screen is not acceptance or profit. Keep the original control and require the seven-day/1,000-observation gate; unknown extra gas, infrastructure, and model invoice costs prevent a full-profit claim.",
+        "name": "wPONS four-hop exact-size edge probe",
+        "rationale": "Hypothesis needing fresh quotes: the WETH → wPONS → PONS → CASHCAT → WETH route tests a different four-hop pool sequence from the size-curve candidate at the exact supplied 0.005 WETH size. Enter only when its current quote meets the 20 bps edge floor and gas-safety threshold for two consecutive eligible observations. No measured quote for this forward test is claimed here.",
+        "strategy": {
+          "family": "EXACT_EDGE",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0x0340947625264221833df80fce9638e93b3cad0f7081152cbe149faba9d743dd",
+          "sizeWei": "5000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "The supplied graph and recent factory discovery are bounded; they do not establish complete chain coverage.",
+      "Training observations are not forward validation. Quote opportunities are not fills, trades, inclusion, or earned returns.",
+      "QUOTE_IMPROVEMENT is not selected; if used in another experiment, its first source-valid quote cannot signal, and later signals must compare the same size with the previous consecutive source-valid quote."
+    ],
+    "summary": "The supplied cohort contains six observations and 36 measured quotes, but it does not establish forward performance for any candidate. I propose two bounded paper experiments involving wPONS routes. Both require fresh quotes after publication; neither is a live strategy change. Preserve the original control and apply the existing seven-day and 1,000-observation acceptance gate. A ten-observation screen may reject an unproductive experiment, but passing it is not acceptance or evidence of profit."
+  },
+  "analysisHash": "0xc96fd317079c69332bbcdcdab64c2646b9b470bb160d2cba2b66ffbb576059e5",
+  "contextHash": "0xebe77f440b6a6fbf03a13d881e2a5e38f0ea857505fbd2b644cb27ed54a3ad2e",
+  "createdAt": "2026-10-23T15:33:27.048Z",
+  "estimatedStandardCostUsd": "0.019589500",
+  "format": "mevy-frontier-analysis/v1",
+  "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x800796f11fe9212735ec0a2715b99a8aeccc1caca695fd177aa4b570d7e5002f",
+  "responseId": "resp_0b3247839691f698016adb7e39cc4487d2935ee3688e6efbbe",
+  "trainingFramesHash": "0xf0a6c085c43f08ec57e266521d340109a26ff584be95cebb9908d7c1e930f38e",
+  "usage": {
+    "inputTokens": 189545,
+    "outputTokens": 1270
+  }
+}

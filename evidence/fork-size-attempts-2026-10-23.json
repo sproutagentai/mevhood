@@ -1,0 +1,58 @@
+{
+  "format": "mevy-fork-attempt-diagnostics/v1",
+  "localForkOnly": true,
+  "mainnetBroadcast": false,
+  "attempts": [
+    {
+      "stage": "two-million-gas pilot",
+      "block": 95139899,
+      "gasLimit": "2000000",
+      "failedSizes": [
+        {
+          "sizeWei": "10000000000000000",
+          "status": "SOURCE_OR_EXECUTION_ERROR",
+          "receipt": null,
+          "executionGasUnits": null,
+          "errorType": "Error"
+        },
+        {
+          "sizeWei": "20000000000000000",
+          "status": "reverted",
+          "receipt": {
+            "type": "legacy",
+            "status": "reverted",
+            "cumulativeGasUsed": "1943688",
+            "logs": [],
+            "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "transactionHash": "0xe2758a28ba7f8d4581fafea01ec4151f761d4196b8c7c1a6ced3a9fc1f5de9f2",
+            "transactionIndex": 0,
+            "blockHash": "0x234d54b55e0d0bd575dfd74848f5e156ffe4c1f18c2688ce3212e905e96a68f7",
+            "blockNumber": "95139903",
+            "gasUsed": "1943688",
+            "effectiveGasPrice": "20334000",
+            "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+            "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+            "contractAddress": null,
+            "blockTimestamp": 1792675066
+          },
+          "executionGasUnits": "1943688",
+          "errorType": null
+        }
+      ],
+      "resolution": "Retained pilot failures; final study uses an 8000000-gas ceiling and records actual gas used, not the ceiling."
+    },
+    {
+      "stage": "first full size matrix",
+      "block": 95144884,
+      "sizeWei": "10000000000000000",
+      "outcome": "LOCAL_RECEIPT_WAIT_TIMEOUT",
+      "resolution": "Repeated the complete route on a fresh local fork with explicit block mining; all ten quote/execution pairs matched."
+    },
+    {
+      "stage": "sixth fork startup",
+      "block": 95393568,
+      "outcome": "ARCHIVE_RPC_STARTUP_ERROR",
+      "resolution": "Preserved the failed run; a fresh one-account local fork completed the full size grid. Archive reads were batched into a cache without substituting synthetic pool state."
+    }
+  ]
+}

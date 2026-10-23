@@ -1,0 +1,12 @@
+{
+  "format": "mevy-fork-replay/v1",
+  "checkedAt": "2026-10-23T10:43:27.140Z",
+  "block": 95139899,
+  "routeHash": "0x19530420ccacc73d9d9e634dfe991fa20b6666e76088cd321db635ec8f389f99",
+  "rows": 10,
+  "amountsAndTransactionGas": "MATCH",
+  "newRawHash": "0xf917a19631e2b4f9236f3aacd66f3394d77760ad7fa0426db57303a5637dd03f",
+  "localForkOnly": true,
+  "rawPath": "evidence/fork-size-replay-raw-2026-10-23.json",
+  "replayHash": "0xe09239b6c7ce45a5f23ccbcb6babb7adad751ad4d2657eb93f19271d877a1001"
+}

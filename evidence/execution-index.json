@@ -1,0 +1,15 @@
+{
+  "format": "mevy-execution-index/v1",
+  "latest": {
+    "path": "evidence/fork-size-study-2026-10-23.json",
+    "reportHash": "0xfda35e37f7ca6792022e747a0ab9875ad54cf284ba0c7c40994eb67dd834daf7",
+    "createdAt": "2026-10-23T10:44:22.844Z"
+  },
+  "reports": [
+    {
+      "path": "evidence/fork-size-study-2026-10-23.json",
+      "reportHash": "0xfda35e37f7ca6792022e747a0ab9875ad54cf284ba0c7c40994eb67dd834daf7",
+      "createdAt": "2026-10-23T10:44:22.844Z"
+    }
+  ]
+}

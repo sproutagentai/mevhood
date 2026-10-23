@@ -1,0 +1,240 @@
+{
+  "format": "mevy-historical-size-plan/v1",
+  "sourceCommit": "a4f40c2239b32b451bee8e9e1206b494425fa43c",
+  "sourceReport": "evidence/lab-mevy-auto-20261021-progress-95408918-report.json",
+  "graphPath": "evidence/lab-mevy-auto-20261021-graph.json",
+  "routes": [
+    {
+      "block": 95139899,
+      "blockHash": "0x15dfe5576f09bde737590a2c465187c21e82fd745f0cf9c5c625cef9bfda4555",
+      "timestamp": 1792675021,
+      "baseFeeWei": "20334000",
+      "sourcePath": "evidence/lab-mevy-auto-20261021-frame-95139899.json",
+      "frameHash": "0x3735f1c17368cba40a628386b6e26bea10ddc978676886d11bb0ae8cc7c5f076",
+      "quote": {
+        "amountOutWei": "100044231456883",
+        "error": null,
+        "gasUnits": "434906",
+        "routeId": "0x1da3d85aa560f47e0c25956d351a2d7633e79b10b534b8e7f54688b12997cd93",
+        "sizeWei": "100000000000000"
+      },
+      "route": {
+        "id": "0x1da3d85aa560f47e0c25956d351a2d7633e79b10b534b8e7f54688b12997cd93",
+        "label": "WETH \u2192 USDG \u2192 PONS \u2192 WETH / 3000 \u00b7 3000 \u00b7 500",
+        "family": "triangle",
+        "tokens": [
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+          "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+          "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+        ],
+        "fees": [
+          3000,
+          3000,
+          500
+        ],
+        "pools": [
+          "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+          "0x0652d61511f3A96B8721bE6825680F5954D9BAF3",
+          "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+        ],
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d168000bb839dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+      }
+    },
+    {
+      "block": 95144884,
+      "blockHash": "0x14afc1543ef6c53b3c2c8af0b12b6eb171c08f080f5fc27ddb29a86f6d4e9aeb",
+      "timestamp": 1792675542,
+      "baseFeeWei": "20114000",
+      "sourcePath": "evidence/lab-mevy-auto-20261021-frame-95144884.json",
+      "frameHash": "0x043f84d8e0b39da0e7c14638892edc3912f5fe05956548c00269cb02bf0df73c",
+      "quote": {
+        "amountOutWei": "100098665657201",
+        "error": null,
+        "gasUnits": "330605",
+        "routeId": "0xca575ecda7af708d124ae31006c4034622f30c9df5fa737620bce05be512ce5b",
+        "sizeWei": "100000000000000"
+      },
+      "route": {
+        "id": "0xca575ecda7af708d124ae31006c4034622f30c9df5fa737620bce05be512ce5b",
+        "label": "WETH \u2192 PONS \u2192 WETH / 3000 \u00b7 500",
+        "family": "cross-pool",
+        "tokens": [
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+          "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+        ],
+        "fees": [
+          3000,
+          500
+        ],
+        "pools": [
+          "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+          "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+        ],
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+      }
+    },
+    {
+      "block": 95257090,
+      "blockHash": "0x209b5fee9da4f4d6b1b208af94c76104b5c07a4fa71d2c8579897b85a04ed429",
+      "timestamp": 1792687231,
+      "baseFeeWei": "20584000",
+      "sourcePath": "evidence/lab-mevy-auto-20261021-frame-95257090.json",
+      "frameHash": "0xbfb3838765cb162242bcc3bac392a5b2b6e8bd9096b60a1d15f59b82568a5a13",
+      "quote": {
+        "amountOutWei": "100353770451199",
+        "error": null,
+        "gasUnits": "429499",
+        "routeId": "0xd921943c0cd013b3918d825c7ab8692d0860ee7fe8df0438090a4e090ecc5662",
+        "sizeWei": "100000000000000"
+      },
+      "route": {
+        "id": "0xd921943c0cd013b3918d825c7ab8692d0860ee7fe8df0438090a4e090ecc5662",
+        "label": "WETH \u2192 PONS \u2192 USDG \u2192 WETH / 3000 \u00b7 500 \u00b7 500",
+        "family": "triangle",
+        "tokens": [
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+          "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+          "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+        ],
+        "fees": [
+          3000,
+          500,
+          500
+        ],
+        "pools": [
+          "0xEd50bDeeA8aDC232f159486192a4157281D722ff",
+          "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+          "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a"
+        ],
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb839dbed3a2bd333467115de45665cc57f813c45710001f45fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+      }
+    },
+    {
+      "block": 95280250,
+      "blockHash": "0x5a969e65f3865e766dfe9a03ef4eec4f16a5096e6841f3e4bc5531ea2d1eb173",
+      "timestamp": 1792689628,
+      "baseFeeWei": "20866000",
+      "sourcePath": "evidence/lab-mevy-auto-20261021-frame-95280250.json",
+      "frameHash": "0x31a80b51c1e013b13242d8af587cc0109d2dda39243bfc08a36f53df49f485de",
+      "quote": {
+        "amountOutWei": "100029691974766",
+        "error": null,
+        "gasUnits": "417233",
+        "routeId": "0xb51144512ca469176c9d2f3b47cf59a4ce116e5fda7e53b547b7f17a0ab5fd8b",
+        "sizeWei": "100000000000000"
+      },
+      "route": {
+        "id": "0xb51144512ca469176c9d2f3b47cf59a4ce116e5fda7e53b547b7f17a0ab5fd8b",
+        "label": "WETH \u2192 PONS \u2192 CASHCAT \u2192 WETH / 500 \u00b7 10000 \u00b7 3000",
+        "family": "triangle",
+        "tokens": [
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+          "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+          "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+        ],
+        "fees": [
+          500,
+          10000,
+          3000
+        ],
+        "pools": [
+          "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468",
+          "0xD82c9986B70Edf587D7a3Be370Beb797D252a989",
+          "0xd42A491087a15E5afd51FEb3606066Cc152d2b09"
+        ],
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f439dbed3a2bd333467115de45665cc57f813c4571002710020bfc650a365f8bb26819deaabf3e21291018b4000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+      }
+    },
+    {
+      "block": 95296762,
+      "blockHash": "0x980664b04d14a903e0f10b41c6b401b1d1218d69bb250b6549dc32a8cf3a1d56",
+      "timestamp": 1792691350,
+      "baseFeeWei": "21122000",
+      "sourcePath": "evidence/lab-mevy-auto-20261021-frame-95296762.json",
+      "frameHash": "0x1a7554eed18f416099623dad567264d1bc36ee17e7f66140396ea37b936343f6",
+      "quote": {
+        "amountOutWei": "100050393318470",
+        "error": null,
+        "gasUnits": "428653",
+        "routeId": "0x994a6c846072e0a114322a2bd4f219074e3d707d169cda8a0b4b7bf893af2a5c",
+        "sizeWei": "100000000000000"
+      },
+      "route": {
+        "id": "0x994a6c846072e0a114322a2bd4f219074e3d707d169cda8a0b4b7bf893af2a5c",
+        "label": "WETH \u2192 USDG \u2192 PONS \u2192 WETH / 100 \u00b7 500 \u00b7 3000",
+        "family": "triangle",
+        "tokens": [
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+          "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+          "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+        ],
+        "fees": [
+          100,
+          500,
+          3000
+        ],
+        "pools": [
+          "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+          "0xEd50bDeeA8aDC232f159486192a4157281D722ff"
+        ],
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c4571000bb80bd7d308f8e1639fab988df18a8011f41eacad73"
+      }
+    },
+    {
+      "block": 95393568,
+      "blockHash": "0xe60fa3f6125545fe71dd72bc96a7bd85844626b1a3218ee33fce6e4455d4e902",
+      "timestamp": 1792701403,
+      "baseFeeWei": "20424000",
+      "sourcePath": "evidence/lab-mevy-auto-20261021-frame-95393568.json",
+      "frameHash": "0xbbedbb3e8e4086340c893acea8cc2e2e3247ca63fef20cb7558407c9c960223f",
+      "quote": {
+        "amountOutWei": "100109678969707",
+        "error": null,
+        "gasUnits": "434944",
+        "routeId": "0x6ce92b6604dfd47a970d858965135ab0425bed272d5333d9a816f538fb8aaef7",
+        "sizeWei": "100000000000000"
+      },
+      "route": {
+        "id": "0x6ce92b6604dfd47a970d858965135ab0425bed272d5333d9a816f538fb8aaef7",
+        "label": "WETH \u2192 USDG \u2192 PONS \u2192 WETH / 100 \u00b7 500 \u00b7 500",
+        "family": "triangle",
+        "tokens": [
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+          "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+          "0x39dBED3a2bd333467115dE45665cC57F813C4571",
+          "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+        ],
+        "fees": [
+          100,
+          500,
+          500
+        ],
+        "pools": [
+          "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+          "0x46534760B24aBE79AafdD82d4a37681DEc311133",
+          "0x6693CF7e87a7039E36FA5F3c0D7E06818d259468"
+        ],
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f439dbed3a2bd333467115de45665cc57f813c45710001f40bd7d308f8e1639fab988df18a8011f41eacad73"
+      }
+    }
+  ],
+  "sizesWei": [
+    "10000000000000",
+    "50000000000000",
+    "100000000000000",
+    "250000000000000",
+    "500000000000000",
+    "1000000000000000",
+    "2500000000000000",
+    "5000000000000000",
+    "10000000000000000",
+    "20000000000000000"
+  ],
+  "boundary": "Hindsight-selected historical execution study; not prospective validation or realized profit. No remote signing or broadcasting."
+}

@@ -6,7 +6,7 @@
 
 Mevy is MEVHOOD's research agent. It examines public onchain quotes, compares a candidate policy with a pinned control, and proposes the next experiment. Both versions see the same new data. Costs, rejected changes and incomplete evidence stay visible.
 
-**A bounded VPS research campaign is active through 28 October 2026, 18:21 UTC. Three automatic OpenAI reports are published. Profit improvement and seven-day uptime are not established; the research contracts are not deployed.** The existing MEVHOOD website and funded searcher are separate systems.
+**The bounded VPS research campaign ends on 28 October 2026, 18:21 UTC. The public journal shows actual hypotheses, prospective screens and failed model requests. A 60-swap historical fork study found no size that covered transaction gas in six selected windows. Profit improvement is not established; the research contracts are not deployed.** The existing MEVHOOD website and funded searcher are separate systems.
 
 <p align="center"><a href="#reproduce-the-evidence">Reproduce</a> · <a href="docs/architecture.md">Architecture</a> · <a href="docs/runbook.md">Operator guide</a> · <a href="docs/claims.md">Claims & evidence</a> · <a href="SECURITY.md">Security</a> · <a href="https://mevhood.xyz">Website</a></p>
 
@@ -93,3 +93,36 @@ npm run lab:verify -- --report evidence/lab-mevy-auto-20261021-progress-95057227
 The [research guide](docs/runbook.md#research-with-mevy) covers direct OpenAI key setup, a free preflight and one explicitly authorized analysis of the complete archived quote snapshot. It retains the model response/usage and emits an unapproved draft or a supported no-change result. The [operator guide](docs/runbook.md#review-a-proposal-and-freeze-its-successor) covers proposal approval, fresh experiment lineage and unsigned onchain preparation. Prepared calldata is not a public deployment. The genuine first analysis establishes provider integration, not a profitable strategy or an autonomous improvement cycle.
 
 No token, payout pool or vault is created by this repository. Do not send assets to an example or old executor address expecting this code to control it.
+
+
+## Six historical price gaps: exact sizes and router execution
+
+The [frozen plan](evidence/fork-size-plan-2026-10-23.json) selects every positive-before-gas quote in the fixed 1,716-quote source snapshot: six route/block pairs. Ten sizes from 0.00001 to 0.02 WETH were executed from isolated local fork snapshots. All **60** router outputs matched their exact-size archive quotes; **zero** covered transaction gas. The unchanged control selected no entry on these same blocks. These hindsight-selected measurements do not count as a prospective strategy improvement.
+
+The [complete study](evidence/fork-size-study-2026-10-23.json) links each balance/receipt matrix, [initial attempt diagnostics](evidence/fork-size-attempts-2026-10-23.json) and [fresh ten-size fork replay](evidence/fork-size-replay-2026-10-23.json). Synthetic ETH funded local WETH deposits. No transaction was sent to Robinhood Chain. Actual execute gas includes transaction/calldata and approvals, while deployment, funding, extra chain fees, tips, infrastructure and model invoices are excluded. Complete net profit stays unknown.
+
+Offline verification of source selection, all 60 balance/gas equations, control decisions and the independent replay:
+
+```sh
+npm run fork:verify -- --report evidence/fork-size-study-2026-10-23.json
+```
+
+To reproduce a fresh local fork measurement, use Node 24 and Foundry 1.8.5. These commands start local processes and make public archive reads; they do not broadcast to the live chain. In one terminal:
+
+```sh
+forge build
+node tools/fork-rpc-proxy.mjs
+```
+
+In another terminal (with `anvil` on PATH):
+
+```sh
+npm run fork:study -- --only-block 95139899
+node --import tsx tools/compare-fork-replay.ts --block 95139899
+```
+
+The runner reuses the published transaction timestamps and manually mines each local transaction after resetting the snapshot. This avoids Anvil's intermittent automining stall after a revert. Amounts and transaction gas matched all ten saved rows on a fresh fork. New raw receipts stay in the ignored private study folder; published evidence is not overwritten. Stop the local proxy after the check. `MEVY_ARCHIVE_RPC_URL` can select another archive endpoint; its key belongs in the environment.
+
+## Structured-output repair
+
+[Repair and actual provider evidence](evidence/research-repair-2026-10-23.json): version 2 reserves 16,000 output tokens with low reasoning and captures completion/usage metadata before parsing. The genuine repair check produced two hypotheses after 250 new source-paired observations, using 125,266 input / 1,697 output tokens; its standard token estimate is $0.0133751, with invoice unreconciled. A later response citing unavailable evidence was rejected; another scheduled response completed. Failed requests stay reserved and are never automatically retried. Version 1 plans, prior trials, the $1 rolling-day/$7 campaign cap and original stop time remain unchanged.

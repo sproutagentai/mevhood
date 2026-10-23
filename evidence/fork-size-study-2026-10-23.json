@@ -1,0 +1,66 @@
+{
+  "format": "mevy-fork-size-study/v1",
+  "createdAt": "2026-10-23T10:44:22.844Z",
+  "planPath": "evidence/fork-size-plan-2026-10-23.json",
+  "planHash": "0x9b6f23f710e26b9fe9d53c5e63fb303bcc4aaa8c0b9045fdcf21cdbb64c31d33",
+  "attemptsPath": "evidence/fork-size-attempts-2026-10-23.json",
+  "replayPath": "evidence/fork-size-replay-2026-10-23.json",
+  "routes": [
+    {
+      "path": "evidence/fork-size-route-95139899-2026-10-23.json",
+      "routeHash": "0x19530420ccacc73d9d9e634dfe991fa20b6666e76088cd321db635ec8f389f99",
+      "block": 95139899,
+      "routeId": "0x1da3d85aa560f47e0c25956d351a2d7633e79b10b534b8e7f54688b12997cd93"
+    },
+    {
+      "path": "evidence/fork-size-route-95144884-2026-10-23.json",
+      "routeHash": "0x8b67a1db7673182e7920eddd6ea9c8bfd8ea8273957bd4822efed26235bb5ae6",
+      "block": 95144884,
+      "routeId": "0xca575ecda7af708d124ae31006c4034622f30c9df5fa737620bce05be512ce5b"
+    },
+    {
+      "path": "evidence/fork-size-route-95257090-2026-10-23.json",
+      "routeHash": "0x7c44a4df3b06a94286d88d8e32779bfbf07e3f1053c28a33eb6d2ad91bd3925a",
+      "block": 95257090,
+      "routeId": "0xd921943c0cd013b3918d825c7ab8692d0860ee7fe8df0438090a4e090ecc5662"
+    },
+    {
+      "path": "evidence/fork-size-route-95280250-2026-10-23.json",
+      "routeHash": "0x4ce4dc5ee65d55441da1eafdbd5e779babe3e6abb0fc32ae4e476f07eb512f3b",
+      "block": 95280250,
+      "routeId": "0xb51144512ca469176c9d2f3b47cf59a4ce116e5fda7e53b547b7f17a0ab5fd8b"
+    },
+    {
+      "path": "evidence/fork-size-route-95296762-2026-10-23.json",
+      "routeHash": "0xf777c5877d9ab7bbbece67b510e856bc4d4e86fa51b038e751f8f10cfe565de0",
+      "block": 95296762,
+      "routeId": "0x994a6c846072e0a114322a2bd4f219074e3d707d169cda8a0b4b7bf893af2a5c"
+    },
+    {
+      "path": "evidence/fork-size-route-95393568-2026-10-23.json",
+      "routeHash": "0xdaceb931cc33ba1929be2687a8315bf803bc8569d59a6572eaf6764c5e886b8f",
+      "block": 95393568,
+      "routeId": "0x6ce92b6604dfd47a970d858965135ab0425bed272d5333d9a816f538fb8aaef7"
+    }
+  ],
+  "summary": {
+    "executions": 60,
+    "successful": 60,
+    "reverted": 0,
+    "positiveAfterExecutionGas": 0,
+    "controlSelections": 0,
+    "conclusion": "None of the 60 historical fork executions covered its transaction gas. Changing size did not produce an executable edge in these six windows."
+  },
+  "completeNetWei": null,
+  "localForkOnly": true,
+  "livePromotion": "DISABLED",
+  "limitations": [
+    "Hindsight-selected historical windows are not a prospective trial or an improved strategy.",
+    "Fork receipts and synthetic funding are local; no transaction was sent to Robinhood Chain.",
+    "Known gas uses the original base fee with no priority tip. Extra chain data fees, failed inclusion attempts, infrastructure and model invoices remain unknown.",
+    "Probe deployment and initial funding costs are excluded; approvals inside execute are included.",
+    "The research probe allows losses to measure outcomes; it is separate from the unchanged guarded live executor.",
+    "Unchanged control sees its original same-block quotes and costs; its actual selection, including unknown-cost guards, is retained."
+  ],
+  "reportHash": "0xfda35e37f7ca6792022e747a0ab9875ad54cf284ba0c7c40994eb67dd834daf7"
+}

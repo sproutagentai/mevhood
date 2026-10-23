@@ -1,0 +1,109 @@
+{
+  "format": "mevy-research-repair/v1",
+  "runtimeSource": "0c3548dfdd549147552bd4805ac4df601b9fa83e",
+  "publicVerificationCommit": "08ddffd72b9251351381004494d3f4fb52e5e725",
+  "originalFailure": {
+    "slot": 4,
+    "errorType": "AI_NoOutputGeneratedError",
+    "cause": "The old runner discarded completion metadata before output parsing; an exact provider-level cause for this historical request cannot be established.",
+    "automaticRetry": false
+  },
+  "changes": {
+    "profile": "v2",
+    "maxOutputTokens": 16000,
+    "reasoning": "low",
+    "diagnostics": "Persist allowlisted response, finish reason and usage before JSON parsing.",
+    "requestHistory": "Publish successful, failed and incomplete attempts.",
+    "oldPlans": "Version 1 replay and frozen control remain unchanged."
+  },
+  "verification": {
+    "attempt": {
+      "id": "repair-20261023",
+      "startedAt": "2026-10-22T21:37:21.786Z",
+      "planHash": "0x8f203921da228ba5ba780f00d5a39b9de02f4081847722a36aa2f0eeb08f2546",
+      "contextHash": "0x506a93e57dd3add19fa50888956c2d06405e8eb0dd2e1b51c94011bed7c06757",
+      "profile": "v2",
+      "maxOutputTokens": 16000,
+      "reasoning": "low",
+      "reservedUsd": "0.097159425",
+      "outcome": "SUCCEEDED",
+      "failureCode": null,
+      "provider": {
+        "responseId": "resp_0ae27eaaaba40b6c016ada8212c92887d28365fa3186d45083",
+        "modelId": "gpt-6-luna",
+        "inputTokens": 125266,
+        "outputTokens": 1697,
+        "reasoningTokens": 749,
+        "finishReason": "stop",
+        "rawFinishReason": null,
+        "visibleCharacters": 3824
+      },
+      "analysisHash": "0x5c6352ab76dbbd908c700484e590d9cfa1c9b2b2c5eb963344808f94b8afe3af",
+      "automaticRetry": false
+    },
+    "analysisPath": "evidence/lab-mevy-auto-20261021-repair-20261023-analysis.json",
+    "planPath": "evidence/lab-mevy-auto-20261021-repair-20261023-plan.json",
+    "contextPath": "evidence/lab-mevy-auto-20261021-repair-20261023-context.json",
+    "estimatedStandardCostUsd": "0.013375100",
+    "actualInvoiceCostUsd": null
+  },
+  "subsequentOutcomes": [
+    {
+      "id": "repair-20261023",
+      "outcome": "SUCCEEDED",
+      "analysisHash": "0x5c6352ab76dbbd908c700484e590d9cfa1c9b2b2c5eb963344808f94b8afe3af",
+      "provider": {
+        "responseId": "resp_0ae27eaaaba40b6c016ada8212c92887d28365fa3186d45083",
+        "modelId": "gpt-6-luna",
+        "inputTokens": 125266,
+        "outputTokens": 1697,
+        "reasoningTokens": 749,
+        "finishReason": "stop",
+        "rawFinishReason": null,
+        "visibleCharacters": 3824
+      }
+    },
+    {
+      "id": "slot-5",
+      "outcome": "FAILED",
+      "analysisHash": null,
+      "provider": {
+        "responseId": "resp_0cfad0a01e59f2ca016adaa958990887d286fba5b7d3bf7a15",
+        "modelId": "gpt-6-luna",
+        "inputTokens": 94936,
+        "outputTokens": 1365,
+        "reasoningTokens": 490,
+        "finishReason": "stop",
+        "rawFinishReason": null,
+        "visibleCharacters": 3646
+      }
+    },
+    {
+      "id": "slot-6",
+      "outcome": "SUCCEEDED",
+      "analysisHash": "0xa006c1d8c37e31a527a3bfd3214781ca8a22dddd052a8717e9bbffa18b9d1823",
+      "provider": {
+        "responseId": "resp_0aa037fd0ae008a4016adafd8eec5487d1b3c2b1d39f0f92f1",
+        "modelId": "gpt-6-luna",
+        "inputTokens": 122958,
+        "outputTokens": 1231,
+        "reasoningTokens": 448,
+        "finishReason": "stop",
+        "rawFinishReason": null,
+        "visibleCharacters": 3178
+      }
+    }
+  ],
+  "rejectedSlot5": {
+    "planHash": "0xd29a07e6691e75b2c9be8cb3c22366753988fc4c6a3aabd3948cb01fb429e762",
+    "checkedReason": "Hypothesis cites unavailable route or block",
+    "effect": "Rejected by the unchanged evidence guard. No paid retry, proposal acceptance or trading."
+  },
+  "campaign": {
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "endsAt": 1793211705
+  },
+  "livePromotion": "DISABLED",
+  "receiptHash": "0xae572748713d693cc569a9a5ccf6cd31dc6dff58c31265daae4b82df4fd7ed50"
+}

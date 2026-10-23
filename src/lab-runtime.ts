@@ -64,11 +64,11 @@ export class LabRuntime{
   this.store.db.exec('BEGIN IMMEDIATE');try{this.store.put('run',id,entry);for(const hypothesis of analysis.analysis.hypotheses){const t=freezeTrial(hypothesis,this.graph,training,this.control,analysis.analysisHash,h);this.store.put('trial',t.id,t);}this.store.db.exec('COMMIT');}catch(e){this.store.db.exec('ROLLBACK');throw e;}
   if(slot!==null)this.budget.complete(slot,'ANALYSED',{kind:'STRATEGY_DISCOVERY',analysisHash:analysis.analysisHash});this.spoolReport('research-'+id);
  }
- async cycle(slot:number){
+ async cycle(slot:number,research=true){
   await this.activate();
-  await this.analyse('launch-20261022',null);
+  if(research){await this.analyse('launch-20261022',null);
   if(process.env.MEVY_RESEARCH_REPAIR==='20261023')await this.analyse('repair-20261023',null);
-  if(this.store.get('run','launch-20261022')&&!this.budget.job(slot))await this.analyse(`slot-${slot}`,slot);
+  if(this.store.get('run','launch-20261022')&&!this.budget.job(slot))await this.analyse(`slot-${slot}`,slot);}
   const frames=this.store.frames();if(!frames.length||!this.store.trials().length)return;
   const last=this.store.list<{at:number}>('spooled').sort((a,b)=>b.at-a.at)[0],results=this.store.trials().map(t=>evaluateTrial(t,frames,this.graph,this.control)),n=results.reduce((a,r)=>a+r.observations,0),now=Date.now();
   const firstForward=n>=3&&!this.store.get('milestone','first-forward'),screened=results.filter(r=>r.observations>=10).length,reportedScreens=Math.max(0,...this.store.list<number>('screen-count'));

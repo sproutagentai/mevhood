@@ -51,7 +51,8 @@ export class AutoStore{
  reserveRepair(now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
   return this.reserveExtra('structured-output-repair-20261023',now,bundleHash,throughBlock,reservedUsd);
  }
- private reserveExtra(id:'strategy-lab-upgrade-20261022'|'structured-output-repair-20261023',now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
+ reserveFrontier(now:number,bundleHash:string,throughBlock:number,reservedUsd:string){return this.reserveExtra('frontier-upgrade-20261023',now,bundleHash,throughBlock,reservedUsd);}
+ private reserveExtra(id:'strategy-lab-upgrade-20261022'|'structured-output-repair-20261023'|'frontier-upgrade-20261023',now:number,bundleHash:string,throughBlock:number,reservedUsd:string){
   this.db.exec('BEGIN IMMEDIATE');try{
    if(!checkCampaign(this.campaign,now)||this.extra(id))throw Error('Upgrade request outside authorization or already claimed');
    const amount=nano(reservedUsd),jobs=this.reservations(),rolling=jobs.filter(j=>j.startedAt>now-86400).reduce((n,j)=>n+nano(j.reservedUsd),0n),total=jobs.reduce((n,j)=>n+nano(j.reservedUsd),0n);

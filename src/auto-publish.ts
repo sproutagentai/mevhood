@@ -5,6 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { digest,canonical } from './model.ts';
 import { checkCampaign,publicPaths,type Campaign } from './auto-research.ts';
 import { planResearch,validateAnalysis } from './llm-research.ts';
+import {appendLabPublication as appendFrontierPublication,validateLabRecord as validateFrontierRecord} from './frontier-publication.ts';
 import { appendLabPublication,validateLabRecord } from './lab-publication.ts';
 const sha=(s:string)=>createHash('sha256').update(s).digest('hex');
 const json=(s:string)=>JSON.parse(s);
@@ -52,7 +53,7 @@ export function legacyIndex(read:(p:string)=>string){
  return {format:'mevy-research-index/v1',reports:[{id:r.analysisHash,createdAt:r.createdAt,decision:r.analysis.decision,model:r.model,observations:b.observations.length,quotes:b.observations.reduce((n:number,o:any)=>n+o.quotes.length,0),paths:{analysis:'evidence/llm-analysis-2026-10-21.json',plan:'evidence/llm-plan-2026-10-21.json',bundle:'evidence/preliminary-vps-2026-10-21.json',audit:'evidence/history-source-audit-2026-10-21.json'},bootstrap:false,window:{firstBlock:b.observations[0].block,lastBlock:b.observations.at(-1).block,startAt:b.observations[0].timestamp,endAt:b.observations.at(-1).timestamp}}]};
 }
 export function publishGit(record:any,root:string,sshKey:string,knownHosts:string){
- const lab=record.format==='mevy-lab-publication/v1';if(lab)validateLabRecord(record);else validatePublication(record);if(!checkCampaign(record.campaign,Math.floor(Date.now()/1000)))throw Error('Publication campaign expired');
+ const frontier=record.format==='mevy-frontier-publication/v1',lab=record.format==='mevy-lab-publication/v1'||frontier;if(frontier)validateFrontierRecord(record);else if(lab)validateLabRecord(record);else validatePublication(record);if(!checkCampaign(record.campaign,Math.floor(Date.now()/1000)))throw Error('Publication campaign expired');
  if(!resolve(root).startsWith('/var/lib/mevy-publisher/'))throw Error('Publisher must use its dedicated checkout');
  const env:NodeJS.ProcessEnv={...process.env,GIT_TERMINAL_PROMPT:'0',GIT_SSH_COMMAND:`ssh -i ${sshKey} -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=${knownHosts}`,GIT_AUTHOR_NAME:'Mevy Research',GIT_COMMITTER_NAME:'Mevy Research',GIT_AUTHOR_EMAIL:'193773860+sproutagentai@users.noreply.github.com',GIT_COMMITTER_EMAIL:'193773860+sproutagentai@users.noreply.github.com'};
  if(env.OPENAI_API_KEY)throw Error('Publisher must not receive OpenAI credentials');
@@ -67,8 +68,9 @@ export function publishGit(record:any,root:string,sshKey:string,knownHosts:strin
  for(const [p,h] of Object.entries(manifest.files))if(sha(read(p))!==h)throw Error('Remote tree does not match reviewed manifest');
  const index=existsSync(join(root,'evidence/research-index.json'))?json(read('evidence/research-index.json')):legacyIndex(read);
  const labIndex=existsSync(join(root,'evidence/discovery-index.json'))?json(read('evidence/discovery-index.json')):null;
- const files=lab?appendLabPublication(record,labIndex,manifest,read):appendPublication(record,index,manifest,read);if(!files)return {state:'ALREADY_PUBLISHED',commit:git('rev-parse','HEAD')};
- for(const [p,text] of Object.entries(files)){if(!/^evidence\/(?:auto-[a-z0-9-]+-(?:analysis|plan|bundle|audit|quotes-\d{2})\.json|lab-[a-z0-9-]+\.json|(?:research|discovery)-index\.json)$/.test(p)&&p!=='PUBLIC_FILES.json')throw Error('Publisher path outside evidence allowlist');if(!existsSync(join(root,p))||read(p)!==text)writeFileSync(join(root,p),text,{mode:0o644});}
+ const frontierIndex=existsSync(join(root,'evidence/frontier-index.json'))?json(read('evidence/frontier-index.json')):null;
+ const files=frontier?appendFrontierPublication(record,frontierIndex,manifest,read):lab?appendLabPublication(record,labIndex,manifest,read):appendPublication(record,index,manifest,read);if(!files)return {state:'ALREADY_PUBLISHED',commit:git('rev-parse','HEAD')};
+ for(const [p,text] of Object.entries(files)){if(!/^evidence\/(?:auto-[a-z0-9-]+-(?:analysis|plan|bundle|audit|quotes-\d{2})\.json|lab-[a-z0-9-]+\.json|(?:research|discovery|frontier)-index\.json)$/.test(p)&&p!=='PUBLIC_FILES.json')throw Error('Publisher path outside evidence allowlist');if(!existsSync(join(root,p))||read(p)!==text)writeFileSync(join(root,p),text,{mode:0o644});}
  const changed=git('status','--porcelain').split('\n').filter(Boolean).map(x=>x.slice(3));if(changed.some(p=>!Object.keys(files).includes(p)))throw Error('Unexpected publisher checkout change');
  git('add','--',...Object.keys(files));git('commit','--no-gpg-sign','-m',lab?`Mevy strategy research: ${record.id}`:`Mevy research: ${record.campaign.id} / slot ${record.slot} / ${record.decision}`);
  if(!checkCampaign(record.campaign,Math.floor(Date.now()/1000)))throw Error('Campaign expired before publication push');

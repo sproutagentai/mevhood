@@ -67,6 +67,10 @@ The second command reads a pinned Robinhood Chain fork. It uses the real WETH an
 
 Even a passing research report says `ELIGIBLE_FOR_REVIEW`. `livePromotion` remains `DISABLED`. Paper quotes do not capture inclusion, competition, failed attempts or private orderflow, and they are not realized trading profit.
 
+## Expanded autonomous search
+
+The versioned frontier adds verified recent factory pools, four-leg cycles, exact size-curve selection and quote-improvement triggers. Its original snapshot contains28liquid pools /20tokens /262routes, including34routes through newly covered tokens. Daily discovery is bounded and preserves old experiment epochs. [Scope, costs and reproduction](docs/frontier-search.md). Source and offline tests are verified; live deployment status is reported separately in the dated journal.
+
 ## Strategy discovery
 
 The optional strategy lab quotes new two/three-pool WETH cycles through a verified USDG/PONS/CASHCAT universe, at four exact sizes up to 0.02 WETH. Mevy proposes new route/size/entry-rule hypotheses, remembers earlier tests and freezes each before public publication and subsequent paired observations. A ten-observation futility screen can reject an idea; promising ideas keep collecting forward evidence. The original seven-day/1,000-observation gate remains unchanged and live execution remains disabled. [Implementation scope and acceptance checks](docs/strategy-lab-spec.md). The first actual discovery request produced two triangular-route hypotheses at 0.005 WETH, bound to six training blocks and 36 new quotes. The verification ledger records their publication and subsequent forward status separately; no profit improvement is claimed.

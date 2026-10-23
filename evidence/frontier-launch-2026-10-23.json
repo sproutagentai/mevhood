@@ -1,0 +1,147 @@
+{
+  "format": "mevy-frontier-launch/v1",
+  "checkedAt": "2026-10-23T21:22:06.658Z",
+  "runtimeSource": "38c7c9f8843d8520adef8109bff13353b377a6d8",
+  "publicProofCommit": "a1c829802cba4628e27ec89033f6fc9cfd4f5c05",
+  "reportPath": "evidence/lab-frontier-mevy-auto-20261021-96024753-progress-96066325-report.json",
+  "sourceGraph": "evidence/frontier-universe-2026-10-23.json",
+  "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+  "modelAnalysisHash": "0xc96fd317079c69332bbcdcdab64c2646b9b470bb160d2cba2b66ffbb576059e5",
+  "usage": {
+    "inputTokens": 189545,
+    "outputTokens": 1270
+  },
+  "estimatedStandardCostUsd": "0.019589500",
+  "reservedUsd": "0.124356925",
+  "actualInvoiceCostUsd": null,
+  "search": {
+    "pools": 28,
+    "routes": 262,
+    "triangularRoutes": 106,
+    "families": [
+      "EXACT_EDGE",
+      "SIZE_CURVE",
+      "QUOTE_IMPROVEMENT"
+    ],
+    "fourHopRoutes": 136,
+    "discoveredEvents": 264,
+    "tokens": 20,
+    "scanFromBlock": 95024754,
+    "scanToBlock": 96024753,
+    "sizes": 4,
+    "totalCells": 1048,
+    "quotedCells": 62,
+    "observations": 17,
+    "quotes": 102,
+    "quoteErrors": 0
+  },
+  "trials": [
+    {
+      "name": "wPONS four-hop size-curve probe",
+      "strategy": {
+        "family": "SIZE_CURVE",
+        "gasSafetyBps": 15000,
+        "maxGasPriceWei": null,
+        "minEdgeBps": 20,
+        "minImprovementBps": 100,
+        "persistence": 2,
+        "routeId": "0x429553059dff351a6261e4f0b16172846940095370139fe22bde9f89c6c0a58e",
+        "sizeWei": "5000000000000000"
+      },
+      "status": "REJECTED_NO_SIGNAL",
+      "paired": 10,
+      "maxGap": 248,
+      "signal": 0,
+      "delta": "0",
+      "anchor": {
+        "commit": "13f108b04d6cecd1fa7ec32a7e7421e5e7b71642",
+        "seenAt": "2026-10-23T15:37:04.295Z",
+        "startBlock": 96048985,
+        "startTimestamp": 1792769824
+      }
+    },
+    {
+      "name": "wPONS four-hop exact-size edge probe",
+      "strategy": {
+        "family": "EXACT_EDGE",
+        "gasSafetyBps": 15000,
+        "maxGasPriceWei": null,
+        "minEdgeBps": 20,
+        "minImprovementBps": 100,
+        "persistence": 2,
+        "routeId": "0x0340947625264221833df80fce9638e93b3cad0f7081152cbe149faba9d743dd",
+        "sizeWei": "5000000000000000"
+      },
+      "status": "REJECTED_NO_SIGNAL",
+      "paired": 10,
+      "maxGap": 248,
+      "signal": 0,
+      "delta": "0",
+      "anchor": {
+        "commit": "13f108b04d6cecd1fa7ec32a7e7421e5e7b71642",
+        "seenAt": "2026-10-23T15:37:04.295Z",
+        "startBlock": 96048985,
+        "startTimestamp": 1792769824
+      }
+    }
+  ],
+  "sourceRechecks": [
+    {
+      "status": "FAIL",
+      "block": 96049192,
+      "mismatchField": "quotes",
+      "details": "The first archive check did not match. Failed fresh row was not captured; exact differing quote is unknown. Retained, not replaced by the later success."
+    },
+    {
+      "status": "CONTROL_QUOTES_MATCH",
+      "block": 96049192,
+      "comparedQuotes": 12,
+      "details": "A separate saved fresh control snapshot matched all original quote fields."
+    },
+    {
+      "status": "PASS",
+      "path": "evidence/frontier-archive-recheck-2026-10-23.json",
+      "receiptHash": "0xcd91b55a6128c2740089c5bb9686bbbd506146254c584f190f3f68ca484c3648"
+    }
+  ],
+  "verification": {
+    "backendTests": 73,
+    "contractTests": 12,
+    "websiteTests": 76,
+    "originalEngineAndV1EvaluatorUnchanged": true,
+    "publicFrontierReplay": "PASS",
+    "sourceCI": 39976231231
+  },
+  "campaignEndsAt": 1793211705,
+  "dailyBudgetUsd": "1.000000000",
+  "totalBudgetUsd": "7.000000000",
+  "dailyRescanLongRunObserved": false,
+  "researchGate": "HOLD",
+  "livePromotion": "DISABLED",
+  "boundary": "Actual source discovery, model response, public freeze, twenty paired hypothesis observations and automatic result publication were observed. Both tests were rejected without a qualifying after-gas quote signal. Quote screens are not swaps, realized profit or seven-day acceptance. Future daily rescans and campaign uptime remain unobserved.",
+  "laterAutomaticRun": {
+    "observedAt": "2026-10-23T21:24:32.663167+00:00",
+    "slot": 8,
+    "response": {
+      "model": "gpt-6-luna",
+      "usage": {
+        "inputTokens": 202192,
+        "outputTokens": 1266
+      },
+      "analysisHash": "0xde1c5ad3a8986a6155f021fa0a8cfa6dc21eeabfc3358bc2880cf798b1ce4619",
+      "createdAt": "2026-10-23T18:26:31.896Z"
+    },
+    "strategyFamilies": [
+      "SIZE_CURVE",
+      "SIZE_CURVE",
+      "QUOTE_IMPROVEMENT",
+      "EXACT_EDGE"
+    ],
+    "totalHypotheses": 4,
+    "sourceFrames": 122,
+    "sourceQuotes": 732,
+    "quoteErrors": 0,
+    "serviceActive": true,
+    "restartCount": 0
+  }
+}

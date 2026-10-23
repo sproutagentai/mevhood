@@ -28,6 +28,11 @@ jobs:
       - run: npm test
       - run: npm run build:agent
       - run: npm run mevy -- verify --file evidence/integration-2026-10-21.json
+      - name: Replay latest published frontier experiment
+        run: |
+          if test -f evidence/frontier-index.json; then
+            node --import tsx src/frontier-cli.ts --report "$(node -p 'require("./evidence/frontier-index.json").latest.path')"
+          fi
       - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09
         with:
           version: v1.8.5

@@ -1,0 +1,14 @@
+{
+  "format": "mevy-frontier-source-check/v1",
+  "checkedAt": "2026-10-23T21:22:06.658Z",
+  "reportHash": "0x87f3b511c64e1373e971c56e1a3978c0ff2fed567a4fa7b0b3d14124cb9270b1",
+  "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+  "frameHash": "0x936e353d2190fd0ec03dab91ee807fb2e0a91f2c7d03f865762d3ff344defcc9",
+  "block": 96049192,
+  "controlQuotes": 12,
+  "discoveryQuotes": 6,
+  "source": "https://rpc-robinhood.blockmachine.io",
+  "sourceAudit": "PASS",
+  "boundary": "Actual same-block archive re-quote, provider consistency rather than consensus or execution proof.",
+  "receiptHash": "0xcd91b55a6128c2740089c5bb9686bbbd506146254c584f190f3f68ca484c3648"
+}

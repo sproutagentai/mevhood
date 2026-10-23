@@ -1,0 +1,22 @@
+{
+  "automaticRetry": false,
+  "contextHash": "0x515f1380e9617dca4c5512e03fd4009e80fd2f55ad81dcfee041fd51ee988f85",
+  "coverage": {
+    "observations": 52,
+    "quotes": 312,
+    "truncated": false
+  },
+  "format": "mevy-frontier-plan/v2",
+  "generationProfile": "v2",
+  "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+  "inputBytes": 423611,
+  "instructionsHash": "0xf01c25470e0c56b81c8a6362a9a277ddde059d04b84e735c3038638140593d36",
+  "livePromotion": "DISABLED",
+  "maxOutputTokens": 16000,
+  "model": "gpt-6-luna",
+  "planHash": "0x1150d3c635886dd69b9336fd2e99793dac15bc74de21e05d5987608e6c864194",
+  "reasoning": "low",
+  "reservedUsd": "0.134119425",
+  "schemaHash": "0xfc2f1eb90db8bd647c338ff43538d9a055083e8b975d25edb3eef1e9c407dcb8",
+  "trainingFramesHash": "0x4aff68bceb8d52c44c2cd1f541620b70e2f1cf3cfaa2d67efb3d9d8c4f3169c0"
+}

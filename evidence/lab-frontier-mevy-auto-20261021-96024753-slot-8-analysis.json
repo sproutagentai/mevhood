@@ -1,0 +1,67 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          96049192,
+          96066325
+        ],
+        "failureCondition": "Reject at the predeclared ten-observation futility screen if fewer than two consecutive eligible observations satisfy both entry rules, or if the route cannot produce valid quotes for the required exact sizes. A passing screen is not acceptance or profit. Retain the original control and require the seven-day/1,000-observation acceptance gate; unknown extra gas, infrastructure, and model invoice costs preclude a full-profit claim.",
+        "name": "wPONS-mediated four-hop size-curve probe",
+        "rationale": "Hypothesis needing fresh quotes: the WETH → wPONS → PONS → USDG → WETH route may have a size-dependent after-gas net that is not represented by the rejected prior route/size cells. Quote every supplied exact size up to 0.005 WETH and select the greatest current after-gas net; do not scale quote outputs. Entry requires the selected quote to meet the 20 bps edge floor and cover the configured 15000 bps gas-safety requirement for two consecutive eligible observations. Training blocks 96049192 and 96066325 are examples of the forward observations recorded in the prior trials; they do not validate this new route or cell.",
+        "strategy": {
+          "family": "SIZE_CURVE",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0x3461e51fb42a8a8f06592826cbe5500ab4ac1cd34756167da76d1b0618dca0d9",
+          "sizeWei": "5000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          96049192,
+          96066325
+        ],
+        "failureCondition": "Reject at the predeclared ten-observation futility screen if fewer than two consecutive eligible observations meet the quote-improvement and gas-safety rules, or if the route lacks valid exact-size quotes. A passing screen is not acceptance or profit. Preserve the original control and require the seven-day/1,000-observation acceptance gate; unknown extra gas, infrastructure, and model invoice costs remain excluded from any full-profit claim.",
+        "name": "wPONS triangle quote-improvement probe",
+        "rationale": "Hypothesis needing fresh quotes: this WETH → PONS → wPONS → WETH triangle uses a different route and strategy family from the prior four-hop trials. It tests whether the same-size amount out sometimes improves by at least 100 bps over the previous consecutive source-valid quote while the current net edge still covers safety gas. The first source-valid row cannot signal. The training evidence records no candidate signals for the earlier trials at blocks 96049192 and 96066325; it gives no forward validation for this route or size.",
+        "strategy": {
+          "family": "QUOTE_IMPROVEMENT",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0x6bc09019db1fb126a0cd3a6d6851a91e3585b456bcdd4d6efc684452707cbb80",
+          "sizeWei": "5000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "The supplied training rows do not establish quotes for either selected route/size cell; fresh same-block control and candidate observations are required.",
+      "The pool graph reflects bounded recent discovery and exclusions, not complete chain coverage.",
+      "Quote opportunities do not establish fills, trades, inclusion, or earned returns.",
+      "No proposal changes live strategy policy; new strategy code, signing, and deployment are unavailable."
+    ],
+    "summary": "The supplied cohort contains 52 observations and 312 quotes. The two prior wPONS-route trials were rejected with no candidate signals in their ten-observation screens; neither result validates a new forward test. The proposals below use different route IDs and are bounded paper experiments, not live strategy changes. The chosen cells are listed in the menu, but their exact-size quotes are not established here and require fresh observations. Preserve the original control and seven-day/1,000-observation acceptance gate; quote opportunities are not fills or earned returns."
+  },
+  "analysisHash": "0xde1c5ad3a8986a6155f021fa0a8cfa6dc21eeabfc3358bc2880cf798b1ce4619",
+  "contextHash": "0x515f1380e9617dca4c5512e03fd4009e80fd2f55ad81dcfee041fd51ee988f85",
+  "createdAt": "2026-10-23T18:26:31.896Z",
+  "estimatedStandardCostUsd": "0.020852200",
+  "format": "mevy-frontier-analysis/v1",
+  "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x1150d3c635886dd69b9336fd2e99793dac15bc74de21e05d5987608e6c864194",
+  "responseId": "resp_0ddcde5231c277f0016adba6cd58f487d2bcf392d4f6133486",
+  "trainingFramesHash": "0x4aff68bceb8d52c44c2cd1f541620b70e2f1cf3cfaa2d67efb3d9d8c4f3169c0",
+  "usage": {
+    "inputTokens": 202192,
+    "outputTokens": 1266
+  }
+}

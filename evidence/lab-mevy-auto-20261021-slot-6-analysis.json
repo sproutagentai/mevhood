@@ -1,0 +1,64 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          95428812,
+          95445589,
+          95602590
+        ],
+        "failureCondition": "Reject if none of the first 10 eligible paired observations satisfies the entry rules, including two consecutive eligible observations. Passing this ten-observation futility screen is not acceptance: retain the original control and require the seven-day/1000-observation acceptance gate. Quotes are not fills, inclusion, or earned returns; unknown extra gas, infrastructure, and model invoice costs prevent full profit claims.",
+        "name": "Hypothesis: WETH–USDG–CASHCAT triangle at 0.001 WETH",
+        "rationale": "The graph has this WETH → USDG → CASHCAT → WETH path through the 10000-fee USDG/WETH, 10000-fee CASHCAT/USDG, and 10000-fee CASHCAT/WETH pools. Hypothesis: a temporary relative-price mismatch across these pools could produce a positive round trip that clears the 1.5× known-gas reserve and 30 bps net-edge rule. This exact route/size cell is unquoted in the supplied cohort and requires fresh quotes; no other size’s output is inferred.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x16945acd47ea2d546023a4415bee45fb185d1c9f196e339f00e5570cefa573e1",
+          "sizeWei": "1000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          95432571,
+          95556351,
+          95620159
+        ],
+        "failureCondition": "Reject if none of the first 10 eligible paired observations satisfies the entry rules, including two consecutive eligible observations. Passing this ten-observation futility screen is not acceptance: retain the original control and require the seven-day/1000-observation acceptance gate. Quotes are not fills, inclusion, or earned returns; unknown extra gas, infrastructure, and model invoice costs prevent full profit claims.",
+        "name": "Hypothesis: WETH–PONS–CASHCAT triangle at 0.02 WETH",
+        "rationale": "The graph contains this WETH → PONS → CASHCAT → WETH route through the 3000-, 10000-, and 3000-fee pools. Hypothesis: temporary divergence between the PONS/CASHCAT pool and the two WETH-linked pools may create a round-trip surplus at this exact size; the entry rule requires fresh quotes to establish that any surplus exceeds both the known-gas reserve and 30 bps. The exact route/size cell is not evidenced by a supplied quote, so its output and edge remain unknown.",
+        "strategy": {
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": "30000000",
+          "minEdgeBps": 30,
+          "persistence": 2,
+          "routeId": "0x38570a0c3c66865275c379e0b6fa67cd57c766b2dd51f746a02b06ba655af340",
+          "sizeWei": "20000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "The prior-trial memory records rejected tests on other route/size cells; none validates these proposed cells or a forward result.",
+      "The cohort contains no exact-size quote for either proposal; both need fresh same-block quotes before any edge assessment.",
+      "No live strategy change is proposed. Keep the original control and seven-day/1000-observation acceptance gate; a ten-row screen can reject an unproductive idea but cannot establish acceptance or profit."
+    ],
+    "summary": "Two unquoted, exact-size paper experiments are proposed on distinct CASHCAT triangle paths. Their rationales are hypotheses, not measured edge claims; the supplied training quotes do not validate either forward result."
+  },
+  "analysisHash": "0xa006c1d8c37e31a527a3bfd3214781ca8a22dddd052a8717e9bbffa18b9d1823",
+  "contextHash": "0xcb8d329261aceb78487f9d84a58e5dcf0e16a37cb58bc8fed4752a938a346ec9",
+  "createdAt": "2026-10-23T06:24:29.378Z",
+  "estimatedStandardCostUsd": "0.012911300",
+  "format": "mevy-discovery-analysis/v1",
+  "graphHash": "0x3cdd5aa6cee7959607b58d7d962ddf827d6c341fd1903a999201cea6c4ef154b",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0xc79d580354b639fffa5cc551a30451d7bd102006621b6b76f26fecfee2d2fcf8",
+  "responseId": "resp_0aa037fd0ae008a4016adafd8eec5487d1b3c2b1d39f0f92f1",
+  "trainingFramesHash": "0x53168fa6cb5728b1451d1ea6abba9a1b5f4792d342e3bcd53f894e1d74a57122",
+  "usage": {
+    "inputTokens": 122958,
+    "outputTokens": 1231
+  }
+}

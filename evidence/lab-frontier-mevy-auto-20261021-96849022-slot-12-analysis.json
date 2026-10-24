@@ -1,0 +1,80 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          96852235,
+          96854572,
+          96856237,
+          96857997,
+          96859705,
+          96861291,
+          96863041,
+          96864717
+        ],
+        "failureCondition": "Reject at the predeclared ten-observation futility screen if fewer than two consecutive eligible observations meet both entry rules, or if required exact-size quotes are invalid or unavailable. A pass is not acceptance or profit. Preserve the original control and require the seven-day/1,000-observation acceptance gate. Unknown extra gas, infrastructure, and model invoice costs prevent a full-profit claim.",
+        "name": "CASHCAT round-trip size-curve test",
+        "rationale": "Measured fact: the verified graph has two WETH–CASHCAT pools, and the menu offers this route as a SIZE_CURVE cell capped at 0.02 WETH. Hypothesis needing fresh quotes: the route may show size-dependent after-gas net behavior. Quote every supplied exact size up to the cap, then select the greatest current after-gas net; do not scale quote outputs. Entry requires the selected quote to meet the 20 bps edge floor and configured gas-safety rule for two consecutive eligible observations. The available evidence does not establish a forward result for this hypothesis.",
+        "strategy": {
+          "family": "SIZE_CURVE",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0x122fffbc1d5f8fd5e136f97282788930e0d02f43a1cbcc55b99c58b63951eb9b",
+          "sizeWei": "20000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          96866411,
+          96868191,
+          96869953,
+          96871705,
+          96873346,
+          96875056,
+          96876798,
+          96878547
+        ],
+        "failureCondition": "Reject at the predeclared ten-observation futility screen if fewer than two consecutive eligible observations meet both entry rules, or if valid quotes cannot be obtained for the required exact sizes. Passing the screen is not acceptance or profit. Preserve the original control and require the seven-day/1,000-observation acceptance gate. Unknown extra gas, infrastructure, and model invoice costs remain outside any full-profit claim.",
+        "name": "Four-hop PONS–CASHCAT route size-curve test",
+        "rationale": "Measured fact: the verified graph contains pools connecting WETH, PONS, USDG, and CASHCAT, and this four-hop route/size/family cell is available in the menu. Hypothesis needing fresh quotes: comparing every supplied exact size up to 0.02 WETH may identify a size at which the current after-gas net meets the entry rules. The runner must select the greatest current after-gas net and must not scale quote outputs. No training row is treated as validation of this forward hypothesis.",
+        "strategy": {
+          "family": "SIZE_CURVE",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0x6df0237a5520b4ba1c361c17bfea8b6c91961f3a4b1dfb2450130ccf6cc1b34b",
+          "sizeWei": "20000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "The supplied observations are training evidence only; no training row validates a forward result.",
+      "Quote opportunities are not fills, trades, inclusion, or earned returns.",
+      "The verified pool graph reflects bounded discovery and exclusions, not complete chain coverage.",
+      "The specified rules do not account for unknown extra gas, infrastructure, or model invoice costs.",
+      "No live strategy change, new strategy code, front-running, signing, or deployment is proposed."
+    ],
+    "summary": "Two bounded paper experiments are proposed from the supplied available-cell menu. These are hypotheses for fresh forward quotes, not claims that the training cohort validates an edge or predicts fills. Keep the original control; a ten-observation futility screen may reject an idea, but passing it is not acceptance or profit. Acceptance still requires the seven-day/1,000-observation gate."
+  },
+  "analysisHash": "0x45265019d4f30fb955272f6b80d9fc18ee6722ea16775b9969525555dfe2ecf8",
+  "contextHash": "0x22b0c40313f9d0934d867483a44f5958a4dcf6c64c179cccc6d85ad93dd2d416",
+  "createdAt": "2026-10-24T18:28:15.582Z",
+  "estimatedStandardCostUsd": "0.018412600",
+  "format": "mevy-frontier-analysis/v1",
+  "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x1819357bd21928e9d12dfe31284ae9c15c1776e0576c63dbcc1bce89546a6da4",
+  "responseId": "resp_0cb58a50fcdfdb98016adcf8b01b3487d28e1d882a62c6b70e",
+  "trainingFramesHash": "0x422df3d5f673c78d2ccb71da23a9a6f38c7490757ceb29dc757832d6578a0741",
+  "usage": {
+    "inputTokens": 177531,
+    "outputTokens": 1319
+  }
+}

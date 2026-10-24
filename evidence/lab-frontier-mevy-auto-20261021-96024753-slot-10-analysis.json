@@ -1,0 +1,68 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          96425943,
+          96427610,
+          96556099
+        ],
+        "failureCondition": "Reject at the predeclared ten-observation futility screen if fewer than two consecutive eligible observations satisfy both entry conditions, or if required exact-size quotes are invalid or unavailable. A pass is not acceptance or profit. Preserve the original control and require the seven-day/1,000-observation acceptance gate. Unknown extra gas, infrastructure costs, and unreconciled model-invoice costs preclude a full-profit claim.",
+        "name": "Alternative wPONS four-hop size-curve probe",
+        "rationale": "Measured fact: the verified graph contains WETH–USDG–PONS–wPONS–WETH pools, and the available menu includes this route at a 0.005 WETH SIZE_CURVE cap. Hypothesis requiring fresh quotes: this distinct route may exhibit size-dependent after-gas net behavior. Quote every supplied exact size up to the cap and select the greatest current after-gas net; do not scale quote outputs. Enter only if the selected quote meets the 20 bps edge floor and covers the configured gas-safety requirement for two consecutive eligible observations.",
+        "strategy": {
+          "family": "SIZE_CURVE",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0xa1346a828870330ccff1e65438cfdb8c69f2f3ad123882ae562e0019bce2c72b",
+          "sizeWei": "5000000000000000"
+        }
+      },
+      {
+        "evidenceBlocks": [
+          96425943,
+          96438930,
+          96556099
+        ],
+        "failureCondition": "Reject at the predeclared ten-observation futility screen if fewer than two consecutive eligible observations meet both the improvement and gas-safety conditions, or if valid quotes are unavailable. A pass is not acceptance or profit. Preserve the original control and require the seven-day/1,000-observation acceptance gate. Unknown extra gas, infrastructure costs, and unreconciled model-invoice costs preclude a full-profit claim.",
+        "name": "wPONS four-hop quote-improvement probe",
+        "rationale": "Measured fact: the verified graph includes wPONS-linked pools, and this route/size/family cell is available in the supplied menu. The cohort does not establish a route-specific forward result for it. Hypothesis requiring fresh quotes: a same-size amount-out improvement of at least 100 bps versus the previous consecutive source-valid quote may coincide with a current quote whose net edge covers safety gas. The first source-valid row cannot signal; require both conditions for two consecutive eligible observations.",
+        "strategy": {
+          "family": "QUOTE_IMPROVEMENT",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0x5ee844833f7f98fc3f4c69fc5b5c6e1b8e645efbe9c3669f184c39fe231cca54",
+          "sizeWei": "1000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "The supplied training rows are not forward evidence for either proposed cell; evidenceBlocks identify cohort observations only.",
+      "The graph reflects bounded recent factory discovery and exclusions, not complete chain coverage.",
+      "Quote opportunities are not fills, trades, inclusion, or earned returns. The ten-observation screen can reject an idea but cannot satisfy the seven-day/1,000-observation acceptance gate."
+    ],
+    "summary": "The supplied cohort contains 80 observations and 480 quotes, but the provided rows do not establish route-specific results for the proposed cells. The prior wPONS trials recorded no candidate signals in their ten-observation screens; their outcomes do not determine the results of these different route/size/family tests. These are bounded paper experiments, not live changes or claims of profitable fills."
+  },
+  "analysisHash": "0xe8bbf8e6fcc98a3d4564a6546e187a82b296c80d007e456f9c634aeedc52a961",
+  "contextHash": "0x6ed324491aaaad4258ea217b679e740a04c691e88fef81ca39caa2f495310f7c",
+  "createdAt": "2026-10-24T06:25:31.824Z",
+  "estimatedStandardCostUsd": "0.022150600",
+  "format": "mevy-frontier-analysis/v1",
+  "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0xf79c6790c42bc6ecf3808fbbae1aa36697737d5de1107211c175570638639170",
+  "responseId": "resp_09f7332485265b17016adc4f4d958087d284cb4abb1cef8fa0",
+  "trainingFramesHash": "0xc107a6199834a8f80580c4d85e4b53d4b6278aab6da29bf65effe914e0300626",
+  "usage": {
+    "inputTokens": 214816,
+    "outputTokens": 1338
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "launch-20261023",
+    "startedAt": "2026-10-23T15:33:12.849Z",
+    "planHash": "0x800796f11fe9212735ec0a2715b99a8aeccc1caca695fd177aa4b570d7e5002f",
+    "contextHash": "0xebe77f440b6a6fbf03a13d881e2a5e38f0ea857505fbd2b644cb27ed54a3ad2e",
+    "profile": "v2",
+    "maxOutputTokens": 16000,
+    "reasoning": "low",
+    "reservedUsd": "0.124356925",
+    "outcome": "SUCCEEDED",
+    "failureCode": null,
+    "provider": {
+      "responseId": "resp_0b3247839691f698016adb7e39cc4487d2935ee3688e6efbbe",
+      "modelId": "gpt-6-luna",
+      "inputTokens": 189545,
+      "outputTokens": 1270,
+      "reasoningTokens": 445,
+      "finishReason": "stop",
+      "rawFinishReason": null,
+      "visibleCharacters": 3521
+    },
+    "analysisHash": "0xc96fd317079c69332bbcdcdab64c2646b9b470bb160d2cba2b66ffbb576059e5",
+    "automaticRetry": false
+  },
+  {
+    "id": "slot-8",
+    "startedAt": "2026-10-23T18:26:20.364Z",
+    "planHash": "0x1150d3c635886dd69b9336fd2e99793dac15bc74de21e05d5987608e6c864194",
+    "contextHash": "0x515f1380e9617dca4c5512e03fd4009e80fd2f55ad81dcfee041fd51ee988f85",
+    "profile": "v2",
+    "maxOutputTokens": 16000,
+    "reasoning": "low",
+    "reservedUsd": "0.134119425",
+    "outcome": "SUCCEEDED",
+    "failureCode": null,
+    "provider": {
+      "responseId": "resp_0ddcde5231c277f0016adba6cd58f487d2bcf392d4f6133486",
+      "modelId": "gpt-6-luna",
+      "inputTokens": 202192,
+      "outputTokens": 1266,
+      "reasoningTokens": 388,
+      "finishReason": "stop",
+      "rawFinishReason": null,
+      "visibleCharacters": 3838
+    },
+    "analysisHash": "0xde1c5ad3a8986a6155f021fa0a8cfa6dc21eeabfc3358bc2880cf798b1ce4619",
+    "automaticRetry": false
+  },
+  {
+    "id": "slot-9",
+    "startedAt": "2026-10-24T00:26:51.447Z",
+    "planHash": "0xb1844f8ca7f74d7eecbcfe6b1a600b606adc954bb576f718731b5df30821608e",
+    "contextHash": "0xd8b0050a8a54bf5c151df2551751ad970685d5ca7d0d84f58bbf7f2b15da8cc4",
+    "profile": "v2",
+    "maxOutputTokens": 16000,
+    "reasoning": "low",
+    "reservedUsd": "0.141361000",
+    "outcome": "SUCCEEDED",
+    "failureCode": null,
+    "provider": {
+      "responseId": "resp_08ec1985bbe87427016adbfb4c43c487d2b8cef252ac1d9b2c",
+      "modelId": "gpt-6-luna",
+      "inputTokens": 211341,
+      "outputTokens": 1302,
+      "reasoningTokens": 380,
+      "finishReason": "stop",
+      "rawFinishReason": null,
+      "visibleCharacters": 3864
+    },
+    "analysisHash": "0x94b6654084ad6d53a13c02a304118e9c9ef1238cbd238d1b0eeb5fcfb15d534a",
+    "automaticRetry": false
+  }
+]

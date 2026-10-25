@@ -7,7 +7,7 @@
     "AGENTS.md": "4915c9dfc6fd63a5495d2ccbe89d0fe250f0b9b39b95b5b8597ed31b1e07d4c9",
     "CONTRIBUTING.md": "878143f0d8199fb3d633b1127191e0ace808bd58f3f8e438411de38cad60150e",
     "LICENSE": "e94fcea968118f339581bda0aecaf0825a594cf1efb194b416d5960467f9ba92",
-    "README.md": "20c39ea04f6f7cceb2646c4da0fa47638dc7151ba9b4d206753142e546612b40",
+    "README.md": "f08a1c4847413ef94571842a18e3c07b0b42a0e3f10f6d7da0558ebca54950bf",
     "SECURITY.md": "8ae8fe1e31d3b9b350dbc0860a7186453f7c382590ea0bc806a5149b5c8dcaa6",
     "agent/agent.ts": "a7a9eb36c5016245e740f7e4fefa48ff328eb75fec696df08eba5001bea0c0aa",
     "agent/instructions.md": "d1cbc76d0aaf3b519752bab9cb4843b04698fed181a1163a893b12b2e976aef5",
@@ -21,7 +21,7 @@
     "contracts/research/RouteProbe.sol": "8a470befad1f1db0c9244a87ecd1e0e8ec5384d144cfc21cdc8aab97eee7671c",
     "docs/architecture.md": "58f2c7f25ec5b60ff26924cb48f059976779e99274d97e0c2800b85b246e4409",
     "docs/claims.md": "b45d9ad8aa2a80898fde310ada7797930ed61efb9bbfeefcb90d9629955d1547",
-    "docs/failure-learning.md": "c236a27ef8715df0bf46ab12fb09995d35e8b6b1d46c9374f095a59edab672a0",
+    "docs/failure-learning.md": "b487196ec48f61f041de27865148b6f9fcef1e88f8e1c19e97b5eb0ca4e6a700",
     "docs/frontier-search.md": "33301455109b73f32154b67cd648cf208c40c08ca599888abdddf9a1f9531f00",
     "docs/product-contract.md": "bc901fff6176b9d2aa75f466c6a5cfb31ccc6bbc8c6e49ae68509574e1f1a512",
     "docs/runbook.md": "ea7e56207bd4ce14b19472605a9e618bb235c9fbaac03eb6756d19eb3b253f9f",
@@ -54,6 +54,7 @@
     "evidence/discovery-index.json": "2d59ab4ce7d59adac404809ce072fd46d5a559a5b1c2dbc9be98b6a31572dec8",
     "evidence/execution-index.json": "45bdba731d27efb67b89a1d975226f34524a158be0301e5c0164bad2abd175a1",
     "evidence/failure-diagnosis-2026-10-25.json": "e553662686ee391a0b5f025e68089fbef1da2c544e1c18ca3e6fb0ff46ecc1c1",
+    "evidence/failure-learning-live-2026-10-25.json": "3260160a33ab5c39412f78cfebf81a959157180f789f074485a9dc5251ff10dd",
     "evidence/fork-size-attempts-2026-10-23.json": "2c2159094352d93c1a6092cf8a06d5dffa0b23efa0ace12e34e268b0347343c4",
     "evidence/fork-size-plan-2026-10-23.json": "839b0e9799aa11dcba2e815f249c7823bfc7389ff2561717a375ba79756a8132",
     "evidence/fork-size-replay-2026-10-23.json": "2ac4fde8f1db71c88fa1ac6eddb3dd5887e35070840f43430b7e8f2fa367baba",
@@ -3138,7 +3139,7 @@
     "evidence/research-repair-2026-10-23.json": "a16f94fd872e4e2687deaee7802cb3dd5a81f732c5352b403114bde2da9c043c",
     "evidence/source-audit-2026-10-21.json": "bc49dc2fb34d9d4664011c70dbf6486192d8c86882688aecfbf0452857f8ff03",
     "foundry.toml": "46d297229020331684195c95772596e274be0e4b42e90dc5983c5d695d339a5b",
-    "implementation-notes.html": "fde54686a2fa1678bb8c7141dfe78e0b55aa4dbfd648656b118c8e663b7ca695",
+    "implementation-notes.html": "52720d427edfce45fe63becaea264e6c2e12d1976cd9a7f3d3a222801cd0b3bb",
     "ops/mevy-research-auto.service": "c074c805b1e65d2e3591797c283114741647999f52291bfd67489bcc8251cb26",
     "ops/mevy-research-expire.service": "a535bbf9407816c90782faebd925692c6f4f8d4cd25108f11f46a40d6db92c05",
     "ops/mevy-research-publish.service": "856cb2f2029fd4b38b480c4c897d0ebcfea70a8b21cb97dfac1d30b92f50c7db",
@@ -3216,6 +3217,7 @@
     "tools/fork-rpc-proxy.mjs": "98b9b6b17098f8cb6d9cbde1e6bc0614f17ea05dee4ca19d931d5e18c4917c81",
     "tools/fork-size-study.ts": "e94784e373cadbbd9753485bf58fac353f3d6c3f5c7c275715d04416653fc44d",
     "tools/prefetch-fork-bitmaps.ts": "505576255cb45a7c54e94da53ea5880fb354fecf0df4d48b768de507e7c35de6",
+    "tools/verify-learning-live.ts": "2a137a67b741d3a60bcf2ecc62045c3e83a62e18f67e708d61e3482340b7bfaf",
     "tsconfig.json": "c1543ec76685c0341ab4b65ca9d0e85f3eb8f109ea6d90f8984fc2bac97547cb"
   }
 }

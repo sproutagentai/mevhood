@@ -1,0 +1,48 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "hypotheses": [
+      {
+        "evidenceBlocks": [
+          97430295,
+          97583762
+        ],
+        "failureCondition": "Reject at the predeclared ten-observation futility screen if fewer than two consecutive eligible observations satisfy both the same-size improvement and gas-safety rules, or if valid quotes are unavailable. A pass is not acceptance or profit. Preserve the original control and require the seven-day/1,000-observation acceptance gate. Unknown extra gas, infrastructure costs, and unreconciled model-invoice costs preclude a full-profit claim.",
+        "name": "PONS–USDG triangle same-size quote-improvement probe",
+        "rationale": "Measured fact: the verified graph contains WETH-linked PONS and USDG pools, and the menu offers this route at exactly 0.005 WETH with QUOTE_IMPROVEMENT. Hypothesis needing fresh quotes: at that exact size, amount out may improve by at least 100 bps versus the previous consecutive source-valid quote while the current net edge covers the configured gas-safety requirement. The first source-valid quote cannot signal; both conditions must hold for two consecutive eligible observations. Cohort observations include blocks 97430295 and 97583762, but they do not validate this forward route/size cell or establish an edge.",
+        "strategy": {
+          "family": "QUOTE_IMPROVEMENT",
+          "gasSafetyBps": 15000,
+          "maxGasPriceWei": null,
+          "minEdgeBps": 20,
+          "minImprovementBps": 100,
+          "persistence": 2,
+          "routeId": "0xaadaebc044f1e8a662461f688856084d6192ada6660be77271632ed753baa3bd",
+          "sizeWei": "5000000000000000"
+        }
+      }
+    ],
+    "limitations": [
+      "Training observations are not forward validation; quote opportunities are not fills, trades, inclusion, or earned returns.",
+      "The bounded graph and deterministic menu are not complete chain coverage; the menu offers no route using a token outside WETH, USDG, PONS, and CASHCAT.",
+      "No live strategy change, signing, deployment, or new strategy code is authorized.",
+      "Unknown extra gas, infrastructure, and model-invoice costs prevent full-profit claims."
+    ],
+    "summary": "The supplied cohort contains 80 observations and 480 quotes, but does not identify route-specific forward results for the proposed cell. The prior trial memory reports several rejected no-signal screens; those outcomes do not validate this new experiment. The menu contains no route using a token outside WETH, USDG, PONS, and CASHCAT, so a new-token route cannot be selected from the available cells. This is a paper experiment only; retain the original control and the seven-day/1,000-observation acceptance gate."
+  },
+  "analysisHash": "0x17f7f090db0da20634329c222269f0e37d85d5e767c69555d8dd99751c19ee25",
+  "contextHash": "0x43e403ce446a412cc49bbb9af29c93c8788cd556cad1b16635d42331643b149b",
+  "createdAt": "2026-10-25T12:26:54.908Z",
+  "estimatedStandardCostUsd": "0.019546600",
+  "format": "mevy-frontier-analysis/v1",
+  "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0xb968a8f5b08bcd90a7e8ad96aa4da74b73f33df4780a5b0a9b8b238cf774113f",
+  "responseId": "resp_08f20c7e1ad06f60016addf584425887d2974ae29e7bdc825a",
+  "trainingFramesHash": "0x9ab9f95ca04c5422458c51024f7ab61f6ca46a9d5695b94e7ee9f1dad720508f",
+  "usage": {
+    "inputTokens": 190571,
+    "outputTokens": 979
+  }
+}

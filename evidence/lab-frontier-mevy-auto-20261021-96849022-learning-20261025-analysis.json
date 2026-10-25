@@ -1,0 +1,62 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "failureReview": [
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x0173aabb268c853082c6232a3b67067501f7f3ebfb0a60b99d778c0de4ff2f00",
+        "lesson": "The alternative wPONS four-hop size-curve trial recorded 10 negative-gross observations, no positive-gross observations, and no positive known-net observations. A lower entry threshold or more persistence cannot fix negative gross economics."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x0bc23a79948630c3a078e6d580a1b460f890219e8d422f82c59e440d1d7791c6",
+        "lesson": "The PONS–USDG triangle size-curve trial was negative gross in all 10 observations, with zero positive known-net observations. Do not retry by changing thresholds or persistence."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x20b0822497155f45a348ca02c829a1b37139123d897f7d94b8ab8116c1e4d0a3",
+        "lesson": "The wPONS four-hop size-curve trial was negative gross in all 10 observations. Its failure is economic before gas, not a threshold or persistence problem."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x2ff64ff28dbf06878a04cb923e671ea2bad6ecbaeb5ac70271cf2cf8719e341c",
+        "lesson": "The wPONS four-hop exact-size trial had 10 negative-gross observations and no positive known-net observations. An exact-size variant does not remove the measured negative gross result."
+      }
+    ],
+    "hypotheses": [],
+    "limitations": [
+      "The failure causes are measured for the specific frozen route trials; they do not establish that all pools, assets, or other routes are uneconomic.",
+      "The current availableCells list is empty, so no measured candidate can be proposed from this packet.",
+      "Quote signals are not swaps or realized profit. Full execution, infrastructure, and model-invoice costs remain unknown.",
+      "Keep the original control unchanged; freeze publicly before collecting fresh forward rows and retain the seven-day/1,000-observation gate, campaign expiry, and spending limits."
+    ],
+    "nextSearch": {
+      "addressesFailureIds": [
+        "0x0173aabb268c853082c6232a3b67067501f7f3ebfb0a60b99d778c0de4ff2f00",
+        "0x0bc23a79948630c3a078e6d580a1b460f890219e8d422f82c59e440d1d7791c6",
+        "0x20b0822497155f45a348ca02c829a1b37139123d897f7d94b8ab8116c1e4d0a3",
+        "0x2ff64ff28dbf06878a04cb923e671ea2bad6ecbaeb5ac70271cf2cf8719e341c"
+      ],
+      "directionId": "EXPAND_POOL_UNIVERSE",
+      "newInformation": "Factory getPool probe results for untested event tokens, including whether additional fee-tier or older companion pools exist. Any discovered route would still need valid, fresh quotes and positive known-net evidence before consideration.",
+      "reason": "The repeated negative-before-gas results rule out trying to repair those measured routes by weakening entry rules. Expand pool discovery instead: probe previously untested event tokens against WETH/USDG fee tiers and look for older companion pools not visible in the recent event window. The supplied menu contains only this executable direction, and availableCells is empty."
+    },
+    "summary": "The frozen failure dossier reports repeated NEGATIVE_BEFORE_GAS results across the tested wPONS, PONS–USDG, and CASHCAT-related routes: each listed failure had 10 negative-gross observations, zero positive-gross observations, and zero positive-known-net observations. These are measured route/cluster failures, not evidence that every pool or asset is uneconomic. The current menu has no available cells, so I propose no hypotheses. The selected next action is EXPAND_POOL_UNIVERSE, which probes untested event tokens and may find older companion pools outside the recent event window. Preserve the frozen control and require a public freeze before fresh forward rows; no quote signal is a swap or realized profit. The seven-day/1,000-observation gate, original expiry and spending limits remain unchanged; full costs and invoices remain unknown."
+  },
+  "analysisHash": "0x2cfb491e24a4c209f2bde3d3c528622ad3fb0a323fe891188917e85db7763688",
+  "contextHash": "0x3e5b30cc1eb8986bf33191cede9e83ae134b8a68b4adef4e7b8ba20805a3dd5f",
+  "createdAt": "2026-10-25T14:30:24.451Z",
+  "estimatedStandardCostUsd": "0.011578600",
+  "format": "mevy-learning-analysis/v1",
+  "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+  "learningEvidenceHash": "0x0d5f0b906833d8ae333c8887aa42b6e3a8f9952e7177c2dcba2aac3a4999edd6",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x78eb3b0d07e791ee554432edbe8f0f854984efec6622d54c4f0babab469779b3",
+  "responseId": "resp_01e7413afe111505016ade12731e6087d2bbf69b78a1193684",
+  "trainingFramesHash": "0x486be1271a87fb1c22f882a723a0b81799b7eb9d18623c837b61133d34013492",
+  "usage": {
+    "inputTokens": 110161,
+    "outputTokens": 1125
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "format": "mevy-learning-index/v1",
+  "campaign": {
+    "id": "mevy-auto-20261021",
+    "startsAt": 1792606905,
+    "endsAt": 1793211705,
+    "intervalSeconds": 21600,
+    "collectionSeconds": 120,
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "model": "gpt-6-luna",
+    "repository": "sproutagentai/mevhood",
+    "bootstrap": true
+  },
+  "latest": {
+    "path": "evidence/lab-frontier-mevy-auto-20261021-96849022-research-learning-20261025-report.json",
+    "reportHash": "0x18655557862fec87093ff02208230de9b400ce356ece4d509638a9a5a598e71a",
+    "createdAt": "2026-10-25T14:30:26.992Z",
+    "trials": 7,
+    "observations": 429
+  }
+}

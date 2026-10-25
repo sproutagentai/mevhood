@@ -1,0 +1,50 @@
+[
+  {
+    "id": "slot-12",
+    "startedAt": "2026-10-24T18:27:58.571Z",
+    "planHash": "0x1819357bd21928e9d12dfe31284ae9c15c1776e0576c63dbcc1bce89546a6da4",
+    "contextHash": "0x22b0c40313f9d0934d867483a44f5958a4dcf6c64c179cccc6d85ad93dd2d416",
+    "profile": "v2",
+    "maxOutputTokens": 16000,
+    "reasoning": "low",
+    "reservedUsd": "0.121269775",
+    "outcome": "SUCCEEDED",
+    "failureCode": null,
+    "provider": {
+      "responseId": "resp_0cb58a50fcdfdb98016adcf8b01b3487d28e1d882a62c6b70e",
+      "modelId": "gpt-6-luna",
+      "inputTokens": 177531,
+      "outputTokens": 1319,
+      "reasoningTokens": 448,
+      "finishReason": "stop",
+      "rawFinishReason": null,
+      "visibleCharacters": 3639
+    },
+    "analysisHash": "0x45265019d4f30fb955272f6b80d9fc18ee6722ea16775b9969525555dfe2ecf8",
+    "automaticRetry": false
+  },
+  {
+    "id": "slot-13",
+    "startedAt": "2026-10-25T00:26:54.129Z",
+    "planHash": "0x98c072ad40b6ac7bb4b4b8c438b6b4bbb3c053306428d2bb325da76a149f1c35",
+    "contextHash": "0xc371995b4578a8f63e07eed803b9783cc0aab7bdf8342dbd84747bd049a8203a",
+    "profile": "v2",
+    "maxOutputTokens": 16000,
+    "reasoning": "low",
+    "reservedUsd": "0.126229675",
+    "outcome": "SUCCEEDED",
+    "failureCode": null,
+    "provider": {
+      "responseId": "resp_0f9bea7c86d87197016add4ccee0a087d2ad58e96b7af7621f",
+      "modelId": "gpt-6-luna",
+      "inputTokens": 183603,
+      "outputTokens": 1295,
+      "reasoningTokens": 443,
+      "finishReason": "stop",
+      "rawFinishReason": null,
+      "visibleCharacters": 3590
+    },
+    "analysisHash": "0x4c385b6a7ca36a1f456b6396e49da3c0bd8b33889ea8ce7775698bad05da0ef8",
+    "automaticRetry": false
+  }
+]

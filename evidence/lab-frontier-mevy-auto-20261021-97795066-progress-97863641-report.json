@@ -1,0 +1,203 @@
+{
+  "format": "mevy-frontier-strategy-report/v1",
+  "createdAt": "2026-10-25T20:31:28.040Z",
+  "campaign": {
+    "id": "mevy-auto-20261021",
+    "startsAt": 1792606905,
+    "endsAt": 1793211705,
+    "intervalSeconds": 21600,
+    "collectionSeconds": 120,
+    "dailyBudgetUsd": "1.000000000",
+    "totalBudgetUsd": "7.000000000",
+    "model": "gpt-6-luna",
+    "repository": "sproutagentai/mevhood",
+    "bootstrap": true
+  },
+  "graphPath": "evidence/lab-frontier-mevy-auto-20261021-97795066-graph.json",
+  "graphHash": "0xae04f10a422b8587a6c8b1cfc059ee338e98bd6a480d84c6b5c4846ff7289c62",
+  "control": {
+    "acceptance": {
+      "maxDrawdownWei": "1000000000000000",
+      "maxGapSeconds": 300,
+      "maxTradeLossWei": "100000000000000",
+      "minImprovementWei": "100000000000000",
+      "minObservations": 1000,
+      "minSeconds": 604800
+    },
+    "baseline": {
+      "gasSafetyBps": 15000,
+      "minEdgeBps": 20,
+      "name": "mevy-control-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "candidate": {
+      "gasSafetyBps": 20000,
+      "minEdgeBps": 35,
+      "name": "mevy-candidate-v1",
+      "sizeWei": "1000000000000000"
+    },
+    "commitment": "0x1f2a6818564be30d487a51fffe647954d11793659ca97c1e43ae947bfcd1fb14",
+    "createdAt": 1792606932,
+    "engineHash": "0x6c0766619a727ad4205b236069f2ae1814db510d0c6a77278596e5e226efe28c",
+    "freezeBlock": 94487422,
+    "freezeBlockHash": "0xd29ea25c4cf43ce9f3abc5dbaa4033611e1b6f2ce7b4e28756a7229f0639a562",
+    "id": "mevy-auto-20261021",
+    "llmCostNote": "Unattended preliminary research. Model USD reservations and response usage are retained separately; WETH invoice conversion and infrastructure costs unknown. No public anchor or live promotion.",
+    "llmCostWei": null,
+    "trainingThroughBlock": 94487421,
+    "version": 1
+  },
+  "sources": [
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97803876.json",
+      "block": 97803876,
+      "frameHash": "0xbdce446fcf1db041b5c25c69ac771aa10ac9e379257c90c2a28f410255f5fd44"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97806639.json",
+      "block": 97806639,
+      "frameHash": "0xe22fb8e0d2c40002d20a64759f88e1abc1e68b3e09ada814bab45edcd2a5af47"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97809160.json",
+      "block": 97809160,
+      "frameHash": "0xe88b73b52cb1bbd1899943bb2977da402a9e83222f7de0a07214c9e11d3f995a"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97811624.json",
+      "block": 97811624,
+      "frameHash": "0x9bbc1f4d630d88ecf38beca60260623e20fceee4a0c56cf672598f83ff49ed71"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97814135.json",
+      "block": 97814135,
+      "frameHash": "0x5676ec23a8ab7dbbf0c89cf3a773ae4141840004cebfc92b08bfa80b21675edd"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97816548.json",
+      "block": 97816548,
+      "frameHash": "0x8b9bb1e12b8b4bf05035e460ab93d7f90a8bad2eb6501993ee497eddca8ba0ed"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97818984.json",
+      "block": 97818984,
+      "frameHash": "0x288bed63bcafda3673a8d5ed7267c20281ff3495c0e5ce05a32f9d7bb9f0601e"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97821418.json",
+      "block": 97821418,
+      "frameHash": "0x2f2c3afa9adaaa6ad3e2559c3e53a4f0ffcc374bb876680d3292b97bc090f377"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97823900.json",
+      "block": 97823900,
+      "frameHash": "0xe11dd1d2a4f4ebce4f872443d59ef6dfba50a634533bf6db8d792c3771268b91"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97826471.json",
+      "block": 97826471,
+      "frameHash": "0xc8bfa17b473535ba214109ad86954d7238fb53eae98b04ab5b220cce8a49374b"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97828843.json",
+      "block": 97828843,
+      "frameHash": "0xd73fb6916dc02de6ee79a4a76636cd92abe1fd5fc2ec32abfb5ca16f938db6f4"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97831348.json",
+      "block": 97831348,
+      "frameHash": "0x8ecdc58e7c0d269092eca2890a0f7d7e32cf3262f20c60cbf1af74f2bff2018d"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97833844.json",
+      "block": 97833844,
+      "frameHash": "0x61374c09a2459fff9cea53b2fc8a232abbb0966d124b2d1a188d53f1095119d6"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97836251.json",
+      "block": 97836251,
+      "frameHash": "0x53df5899cffb83bbac17e5f3f9b52ffd742a6353dda9c1dc8a32aa03b5a2882c"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97838751.json",
+      "block": 97838751,
+      "frameHash": "0x91e7fc9a695faf466071405582ed62a116b540fe402f12723b7db8e961ed1fad"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97841260.json",
+      "block": 97841260,
+      "frameHash": "0x66588aca17b46b8c512cb7a9364fd4aee592c18f1969a80b215d1b91bcb11ce1"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97843787.json",
+      "block": 97843787,
+      "frameHash": "0x1a173d120026e35f08dc0c97561cfefc7479299c76658447ad3bfb01081cf317"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97846178.json",
+      "block": 97846178,
+      "frameHash": "0xb29f2f2fc55bf915260b9534a11cab34e3d404d7a33162bd5458aa97d2068a59"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97848707.json",
+      "block": 97848707,
+      "frameHash": "0x9ec26c3db468e9b4ef1b6087a0d888421b9601b7584998bfb3a6e57db53d18ad"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97851259.json",
+      "block": 97851259,
+      "frameHash": "0xc6fb1089a37911b78c5503851be5b94911d5a0263ba6bd591738d84efb64acc2"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97853717.json",
+      "block": 97853717,
+      "frameHash": "0xa8bc36b1f3ecb382d12a4434e497f7a36ce80da2706c959ed7f6d9802cfd9469"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97856188.json",
+      "block": 97856188,
+      "frameHash": "0x5ea42f59d8e7b04329a705ee3a5fa7b673dd23b89375c2f21b751238d7bf9de3"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97858770.json",
+      "block": 97858770,
+      "frameHash": "0x2dd8ce96015457175e0b223b080122c65869f84d1a7154930f9334cf8600f8db"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97861313.json",
+      "block": 97861313,
+      "frameHash": "0xfa8e5ba69e2bf7b32aed296b86b16e24238f2cea7adff8e3ad0ece8d96823d74"
+    },
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-97795066-frame-97863641.json",
+      "block": 97863641,
+      "frameHash": "0x33f9117081364eaa7ab982e6c1014e028f190ac8ae96512598ce61fa197fdc78"
+    }
+  ],
+  "modelRuns": [],
+  "trials": [],
+  "search": {
+    "pools": 31,
+    "routes": 228,
+    "triangularRoutes": 100,
+    "families": [
+      "EXACT_EDGE",
+      "SIZE_CURVE",
+      "QUOTE_IMPROVEMENT"
+    ],
+    "fourHopRoutes": 108,
+    "discoveredEvents": 236,
+    "tokens": 22,
+    "scanFromBlock": 96795067,
+    "scanToBlock": 97795066,
+    "sizes": 4,
+    "totalCells": 912,
+    "quotedCells": 150,
+    "observations": 25,
+    "quotes": 150,
+    "quoteErrors": 0
+  },
+  "livePromotion": "DISABLED",
+  "boundary": "Versioned bounded strategy search. Training and publicly activated forward rows are distinct. Unknown costs and the unchanged seven-day gate prevent a profit or live-promotion claim.",
+  "reportHash": "0x6a83287e2b2e94d99aa359a2dbca90cf0d4163ff8cc68c5437a987995361e0dd"
+}

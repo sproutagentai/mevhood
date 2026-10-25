@@ -13,3 +13,17 @@ Other measured situations can allocate reads to a new asset cluster or independe
 Each response may contain zero hypotheses. The original control, public freeze before future rows, seven-day / 1,000-observation gate, $1 rolling-day / $7 campaign reservations and 28 October 18:21:45 UTC stop remain unchanged. A unique owner-authorized upgrade check shares those caps and is never retried after an uncertain paid attempt. Future calls use the existing six-hour schedule.
 
 The public learning index links the failure evidence, original model response and actual search action, including across graph epoch switches. Reproduce any linked frontier report with `npm run frontier:verify -- --report ...`. A successful test run or changed search direction does not establish improved profit.
+
+## Verified first pivot — 25 October
+
+The genuine 14:30:24 UTC response examined 15 source-backed rejected trials, paused four asset clusters and proposed zero unsupported hypotheses. Its factory search completed at 14:44:57 UTC: 48 canonical lookups for six tokens, four additional liquid pools, 26 total pools and 228 cycles. Added pools did not increase the closed-cycle count in this snapshot; they do not establish a tradeable opportunity. New hypotheses still require fresh economic evidence.
+
+[Original decision and completed action](../evidence/lab-frontier-mevy-auto-20261021-96849022-search-shift-97656727-report.json), [original model response](../evidence/lab-frontier-mevy-auto-20261021-96849022-learning-20261025-analysis.json).
+
+Replay the first post-upgrade allocation from the original saved frames:
+
+```sh
+node --import tsx tools/verify-learning-live.ts
+```
+
+The [live receipt](../evidence/failure-learning-live-2026-10-25.json) retains the model digest, graph, guide and all three source frames preceding that check. The replay verifies source hashes and independently recomputes the six chosen quote cells: one reopening sentinel and five cells outside suspended clusters. The receipt is an operator observation; it is not a provider signature, a claim of continuous uptime or a proof of profit.

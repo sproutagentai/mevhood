@@ -10,6 +10,6 @@ export function readResearchAttempts(root:string):ResearchAttempt[]{
   const dir=join(root,n),read=(name:string)=>existsSync(join(dir,name))?JSON.parse(readFileSync(join(dir,name),'utf8')):null,plan=read('plan.json'),start=read('request-started.json');if(!plan||!start)return [];
   const failed=read('failure.json'),analysis=read('analysis.json'),metadata=read('provider-metadata.json');
   // The legacy runner did not retain response diagnostics. Do not infer a token-limit cause.
-  return [attemptSchema.parse({id:n.slice(4),startedAt:start.startedAt,planHash:plan.planHash,contextHash:plan.contextHash,profile:plan.format==='mevy-frontier-plan/v2'?'v2':'v1',maxOutputTokens:plan.maxOutputTokens,reasoning:plan.reasoning??'medium',reservedUsd:plan.reservedUsd,outcome:analysis?'SUCCEEDED':failed?'FAILED':'INCOMPLETE',failureCode:failed?(failed.code??'LEGACY_NO_STRUCTURED_OUTPUT'):null,provider:metadata,analysisHash:analysis?.analysisHash??null,automaticRetry:false})];
+  return [attemptSchema.parse({id:n.slice(4),startedAt:start.startedAt,planHash:plan.planHash,contextHash:plan.contextHash,profile:(plan.format==='mevy-frontier-plan/v2'||plan.format==='mevy-learning-plan/v1')?'v2':'v1',maxOutputTokens:plan.maxOutputTokens,reasoning:plan.reasoning??'medium',reservedUsd:plan.reservedUsd,outcome:analysis?'SUCCEEDED':failed?'FAILED':'INCOMPLETE',failureCode:failed?(failed.code??'LEGACY_NO_STRUCTURED_OUTPUT'):null,provider:metadata,analysisHash:analysis?.analysisHash??null,automaticRetry:false})];
  }).sort((a,b)=>a.startedAt.localeCompare(b.startedAt));
 }

@@ -1,0 +1,1848 @@
+{
+  "format": "mevy-failure-diagnosis/v1",
+  "sourceCommit": "0cb6185",
+  "trialCount": 15,
+  "causes": {
+    "NEGATIVE_BEFORE_GAS": 15
+  },
+  "failures": [
+    {
+      "trialId": "0xe0b4ee5f3e24bd0fc2968cc45b239e00fa8dc8008eebcca317e77202b0b91b50",
+      "trialHash": "0x2a316a596652b0c47c6a8bc83fafa5b71aa769b9e393a47486237ec0d004b40c",
+      "name": "Alternative wPONS four-hop size-curve probe",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0xa4f84fb71fda8abb4a1419910b9867ad5561904ec91426a3c94762ac1a8d3825",
+      "routeLabel": "WETH \u2192 USDG \u2192 PONS \u2192 wPONS \u2192 WETH / 3000 \u00b7 3000 \u00b7 100 \u00b7 100",
+      "hops": 4,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x379c0758948b1b08796f41d3e437697ff45263b1eae315c84f57af00edf64cf1",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-52",
+      "bestKnownNetWei": "-10989671435462",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96559616,
+          "frameHash": "0x528f2fb1d11628db342f94db2f3f58789f8cfac59a6ecaea859a797732c7950a",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96561273,
+          "frameHash": "0xf7aa1fef34701c9b4575e33af055148beacc31fa6027323e59a25d5c18eeb3d6",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96562962,
+          "frameHash": "0xd07bfa45635c8c2761a9d0a97ef5b9e34f1e1740a7024c322a372abe18765ff4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96564526,
+          "frameHash": "0xce474a4562b1c47a173d16c587d8dbbcde0278c57b2d153b7e3b6aeb4c326e90",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96566189,
+          "frameHash": "0x136da7d1ec815e4119cf2e9d5b70fb9dcc3361018835e8c934997862f448dfa9",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96567827,
+          "frameHash": "0x39ea8c63a9d535d92b122e836765f12dc4ec248ece6fe2c7b731878502497f6d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96569510,
+          "frameHash": "0xb2284863e74670df4a40316d1a6f3f324aba8b2f1d0e1758df9f2d48792ac7a3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96571201,
+          "frameHash": "0x96584750684d913931079f77cea7789f13a1633b924fb821228d81e4ef7e8a23",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96572950,
+          "frameHash": "0x407a0943471a3427b8bda455f557a81dfc5a2ec01b31bddf03af5f70ef14756b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96574595,
+          "frameHash": "0x878a86c853ca55b72b8d25fb97e9f3021b8dd3964d8afc517dad8bd9cc28455d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-24T06:25:33.011Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x0173aabb268c853082c6232a3b67067501f7f3ebfb0a60b99d778c0de4ff2f00"
+    },
+    {
+      "trialId": "0x6f536fa81fc5fe64f8272e7c7bdf18aee108b68889a805d8d1489267fd71ee53",
+      "trialHash": "0x2c9d6efcdc589d0c186f35d89a962fde60300b5f0a19ffc80a81d0cfb2e8a217",
+      "name": "PONS\u2013USDG triangle size-curve probe",
+      "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+      "clusterId": "0xd1e69f90c688bdc6781e1f84daed7219e99d0f5773fe959cde6e191a8895a489",
+      "routeLabel": "WETH \u2192 PONS \u2192 USDG \u2192 WETH / 500 \u00b7 500 \u00b7 10000",
+      "hops": 3,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x4c9ae578ceaf03883fde5964598585c1e1233221d13857476d3f311537965e1e",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-33",
+      "bestKnownNetWei": "-9044057334139",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 97178789,
+          "frameHash": "0x209295c8dd9b75d25b525392f37c2f28c70e497bcdafcf6a5c51c948e7c93926",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97180614,
+          "frameHash": "0xc9e1dfad56a486a553bf20694b50f10847f90548432040acd0db6abfbb696bc3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97182508,
+          "frameHash": "0x4fe81f7c3cd5fcea130eebb38b4471b666a354797732189687afae95ccaa92a3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97184367,
+          "frameHash": "0xdc0e72832911d12652d1f3213ad877e2c8b58f6ccfb15abc0ef4174e38917213",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97186226,
+          "frameHash": "0xb621c69821b8a93f709176039da3600800ad2217fd764b51ed3e3e83ad9482b8",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97188113,
+          "frameHash": "0x950e48097c6d65bcb2dc0c0f5e12565853ef8e91199d4e253208adca0b1e21bf",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97189997,
+          "frameHash": "0x1d75ce1f9fd72eb6fa05104b2c59299388855215bbcf74fe794149ccd4086ba6",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97191807,
+          "frameHash": "0xf4762204594d4a4e27aa6214642cffe71b0af29c8dbb943dac0fb18bda58a29e",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97193668,
+          "frameHash": "0x865bae905026f11a0ce79729b96a548f14a01f7e1722b3964b0feb0554354573",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 97195466,
+          "frameHash": "0xf8dc429fcf7c7d885982c1e1401aa5704e9008f0650dd6fdb4191b9b714d3e2b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-25T00:27:09.544Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96849022-",
+      "failureId": "0x0bc23a79948630c3a078e6d580a1b460f890219e8d422f82c59e440d1d7791c6"
+    },
+    {
+      "trialId": "0x1ecb2257c73140ec7342f065dde5336445e4f69efb745340f1e65373316ff7dd",
+      "trialHash": "0x6d35c1afa4bc3a5fe24a1a94760a5d7fae7b5ce2d1840fd3a21d4a9f6b270706",
+      "name": "wPONS four-hop size-curve probe",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0xa4f84fb71fda8abb4a1419910b9867ad5561904ec91426a3c94762ac1a8d3825",
+      "routeLabel": "WETH \u2192 USDG \u2192 PONS \u2192 wPONS \u2192 WETH / 10000 \u00b7 10000 \u00b7 100 \u00b7 100",
+      "hops": 4,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x77f0652daf35966eacb8ffacce5911a4b39cfc47640a88aa47514a48ea576188",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-236",
+      "bestKnownNetWei": "-12805679835797",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96049192,
+          "frameHash": "0x936e353d2190fd0ec03dab91ee807fb2e0a91f2c7d03f865762d3ff344defcc9",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96051244,
+          "frameHash": "0xa1bca413aaf508f8638ded7ba422413046e1bc2df6287c6e36ad0b8c605d0342",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96053223,
+          "frameHash": "0x9d8d200e8a3f9361c4cc0152f556718f88a412d9b8aa869ef112d13d411608d6",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96055151,
+          "frameHash": "0x641bec3a5f526420cb4a3283d7133aedbc39ab0c7eecfd02c06d97c04583a515",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96057326,
+          "frameHash": "0x8c1d68863eb56c30823b30f10f3c7c5043929820aaf04652d2747fc7fea06d17",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96059588,
+          "frameHash": "0x10d657b74359e2689a19e51db3d292b9070317da2ecf9e6aaf15187f8ec8662b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96061249,
+          "frameHash": "0xb0745623f6970824bc74d5c16fe0deef5fcedb991f8c7310a945bb1745e7b8b4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96062864,
+          "frameHash": "0x5aa2ffebd5dec7b8e3656bda8d7dacae564e187a0feed0b964db0e0b92711e76",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96064571,
+          "frameHash": "0xfb877f78a40fbdc430fe781ca73649fd69fbecd136f2cec39eed34b797567afb",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96066325,
+          "frameHash": "0x830543da3ea5392d2b61da7ed0ecedee155059f6beeb13c4972a637dbfeea13b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-23T15:33:29.313Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x20b0822497155f45a348ca02c829a1b37139123d897f7d94b8ab8116c1e4d0a3"
+    },
+    {
+      "trialId": "0xf9306a014078e286b86b86ea3384b80bb7c1299f62f43a15b82347f6da811d9c",
+      "trialHash": "0x4b1117502f8ae82cc225429585068405452aef2e8ef9922b7afa98e9d33a5b80",
+      "name": "wPONS four-hop exact-size edge probe",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0x19aa4d86b05a502c3f584fac2fa766ebb8b264460540753be2caefb3681a434f",
+      "routeLabel": "WETH \u2192 wPONS \u2192 PONS \u2192 CASHCAT \u2192 WETH / 100 \u00b7 100 \u00b7 10000 \u00b7 3000",
+      "hops": 4,
+      "family": "EXACT_EDGE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x47f598cce91bf60dffa9ee7f6ccbf59800ae5e043f65c2c3ba5cd65562ba2840",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-152",
+      "bestKnownNetWei": "-86818924915763",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96049192,
+          "frameHash": "0x936e353d2190fd0ec03dab91ee807fb2e0a91f2c7d03f865762d3ff344defcc9",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96051244,
+          "frameHash": "0xa1bca413aaf508f8638ded7ba422413046e1bc2df6287c6e36ad0b8c605d0342",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96053223,
+          "frameHash": "0x9d8d200e8a3f9361c4cc0152f556718f88a412d9b8aa869ef112d13d411608d6",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96055151,
+          "frameHash": "0x641bec3a5f526420cb4a3283d7133aedbc39ab0c7eecfd02c06d97c04583a515",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96057326,
+          "frameHash": "0x8c1d68863eb56c30823b30f10f3c7c5043929820aaf04652d2747fc7fea06d17",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96059588,
+          "frameHash": "0x10d657b74359e2689a19e51db3d292b9070317da2ecf9e6aaf15187f8ec8662b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96061249,
+          "frameHash": "0xb0745623f6970824bc74d5c16fe0deef5fcedb991f8c7310a945bb1745e7b8b4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96062864,
+          "frameHash": "0x5aa2ffebd5dec7b8e3656bda8d7dacae564e187a0feed0b964db0e0b92711e76",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96064571,
+          "frameHash": "0xfb877f78a40fbdc430fe781ca73649fd69fbecd136f2cec39eed34b797567afb",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96066325,
+          "frameHash": "0x830543da3ea5392d2b61da7ed0ecedee155059f6beeb13c4972a637dbfeea13b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-23T15:33:29.314Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x2ff64ff28dbf06878a04cb923e671ea2bad6ecbaeb5ac70271cf2cf8719e341c"
+    },
+    {
+      "trialId": "0x6ed815f775030c595b643cb0dfcc3ed3829be00fccbc9823165dab8358d3fccb",
+      "trialHash": "0xad23ed47b75450383ed02325e26c93a87dabd29a449a217d8a648aedf56580ed",
+      "name": "wPONS-mediated four-hop size-curve probe",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0xa4f84fb71fda8abb4a1419910b9867ad5561904ec91426a3c94762ac1a8d3825",
+      "routeLabel": "WETH \u2192 wPONS \u2192 PONS \u2192 USDG \u2192 WETH / 100 \u00b7 100 \u00b7 3000 \u00b7 100",
+      "hops": 4,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0xd4f03653b1b433227e9c9b5a3033858cc7733a161a0f318b74c191ca1bffad5a",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-5",
+      "bestKnownNetWei": "-10670559906735",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96148570,
+          "frameHash": "0x8e1da0c5671debae5bbb8bd209d6510841074743bdd35739ee5fe5ff3d67524e",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96150198,
+          "frameHash": "0x25e081b10e9bfb8616fb0493c9891a4294643e501e25e0e66cb10b3198954150",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96151779,
+          "frameHash": "0xc706ea9956c5c338fe55da76efe49362977d098a9b61577eb88930ea5b25c054",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96153419,
+          "frameHash": "0xee8e40e94f127053b79523e7645f8e93c7267e75ccb3881cd4179288f08be7a3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96154880,
+          "frameHash": "0x349a7d3d76d9b0f923f21e04be2d78ccb39e889b18c2ba7938326ae418de0929",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96156455,
+          "frameHash": "0x05164f74850e55e5e35991212f1563908cfbf5de49c9804a0bac0c70944f38b7",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96158054,
+          "frameHash": "0x8d96c92dcf7f8076ac47de0473cb8e703c64f2e89021f54f166a832e5ce537f1",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96159650,
+          "frameHash": "0xc297f6929a072f51df0b5970a1de145edfadce1dae6637deffeb0627d5c69d67",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96161324,
+          "frameHash": "0x404e9d22dbe05c7fbbfe1574ebdd6046b0b8f3805de1a67cb8914bcda17d7f23",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96162951,
+          "frameHash": "0xa07d9f61ff4c4f8f41e83206538ce4df7928a2e159c3683f427c46d7acce2c7a",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-23T18:26:33.066Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x3f7a38386621419fe9637e06f7b15c68b00263c3a54599c91e68f762ae81b52b"
+    },
+    {
+      "trialId": "0xb18a1c29349fa1a43ec71e9a803e8c9ac8a2513e846cbfa24880689cd14280bb",
+      "trialHash": "0x2a622ff896f9b436053c86b75f0387718d72105b7833735dbe1063ef2019ac4d",
+      "name": "wPONS triangle size-curve probe up to 0.02 WETH",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0xc5122cb5d369b4c4430b51d195ba43288772aa06227b69284c314e217f8033a1",
+      "routeLabel": "WETH \u2192 PONS \u2192 wPONS \u2192 WETH / 3000 \u00b7 100 \u00b7 100",
+      "hops": 3,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0xca9ed49c4399182c5e529d79c94cf6c40626261d17a0d94d8776819186fcf476",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-25",
+      "bestKnownNetWei": "-8684628454789",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96355273,
+          "frameHash": "0x1c24bb8843578d35fe301408916f63628c4d2a27bffe387ec55a2f069d766ed4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96356965,
+          "frameHash": "0x303e46dc750603b1656c6af492bc05653250085dbe341b82cbcd62b8f1edca61",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96358642,
+          "frameHash": "0xf20775aefbfbe7e509688752191959008c6995d0035173f0d694987071f908b8",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96360296,
+          "frameHash": "0x51403258c11e7d7cf4c5048fa2eac95b3cda89066c555b8dbce117205e1b7b65",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96361897,
+          "frameHash": "0x62b280b677d6739ac6f234ad51f3a5e23e20b5123c374ccd97200491b21fd96d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96363525,
+          "frameHash": "0xc7d31e05cfa4ab05e4b2aa567c1f808d52b1b282bc4ef9619be1c2b24508fdad",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96365145,
+          "frameHash": "0x261982b76895b480f6efa572e4782496fb4ce998d3f828ac5a63f5e36fba38fd",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96366815,
+          "frameHash": "0x21880f08ac91eafe915cd6e08c9b966382ab1cec628bb8eb1d4acf7217448f27",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96368480,
+          "frameHash": "0x26933eb08d88b744d3c646d9b74c68d04caba82fec0013786c5b63242cada531",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96370083,
+          "frameHash": "0x692ade9ec44f48b6ab5fdd4f5b723680bc55b0c35f63dee8089f36fde158365e",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-24T00:27:08.130Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x439f83f69fa733235cb3cf7e1ed802198f538d15556f1a3b3f665d83d7c11c7e"
+    },
+    {
+      "trialId": "0x9d0a2b26ba4acd39ccd76da4b5cbcac5680ea03b66b405fe87cd61156103f2ee",
+      "trialHash": "0xd4780b48fe7c9755fb73ef1f05f55414a499be85d17ef89f162c2b0c7e7396f3",
+      "name": "CASHCAT\u2013PONS\u2013USDG four-hop quote-improvement probe",
+      "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+      "clusterId": "0x6aba1515305e5e62875176f325baa5527e44144f235920e08e7e91e0d30b8fc8",
+      "routeLabel": "WETH \u2192 CASHCAT \u2192 PONS \u2192 USDG \u2192 WETH / 3000 \u00b7 10000 \u00b7 3000 \u00b7 500",
+      "hops": 4,
+      "family": "QUOTE_IMPROVEMENT",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0xcb0020e8b2b596966b8646ca685970d497cfbcb734bda8aa4d602209ed7c0879",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-281",
+      "bestKnownNetWei": "-150927893423304",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 97178789,
+          "frameHash": "0x209295c8dd9b75d25b525392f37c2f28c70e497bcdafcf6a5c51c948e7c93926",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97180614,
+          "frameHash": "0xc9e1dfad56a486a553bf20694b50f10847f90548432040acd0db6abfbb696bc3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97182508,
+          "frameHash": "0x4fe81f7c3cd5fcea130eebb38b4471b666a354797732189687afae95ccaa92a3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97184367,
+          "frameHash": "0xdc0e72832911d12652d1f3213ad877e2c8b58f6ccfb15abc0ef4174e38917213",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97186226,
+          "frameHash": "0xb621c69821b8a93f709176039da3600800ad2217fd764b51ed3e3e83ad9482b8",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97188113,
+          "frameHash": "0x950e48097c6d65bcb2dc0c0f5e12565853ef8e91199d4e253208adca0b1e21bf",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97189997,
+          "frameHash": "0x1d75ce1f9fd72eb6fa05104b2c59299388855215bbcf74fe794149ccd4086ba6",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97191807,
+          "frameHash": "0xf4762204594d4a4e27aa6214642cffe71b0af29c8dbb943dac0fb18bda58a29e",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97193668,
+          "frameHash": "0x865bae905026f11a0ce79729b96a548f14a01f7e1722b3964b0feb0554354573",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97195466,
+          "frameHash": "0xf8dc429fcf7c7d885982c1e1401aa5704e9008f0650dd6fdb4191b9b714d3e2b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-25T00:27:09.545Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96849022-",
+      "failureId": "0x4854d6a761b30002c777dc5eedd56244d3a54e2fc8551f002c816e47af1ac3d0"
+    },
+    {
+      "trialId": "0x11873b41d2cbf8881b4799d61109948a680cdc1f498533686e5177d3a04cec99",
+      "trialHash": "0x59dc1b18e2ab01fac4bf6e0a862820e6df892b7315837dfc4ab37084ce0aed4a",
+      "name": "PONS\u2013USDG triangle same-size quote-improvement probe",
+      "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+      "clusterId": "0xd1e69f90c688bdc6781e1f84daed7219e99d0f5773fe959cde6e191a8895a489",
+      "routeLabel": "WETH \u2192 PONS \u2192 USDG \u2192 WETH / 500 \u00b7 500 \u00b7 100",
+      "hops": 3,
+      "family": "QUOTE_IMPROVEMENT",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0xbcbd81bb1fb2220ea4a570812c7d529735b07aaf3ed28525a61c4deede96626c",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-6397",
+      "bestKnownNetWei": "-3222700310839530",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 97587725,
+          "frameHash": "0x227657326eeb93c932dc4cc75c4359b3ba761d8a7385fb8a79aed7cd27c855b9",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97589716,
+          "frameHash": "0xc3c01e16e93f872acb2a0761b439619fd65ed25a76f5c7718b3bf820389d787c",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97591678,
+          "frameHash": "0xd7e2f878e99036521113337ed0911359fd34f1a5763a1a895ccf4e56eec62e5c",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97593683,
+          "frameHash": "0x333a245e7178d9acbab2a409454df499be75ba92a8439a43aaf7eb84f6d68a65",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97595653,
+          "frameHash": "0xea9b313adc1212b7c2f7814be6393cf7b0342b5274fccbf8dd3f5a267595161b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97597729,
+          "frameHash": "0xa4ef3802176686c04ee7612912403cef8d1cad6c179ea9ad323eb97149367639",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97599795,
+          "frameHash": "0xbe12073e009431464152a59a654b043c4ec50254b4b3e6b2690f0b76a000099c",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97601800,
+          "frameHash": "0x02ca8a26b6452d20dcf9ca1d0abdcfa6ea7ba0f0def16563033f1344f209c0c0",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97603758,
+          "frameHash": "0x1813d47b02f1709ab5f6dbc8233bcafbf53661091fa23c06b95b37610b75668f",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97605790,
+          "frameHash": "0xa492068745cb2dfaa20350963f4b0fb5f369a6fd276d0c44e500445c7a20753d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-25T12:26:56.089Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96849022-",
+      "failureId": "0x4b74050524e4ff05b4e79502f4db57a0572c0d719976581af96742f91edcc36a"
+    },
+    {
+      "trialId": "0x9d48362a18d2d4b3b9cf87e6bd1898b1c7c1da282df9147f04ecbd649e4ebfae",
+      "trialHash": "0x19ebd9160aca84120e8fbf5ad3a2e242bb5755ae79039408cccfcac1cd7c5fe8",
+      "name": "wPONS four-hop quote-improvement probe",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0xa4f84fb71fda8abb4a1419910b9867ad5561904ec91426a3c94762ac1a8d3825",
+      "routeLabel": "WETH \u2192 wPONS \u2192 PONS \u2192 USDG \u2192 WETH / 100 \u00b7 100 \u00b7 500 \u00b7 100",
+      "hops": 4,
+      "family": "QUOTE_IMPROVEMENT",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0xb0550841d912f679da9ff51305447147b2d4bc7bef2ece4a884c26ecb65eff65",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-247",
+      "bestKnownNetWei": "-36125248617801",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96559616,
+          "frameHash": "0x528f2fb1d11628db342f94db2f3f58789f8cfac59a6ecaea859a797732c7950a",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96561273,
+          "frameHash": "0xf7aa1fef34701c9b4575e33af055148beacc31fa6027323e59a25d5c18eeb3d6",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96562962,
+          "frameHash": "0xd07bfa45635c8c2761a9d0a97ef5b9e34f1e1740a7024c322a372abe18765ff4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96564526,
+          "frameHash": "0xce474a4562b1c47a173d16c587d8dbbcde0278c57b2d153b7e3b6aeb4c326e90",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96566189,
+          "frameHash": "0x136da7d1ec815e4119cf2e9d5b70fb9dcc3361018835e8c934997862f448dfa9",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96567827,
+          "frameHash": "0x39ea8c63a9d535d92b122e836765f12dc4ec248ece6fe2c7b731878502497f6d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96569510,
+          "frameHash": "0xb2284863e74670df4a40316d1a6f3f324aba8b2f1d0e1758df9f2d48792ac7a3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96571201,
+          "frameHash": "0x96584750684d913931079f77cea7789f13a1633b924fb821228d81e4ef7e8a23",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96572950,
+          "frameHash": "0x407a0943471a3427b8bda455f557a81dfc5a2ec01b31bddf03af5f70ef14756b",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        },
+        {
+          "block": 96574595,
+          "frameHash": "0x878a86c853ca55b72b8d25fb97e9f3021b8dd3964d8afc517dad8bd9cc28455d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "1000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-24T06:25:33.012Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x58b90af380a59c0267255b6fee18664a32062fc2ba6925302306e631f0815e0d"
+    },
+    {
+      "trialId": "0xbe0aa399bba7dc8833a7f1d63d4eaf8418a25187b38206320dfd5c77d8e3c6c1",
+      "trialHash": "0x1b1fca07a320756e82bb08fc57fa3f2667ed2dbf3cb412a9f4cdb90097a568e0",
+      "name": "wPONS triangle quote-improvement probe",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0xc5122cb5d369b4c4430b51d195ba43288772aa06227b69284c314e217f8033a1",
+      "routeLabel": "WETH \u2192 PONS \u2192 wPONS \u2192 WETH / 3000 \u00b7 100 \u00b7 100",
+      "hops": 3,
+      "family": "QUOTE_IMPROVEMENT",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x03481a98c76927f210e9a5eb7a38d430a08aadd201c987d16cdbc0118e7c5640",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-36",
+      "bestKnownNetWei": "-26736689333081",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96148570,
+          "frameHash": "0x8e1da0c5671debae5bbb8bd209d6510841074743bdd35739ee5fe5ff3d67524e",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96150198,
+          "frameHash": "0x25e081b10e9bfb8616fb0493c9891a4294643e501e25e0e66cb10b3198954150",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96151779,
+          "frameHash": "0xc706ea9956c5c338fe55da76efe49362977d098a9b61577eb88930ea5b25c054",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96153419,
+          "frameHash": "0xee8e40e94f127053b79523e7645f8e93c7267e75ccb3881cd4179288f08be7a3",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96154880,
+          "frameHash": "0x349a7d3d76d9b0f923f21e04be2d78ccb39e889b18c2ba7938326ae418de0929",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96156455,
+          "frameHash": "0x05164f74850e55e5e35991212f1563908cfbf5de49c9804a0bac0c70944f38b7",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96158054,
+          "frameHash": "0x8d96c92dcf7f8076ac47de0473cb8e703c64f2e89021f54f166a832e5ce537f1",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96159650,
+          "frameHash": "0xc297f6929a072f51df0b5970a1de145edfadce1dae6637deffeb0627d5c69d67",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96161324,
+          "frameHash": "0x404e9d22dbe05c7fbbfe1574ebdd6046b0b8f3805de1a67cb8914bcda17d7f23",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 96162951,
+          "frameHash": "0xa07d9f61ff4c4f8f41e83206538ce4df7928a2e159c3683f427c46d7acce2c7a",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-23T18:26:33.067Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x5cb31c4c03f61674c909cdfa84a67b087a441b2dcdeaf991a4ab8fef4e9a2abb"
+    },
+    {
+      "trialId": "0x6ce20c532d8203b65350f339c0414be6be1cad6753c5bafcdf22ea680ea6e38c",
+      "trialHash": "0x5e6d260484a50349c18c2b5a66085fb6ad0c734dafd282add6f84e8280a0143e",
+      "name": "Four-hop PONS\u2013CASHCAT route size-curve test",
+      "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+      "clusterId": "0x6aba1515305e5e62875176f325baa5527e44144f235920e08e7e91e0d30b8fc8",
+      "routeLabel": "WETH \u2192 USDG \u2192 PONS \u2192 CASHCAT \u2192 WETH / 3000 \u00b7 3000 \u00b7 10000 \u00b7 10000",
+      "hops": 4,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x9d3396dda8f2ae469f25b56e29c9bbe0153d1171cd473ed082a6ecdb096f9dfe",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-84",
+      "bestKnownNetWei": "-11113934550567",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96972622,
+          "frameHash": "0x8c0ebe64d5248fe8782b8230e340c19717bf59d88945176acd9a4f04de7a7c12",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96974509,
+          "frameHash": "0x98bf23bc21370c1a4f836ee1a3e3a4e45ef217b543419326843529a7b08595f4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96976390,
+          "frameHash": "0x7efcef77f025266dc2464642cc12e6455f649f36311955ad63ad50be552c62f5",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96978137,
+          "frameHash": "0x25f551d38b240941c8ece8b8c6c33137e5341d2e8a16b6acd86b7c0c564fda7d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96980002,
+          "frameHash": "0x0b73bade23b788ef342cedcacb7b047e56511a5dff32c2f27a5bbfad8e379954",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96981888,
+          "frameHash": "0xa9b7843abb1331f70b469026e7f2f69f0a8dbfd97d775aa5ec69575b4405f859",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96983740,
+          "frameHash": "0xc9ba236f0f4250601532faa5abf848de2a949da29fb0ab1a4f09cd61b384a181",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96985605,
+          "frameHash": "0x662a20fd3d03b5445c27ac5ed5e8ce56b3d103ea33056c778da4bb95901d2b0c",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96987392,
+          "frameHash": "0x8c173bc37d9a975d8296304673f491526d4e5a7dce607901895d169de86638be",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96989197,
+          "frameHash": "0xc7356e0c1cdcd32032f045978d20fe29e3fdf525d649982788ca9966ec267713",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-24T18:28:16.843Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96849022-",
+      "failureId": "0x78cd1074c71cb3a6e567fa5b2e281c9de95c6bb0076b306777bf296a91155107"
+    },
+    {
+      "trialId": "0x91200c19a9ecfd66ac7daafe9afbba2900d9a81a8f3d9fd1a32ec394d99bc19c",
+      "trialHash": "0x12a1fb77d7666c77b5bed20a0a605d3e7680000086729636b76983ab3044a965",
+      "name": "wPONS triangle exact-size probe at 0.02 WETH",
+      "graphHash": "0x36bd9bb82769aae549258e08d6aee51289e2040e7da7b049de002f6596de19bf",
+      "clusterId": "0xc5122cb5d369b4c4430b51d195ba43288772aa06227b69284c314e217f8033a1",
+      "routeLabel": "WETH \u2192 wPONS \u2192 PONS \u2192 WETH / 100 \u00b7 100 \u00b7 10000",
+      "hops": 3,
+      "family": "EXACT_EDGE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x1bbe4b981076d3f0ff1680156e5b0587a1eeee2d1b10efed52da1979a6c4d7dc",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-19",
+      "bestKnownNetWei": "-46798203385068",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96355273,
+          "frameHash": "0x1c24bb8843578d35fe301408916f63628c4d2a27bffe387ec55a2f069d766ed4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96356965,
+          "frameHash": "0x303e46dc750603b1656c6af492bc05653250085dbe341b82cbcd62b8f1edca61",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96358642,
+          "frameHash": "0xf20775aefbfbe7e509688752191959008c6995d0035173f0d694987071f908b8",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96360296,
+          "frameHash": "0x51403258c11e7d7cf4c5048fa2eac95b3cda89066c555b8dbce117205e1b7b65",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96361897,
+          "frameHash": "0x62b280b677d6739ac6f234ad51f3a5e23e20b5123c374ccd97200491b21fd96d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96363525,
+          "frameHash": "0xc7d31e05cfa4ab05e4b2aa567c1f808d52b1b282bc4ef9619be1c2b24508fdad",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96365145,
+          "frameHash": "0x261982b76895b480f6efa572e4782496fb4ce998d3f828ac5a63f5e36fba38fd",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96366815,
+          "frameHash": "0x21880f08ac91eafe915cd6e08c9b966382ab1cec628bb8eb1d4acf7217448f27",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96368480,
+          "frameHash": "0x26933eb08d88b744d3c646d9b74c68d04caba82fec0013786c5b63242cada531",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96370083,
+          "frameHash": "0x692ade9ec44f48b6ab5fdd4f5b723680bc55b0c35f63dee8089f36fde158365e",
+          "sourceOK": true,
+          "quoteSizes": [
+            "20000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-24T00:27:08.129Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96024753-",
+      "failureId": "0x7b1620a1886826ec54857e230adf75ef4a417e41f1707ee967c1e2dd159d6569"
+    },
+    {
+      "trialId": "0x5a8d635b2802b05e9a7e96f05653982441ca0d0955b333f0b4a9ab9f2a29f065",
+      "trialHash": "0x8012f78184048a7956b864376a1a8df4a545ee133f344941598d40e1b4b50bf9",
+      "name": "WETH\u2013USDG\u2013PONS triangle quote-improvement probe",
+      "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+      "clusterId": "0xd1e69f90c688bdc6781e1f84daed7219e99d0f5773fe959cde6e191a8895a489",
+      "routeLabel": "WETH \u2192 USDG \u2192 PONS \u2192 WETH / 500 \u00b7 3000 \u00b7 10000",
+      "hops": 3,
+      "family": "QUOTE_IMPROVEMENT",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x7adde4348ecffd5a2adea7369f20fe0f56e3bc1db91182f710f5a887d7443d46",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-195",
+      "bestKnownNetWei": "-106561777378382",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 97383828,
+          "frameHash": "0xba420c85cd4a31447c86cfdb926d723de63659a31bf9655e8ff7af44c3b4fa67",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97385746,
+          "frameHash": "0x103f18e96e3e1a18b30d57f72cf842f40e4c8c53c89274bb7f14cc785259126d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97387702,
+          "frameHash": "0x59eda7e730c21d65bf97e179c7c6c7d893f1ef81b2e98381d0d8912d3ab092d9",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97389623,
+          "frameHash": "0xf56baec484f80decf57f98f96c1dd802b9d428de42b815643a3f04318b646d4f",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97391510,
+          "frameHash": "0x5e652b053131efb35f8508e5e808a588d19869e881066184094965eceb8a41fc",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97393450,
+          "frameHash": "0x8e0c47cdc4689e248c5fad13a6831006ffaa92e2e347a80bf8f92a018fd03544",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97395425,
+          "frameHash": "0xcbea7fef6dd1ac1964dd309872f3b785da5dc3af71fa12206dc771f8e1fb8b19",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97397364,
+          "frameHash": "0x2b61d9e7c6475221df430f8b5ee8bfe92bc245f6d802c9e58f732ad7159aabba",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97399209,
+          "frameHash": "0x9a998fba54517489c000d91aeea062b5d47b30095cb4cdeb82393b2dd02bd287",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97401179,
+          "frameHash": "0x044c51a177da098e0b522a664afcdd7f0dd218c167f9d711d4662f6bafb4b033",
+          "sourceOK": true,
+          "quoteSizes": [
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-25T06:27:19.125Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96849022-",
+      "failureId": "0xaea77ef5c10d5abbd0ce6dca2aadcbb4f06af63494d137b32fd186b67b94fb75"
+    },
+    {
+      "trialId": "0x1894b555b0152136528777c9df03071416288d630ae58aacc3d9461018598890",
+      "trialHash": "0x6bd9803a08442b76e4c9b9be2b34aefb9bc8501493d630bea1dcdd23669490c3",
+      "name": "CASHCAT round-trip size-curve test",
+      "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+      "clusterId": "0xca929c088471f06122148ba6095746a9737363eecdcb89d9314b0660855456b4",
+      "routeLabel": "WETH \u2192 CASHCAT \u2192 WETH / 3000 \u00b7 10000",
+      "hops": 2,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0x1e5b3023cd195d0f5db9da31d2077256d2880bcc5b017a0e04e8098311dab547",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-56",
+      "bestKnownNetWei": "-7064523911502",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 96972622,
+          "frameHash": "0x8c0ebe64d5248fe8782b8230e340c19717bf59d88945176acd9a4f04de7a7c12",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96974509,
+          "frameHash": "0x98bf23bc21370c1a4f836ee1a3e3a4e45ef217b543419326843529a7b08595f4",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96976390,
+          "frameHash": "0x7efcef77f025266dc2464642cc12e6455f649f36311955ad63ad50be552c62f5",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96978137,
+          "frameHash": "0x25f551d38b240941c8ece8b8c6c33137e5341d2e8a16b6acd86b7c0c564fda7d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96980002,
+          "frameHash": "0x0b73bade23b788ef342cedcacb7b047e56511a5dff32c2f27a5bbfad8e379954",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96981888,
+          "frameHash": "0xa9b7843abb1331f70b469026e7f2f69f0a8dbfd97d775aa5ec69575b4405f859",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96983740,
+          "frameHash": "0xc9ba236f0f4250601532faa5abf848de2a949da29fb0ab1a4f09cd61b384a181",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96985605,
+          "frameHash": "0x662a20fd3d03b5445c27ac5ed5e8ce56b3d103ea33056c778da4bb95901d2b0c",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96987392,
+          "frameHash": "0x8c173bc37d9a975d8296304673f491526d4e5a7dce607901895d169de86638be",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        },
+        {
+          "block": 96989197,
+          "frameHash": "0xc7356e0c1cdcd32032f045978d20fe29e3fdf525d649982788ca9966ec267713",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000",
+            "20000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-24T18:28:16.842Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96849022-",
+      "failureId": "0xb77804da949ff48419fe6b47196ce90b9233e79a828f8edec735485bb2517991"
+    },
+    {
+      "trialId": "0xfc8ccd2ed9ba08802b8457b270e77eb95eea2fc1b5711a5276eec4cbf8b07b15",
+      "trialHash": "0xbd1954f69c35a62bd0d3a5fdd8b97fcf64006f6ef7ebcd45a345b58ec50946df",
+      "name": "Four-hop USDG\u2013PONS\u2013CASHCAT size-curve probe",
+      "graphHash": "0x759cc2dd1e305e94bc38599b83e14f4306db7b0736d230d6f1c9d64cbe6b8a2d",
+      "clusterId": "0x6aba1515305e5e62875176f325baa5527e44144f235920e08e7e91e0d30b8fc8",
+      "routeLabel": "WETH \u2192 USDG \u2192 PONS \u2192 CASHCAT \u2192 WETH / 10000 \u00b7 500 \u00b7 10000 \u00b7 3000",
+      "hops": 4,
+      "family": "SIZE_CURVE",
+      "status": "REJECTED_NO_SIGNAL",
+      "resultHash": "0xe083727fdbe3f1bafc3c3604c52fae0c21fa1f064ab083a7cfd43d375237a2f3",
+      "cause": "NEGATIVE_BEFORE_GAS",
+      "observations": 10,
+      "pairedObservations": 10,
+      "negativeGrossObservations": 10,
+      "positiveGrossObservations": 0,
+      "positiveKnownNetObservations": 0,
+      "economicEligibleObservations": 0,
+      "candidateSignals": 0,
+      "controlSignals": 0,
+      "bestGrossBps": "-308",
+      "bestKnownNetWei": "-13382082880253",
+      "implication": "Changing an entry threshold or adding persistence cannot repair negative gross economics. Seek a different asset cluster or new contradictory quotes.",
+      "rows": [
+        {
+          "block": 97383828,
+          "frameHash": "0xba420c85cd4a31447c86cfdb926d723de63659a31bf9655e8ff7af44c3b4fa67",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97385746,
+          "frameHash": "0x103f18e96e3e1a18b30d57f72cf842f40e4c8c53c89274bb7f14cc785259126d",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97387702,
+          "frameHash": "0x59eda7e730c21d65bf97e179c7c6c7d893f1ef81b2e98381d0d8912d3ab092d9",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97389623,
+          "frameHash": "0xf56baec484f80decf57f98f96c1dd802b9d428de42b815643a3f04318b646d4f",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97391510,
+          "frameHash": "0x5e652b053131efb35f8508e5e808a588d19869e881066184094965eceb8a41fc",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97393450,
+          "frameHash": "0x8e0c47cdc4689e248c5fad13a6831006ffaa92e2e347a80bf8f92a018fd03544",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97395425,
+          "frameHash": "0xcbea7fef6dd1ac1964dd309872f3b785da5dc3af71fa12206dc771f8e1fb8b19",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97397364,
+          "frameHash": "0x2b61d9e7c6475221df430f8b5ee8bfe92bc245f6d802c9e58f732ad7159aabba",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97399209,
+          "frameHash": "0x9a998fba54517489c000d91aeea062b5d47b30095cb4cdeb82393b2dd02bd287",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        },
+        {
+          "block": 97401179,
+          "frameHash": "0x044c51a177da098e0b522a664afcdd7f0dd218c167f9d711d4662f6bafb4b033",
+          "sourceOK": true,
+          "quoteSizes": [
+            "100000000000000",
+            "1000000000000000",
+            "5000000000000000"
+          ]
+        }
+      ],
+      "proposedAt": "2026-10-25T06:27:19.124Z",
+      "sourcePrefix": "evidence/lab-frontier-mevy-auto-20261021-96849022-",
+      "failureId": "0xf7d79b16380befcb6a222eb30a84d7b20291e41060b0eec3464cb8cefe8d3768"
+    }
+  ],
+  "finding": "All 15 completed tests lost WETH before gas in each of their ten paired observations. Changing persistence or an entry threshold does not remove that measured loss.",
+  "implementationFault": "Previous epoch memory retained hypotheses, but not their detailed economic outcomes. The planner required new proposals even when no measured positive economics supported them.",
+  "boundary": "Bounded quote research, not trades or proof of profitability."
+}

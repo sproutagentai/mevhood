@@ -16,3 +16,8 @@ export function selectLearningCells(g:LabGraph,frames:LabFrame[],mandatory:LabCe
  const suspended=all.filter(c=>guide.suspendedClusters.includes(clusterId(g,c.routeId)));if(suspended.length)add(order(suspended)[0]!);
  for(const c of order(all.filter(c=>!guide.suspendedClusters.includes(clusterId(g,c.routeId))))){if(selected.size>=6)break;add(c);}if(!selected.size&&all.length)add(order(all)[0]!);return [...selected.values()];
 }
+export function latestSearchState(stateRoot:string){
+ const parent=join(stateRoot,'frontier-epochs');let latest:{guide:SearchGuide;outcomes:{kind:string;body:any}[]}|null=null;if(!existsSync(parent))return null;
+ for(const name of readdirSync(parent).filter(n=>/^\d+$/.test(n))){const p=join(parent,name,'frontier.sqlite');if(!existsSync(p))continue;const db=new DatabaseSync(p,{readOnly:true});try{for(const row of db.prepare('SELECT body FROM lab_items WHERE kind=?').all('guide') as {body:string}[]){const guide=JSON.parse(row.body) as SearchGuide;if(latest&&latest.guide.createdAt>guide.createdAt)continue;const outcomes=['action-result','scan-failure'].flatMap(kind=>{const r=db.prepare('SELECT body FROM lab_items WHERE kind=? AND id=?').get(kind,guide.id) as {body:string}|undefined;return r?[{kind,body:JSON.parse(r.body)}]:[];});if(!latest||guide.createdAt>latest.guide.createdAt||outcomes.length>latest.outcomes.length)latest={guide,outcomes};}}finally{db.close();}}
+ return latest;
+}

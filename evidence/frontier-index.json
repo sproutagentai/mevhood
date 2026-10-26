@@ -13,13 +13,20 @@
     "bootstrap": true
   },
   "latest": {
-    "path": "evidence/lab-frontier-mevy-auto-20261021-98624665-progress-98736393-report.json",
-    "reportHash": "0x5105c7d2e4f2613f500e12a3a7666bd05edf9260694019443b4fee11748e7002",
-    "createdAt": "2026-10-26T21:45:42.112Z",
+    "path": "evidence/lab-frontier-mevy-auto-20261021-98624665-progress-98756108-report.json",
+    "reportHash": "0xbe07873eff30a37efe94da2a719ac6bb44303970ca13d12f8ff14cad5dddda73",
+    "createdAt": "2026-10-26T22:19:52.942Z",
     "trials": 0,
-    "observations": 36
+    "observations": 43
   },
   "reports": [
+    {
+      "path": "evidence/lab-frontier-mevy-auto-20261021-98624665-progress-98756108-report.json",
+      "reportHash": "0xbe07873eff30a37efe94da2a719ac6bb44303970ca13d12f8ff14cad5dddda73",
+      "createdAt": "2026-10-26T22:19:52.942Z",
+      "trials": 0,
+      "observations": 43
+    },
     {
       "path": "evidence/lab-frontier-mevy-auto-20261021-98624665-progress-98736393-report.json",
       "reportHash": "0x5105c7d2e4f2613f500e12a3a7666bd05edf9260694019443b4fee11748e7002",

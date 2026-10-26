@@ -1,0 +1,23 @@
+{
+  "automaticRetry": false,
+  "contextHash": "0x7482200713d0b9dc5928c283200bd2b119fdffe48c506ced2708e8ec577fff11",
+  "coverage": {
+    "observations": 66,
+    "quotes": 396,
+    "truncated": false
+  },
+  "format": "mevy-learning-plan/v1",
+  "generationProfile": "v2",
+  "graphHash": "0x2e935db4b1f80be2781904fa7aa765d02d47f419f47fd308249ee1a826ba3f89",
+  "inputBytes": 302205,
+  "instructionsHash": "0xb2cea5044be7fcfe4f0e3d5a49e03d526f62c052de6108997bd860d7fa201513",
+  "learningEvidenceHash": "0x0d5f0b906833d8ae333c8887aa42b6e3a8f9952e7177c2dcba2aac3a4999edd6",
+  "livePromotion": "DISABLED",
+  "maxOutputTokens": 16000,
+  "model": "gpt-6-luna",
+  "planHash": "0xa08dcdc269546b3abc57a92a6ca13835529a9efd0121284536564bec2877280d",
+  "reasoning": "low",
+  "reservedUsd": "0.100732775",
+  "schemaHash": "0x22d62b56ee279802c7732495800f57adbfbfbe801d82ea46ba2b31a110dae368",
+  "trainingFramesHash": "0x4599233539b20bec72d2244cd86878756aef16d5d9a47e9a914b1ee798cc1a47"
+}

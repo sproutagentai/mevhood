@@ -1,0 +1,26 @@
+[
+  {
+    "id": "slot-20",
+    "startedAt": "2026-10-26T18:27:48.820Z",
+    "planHash": "0xa08dcdc269546b3abc57a92a6ca13835529a9efd0121284536564bec2877280d",
+    "contextHash": "0x7482200713d0b9dc5928c283200bd2b119fdffe48c506ced2708e8ec577fff11",
+    "profile": "v2",
+    "maxOutputTokens": 16000,
+    "reasoning": "low",
+    "reservedUsd": "0.100732775",
+    "outcome": "SUCCEEDED",
+    "failureCode": null,
+    "provider": {
+      "responseId": "resp_0f3cc6d5194d7ddc016adf9ba5e86487d2b4c72889fcc34ca0",
+      "modelId": "gpt-6-luna",
+      "inputTokens": 142133,
+      "outputTokens": 1104,
+      "reasoningTokens": 84,
+      "finishReason": "stop",
+      "rawFinishReason": null,
+      "visibleCharacters": 3887
+    },
+    "analysisHash": "0x1baeb6e46a0edef80c4c097c1753b4c2f287725b4a6cc10abaa6820a02cad6c3",
+    "automaticRetry": false
+  }
+]

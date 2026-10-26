@@ -1,0 +1,62 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "failureReview": [
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x0173aabb268c853082c6232a3b67067501f7f3ebfb0a60b99d778c0de4ff2f00",
+        "lesson": "Measured: 10/10 observations were negative gross, with no positive known net. Do not retry this tested wPONS four-hop cell by changing its threshold or persistence."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x0bc23a79948630c3a078e6d580a1b460f890219e8d422f82c59e440d1d7791c6",
+        "lesson": "Measured: the PONS–USDG size-curve trial was negative gross in all 10 observations and had no positive known net. Threshold or persistence changes cannot repair that result."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x20b0822497155f45a348ca02c829a1b37139123d897f7d94b8ab8116c1e4d0a3",
+        "lesson": "Measured: 10/10 observations for the wPONS four-hop size-curve trial were negative gross, with zero positive known-net observations. Do not tune entry rules to compensate."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x2ff64ff28dbf06878a04cb923e671ea2bad6ecbaeb5ac70271cf2cf8719e341c",
+        "lesson": "Measured: the wPONS exact-size edge trial was negative gross in all 10 observations and produced no positive known net. A lower threshold or more persistence is not a remedy."
+      }
+    ],
+    "hypotheses": [],
+    "limitations": [
+      "The failure causes are measured classifications from the frozen dossier; the factory-search rationale is a data-collection choice, not evidence that a profitable route exists.",
+      "No availableCells were supplied, so no strategy hypothesis is supportable.",
+      "Preserve the frozen control and public freeze before any fresh forward rows. Any later evaluation remains subject to the seven-day and 1,000-observation gate, original expiry, spending limits, and drawdown, gap, loss, and improvement criteria.",
+      "Quote signals are not swaps or realized profit. Full costs and invoices remain unknown."
+    ],
+    "nextSearch": {
+      "addressesFailureIds": [
+        "0x0173aabb268c853082c6232a3b67067501f7f3ebfb0a60b99d778c0de4ff2f00",
+        "0x0bc23a79948630c3a078e6d580a1b460f890219e8d422f82c59e440d1d7791c6",
+        "0x20b0822497155f45a348ca02c829a1b37139123d897f7d94b8ab8116c1e4d0a3",
+        "0x2ff64ff28dbf06878a04cb923e671ea2bad6ecbaeb5ac70271cf2cf8719e341c"
+      ],
+      "directionId": "EXPAND_POOL_UNIVERSE",
+      "newInformation": "Factory getPool probe results for untested event tokens and the four fee tiers against WETH and USDG; any discovered pools can be assessed for identity, code, and active liquidity before new measurements.",
+      "reason": "The repeated negative-gross results justify seeking new pools and asset opportunities rather than retuning the failed routes. This executable direction probes previously untested event tokens against WETH and USDG fee tiers, including older companion pools outside the recent event window."
+    },
+    "summary": "The frozen failure review reports repeated NEGATIVE_BEFORE_GAS results: each listed trial had 10 observations, 10 negative-gross observations, no positive-gross or positive-known-net observations, and no candidate signals. These measured results rule out rescuing those tested cells by lowering entry thresholds or increasing persistence. The four associated asset clusters remain suspended; the supplied evidence does not show contradictory positive known-net measurements reopening them. No route/size cells are available, so I propose no hypotheses."
+  },
+  "analysisHash": "0xe33eb725ab3208bf1e1ba3229b80d8a8a4c438fad31d356680476a840c31f7b5",
+  "contextHash": "0x7d0d925c7e61befde0b617941f7dc0d558ad661318462b64231f4d7ad7f85928",
+  "createdAt": "2026-10-26T06:30:27.840Z",
+  "estimatedStandardCostUsd": "0.013909600",
+  "format": "mevy-learning-analysis/v1",
+  "graphHash": "0x6b39ac16580afdbc12a9719b531ea02fd511afac7efebe0783df8905dda92137",
+  "learningEvidenceHash": "0x0d5f0b906833d8ae333c8887aa42b6e3a8f9952e7177c2dcba2aac3a4999edd6",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x240c7c147ae8456cce7040264e5d67cf3d651dd655613bd4876e2082ca89eb1f",
+  "responseId": "resp_0762fe3ab652173b016adef3793b0087d29918de72d125539a",
+  "trainingFramesHash": "0xa9b4ff2c1d8050dad19860fef9933d8105e9254b4799e3d2bc089cf57dc27d26",
+  "usage": {
+    "inputTokens": 133796,
+    "outputTokens": 1060
+  }
+}

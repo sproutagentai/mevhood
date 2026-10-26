@@ -1,0 +1,253 @@
+{
+  "control": {
+    "block": 98089186,
+    "blockHash": "0xa35b99d2a0c5730848359270a97f95e9a12e2c980c242c9396206cbfbe07447b",
+    "chainId": 4663,
+    "codeHashes": {
+      "0x0bd7d308f8e1639fab988df18a8011f41eacad73": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+      "0x1f7d7550b1b028f7571e69a784071f0205fd2efa": "0xec72b1abd1f2faee020cfea9c646bd8994f9fb389054f6e574f103a895091739",
+      "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7": "0x3db0868d945e9304c9bc6a8b2181948109ea617647142f3c4083e14393496a28",
+      "0x52e65b17fb6e5ba00ed806f37afcd2daa50271ca": "0x3298b5dd4e6f115074c526a55ad05a36fd73a0034ac22ec6cbaab32cc9c1e8d2",
+      "0x5f009e071f07e92b6c624e83f52f17bbda34680d": "0xe20600974a722992eb4622b85b2a77ccac5e4aaa2f781bd93cae4334ca18d686",
+      "0x5fc5360d0400a0fd4f2af552add042d716f1d168": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+      "0x69bfaf19c9f377bb306a89aed9f6b07e2c1a8d9a": "0x74a16c3b1b4ac8903c54a9edad666d4c87512cb78ed0723538acd84d1b56c5b5",
+      "0xa9188730fe85be88ad499d7d52b099e800fb0334": "0x0fc31cfc533a5922261eaa33ff62c43ffd3839dc5204fb6dbbe6effd7bd9d63d",
+      "0xcaf681a66d020601342297493863e78c959e5cb2": "0x6f36c378e272c6324c48f045182bcb54bd8ad654cf9ebd42e8893d52c4cb25dc"
+    },
+    "collectedAt": 1792983727,
+    "errors": [],
+    "extraGasWei": null,
+    "factory": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+    "gasModel": "quoter-plus-overhead-v1",
+    "gasPriceWei": "20182000",
+    "infrastructureWei": null,
+    "provider": "https://rpc-robinhood.blockmachine.io",
+    "quoter": "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7",
+    "quotes": [
+      {
+        "amountOutWei": "999799170988526",
+        "error": null,
+        "feeBack": 500,
+        "feeOut": 100,
+        "gasUnits": "341145",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "route": "WETH/USDG 100 → 500",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "998150185604099",
+        "error": null,
+        "feeBack": 3000,
+        "feeOut": 100,
+        "gasUnits": "342055",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "route": "WETH/USDG 100 → 3000",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "983975744713016",
+        "error": null,
+        "feeBack": 10000,
+        "feeOut": 100,
+        "gasUnits": "342057",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730000645fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "poolOut": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "route": "WETH/USDG 100 → 10000",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "998999633552140",
+        "error": null,
+        "feeBack": 100,
+        "feeOut": 500,
+        "gasUnits": "341187",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "route": "WETH/USDG 500 → 100",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "997351596489005",
+        "error": null,
+        "feeBack": 3000,
+        "feeOut": 500,
+        "gasUnits": "341172",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "route": "WETH/USDG 500 → 3000",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "983188542410896",
+        "error": null,
+        "feeBack": 10000,
+        "feeOut": 500,
+        "gasUnits": "341174",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730001f45fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "poolOut": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "route": "WETH/USDG 500 → 10000",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "995650367398456",
+        "error": null,
+        "feeBack": 100,
+        "feeOut": 3000,
+        "gasUnits": "342022",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "route": "WETH/USDG 3000 → 100",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "995650223372295",
+        "error": null,
+        "feeBack": 500,
+        "feeOut": 3000,
+        "gasUnits": "341097",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "route": "WETH/USDG 3000 → 500",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "979892132727945",
+        "error": null,
+        "feeBack": 10000,
+        "feeOut": 3000,
+        "gasUnits": "342009",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad73000bb85fc5360d0400a0fd4f2af552add042d716f1d1680027100bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "poolOut": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "route": "WETH/USDG 3000 → 10000",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "995854866278224",
+        "error": null,
+        "feeBack": 100,
+        "feeOut": 10000,
+        "gasUnits": "342091",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680000640bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca",
+        "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "route": "WETH/USDG 10000 → 100",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "995854804018018",
+        "error": null,
+        "feeBack": 500,
+        "feeOut": 10000,
+        "gasUnits": "341166",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d1680001f40bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0x69BfaF19C9f377BB306a89aEd9F6B07e2c1a8d9a",
+        "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "route": "WETH/USDG 10000 → 500",
+        "sizeWei": "1000000000000000"
+      },
+      {
+        "amountOutWei": "994212015326183",
+        "error": null,
+        "feeBack": 3000,
+        "feeOut": 10000,
+        "gasUnits": "342076",
+        "path": "0x0bd7d308f8e1639fab988df18a8011f41eacad730027105fc5360d0400a0fd4f2af552add042d716f1d168000bb80bd7d308f8e1639fab988df18a8011f41eacad73",
+        "poolBack": "0xa9188730Fe85Be88ad499D7d52B099e800fB0334",
+        "poolOut": "0x5f009E071F07e92B6C624e83F52F17bBDa34680D",
+        "route": "WETH/USDG 10000 → 3000",
+        "sizeWei": "1000000000000000"
+      }
+    ],
+    "timestamp": 1792983669
+  },
+  "controlSource": {
+    "auditComplete": true,
+    "auditedObservations": 1,
+    "bundleHash": "0x5ed3ec046ef141a909b2a9325642391de61e65013e030e5124dded2b164ea7ba",
+    "checkedAt": "2026-10-26T03:03:01.926Z",
+    "checks": [
+      {
+        "block": 98089186,
+        "blockHash": "0xa35b99d2a0c5730848359270a97f95e9a12e2c980c242c9396206cbfbe07447b",
+        "observationHash": "0xb63c92c3d052c6973b15a17d478dabc9336eb9c84497af746368f93373eb9a6e",
+        "quotes": 12,
+        "sourceDigest": "0x19b533d205de20cbe04fb5b0d4c8b25509ba8671adc228c0efc7794cc79fd030"
+      }
+    ],
+    "format": "mevy-source-audit/v1",
+    "nextOffset": null,
+    "offset": 0,
+    "receiptHash": "0x47fa13c0f835b43ec3d048c3078f9bd465d7f84ab2174f0cfa46d2289a977180",
+    "researchGate": "HOLD",
+    "source": "https://rpc-robinhood.blockmachine.io",
+    "sourceAudit": "PASS",
+    "sourceId": "0x17485a8cb4ec501a37660589d750122b855356a608f1bdfa9921f0343c36dff9",
+    "sourceRequoted": true,
+    "totalObservations": 1,
+    "verified": true
+  },
+  "format": "mevy-frontier-frame/v1",
+  "frameHash": "0x81efd2f19fb4eb6f62fa6d2be5b4174cdd233fe823e7c0f1c97323c33851c2e6",
+  "graphHash": "0x6b39ac16580afdbc12a9719b531ea02fd511afac7efebe0783df8905dda92137",
+  "quotes": [
+    {
+      "amountOutWei": "98951587294458",
+      "error": null,
+      "gasUnits": "427662",
+      "routeId": "0xd7acbae414694b6fb60529a0f2474aa012f03e0ecedaa04e3bbc44d79f2ed3fc",
+      "sizeWei": "100000000000000"
+    },
+    {
+      "amountOutWei": "4815318706308841",
+      "error": null,
+      "gasUnits": "410619",
+      "routeId": "0x593cf11e5690fb045a75b578840a70c8e1118180acc14e81d99a7e9b7a5fe005",
+      "sizeWei": "5000000000000000"
+    },
+    {
+      "amountOutWei": "970087534652028",
+      "error": null,
+      "gasUnits": "410899",
+      "routeId": "0x80fab0e7690b112f67756c11f59211c46228c432561888d773c96d5e64ad24b0",
+      "sizeWei": "1000000000000000"
+    },
+    {
+      "amountOutWei": "97875345869471",
+      "error": null,
+      "gasUnits": "422145",
+      "routeId": "0x16945acd47ea2d546023a4415bee45fb185d1c9f196e339f00e5570cefa573e1",
+      "sizeWei": "100000000000000"
+    },
+    {
+      "amountOutWei": "4909895718260685",
+      "error": null,
+      "gasUnits": "540072",
+      "routeId": "0xc717cf4c8a0ad2c69f50b6c4797679dac3c2588c5a1c71a0152e0c749787764f",
+      "sizeWei": "5000000000000000"
+    },
+    {
+      "amountOutWei": "98695431695125",
+      "error": null,
+      "gasUnits": "546058",
+      "routeId": "0x9bc559e006e222c92ef55a336f736e8515d2bf1d311081420ffd64e81d89fb90",
+      "sizeWei": "100000000000000"
+    }
+  ],
+  "sourceCheck": {
+    "checkedAt": "2026-10-26T03:03:39.309Z",
+    "quoteHash": "0x05a177684335bbe7b1813a0a12b02f682ed64eb565ab237469fdf66b71b61a73",
+    "source": "https://rpc-robinhood.blockmachine.io",
+    "status": "MATCH"
+  }
+}

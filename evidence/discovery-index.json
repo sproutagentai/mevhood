@@ -13,13 +13,20 @@
     "bootstrap": true
   },
   "latest": {
-    "path": "evidence/lab-mevy-auto-20261021-progress-98290806-report.json",
-    "reportHash": "0x369e2009156fb6cf85e99c009f1826f584aba73d6ab05fc02e9145ea2a8f1ec1",
-    "createdAt": "2026-10-26T08:59:08.761Z",
+    "path": "evidence/lab-mevy-auto-20261021-progress-98309365-report.json",
+    "reportHash": "0x9d6beaa736e11bf2ef80299bd23132fe15b06fef382dff0d221e2f1f400a098e",
+    "createdAt": "2026-10-26T09:31:24.533Z",
     "trials": 8,
-    "observations": 1902
+    "observations": 1909
   },
   "reports": [
+    {
+      "path": "evidence/lab-mevy-auto-20261021-progress-98309365-report.json",
+      "reportHash": "0x9d6beaa736e11bf2ef80299bd23132fe15b06fef382dff0d221e2f1f400a098e",
+      "createdAt": "2026-10-26T09:31:24.533Z",
+      "trials": 8,
+      "observations": 1909
+    },
     {
       "path": "evidence/lab-mevy-auto-20261021-progress-98290806-report.json",
       "reportHash": "0x369e2009156fb6cf85e99c009f1826f584aba73d6ab05fc02e9145ea2a8f1ec1",

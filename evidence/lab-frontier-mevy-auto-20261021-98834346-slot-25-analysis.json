@@ -1,0 +1,61 @@
+{
+  "actualInvoiceCostUsd": null,
+  "analysis": {
+    "failureReview": [
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x0173aabb268c853082c6232a3b67067501f7f3ebfb0a60b99d778c0de4ff2f00",
+        "lesson": "Ten paired observations; all 10 had negative gross results. Best gross was -52 bps and best known net was -10989671435462 wei. Threshold or persistence changes cannot repair negative gross economics."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x0bc23a79948630c3a078e6d580a1b460f890219e8d422f82c59e440d1d7791c6",
+        "lesson": "Ten paired observations; all 10 had negative gross results. Best gross was -33 bps and best known net was -9044057334139 wei. This PONS–USDG cluster needs contradictory positive known-net evidence before reuse."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x20b0822497155f45a348ca02c829a1b37139123d897f7d94b8ab8116c1e4d0a3",
+        "lesson": "Ten paired observations; all 10 had negative gross results. Best gross was -236 bps and best known net was -12805679835797 wei. Altering size-curve entry rules or persistence does not address the measured negative gross result."
+      },
+      {
+        "cause": "NEGATIVE_BEFORE_GAS",
+        "failureId": "0x2ff64ff28dbf06878a04cb923e671ea2bad6ecbaeb5ac70271cf2cf8719e341c",
+        "lesson": "Ten paired observations; all 10 had negative gross results. Best gross was -152 bps and best known net was -86818924915763 wei. This exact-edge trial failed before gas could be the cause."
+      }
+    ],
+    "hypotheses": [],
+    "limitations": [
+      "The failure measurements are frozen historical observations; they do not establish current route performance.",
+      "Quote signals are not swaps or realized profit. Full costs and invoices remain unknown.",
+      "Preserve the frozen control and original campaign expiry and spending limits. Require a public freeze before fresh forward rows and the seven-day, 1,000-observation acceptance gate."
+    ],
+    "nextSearch": {
+      "addressesFailureIds": [
+        "0x0173aabb268c853082c6232a3b67067501f7f3ebfb0a60b99d778c0de4ff2f00",
+        "0x0bc23a79948630c3a078e6d580a1b460f890219e8d422f82c59e440d1d7791c6",
+        "0x20b0822497155f45a348ca02c829a1b37139123d897f7d94b8ab8116c1e4d0a3",
+        "0x2ff64ff28dbf06878a04cb923e671ea2bad6ecbaeb5ac70271cf2cf8719e341c"
+      ],
+      "directionId": "EXPAND_POOL_UNIVERSE",
+      "newInformation": "Factory getPool results for untested event tokens against WETH and USDG across the supported fee tiers, including whether older companion pools exist. Discovery alone would not establish quote quality or profitability.",
+      "reason": "The repeated failures are measured negative gross results in the tested clusters, while all availableCells are empty and suspended clusters have no new positive known-net measurements. Expanding the pool universe addresses this by probing previously untested event tokens and discovering older companion pools, rather than proposing another fee permutation or changing entry rules."
+    },
+    "summary": "The frozen dossier records 15 rejected trials, all with the measured cause NEGATIVE_BEFORE_GAS: each had 10 paired observations, zero positive-gross observations, zero positive-known-net observations, and zero candidate signals. The reported best gross results were negative, so lowering an entry threshold or increasing persistence would not address the measured failure. Four asset clusters remain suspended; none is reopened by contradictory positive known-net measurements in this dossier. No hypotheses are proposed because availableCells is empty. The appropriate next action is to expand pool discovery, not to reuse a suspended cluster or treat an unmeasured route as a candidate."
+  },
+  "analysisHash": "0xafd2a5d59457ead984fabd4a366ffdf30cdd706ce2be0abe65f13176ff19785c",
+  "contextHash": "0xb8159ce9345dd0cfcb26abe93061b87488b7455b460e52b7cb11665e79d4dcaa",
+  "createdAt": "2026-10-28T01:32:33.393Z",
+  "estimatedStandardCostUsd": "0.014546400",
+  "format": "mevy-learning-analysis/v1",
+  "graphHash": "0x005adb44455dda07f513cb78cf1382cc7d83663693d749c72d6bd6a77ff334af",
+  "learningEvidenceHash": "0x0d5f0b906833d8ae333c8887aa42b6e3a8f9952e7177c2dcba2aac3a4999edd6",
+  "livePromotion": "DISABLED",
+  "model": "gpt-6-luna",
+  "planHash": "0x4fe2dcff898648ca737b3698871cb3ad0fb210cc02e58cfc6932659fa2566757",
+  "responseId": "resp_0d86c5938e605bb0016ae150a7104087d2afe011c184e53136",
+  "trainingFramesHash": "0x54c287e5e4a8a5512c900754acf0ad00ee05f3efd69e50911ef6e1471da0675f",
+  "usage": {
+    "inputTokens": 140479,
+    "outputTokens": 997
+  }
+}
